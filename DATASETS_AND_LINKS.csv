@@ -1,0 +1,6 @@
+name,url,role,redistribution_note
+OpenStreetMap,https://www.openstreetmap.org,Primary source for road-network data,Raw OSM data are not redistributed in this package.
+OSMnx,https://osmnx.readthedocs.io,Graph extraction software,Users can recreate graph extraction workflows with OSMnx and OSM data.
+Geofabrik extracts,https://download.geofabrik.de,Diagnostic local-PBF source mentioned in manuscript,Raw PBF files are not redistributed.
+R41 derived source tables,data/R41_degree_preserving_nulls,Included derived degree-null evidence,Derived tables only.
+R56 derived source tables,data/R56_spatial_length_constrained_nulls,Included derived spatial-null evidence,Derived tables only.

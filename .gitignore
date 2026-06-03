@@ -1,0 +1,29 @@
+# Local/private inputs
+cache/
+private_graphs/
+raw/
+*.pkl
+*.gpkg
+*.osm
+*.osm.pbf
+
+# Manuscripts and private review materials
+submission/
+submission_clean/
+rounds/
+logs/
+*.docx
+*.pptx
+
+# Runtime outputs
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
