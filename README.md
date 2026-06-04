@@ -18,6 +18,13 @@ covariates and World Bank WDI country controls. In five-fold RidgeCV screens,
 road-form variables outperform external-only GHSL/WDI controls for both the
 observed CEBH gap and the post-spatial residual.
 
+The package now also includes the R67 geometry-null sensitivity increment. R67
+uses the 21-city strict non-crossing subset, completes 162/162 geometry-null
+replicates with zero degree drift, and shows that the mean road-minus-geometry
+residual is 0.0056 at 0.005 accepted swaps per edge and approximately zero in
+the feasible 0.02-swap subset. This is a sensitivity-tested subset, not a full
+71-city planar-null ensemble.
+
 ## What Is Included
 
 - `scripts/build_R41_degree_preserving_nulls.py`: full R41 analysis script.
@@ -28,6 +35,11 @@ observed CEBH gap and the post-spatial residual.
 - `scripts/build_R65_public_covariates_and_controls.py`: public-data script
   that downloads official GHSL/WDI sources, matches the 71-city matrix, runs
   external-control screens and recreates the R65 figure.
+- `scripts/build_R60_expansion_geometry_nulls.py`: strict non-crossing
+  geometry-preserving rewiring helper used by R67.
+- `scripts/build_R67_geometry_null_sensitivity.py`: R67 sensitivity script.
+  With `--skip-compute`, it recreates R67 summaries and figures from included
+  derived tables; a full rerun requires local cached OSMnx graph objects.
 - `data/R41_degree_preserving_nulls/`: derived degree-null source tables.
 - `data/R56_spatial_length_constrained_nulls/`: derived spatial-null source
   tables and report.
@@ -38,9 +50,13 @@ observed CEBH gap and the post-spatial residual.
 - `data/R65_public_covariates_and_controls/`: derived public-covariate match,
   model-comparison and source-registry tables. Raw GHSL zip packages are not
   redistributed.
+- `data/R67_geometry_null_sensitivity/`: derived R67 replicate, city-summary,
+  fraction-summary and report tables.
 - `figures/Fig_R56_spatial_length_constrained_nulls.*`: exported figure.
 - `figures/Fig_R65_public_covariate_controls.*`: exported R65 public-control
   figure.
+- `figures/Fig_R67_geometry_null_sensitivity.*`: exported R67 null-ladder and
+  geometry-null sensitivity figure.
 
 ## What Is Not Included
 
@@ -58,15 +74,24 @@ python -m venv .venv
 pip install -r requirements.txt
 python scripts/replot_R56_spatial_null_figure.py
 python scripts/build_R65_public_covariates_and_controls.py
+python scripts/build_R67_geometry_null_sensitivity.py --skip-compute
 ```
 
 The full R56 null-model regeneration requires local graph caches or a
 fresh OSMnx extraction workflow. The included derived tables are sufficient to
 recreate the submitted R56 evidence figure. R65 can be recreated from the
 included R63/R64 derived inputs plus official GHSL/WDI downloads.
+R67 can be redrawn from included derived tables with `--skip-compute`; the full
+geometry-null regeneration requires local cached OSMnx graph objects.
 
 ## Boundary
 
 The R56 null preserves degree sequence exactly and constrains edge chord-length
 slots. It is not a full planar, block-preserving or road-geometry-preserving
 null model.
+
+R67 adds a stricter non-crossing geometry-null sensitivity test for 21 cities.
+It preserves degree sequence and rejects replacement edges that cross
+non-adjacent existing segments, but it still does not preserve all road
+semantics, planning history, directed traffic rules or block structure. It is
+not a complete 71-city planar-null ensemble.

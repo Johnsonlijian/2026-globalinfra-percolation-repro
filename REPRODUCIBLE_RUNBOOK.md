@@ -66,3 +66,37 @@ The script writes GHSL raw zip downloads under
 `data/R65_public_covariates_and_controls/raw/`. That directory is intentionally
 ignored by git; redistribute only after checking the source terms and citation
 requirements.
+
+## Recreate R67 Geometry-null Sensitivity Figure
+
+The public package includes the derived R67 replicate and summary tables. To
+rebuild the R67 summaries and figure without raw graph caches:
+
+```bash
+python scripts/build_R67_geometry_null_sensitivity.py --skip-compute
+```
+
+Expected outputs:
+
+- `data/R67_geometry_null_sensitivity/geometry_null_sensitivity_city_summary.csv`
+- `data/R67_geometry_null_sensitivity/geometry_null_sensitivity_fraction_summary.csv`
+- `data/R67_geometry_null_sensitivity/R67_summary.json`
+- `figures/Fig_R67_geometry_null_sensitivity.png`
+- `figures/Fig_R67_geometry_null_sensitivity.svg`
+- `figures/Fig_R67_geometry_null_sensitivity.pdf`
+- `figures/Fig_R67_geometry_null_sensitivity.tiff`
+
+## Re-run R67 From Graph Caches
+
+The full R67 geometry-null regeneration requires cached OSMnx road graph
+objects with node longitude/latitude fields. Those graph caches are not
+redistributed. If local caches are available in the expected project layout,
+run:
+
+```bash
+python scripts/build_R67_geometry_null_sensitivity.py --force
+```
+
+Interpret R67 as a 21-city strict non-crossing sensitivity test. It is stronger
+than a one-replicate pilot, but it is not a full 71-city planar-null ensemble
+and does not prove a causal urban-design law.

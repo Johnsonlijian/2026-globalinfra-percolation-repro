@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "round": "R67_geometry_null_sensitivity",
+  "n_replicates_total": 162,
+  "n_replicates_pass": 162,
+  "n_cities": 21,
+  "swap_fractions": [
+    0.005,
+    0.01,
+    0.02
+  ],
+  "baseline_swap_fraction": 0.005,
+  "baseline_road_minus_geometry_mean": 0.005555555555555543,
+  "baseline_remaining_fraction_after_geometry_mean": 0.02233394872751731,
+  "baseline_positive_residual_city_share": 0.42857142857142855,
+  "high_swap_fraction": 0.02,
+  "high_swap_road_minus_geometry_mean": 1.4456028966473393e-18,
+  "high_swap_remaining_fraction_after_geometry_mean": -0.006260056846476018,
+  "max_degree_drift": 0.0,
+  "mean_length_bin_tvd": 3.9947189815064954e-07,
+  "mean_null_mobility_index": 0.00691830721158937,
+  "claim_boundary": "R67 is a sensitivity-tested 21-city strict geometry-null layer; it is not a full 71-city planar ensemble and should be described as a hardening test rather than a universal spatial null result."
+}
