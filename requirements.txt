@@ -1,4 +1,4 @@
-matplotlib>=3.8
+﻿matplotlib>=3.8
 numpy>=1.26
 networkx>=3.2
 pandas>=2.2
@@ -8,3 +8,4 @@ scikit-learn>=1.4
 geopandas>=0.14
 pyogrio>=0.7
 shapely>=2.0
+

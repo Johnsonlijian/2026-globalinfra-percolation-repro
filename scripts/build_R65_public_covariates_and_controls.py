@@ -1,4 +1,4 @@
-"""R65 public covariates and external-control analysis.
+﻿"""R65 public covariates and external-control analysis.
 
 This round adds externally sourced urban-centre and country-background
 covariates to the 71-city road-window evidence stack. The analysis is designed
@@ -49,7 +49,7 @@ from sklearn.preprocessing import StandardScaler
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "R65_public_covariates_and_controls"
 RAW = OUT / "raw"
-ROUND_DIR = ROOT / "rounds" / "R65_public_covariates_and_controls"
+ROUND_DIR = ROOT / "validation_reports" / "R65_public_covariates_and_controls"
 FIG_BASE = ROOT / "figures" / "Fig_R65_public_covariate_controls"
 
 R63_INTEGRATED = ROOT / "data" / "R63_high_order_external_covariates" / "integrated_high_order_external_covariates.csv"
@@ -193,7 +193,7 @@ def ensure_dirs() -> None:
 def normalise_text(value: Any) -> str:
     s = str(value).lower()
     s = "".join(c for c in unicodedata.normalize("NFKD", s) if not unicodedata.combining(c))
-    s = re.sub(r"[,\._/\-\(\)'’]", " ", s)
+    s = re.sub(r"[,\._/\-\(\)'鈥橾", " ", s)
     s = re.sub(r"\b(city|municipality|metropolitan|area|greater|province|prefecture|district)\b", " ", s)
     return " ".join(s.split())
 
@@ -996,3 +996,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

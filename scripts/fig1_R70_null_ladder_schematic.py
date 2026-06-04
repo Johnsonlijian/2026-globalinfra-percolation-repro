@@ -1,4 +1,4 @@
-"""Build Fig. 1 R70 null-ladder schematic for the road percolation paper."""
+﻿"""Build Fig. 1 R70 null-ladder schematic for the road percolation paper."""
 
 from __future__ import annotations
 
@@ -171,14 +171,21 @@ def build() -> plt.Figure:
         0.89,
         0.13,
         "Allowed claim: a model-conditional null ladder separates degree, edge-scale and strict embedded-geometry baselines.\n"
-        "R68 provides full-city low-intensity coverage; R67 provides higher-intensity subset sensitivity.\n"
+        "The full-city low-intensity layer tests coverage; the higher-intensity subset tests sensitivity.\n"
         "Forbidden overclaim: not a universal planar theorem, causal urban-design rule or high-intensity all-city planar null.",
         colors["boundary"],
         ec="#b58b00",
         fontsize=6.45,
         weight="normal",
     )
-    ax.text(0.055, 0.055, "R70 Fig. 1 rebuild: evidence domains are separated; R68 is full-city low-intensity coverage, not a proof.", transform=ax.transAxes, fontsize=5.8, color="#687386")
+    ax.text(
+        0.055,
+        0.055,
+        "Evidence domains are separated: full-city low-intensity coverage is not a planar-percolation proof.",
+        transform=ax.transAxes,
+        fontsize=5.8,
+        color="#687386",
+    )
     return fig
 
 
@@ -210,3 +217,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

@@ -15,6 +15,7 @@ data/R65_public_covariates_and_controls/wdi_indicator_long_latest.csv
 submission/
 submission_clean/
 rounds/
+validation_reports/
 logs/
 *.docx
 *.pptx

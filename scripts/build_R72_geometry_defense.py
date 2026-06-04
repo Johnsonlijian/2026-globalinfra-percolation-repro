@@ -1,6 +1,6 @@
-"""R72: geometry-null defense analysis for submission hardening.
+﻿"""R72: geometry-null defense analysis for submission hardening.
 
-This round addresses the main reviewer attack on R68: a low-intensity
+This round addresses the main reviewer objection on R68: a low-intensity
 strict-geometry null could be close to the road graph simply because it did
 not move far enough. R72 therefore builds a matched-intensity comparison on
 the R67 21-city geometry subset, using the same swap fractions for a
@@ -38,7 +38,7 @@ import build_R56_spatial_length_constrained_nulls as r56  # noqa: E402
 
 
 OUT = ROOT / "data" / "R72_geometry_defense"
-ROUND_DIR = ROOT / "rounds" / "R72_geometry_defense"
+ROUND_DIR = ROOT / "validation_reports" / "R72_geometry_defense"
 FIG_BASE = ROOT / "figures" / "Fig_R72_geometry_null_defense"
 R62_COVARIATES = ROOT / "data" / "R62_urban_form_mechanism" / "urban_form_covariates.csv"
 R67_CITY_SUMMARY = ROOT / "data" / "R67_geometry_null_sensitivity" / "geometry_null_sensitivity_city_summary.csv"
@@ -391,7 +391,7 @@ def make_figure(
     ax1.tick_params(axis="x", which="minor", bottom=False)
     ax1.set_xlabel("Matched accepted-swap target")
     ax1.set_ylabel("Mean road-minus-null residual")
-    ax1.set_title("b  Matched-intensity defense on R67 subset", loc="left", fontweight="bold", fontsize=8.5)
+    ax1.set_title("b  Matched-intensity defense on 21-city subset", loc="left", fontweight="bold", fontsize=8.5)
     ax1.grid(axis="y", color="#eef1f5", lw=0.6)
     ax1.legend(fontsize=6.0, loc="upper right")
 
@@ -446,10 +446,10 @@ Generated: {time.strftime('%Y-%m-%d %H:%M:%S')}
 
 ## Purpose
 
-R72 responds to the strongest reviewer attack on the R68 geometry-null result:
+This analysis responds to a robustness objection about the full-city low-intensity geometry-null result:
 the strict-geometry null might remain close to the original road graph because
 the accepted-swap intensity is low. The round therefore compares spatial-scale
-and strict-geometry nulls at matched swap-fraction targets on the 21-city R67
+and strict-geometry nulls at matched swap-fraction targets on the 21-city
 subset and reports mobility/fidelity diagnostics from the strict geometry
 ensemble.
 
@@ -501,7 +501,7 @@ mechanism candidate for the post-spatial residual.
   structure.
 """
     (OUT / "R72_report.md").write_text(report, encoding="utf-8")
-    (ROUND_DIR / "gate_report.md").write_text(report, encoding="utf-8")
+    (ROUND_DIR / "validation_report.md").write_text(report, encoding="utf-8")
 
 
 def parse_args() -> argparse.Namespace:
@@ -557,7 +557,7 @@ def main() -> None:
         "geometry_null_mobility_index_mean": float(mobility["null_mobility_index_mean"].mean()),
         "max_degree_drift": float(mobility["degree_max_abs_drift_max"].max()),
         "claim_boundary": (
-            "R72 supports a matched-intensity empirical defense on the R67 subset, "
+            "This analysis supports a matched-intensity empirical defense on the 21-city subset, "
             "not full mixing or a theorem."
         ),
     }
@@ -569,3 +569,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

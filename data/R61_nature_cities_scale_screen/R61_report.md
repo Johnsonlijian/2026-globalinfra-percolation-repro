@@ -1,4 +1,4 @@
-# R61 Nature Cities Scale Screen
+﻿# R61 Nature Cities Scale Screen
 
 Generated: 2026-06-03 19:58:26
 
@@ -79,3 +79,4 @@ cities show a persistent positive gap beyond degree-only theory."
 - `figures/Fig_R61_nature_cities_scale_screen.svg`
 - `figures/Fig_R61_nature_cities_scale_screen.png`
 - `figures/Fig_R61_nature_cities_scale_screen.tiff`
+

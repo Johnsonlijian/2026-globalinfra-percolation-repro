@@ -1,4 +1,4 @@
-# R67 Geometry-null Sensitivity Hardening
+﻿# R67 Geometry-null Sensitivity Hardening
 
 ## Purpose
 
@@ -42,7 +42,7 @@ stronger feasible swap fractions.
 
 ## Reviewer-facing Interpretation
 
-This result should be used as a hardening test, not as a universal full-planar ensemble. A hostile reviewer can no
+This result should be used as a hardening test, not as a universal full-planar ensemble. A critical reviewer can no
 longer say that the manuscript has only a one-replicate geometry pilot, because R67 reports replicate-level
 stability, stronger-swap feasibility, degree drift, length-bin drift, and structural mobility. However, it still does
 not close the full 71-city planar-null objection. The safe claim is that the strict geometry null absorbs part of the
@@ -54,3 +54,4 @@ gap but leaves a measurable residual under the tested perturbation range.
 - `data/R67_geometry_null_sensitivity/geometry_null_sensitivity_city_summary.csv`
 - `data/R67_geometry_null_sensitivity/geometry_null_sensitivity_fraction_summary.csv`
 - `figures/Fig_R67_geometry_null_sensitivity.svg|pdf|png|tiff`
+

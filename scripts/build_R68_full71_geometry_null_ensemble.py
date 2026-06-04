@@ -1,4 +1,4 @@
-"""R68: full 71-city strict geometry-null ensemble at low swap intensity.
+﻿"""R68: full 71-city strict geometry-null ensemble at low swap intensity.
 
 R67 showed that strict non-crossing geometry nulls collapse most of the
 post-spatial residual in a 21-city sensitivity subset. R68 extends the strict
@@ -36,7 +36,7 @@ R64_SPATIAL = ROOT / "data" / "R64_71city_spatial_null_screen" / "spatial_null_s
 R67_REPS = ROOT / "data" / "R67_geometry_null_sensitivity" / "geometry_null_sensitivity_replicates.csv"
 
 OUT = ROOT / "data" / "R68_full71_geometry_null_ensemble"
-ROUND_DIR = ROOT / "rounds" / "R68_full71_geometry_null_ensemble"
+ROUND_DIR = ROOT / "validation_reports" / "R68_full71_geometry_null_ensemble"
 FIG_BASE = ROOT / "figures" / "Fig_R68_full71_geometry_null_ensemble"
 
 REPLICATES_CSV = OUT / "full71_geometry_null_replicates.csv"
@@ -44,7 +44,7 @@ CITY_SUMMARY_CSV = OUT / "full71_geometry_null_city_summary.csv"
 MACRO_SUMMARY_CSV = OUT / "full71_geometry_null_macro_region_summary.csv"
 SUMMARY_JSON = OUT / "R68_summary.json"
 REPORT_MD = OUT / "R68_report.md"
-GATE_REPORT_MD = ROUND_DIR / "gate_report.md"
+GATE_REPORT_MD = ROUND_DIR / "validation_report.md"
 CLOSEOUT_MD = ROUND_DIR / "substantive_increment_closeout.md"
 THEORY_MD = ROUND_DIR / "bounded_geometry_mechanism_note.md"
 
@@ -728,3 +728,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

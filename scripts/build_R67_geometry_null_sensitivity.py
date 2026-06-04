@@ -1,11 +1,11 @@
-"""R67: sensitivity-tested strict geometry-null evidence.
+﻿"""R67: sensitivity-tested strict geometry-null evidence.
 
 This round hardens the R62 strict non-crossing geometry-null pilot by running
 multiple replicates and swap fractions on the same 21-city subset. The goal is
 not to claim a full 71-city planar null ensemble. It is to quantify how much of
 the CEBH-to-road percolation gap remains after a stricter, spatially embedded
 degree-preserving perturbation, and to report the null mobility diagnostics
-needed for hostile reviewer inspection.
+needed for critical reviewer inspection.
 """
 
 from __future__ import annotations
@@ -33,7 +33,7 @@ import build_R60_expansion_geometry_nulls as r60  # noqa: E402
 R62_SUBSET = ROOT / "data" / "R62_urban_form_mechanism" / "geometry_null_subset_registry.csv"
 R64_SPATIAL = ROOT / "data" / "R64_71city_spatial_null_screen" / "spatial_null_screen_summary.csv"
 OUT = ROOT / "data" / "R67_geometry_null_sensitivity"
-ROUND_DIR = ROOT / "rounds" / "R67_geometry_null_sensitivity"
+ROUND_DIR = ROOT / "validation_reports" / "R67_geometry_null_sensitivity"
 FIG_BASE = ROOT / "figures" / "Fig_R67_geometry_null_sensitivity"
 
 REPLICATES_CSV = OUT / "geometry_null_sensitivity_replicates.csv"
@@ -41,7 +41,7 @@ CITY_SUMMARY_CSV = OUT / "geometry_null_sensitivity_city_summary.csv"
 FRACTION_SUMMARY_CSV = OUT / "geometry_null_sensitivity_fraction_summary.csv"
 SUMMARY_JSON = OUT / "R67_summary.json"
 REPORT_MD = OUT / "R67_report.md"
-GATE_REPORT_MD = ROUND_DIR / "gate_report.md"
+GATE_REPORT_MD = ROUND_DIR / "validation_report.md"
 CLOSEOUT_MD = ROUND_DIR / "substantive_increment_closeout.md"
 
 METRIC_KEYS = [
@@ -860,7 +860,7 @@ stronger feasible swap fractions.
 
 ## Reviewer-facing Interpretation
 
-This result should be used as a hardening test, not as a universal full-planar ensemble. A hostile reviewer can no
+This result should be used as a hardening test, not as a universal full-planar ensemble. A critical reviewer can no
 longer say that the manuscript has only a one-replicate geometry pilot, because R67 reports replicate-level
 stability, stronger-swap feasibility, degree drift, length-bin drift, and structural mobility. However, it still does
 not close the full 71-city planar-null objection. The safe claim is that the strict geometry null absorbs part of the
@@ -881,7 +881,7 @@ gap but leaves a measurable residual under the tested perturbation range.
 
 **R67 evidence gate: PASS with bounded claims.**
 
-The requested increment was to strengthen the geometry-null evidence against the hostile-review objection that R62 was
+The requested increment was to strengthen the geometry-null evidence against the robustness-review objection that R62 was
 only a small pilot. R67 completes a replicate-level, swap-fraction sensitivity layer on the 21-city strict
 non-crossing subset.
 
@@ -976,3 +976,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

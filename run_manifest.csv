@@ -9,3 +9,5 @@ R65,public covariate controls,data/R65_public_covariates_and_controls,GHSL/WDI m
 R67,geometry null sensitivity,data/R67_geometry_null_sensitivity,21-city multi-replicate strict non-crossing geometry-null sensitivity,completed
 R68,full 71-city geometry null ensemble,data/R68_full71_geometry_null_ensemble,one low-intensity strict geometry-null record per 71-city window,completed
 R72,matched-intensity geometry defense,data/R72_geometry_defense,spatial vs strict-geometry nulls at matched accepted-swap targets,completed
+R39,threshold estimator sensitivity,data/R39_threshold_sensitivity,eight-city fine-grid and rank-order threshold estimator audit,completed
+R73,urban-form nested cross-validation,data/R73_urban_form_nested_cv,nested model ladder and leave-region-out validation for road-form mechanism signal,completed

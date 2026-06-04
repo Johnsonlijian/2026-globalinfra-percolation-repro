@@ -1,4 +1,4 @@
-"""R56 degree-preserving, spatial-scale-constrained null models.
+﻿"""R56 degree-preserving, spatial-scale-constrained null models.
 
 This round tests whether the R41 degree-preserving null gap changes after
 adding a real spatial constraint. The null keeps the road degree sequence
@@ -823,3 +823,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

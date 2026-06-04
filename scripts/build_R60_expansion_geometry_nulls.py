@@ -1,4 +1,4 @@
-"""R60 expanded road evidence and strict geometry-preserving null pilots.
+﻿"""R60 expanded road evidence and strict geometry-preserving null pilots.
 
 This round addresses the two hardest remaining reviewer risks:
 
@@ -40,7 +40,7 @@ import build_R56_spatial_length_constrained_nulls as r56  # noqa: E402
 
 OUT = ROOT / "data" / "R60_expansion_geometry_nulls"
 FIG_BASE = ROOT / "figures" / "Fig_R60_expansion_geometry_nulls"
-ROUND_DIR = ROOT / "rounds" / "R60_expansion_geometry_nulls"
+ROUND_DIR = ROOT / "validation_reports" / "R60_expansion_geometry_nulls"
 R56_SUMMARY = ROOT / "data" / "R56_spatial_length_constrained_nulls" / "spatial_length_constrained_nulls_city_summary.csv"
 R24_SUMMARY = ROOT / "data" / "W7_nc10_R24_local_pbf_recovery_matrix" / "nc10_road_gap_summary.csv"
 
@@ -701,7 +701,7 @@ def write_report(expanded: pd.DataFrame, geom: pd.DataFrame, reps: pd.DataFrame)
         "mechanistic probe, not as a completed global planar-null theory.",
     ]
     (OUT / "R60_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
-    (ROUND_DIR / "gate_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
+    (ROUND_DIR / "validation_report.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     return summary
 
 
@@ -716,3 +716,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

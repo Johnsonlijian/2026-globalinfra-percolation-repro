@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "round": "R73_urban_form_nested_cv",
+  "n_cities": 71,
+  "targets": [
+    "road_gap",
+    "road_minus_spatial"
+  ],
+  "road_gap_m3_cv5_r2": 0.40971883552604615,
+  "road_gap_m3_leave_region_out_r2": 0.3961184751953727,
+  "post_spatial_m3_cv5_r2": 0.20812173259471967,
+  "post_spatial_m3_leave_region_out_r2": 0.2960063021529121,
+  "post_spatial_m4_cv5_r2": 0.05980399945412729,
+  "post_spatial_m4_leave_region_out_r2": 0.2932422848681261,
+  "claim_boundary": "R73 is a descriptive predictive screen. It supports a road-form mechanism signal under nested and regional holdout tests, not causal inference."
+}

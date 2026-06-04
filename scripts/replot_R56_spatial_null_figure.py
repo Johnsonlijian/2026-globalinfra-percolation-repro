@@ -1,4 +1,4 @@
-"""Recreate the public R56 spatial-null figure from derived source data."""
+﻿"""Recreate the public R56 spatial-null figure from derived source data."""
 
 from __future__ import annotations
 
@@ -133,3 +133,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
+

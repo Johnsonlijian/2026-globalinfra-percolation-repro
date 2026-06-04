@@ -1002,3 +1002,128 @@ R72_R72_summary.json,geometry_attempts_per_accepted_swap_mean,float,1,1,547.2587
 R72_R72_summary.json,geometry_null_mobility_index_mean,float,1,1,0.00691830721158937,Strict non-crossing geometry-null metric or diagnostic.
 R72_R72_summary.json,max_degree_drift,float,1,1,0.0,Degree-sequence or degree-composition metric.
 R72_R72_summary.json,claim_boundary,str,1,1,"R72 supports a matched-intensity empirical defense on the R67 subset, not full mixing or a theorem.",Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,city,text,8,8,Berlin,City or urban-window identifier.
+R39_threshold_sensitivity_source_data.csv,graph_cache_file,text,8,8,cache\private_graphs\berlin_germany__road.pkl,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,n_nodes,numeric,8,8,28407,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,n_edges,numeric,8,8,42452,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,pc_cebh,numeric,8,8,0.444985,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,pc_w7_coarse,numeric,8,8,0.675,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,pc_fine_grid,numeric,8,8,0.655,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,pc_fine_grid_ci_low,numeric,8,8,0.645,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,pc_fine_grid_ci_high,numeric,8,8,0.685,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,pc_rank_order,numeric,8,8,0.665,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,pc_rank_order_ci_low,numeric,8,8,0.635,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,pc_rank_order_ci_high,numeric,8,8,0.675,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,delta_w7_coarse,numeric,8,8,0.230015,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,delta_fine_grid,numeric,8,8,0.210015,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,delta_rank_order,numeric,8,8,0.220015,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,fine_shift_from_w7,numeric,8,8,-0.02,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,estimator_spread,numeric,8,8,0.01,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,p_grid_min,numeric,8,8,0.575,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,p_grid_max,numeric,8,8,0.775,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,p_grid_step,numeric,8,8,0.01,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,n_trial_fine_grid,numeric,8,8,80,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,n_perm_rank_order,numeric,8,8,40,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,fine_boundary_hit,numeric,8,8,False,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,rank_boundary_hit,numeric,8,8,False,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,pass_shift_gate,numeric,8,8,True,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,pass_spread_gate,numeric,8,8,True,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,pass_window_gate,numeric,8,8,True,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,status,text,8,8,pass,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,simulation_seconds,numeric,8,8,7.80767,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_sensitivity_source_data.csv,notes,text,8,8,all R39 local sensitivity gates passed,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_curves_source_data.csv,city,text,336,336,Berlin,City or urban-window identifier.
+R39_threshold_curves_source_data.csv,estimator,text,336,336,fine_grid,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_curves_source_data.csv,p,numeric,336,336,0.575,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_curves_source_data.csv,lcc_mean,numeric,336,336,0.037763,Project-derived variable; see round report and manuscript Methods for definition.
+R39_threshold_curves_source_data.csv,lcc_sd,numeric,336,336,0.014823,Project-derived variable; see round report and manuscript Methods for definition.
+R73_nested_model_summary.csv,target,text,10,10,road_gap,Prediction target: road_gap or road_minus_spatial.
+R73_nested_model_summary.csv,model_group,text,10,10,M0_size,Nested model family identifier.
+R73_nested_model_summary.csv,model_label,text,10,10,M0 size,Human-readable nested model label.
+R73_nested_model_summary.csv,n,numeric,10,10,71,Number of city windows used in the model.
+R73_nested_model_summary.csv,n_features_used,numeric,10,10,4,Number of predictors included in the model family.
+R73_nested_model_summary.csv,features_used,text,10,10,n_nodes;n_edges;node_density_per_km2;edge_density_per_km2,Semicolon-separated predictor names in the fitted model family.
+R73_nested_model_summary.csv,cv5_r2,numeric,10,10,0.0798157243414321,Five-fold cross-validated R-squared.
+R73_nested_model_summary.csv,cv5_mae,numeric,10,10,0.0183196542171944,Five-fold cross-validated mean absolute error.
+R73_nested_model_summary.csv,cv5_spearman_r,numeric,10,10,0.3947686116700201,Spearman correlation between observed and five-fold predictions.
+R73_nested_model_summary.csv,cv5_spearman_p,numeric,10,10,0.0006572193808073,P value for cv5_spearman_r.
+R73_nested_model_summary.csv,leave_region_out_r2,numeric,10,10,0.0568324863523594,Leave-region-out cross-validated R-squared.
+R73_nested_model_summary.csv,leave_region_out_mae,numeric,10,10,0.0187295583575047,Leave-region-out mean absolute error.
+R73_nested_model_summary.csv,leave_region_out_spearman_r,numeric,10,10,0.3215962441314554,Spearman correlation between observed and leave-region-out predictions.
+R73_nested_model_summary.csv,leave_region_out_spearman_p,numeric,10,10,0.0062422611908526,P value for leave_region_out_spearman_r.
+R73_nested_model_summary.csv,in_sample_r2,numeric,10,10,0.2449479822518337,In-sample R-squared after fitting the full 71-city matrix.
+R73_nested_model_summary.csv,in_sample_mae,numeric,10,10,0.0169195100542793,In-sample mean absolute error after fitting the full 71-city matrix.
+R73_nested_model_summary.csv,alpha,numeric,10,10,0.1501310728908172,Selected Ridge regularization strength.
+R73_nested_model_predictions.csv,city,text,710,710,Lisbon,City or urban-window identifier.
+R73_nested_model_predictions.csv,country,text,710,710,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
+R73_nested_model_predictions.csv,macro_region,text,710,710,Europe,Macro-region label used for leave-region-out validation.
+R73_nested_model_predictions.csv,target,text,710,710,road_gap,Prediction target: road_gap or road_minus_spatial.
+R73_nested_model_predictions.csv,model_group,text,710,710,M0_size,Nested model family identifier.
+R73_nested_model_predictions.csv,observed,numeric,710,710,0.2544838513923538,Observed target value.
+R73_nested_model_predictions.csv,predicted_cv5,numeric,710,710,0.2196210893078216,Project-derived variable; see round report and manuscript Methods for definition.
+R73_nested_model_predictions.csv,predicted_leave_region_out,numeric,710,710,0.2203467591134906,Project-derived variable; see round report and manuscript Methods for definition.
+R73_nested_model_predictions.csv,predicted_fit,numeric,710,710,0.2206206105312326,Project-derived variable; see round report and manuscript Methods for definition.
+R73_leave_region_out_region_summary.csv,target,text,70,70,road_gap,Prediction target: road_gap or road_minus_spatial.
+R73_leave_region_out_region_summary.csv,model_group,text,70,70,M0_size,Nested model family identifier.
+R73_leave_region_out_region_summary.csv,macro_region,text,70,70,Africa,Macro-region label used for leave-region-out validation.
+R73_leave_region_out_region_summary.csv,n_region,numeric,70,70,12,Project-derived variable; see round report and manuscript Methods for definition.
+R73_leave_region_out_region_summary.csv,leave_region_out_r2_region,numeric,70,70,-0.4333819915655723,Project-derived variable; see round report and manuscript Methods for definition.
+R73_leave_region_out_region_summary.csv,leave_region_out_mae_region,numeric,70,70,0.0234375187846469,Project-derived variable; see round report and manuscript Methods for definition.
+R73_leave_region_out_region_summary.csv,leave_region_out_spearman_r_region,numeric,70,70,0.4125874125874127,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_pca_scores.csv,city,text,71,71,Lisbon,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_urban_form_pca_scores.csv,country,text,71,71,Portugal,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_urban_form_pca_scores.csv,macro_region,text,71,71,Europe,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_urban_form_pca_scores.csv,road_gap,numeric,71,71,0.2544838513923538,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_urban_form_pca_scores.csv,n_edges,numeric,71,71,36745,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_urban_form_pca_scores.csv,morph_pc1,numeric,71,71,0.6950054427456636,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_urban_form_pca_scores.csv,morph_pc2,numeric,71,71,-1.2945308818555787,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,city,text,21,21,Amsterdam,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,country,text,21,21,Netherlands,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,macro_region,text,21,21,Europe,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,n_nodes,numeric,21,21,23201,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,n_edges,numeric,21,21,32887,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,pc_cebh,numeric,21,21,0.466680857102313,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,pc_road,numeric,21,21,0.7,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,road_gap,numeric,21,21,0.2333191428976869,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,pc_geometry_null_mean,numeric,21,21,0.675,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,geometry_null_gap_mean,numeric,21,21,0.208319142897687,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,road_minus_geometry_mean,numeric,21,21,0.0249999999999999,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,accepted_swaps_per_edge_mean,numeric,21,21,0.0049867728889834,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,acceptance_rate_mean,numeric,21,21,0.002125012957396,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,length_bin_tvd_mean,numeric,21,21,0.0,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,degree_max_abs_drift_max,numeric,21,21,0,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,n_replicates_pass,numeric,21,21,1,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_summary.csv,n_replicates_total,numeric,21,21,1,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,city,text,21,21,Amsterdam,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,country,text,21,21,Netherlands,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,macro_region,text,21,21,Europe,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,replicate,numeric,21,21,0,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,n_nodes,numeric,21,21,23201,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,n_edges,numeric,21,21,32887,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,pc_cebh,numeric,21,21,0.466680857102313,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,pc_road,numeric,21,21,0.7,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,road_gap,numeric,21,21,0.2333191428976869,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,pc_geometry_null,numeric,21,21,0.675,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,pc_geometry_null_ci_low,numeric,21,21,0.65,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,pc_geometry_null_ci_high,numeric,21,21,0.675,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,geometry_null_gap,numeric,21,21,0.208319142897687,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,road_minus_geometry,numeric,21,21,0.0249999999999999,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,threshold_boundary_hit,numeric,21,21,False,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,runtime_seconds,numeric,21,21,5.321834564208984,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,accepted_swaps,numeric,21,21,164,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,attempted_swaps,numeric,21,21,77176,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,acceptance_rate,numeric,21,21,0.002125012957396,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,accepted_swaps_per_edge,numeric,21,21,0.0049867728889834,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,target_swaps,numeric,21,21,164,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,target_swap_fraction,numeric,21,21,0.005,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,topology_rejects,numeric,21,21,3625,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,length_rejects,numeric,21,21,70691,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,crossing_rejects,numeric,21,21,2696,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,degree_max_abs_drift,numeric,21,21,0,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,length_bin_tvd,numeric,21,21,0.0,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,length_mean_ratio,numeric,21,21,1.0055847496836623,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,length_median_ratio,numeric,21,21,1.000324659442596,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,stale_index_guard_calls,numeric,21,21,478,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,max_attempts,numeric,21,21,147600,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,status,text,21,21,pass,Project-derived variable; see R62 report and manuscript Methods for definition.
+R62_geometry_null_pilot_replicates.csv,notes,text,21,21,strict non-crossing degree-preserving geometry-null pilot,Project-derived variable; see R62 report and manuscript Methods for definition.

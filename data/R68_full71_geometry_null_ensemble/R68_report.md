@@ -1,4 +1,4 @@
-# R68 Full 71-city Geometry-null Ensemble
+﻿# R68 Full 71-city Geometry-null Ensemble
 
 ## Purpose
 
@@ -56,3 +56,4 @@ directly answers the reviewer objection that the geometry-null result was only a
 strict local non-crossing geometry sharply reduces the residual left by edge-scale controls across the full city-window
 matrix. The unsafe claim remains forbidden: R68 is not a high-intensity multi-replicate planar ensemble, not an
 analytical proof and not a causal urban-design law.
+

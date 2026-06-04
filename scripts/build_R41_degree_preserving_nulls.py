@@ -1,4 +1,4 @@
-"""R41 degree-sequence null models for the road-layer offset mechanism.
+﻿"""R41 degree-sequence null models for the road-layer offset mechanism.
 
 This round asks whether the road-layer offset is mainly a degree-distribution
 effect or whether spatial road organization adds a threshold penalty beyond a
@@ -671,3 +671,4 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+

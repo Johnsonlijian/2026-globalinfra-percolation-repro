@@ -1,4 +1,4 @@
-# R56 spatial-length constrained null models
+﻿# R56 spatial-length constrained null models
 
 ## Purpose
 
@@ -43,3 +43,4 @@ The safe claim is that degree sequence alone is insufficient and that adding a s
 - The spatial constraint is based on node-to-node chord length because rewired null edges have no road geometry.
 - The algorithm preserves degree exactly; it preserves the empirical length-bin distribution approximately.
 - The result should not be phrased as a full planar constrained null or as proof of a mechanism.
+

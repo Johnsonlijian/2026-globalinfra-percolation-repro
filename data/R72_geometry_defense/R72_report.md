@@ -1,13 +1,13 @@
-# R72 Geometry-Null Defense
+﻿# R72 Geometry-Null Defense
 
-Generated: 2026-06-04 19:26:38
+Generated: 2026-06-04 20:05:51
 
 ## Purpose
 
-R72 responds to the strongest reviewer attack on the R68 geometry-null result:
+This analysis responds to a robustness objection about the full-city low-intensity geometry-null result:
 the strict-geometry null might remain close to the original road graph because
 the accepted-swap intensity is low. The round therefore compares spatial-scale
-and strict-geometry nulls at matched swap-fraction targets on the 21-city R67
+and strict-geometry nulls at matched swap-fraction targets on the 21-city
 subset and reports mobility/fidelity diagnostics from the strict geometry
 ensemble.
 
@@ -40,7 +40,7 @@ ensemble.
   "geometry_attempts_per_accepted_swap_mean": 547.2587301461137,
   "geometry_null_mobility_index_mean": 0.00691830721158937,
   "max_degree_drift": 0.0,
-  "claim_boundary": "R72 supports a matched-intensity empirical defense on the R67 subset, not full mixing or a theorem."
+  "claim_boundary": "This analysis supports a matched-intensity empirical defense on the 21-city subset, not full mixing or a theorem."
 }
 ```
 
@@ -92,3 +92,4 @@ mechanism candidate for the post-spatial residual.
 - No causal urban-design rule.
 - No isolation of planarity alone from degree, length scale, angular and block
   structure.
+

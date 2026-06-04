@@ -1,4 +1,4 @@
-# Reproducible Runbook
+﻿# Reproducible Runbook
 
 ## Environment
 
@@ -8,7 +8,7 @@ Use Python 3.11 or newer.
 pip install -r requirements.txt
 ```
 
-## Recreate R70 Fig. 1 Null-ladder Schematic
+## Recreate current Fig. 1 Null-ladder Schematic
 
 ```bash
 python scripts/fig1_R70_null_ladder_schematic.py
@@ -184,3 +184,4 @@ python scripts/build_R72_geometry_defense.py --force
 Interpret R72 as a matched-intensity empirical defense on the 21-city R67
 subset. It weakens the low-perturbation artifact objection, but it is not a
 proof of full Markov-chain mixing or a high-intensity all-71 planar ensemble.
+

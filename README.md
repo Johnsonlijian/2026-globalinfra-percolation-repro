@@ -1,4 +1,4 @@
-# 2026 Global Infrastructure Percolation Reproducibility Package
+﻿# 2026 Global Infrastructure Percolation Reproducibility Package
 
 This repository contains public, non-sensitive materials for reproducing the
 derived evidence behind the road-network percolation null-model analysis.
@@ -33,13 +33,19 @@ road-minus-spatial residual of 0.0965 and mean road-minus-geometry residual of
 coverage, not an analytical theorem or high-intensity multi-replicate planar
 ensemble.
 
-R72 adds the matched-intensity defense requested by the hostile-review round.
-On the 21-city R67 subset, spatial-scale and strict non-crossing geometry nulls
+R72 adds the matched-intensity defense requested by the reviewer-objection audit.
+On the 21-city sensitivity subset, spatial-scale and strict non-crossing geometry nulls
 are compared at the same accepted-swap targets. Spatial-scale nulls retain
 positive residuals at 0.005, 0.01 and 0.02 accepted swaps per edge, whereas
 strict-geometry residuals remain near zero at the tested estimator resolution.
 This weakens the low-perturbation artifact objection but does not prove full
 Markov-chain mixing.
+
+R73 adds a nested urban-form validation layer. It compares size/density,
+degree-composition, edge-scale, embedded street-form and public-control model
+families under five-fold and leave-region-out cross-validation. Embedded
+street form remains the strongest descriptive mechanism signal, including for
+the post-spatial residual; this is predictive evidence, not causal inference.
 
 ## What Is Included
 
@@ -58,8 +64,13 @@ Markov-chain mixing.
   derived tables; a full rerun requires local cached OSMnx graph objects.
 - `scripts/build_R68_full71_geometry_null_ensemble.py`: R68 full-city
   low-intensity geometry-null script. With `--skip-compute`, it recreates R68
-  summaries and figures from included derived tables; a full rerun requires
-  local cached OSMnx graph objects.
+  summaries and figures from included derived tables.
+- `scripts/build_R72_geometry_defense.py`: matched-intensity spatial-versus-
+  geometry defense on the 21-city sensitivity subset.
+- `scripts/build_R73_urban_form_nested_cv.py`: nested urban-form model ladder
+  and leave-region-out validation script.
+- `scripts/build_R62_urban_form_mechanism.py`: R62 covariate and Fig.3 source
+  workflow; full geometry-pilot reruns require local cached graph objects.
 - `scripts/build_R72_geometry_defense.py`: R72 matched-intensity spatial vs
   strict-geometry defense and Fig. 4 script. Without `--force`, it recreates
   summaries and figures from included derived tables; with `--force`, it reruns
@@ -88,6 +99,8 @@ Markov-chain mixing.
   geometry-null replicate, city-summary, macro-region and report tables.
 - `data/R72_geometry_defense/`: derived R72 matched-intensity spatial-null
   replicates, geometry-vs-spatial city summaries, mobility summaries and report.
+- `data/R73_urban_form_nested_cv/`: derived nested urban-form model summaries,
+  city-level predictions, leave-region-out diagnostics and report.
 - `source_data/`: submission-facing source-data bundle, column dictionary,
   claim-to-table map and run manifest. It contains derived project tables only.
 - `figures/Fig_R56_spatial_length_constrained_nulls.*`: exported figure.
@@ -99,7 +112,9 @@ Markov-chain mixing.
   geometry-null figure.
 - `figures/Fig_R72_geometry_null_defense.*`: exported Fig. 4 R72
   matched-intensity geometry-null defense figure.
-- `figures/Fig_R70_null_ladder_schematic.*`: exported R70 Fig. 1 schematic.
+- `figures/Fig_R70_null_ladder_schematic.*`: exported current Fig. 1 schematic.
+- `figures/Fig_R73_urban_form_nested_cv.*`: exported supplementary nested
+  urban-form validation figure.
 
 ## What Is Not Included
 
@@ -152,7 +167,8 @@ per city. It answers the low-intensity coverage objection, but it is not a
 high-intensity multi-replicate planar-null theorem and does not establish a
 causal urban-design rule.
 
-R72 adds a matched-intensity empirical defense on the 21-city R67 subset. It
+R72 adds a matched-intensity empirical defense on the 21-city 21-city subset. It
 shows that the spatial-scale null and strict-geometry null behave differently
 under the same accepted-swap targets, but it does not prove full mixing or
 isolate planarity alone from degree, length scale, angular and block structure.
+
