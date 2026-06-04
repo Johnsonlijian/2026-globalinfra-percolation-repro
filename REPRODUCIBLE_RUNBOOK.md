@@ -100,3 +100,39 @@ python scripts/build_R67_geometry_null_sensitivity.py --force
 Interpret R67 as a 21-city strict non-crossing sensitivity test. It is stronger
 than a one-replicate pilot, but it is not a full 71-city planar-null ensemble
 and does not prove a causal urban-design law.
+
+## Recreate R68 Full-city Geometry-null Figure
+
+The public package includes the derived R68 replicate, city-summary and
+macro-region tables. To rebuild the R68 summaries and figure without raw graph
+caches:
+
+```bash
+python scripts/build_R68_full71_geometry_null_ensemble.py --skip-compute
+```
+
+Expected outputs:
+
+- `data/R68_full71_geometry_null_ensemble/full71_geometry_null_city_summary.csv`
+- `data/R68_full71_geometry_null_ensemble/full71_geometry_null_macro_region_summary.csv`
+- `data/R68_full71_geometry_null_ensemble/R68_summary.json`
+- `figures/Fig_R68_full71_geometry_null_ensemble.png`
+- `figures/Fig_R68_full71_geometry_null_ensemble.svg`
+- `figures/Fig_R68_full71_geometry_null_ensemble.pdf`
+- `figures/Fig_R68_full71_geometry_null_ensemble.tiff`
+
+## Re-run R68 From Graph Caches
+
+The full R68 geometry-null regeneration requires cached OSMnx road graph
+objects with node longitude/latitude fields. Those graph caches are not
+redistributed. If local caches are available in the expected project layout,
+run:
+
+```bash
+python scripts/build_R68_full71_geometry_null_ensemble.py --force
+```
+
+Interpret R68 as full 71-city low-intensity strict geometry-null coverage with
+one replicate per city. It answers the low-intensity coverage objection, but it
+is not a high-intensity multi-replicate planar-null theorem and does not prove
+a causal urban-design rule.

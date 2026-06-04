@@ -1,0 +1,26 @@
+{
+  "status": "pass",
+  "round": "R68_full71_geometry_null_ensemble",
+  "expected_cities": 71,
+  "passed_cities": 71,
+  "n_replicates_total": 71,
+  "n_replicates_pass": 71,
+  "n_replicates_fail": 0,
+  "swap_fractions": [
+    0.005
+  ],
+  "road_minus_geometry_mean": 0.0014084507042253476,
+  "road_minus_geometry_ci95_low": -0.0027487938167931316,
+  "road_minus_geometry_ci95_high": 0.005565695225243827,
+  "remaining_fraction_after_geometry_mean": 0.004172699905853008,
+  "remaining_fraction_after_geometry_ci95_low": -0.014092429217534605,
+  "remaining_fraction_after_geometry_ci95_high": 0.022437829029240623,
+  "positive_residual_city_share": 0.18309859154929578,
+  "road_minus_spatial_mean": 0.09647887323943655,
+  "mean_residual_reduction_vs_spatial": 0.09507042253521121,
+  "max_degree_drift": 0.0,
+  "mean_length_bin_tvd": 0.0,
+  "mean_accepted_swaps_per_edge": 0.004999784178997895,
+  "reused_r67_records": 21,
+  "claim_boundary": "R68 is full 71-city strict non-crossing geometry-null coverage at low accepted-swap intensity and one replicate per city. It is not a full high-intensity multi-replicate planar-null theorem."
+}

@@ -4,8 +4,11 @@ OSMnx,https://osmnx.readthedocs.io,Graph extraction software,Users can recreate 
 Geofabrik extracts,https://download.geofabrik.de,Diagnostic local-PBF source mentioned in manuscript,Raw PBF files are not redistributed.
 R41 derived source tables,data/R41_degree_preserving_nulls,Included derived degree-null evidence,Derived tables only.
 R56 derived source tables,data/R56_spatial_length_constrained_nulls,Included derived spatial-null evidence,Derived tables only.
+R62 urban-form derived table,data/R62_urban_form_mechanism,Included derived 71-city urban-form covariates and geometry-subset registry,Derived tables only.
 R63 integrated high-order table,data/R63_high_order_external_covariates,Included derived high-order and candidate external metadata inputs for R65,Derived table only.
 R64 all-city spatial-null summary,data/R64_71city_spatial_null_screen,Included derived all-city spatial-null residual input for R65,Derived table only.
 GHSL UCDB R2024A,https://human-settlement.emergency.copernicus.eu/ghs_ucdb_2024.php,Official public urban-centre covariate source,Raw GHSL zip packages are downloaded by script but not redistributed in this package.
 World Bank WDI API,https://api.worldbank.org/v2/,Official public country-control source,Downloaded WDI outputs are reduced to derived project country controls.
 R65 public-control derived tables,data/R65_public_covariates_and_controls,Included derived GHSL/WDI match and model-control evidence,Raw GHSL zip packages and WDI all-year cache are not redistributed.
+R67 geometry-null sensitivity tables,data/R67_geometry_null_sensitivity,Included derived 21-city geometry-null sensitivity evidence,Derived tables only; raw graph caches are not redistributed.
+R68 full-city geometry-null tables,data/R68_full71_geometry_null_ensemble,Included derived full 71-city low-intensity geometry-null evidence,Derived tables only; raw graph caches are not redistributed.

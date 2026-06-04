@@ -25,6 +25,14 @@ residual is 0.0056 at 0.005 accepted swaps per edge and approximately zero in
 the feasible 0.02-swap subset. This is a sensitivity-tested subset, not a full
 71-city planar-null ensemble.
 
+R68 extends low-intensity strict non-crossing geometry-null coverage to the
+full 71-city standardized-window matrix. The included derived tables record
+71/71 passing one-replicate records, maximum degree drift of zero, mean
+road-minus-spatial residual of 0.0965 and mean road-minus-geometry residual of
+0.0014 (95% CI -0.0027 to 0.0056). R68 is full-city low-intensity empirical
+coverage, not an analytical theorem or high-intensity multi-replicate planar
+ensemble.
+
 ## What Is Included
 
 - `scripts/build_R41_degree_preserving_nulls.py`: full R41 analysis script.
@@ -40,9 +48,15 @@ the feasible 0.02-swap subset. This is a sensitivity-tested subset, not a full
 - `scripts/build_R67_geometry_null_sensitivity.py`: R67 sensitivity script.
   With `--skip-compute`, it recreates R67 summaries and figures from included
   derived tables; a full rerun requires local cached OSMnx graph objects.
+- `scripts/build_R68_full71_geometry_null_ensemble.py`: R68 full-city
+  low-intensity geometry-null script. With `--skip-compute`, it recreates R68
+  summaries and figures from included derived tables; a full rerun requires
+  local cached OSMnx graph objects.
 - `data/R41_degree_preserving_nulls/`: derived degree-null source tables.
 - `data/R56_spatial_length_constrained_nulls/`: derived spatial-null source
   tables and report.
+- `data/R62_urban_form_mechanism/`: derived 21-city geometry-subset registry
+  and 71-city urban-form covariate table required by R67/R68 replotting.
 - `data/R63_high_order_external_covariates/`: derived high-order 71-city input
   table used by R65.
 - `data/R64_71city_spatial_null_screen/`: derived all-city spatial-null input
@@ -52,11 +66,15 @@ the feasible 0.02-swap subset. This is a sensitivity-tested subset, not a full
   redistributed.
 - `data/R67_geometry_null_sensitivity/`: derived R67 replicate, city-summary,
   fraction-summary and report tables.
+- `data/R68_full71_geometry_null_ensemble/`: derived R68 full-city
+  geometry-null replicate, city-summary, macro-region and report tables.
 - `figures/Fig_R56_spatial_length_constrained_nulls.*`: exported figure.
 - `figures/Fig_R65_public_covariate_controls.*`: exported R65 public-control
   figure.
 - `figures/Fig_R67_geometry_null_sensitivity.*`: exported R67 null-ladder and
   geometry-null sensitivity figure.
+- `figures/Fig_R68_full71_geometry_null_ensemble.*`: exported R68 full-city
+  geometry-null figure.
 
 ## What Is Not Included
 
@@ -75,6 +93,7 @@ pip install -r requirements.txt
 python scripts/replot_R56_spatial_null_figure.py
 python scripts/build_R65_public_covariates_and_controls.py
 python scripts/build_R67_geometry_null_sensitivity.py --skip-compute
+python scripts/build_R68_full71_geometry_null_ensemble.py --skip-compute
 ```
 
 The full R56 null-model regeneration requires local graph caches or a
@@ -83,6 +102,9 @@ recreate the submitted R56 evidence figure. R65 can be recreated from the
 included R63/R64 derived inputs plus official GHSL/WDI downloads.
 R67 can be redrawn from included derived tables with `--skip-compute`; the full
 geometry-null regeneration requires local cached OSMnx graph objects.
+R68 can also be redrawn from included derived tables with `--skip-compute`; the
+full 71-city geometry-null regeneration requires local cached OSMnx graph
+objects and is computationally heavier.
 
 ## Boundary
 
@@ -95,3 +117,8 @@ It preserves degree sequence and rejects replacement edges that cross
 non-adjacent existing segments, but it still does not preserve all road
 semantics, planning history, directed traffic rules or block structure. It is
 not a complete 71-city planar-null ensemble.
+
+R68 adds full 71-city low-intensity geometry-null coverage with one replicate
+per city. It answers the low-intensity coverage objection, but it is not a
+high-intensity multi-replicate planar-null theorem and does not establish a
+causal urban-design rule.
