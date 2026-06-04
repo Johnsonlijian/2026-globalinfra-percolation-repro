@@ -52,6 +52,8 @@ ensemble.
   low-intensity geometry-null script. With `--skip-compute`, it recreates R68
   summaries and figures from included derived tables; a full rerun requires
   local cached OSMnx graph objects.
+- `scripts/fig1_R70_null_ladder_schematic.py`: code-generated schematic for
+  the current Fig. 1 null-ladder framing.
 - `data/R41_degree_preserving_nulls/`: derived degree-null source tables.
 - `data/R56_spatial_length_constrained_nulls/`: derived spatial-null source
   tables and report.
@@ -75,6 +77,7 @@ ensemble.
   geometry-null sensitivity figure.
 - `figures/Fig_R68_full71_geometry_null_ensemble.*`: exported R68 full-city
   geometry-null figure.
+- `figures/Fig_R70_null_ladder_schematic.*`: exported R70 Fig. 1 schematic.
 
 ## What Is Not Included
 
@@ -94,6 +97,7 @@ python scripts/replot_R56_spatial_null_figure.py
 python scripts/build_R65_public_covariates_and_controls.py
 python scripts/build_R67_geometry_null_sensitivity.py --skip-compute
 python scripts/build_R68_full71_geometry_null_ensemble.py --skip-compute
+python scripts/fig1_R70_null_ladder_schematic.py
 ```
 
 The full R56 null-model regeneration requires local graph caches or a

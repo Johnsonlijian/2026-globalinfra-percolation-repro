@@ -8,6 +8,19 @@ Use Python 3.11 or newer.
 pip install -r requirements.txt
 ```
 
+## Recreate R70 Fig. 1 Null-ladder Schematic
+
+```bash
+python scripts/fig1_R70_null_ladder_schematic.py
+```
+
+Expected outputs:
+
+- `figures/Fig_R70_null_ladder_schematic.png`
+- `figures/Fig_R70_null_ladder_schematic.svg`
+- `figures/Fig_R70_null_ladder_schematic.pdf`
+- `figures/Fig_R70_null_ladder_schematic.tiff`
+
 ## Recreate The Public R56 Figure
 
 ```bash
