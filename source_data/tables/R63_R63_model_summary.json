@@ -1,0 +1,37 @@
+{
+  "model": "R63 standardized RidgeCV high-order + external candidate screen",
+  "n": 71,
+  "predictors": [
+    "node_density_per_km2",
+    "orientation_fourfold_order",
+    "dead_end_share",
+    "cycle_density",
+    "arterial_length_share",
+    "articulation_point_share",
+    "bridge_edge_share",
+    "largest_biconnected_node_fraction",
+    "dual_degree_gini",
+    "angular_entropy",
+    "orthogonal_angle_share_10deg",
+    "wikidata_population_density_per_km2"
+  ],
+  "alpha": 15.848931924611142,
+  "in_sample_r2": 0.5205613405684263,
+  "cv_r2_mean": 0.24153242078868295,
+  "cv_r2_sd": 0.35432887401758817,
+  "coefficients": {
+    "node_density_per_km2": -0.002448818040371445,
+    "orientation_fourfold_order": -0.004135523076682902,
+    "dead_end_share": 0.001697338947227892,
+    "cycle_density": -0.004457495999293134,
+    "arterial_length_share": -0.0042938483226027235,
+    "articulation_point_share": 0.0024019628457451073,
+    "bridge_edge_share": 0.0038449668414611725,
+    "largest_biconnected_node_fraction": -0.004497060648923844,
+    "dual_degree_gini": -0.004943797638000626,
+    "angular_entropy": -3.9568839172126995e-06,
+    "orthogonal_angle_share_10deg": -0.00018836136045772655,
+    "wikidata_population_density_per_km2": 0.001064906085761291
+  },
+  "interpretation": "descriptive screen; Wikidata variables are candidate public metadata pending spot-check"
+}

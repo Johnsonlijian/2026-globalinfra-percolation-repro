@@ -1,0 +1,31 @@
+{
+  "model": "standardized RidgeCV",
+  "n": 71,
+  "predictors": [
+    "node_density_per_km2",
+    "edge_length_median_m",
+    "orientation_fourfold_order",
+    "dead_end_share",
+    "degree4plus_share",
+    "cycle_density",
+    "arterial_length_share",
+    "oneway_length_share",
+    "edge_circuity_median"
+  ],
+  "alpha": 25.11886431509582,
+  "in_sample_r2": 0.5011439245640078,
+  "cv_r2_mean": 0.3888860755392912,
+  "cv_r2_sd": 0.17334181189012854,
+  "coefficients": {
+    "node_density_per_km2": -0.003226486947650713,
+    "edge_length_median_m": -0.002796867743576758,
+    "orientation_fourfold_order": -0.00364064903121483,
+    "dead_end_share": 0.0041689958835548395,
+    "degree4plus_share": -0.0022731509548584855,
+    "cycle_density": -0.004050393368441027,
+    "arterial_length_share": -0.0029876521755043736,
+    "oneway_length_share": -0.0030388238294440503,
+    "edge_circuity_median": 0.0021325889176812022
+  },
+  "interpretation": "descriptive predictive screen only; not a causal model"
+}

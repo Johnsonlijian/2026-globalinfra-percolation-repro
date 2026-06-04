@@ -1,0 +1,12 @@
+{
+  "n_cities": 71,
+  "n_pass_like": 71,
+  "mean_road_gap": 0.21658261833673306,
+  "mean_spatial_null_gap": 0.1201037450972966,
+  "mean_road_minus_spatial": 0.09647887323943663,
+  "mean_spatial_fraction": 0.557362398642295,
+  "mean_remaining_fraction": 0.4426376013577051,
+  "boundary_hits": 0,
+  "mean_accepted_swaps_per_edge": 0.0200008587223721,
+  "mean_acceptance_rate": 0.02778164598846336
+}

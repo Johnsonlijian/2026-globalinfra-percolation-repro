@@ -1,0 +1,26 @@
+{
+  "n_attempted": 71,
+  "n_pass": 71,
+  "n_fail": 0,
+  "n_regions_pass": 7,
+  "regions_pass": [
+    "Africa",
+    "Asia",
+    "Europe",
+    "Latin America",
+    "Middle East",
+    "North America",
+    "Oceania"
+  ],
+  "road_gap_mean": 0.21658261833673306,
+  "road_gap_median": 0.2123759548797029,
+  "road_gap_min": 0.1683153898164039,
+  "road_gap_max": 0.2816907863000482,
+  "positive_gap_fraction": 1.0,
+  "nodes_total": 2492958,
+  "edges_total": 3557249,
+  "r56_primary_n": 8,
+  "r56_primary_road_gap_mean": 0.20959387499999999,
+  "r56_primary_road_gap_min": 0.175061,
+  "r56_primary_road_gap_max": 0.226399
+}

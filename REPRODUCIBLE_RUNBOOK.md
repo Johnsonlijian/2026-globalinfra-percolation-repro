@@ -149,3 +149,38 @@ Interpret R68 as full 71-city low-intensity strict geometry-null coverage with
 one replicate per city. It answers the low-intensity coverage objection, but it
 is not a high-intensity multi-replicate planar-null theorem and does not prove
 a causal urban-design rule.
+
+## Recreate R72 Matched-intensity Geometry-null Defense
+
+The public package includes the derived R72 matched spatial-null replicates,
+matched city summaries and geometry-null mobility summaries. To rebuild the
+R72 summaries and Fig. 4 from included tables:
+
+```bash
+python scripts/build_R72_geometry_defense.py
+```
+
+Expected outputs:
+
+- `data/R72_geometry_defense/matched_intensity_geometry_vs_spatial_city.csv`
+- `data/R72_geometry_defense/matched_intensity_summary.csv`
+- `data/R72_geometry_defense/geometry_null_mobility_summary.csv`
+- `data/R72_geometry_defense/R72_summary.json`
+- `figures/Fig_R72_geometry_null_defense.png`
+- `figures/Fig_R72_geometry_null_defense.svg`
+- `figures/Fig_R72_geometry_null_defense.pdf`
+- `figures/Fig_R72_geometry_null_defense.tiff`
+
+## Re-run R72 Matched Spatial Nulls From Graph Caches
+
+The full R72 matched spatial-null recomputation requires cached OSMnx road
+graph objects. Those graph caches are not redistributed. If local caches are
+available in the expected project layout, run:
+
+```bash
+python scripts/build_R72_geometry_defense.py --force
+```
+
+Interpret R72 as a matched-intensity empirical defense on the 21-city R67
+subset. It weakens the low-perturbation artifact objection, but it is not a
+proof of full Markov-chain mixing or a high-intensity all-71 planar ensemble.

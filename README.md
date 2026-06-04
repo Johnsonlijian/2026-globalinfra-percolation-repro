@@ -33,6 +33,14 @@ road-minus-spatial residual of 0.0965 and mean road-minus-geometry residual of
 coverage, not an analytical theorem or high-intensity multi-replicate planar
 ensemble.
 
+R72 adds the matched-intensity defense requested by the hostile-review round.
+On the 21-city R67 subset, spatial-scale and strict non-crossing geometry nulls
+are compared at the same accepted-swap targets. Spatial-scale nulls retain
+positive residuals at 0.005, 0.01 and 0.02 accepted swaps per edge, whereas
+strict-geometry residuals remain near zero at the tested estimator resolution.
+This weakens the low-perturbation artifact objection but does not prove full
+Markov-chain mixing.
+
 ## What Is Included
 
 - `scripts/build_R41_degree_preserving_nulls.py`: full R41 analysis script.
@@ -52,11 +60,19 @@ ensemble.
   low-intensity geometry-null script. With `--skip-compute`, it recreates R68
   summaries and figures from included derived tables; a full rerun requires
   local cached OSMnx graph objects.
+- `scripts/build_R72_geometry_defense.py`: R72 matched-intensity spatial vs
+  strict-geometry defense and Fig. 4 script. Without `--force`, it recreates
+  summaries and figures from included derived tables; with `--force`, it reruns
+  matched spatial nulls and requires local cached graph objects.
 - `scripts/fig1_R70_null_ladder_schematic.py`: code-generated schematic for
   the current Fig. 1 null-ladder framing.
+- `run_manifest.csv` and `run_manifest.json`: compact run-level provenance for
+  the submission source-data bundle.
 - `data/R41_degree_preserving_nulls/`: derived degree-null source tables.
 - `data/R56_spatial_length_constrained_nulls/`: derived spatial-null source
   tables and report.
+- `data/R61_nature_cities_scale_screen/`: derived 71-city standardized
+  center-window threshold screen.
 - `data/R62_urban_form_mechanism/`: derived 21-city geometry-subset registry
   and 71-city urban-form covariate table required by R67/R68 replotting.
 - `data/R63_high_order_external_covariates/`: derived high-order 71-city input
@@ -70,6 +86,10 @@ ensemble.
   fraction-summary and report tables.
 - `data/R68_full71_geometry_null_ensemble/`: derived R68 full-city
   geometry-null replicate, city-summary, macro-region and report tables.
+- `data/R72_geometry_defense/`: derived R72 matched-intensity spatial-null
+  replicates, geometry-vs-spatial city summaries, mobility summaries and report.
+- `source_data/`: submission-facing source-data bundle, column dictionary,
+  claim-to-table map and run manifest. It contains derived project tables only.
 - `figures/Fig_R56_spatial_length_constrained_nulls.*`: exported figure.
 - `figures/Fig_R65_public_covariate_controls.*`: exported R65 public-control
   figure.
@@ -77,6 +97,8 @@ ensemble.
   geometry-null sensitivity figure.
 - `figures/Fig_R68_full71_geometry_null_ensemble.*`: exported R68 full-city
   geometry-null figure.
+- `figures/Fig_R72_geometry_null_defense.*`: exported Fig. 4 R72
+  matched-intensity geometry-null defense figure.
 - `figures/Fig_R70_null_ladder_schematic.*`: exported R70 Fig. 1 schematic.
 
 ## What Is Not Included
@@ -97,6 +119,7 @@ python scripts/replot_R56_spatial_null_figure.py
 python scripts/build_R65_public_covariates_and_controls.py
 python scripts/build_R67_geometry_null_sensitivity.py --skip-compute
 python scripts/build_R68_full71_geometry_null_ensemble.py --skip-compute
+python scripts/build_R72_geometry_defense.py
 python scripts/fig1_R70_null_ladder_schematic.py
 ```
 
@@ -109,6 +132,8 @@ geometry-null regeneration requires local cached OSMnx graph objects.
 R68 can also be redrawn from included derived tables with `--skip-compute`; the
 full 71-city geometry-null regeneration requires local cached OSMnx graph
 objects and is computationally heavier.
+R72 can be redrawn from included derived tables without `--force`; a matched
+spatial-null recomputation requires local cached OSMnx graph objects.
 
 ## Boundary
 
@@ -126,3 +151,8 @@ R68 adds full 71-city low-intensity geometry-null coverage with one replicate
 per city. It answers the low-intensity coverage objection, but it is not a
 high-intensity multi-replicate planar-null theorem and does not establish a
 causal urban-design rule.
+
+R72 adds a matched-intensity empirical defense on the 21-city R67 subset. It
+shows that the spatial-scale null and strict-geometry null behave differently
+under the same accepted-swap targets, but it does not prove full mixing or
+isolate planarity alone from degree, length scale, angular and block structure.

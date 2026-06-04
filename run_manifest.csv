@@ -1,0 +1,11 @@
+round,analysis,data_directory,purpose,status
+R41,degree-preserving nulls,data/R41_degree_preserving_nulls,six configuration-model null projections per eight-city graph,completed
+R56,spatial-scale nulls,data/R56_spatial_length_constrained_nulls,"degree-preserving chord-length-bin constrained nulls, four replicates per main city",completed
+R61,71-city center-window screen,data/R61_nature_cities_scale_screen,10-km standardized OSMnx city windows,completed
+R62,urban-form mechanism screen,data/R62_urban_form_mechanism,road-form covariates and descriptive Ridge screen,completed
+R63,high-order embedded metrics,data/R63_high_order_external_covariates,block/bridge/angular/dual metrics and subset expansion,completed
+R64,71-city spatial null screen,data/R64_71city_spatial_null_screen,one spatial-scale null per 71-city window,completed
+R65,public covariate controls,data/R65_public_covariates_and_controls,GHSL/WDI matching and model comparisons,completed
+R67,geometry null sensitivity,data/R67_geometry_null_sensitivity,21-city multi-replicate strict non-crossing geometry-null sensitivity,completed
+R68,full 71-city geometry null ensemble,data/R68_full71_geometry_null_ensemble,one low-intensity strict geometry-null record per 71-city window,completed
+R72,matched-intensity geometry defense,data/R72_geometry_defense,spatial vs strict-geometry nulls at matched accepted-swap targets,completed

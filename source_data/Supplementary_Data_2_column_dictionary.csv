@@ -1,0 +1,1004 @@
+file,column,inferred_type,n_rows,non_empty_count,example_value,description
+R41_degree_preserving_nulls_city_summary.csv,city,text,8,8,Berlin,City or urban-window identifier.
+R41_degree_preserving_nulls_city_summary.csv,graph_cache_file,text,8,8,cache\private_graphs\berlin_germany__road.pkl,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,n_nodes_road,numeric,8,8,28407,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,n_edges_road,numeric,8,8,42285,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,pc_cebh_road,numeric,8,8,0.444985,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R41_degree_preserving_nulls_city_summary.csv,pc_road_fine_grid,numeric,8,8,0.655,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,road_gap,numeric,8,8,0.210015,Difference between observed road threshold and a baseline/null threshold.
+R41_degree_preserving_nulls_city_summary.csv,pc_null_rank_mean,numeric,8,8,0.471652,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,pc_null_rank_ci_low,numeric,8,8,0.464985,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,pc_null_rank_ci_high,numeric,8,8,0.474985,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,pc_null_cebh_mean,numeric,8,8,0.445635,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R41_degree_preserving_nulls_city_summary.csv,null_gap,numeric,8,8,0.026017,Difference between observed road threshold and a baseline/null threshold.
+R41_degree_preserving_nulls_city_summary.csv,road_minus_null,numeric,8,8,0.183348,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,organization_fraction_of_gap,numeric,8,8,0.873025,Difference between observed road threshold and a baseline/null threshold.
+R41_degree_preserving_nulls_city_summary.csv,n_null,numeric,8,8,6,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,n_perm,numeric,8,8,20,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,p_grid_min,numeric,8,8,0.194985,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,p_grid_max,numeric,8,8,0.694985,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,p_grid_step,numeric,8,8,0.01,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,boundary_hit_count,numeric,8,8,0,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,status,text,8,8,pass,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_city_summary.csv,notes,text,8,8,Observed road threshold exceeds degree-preserving null threshold.,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_replicates.csv,city,text,48,48,Berlin,City or urban-window identifier.
+R41_degree_preserving_nulls_replicates.csv,replicate,numeric,48,48,1,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_replicates.csv,n_nodes,numeric,48,48,28407,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_replicates.csv,n_edges,numeric,48,48,42282,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_replicates.csv,lcc_fraction_p1,numeric,48,48,0.994579,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_replicates.csv,pc_cebh_null,numeric,48,48,0.445618,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R41_degree_preserving_nulls_replicates.csv,pc_rank_null,numeric,48,48,0.474985,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_replicates.csv,pc_rank_ci_low,numeric,48,48,0.464985,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_replicates.csv,pc_rank_ci_high,numeric,48,48,0.484985,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_replicates.csv,threshold_boundary_hit,text,48,48,False,Estimated bond-percolation threshold.
+R41_degree_preserving_nulls_summary.json,_schema,str,1,1,R41-degree-preserving-nulls-v1,Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_summary.json,parameters,dict,1,1,"{'r39_source': 'data\\R39_threshold_sensitivity\\threshold_sensitivity_source_data.csv', 'graph_cache_dir': 'cache\\priv",Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_summary.json,aggregate,dict,1,1,"{'n_cities': 8, 'road_gap_mean': 0.209594, 'road_gap_ci_95': [0.198247, 0.217702], 'null_gap_mean': 0.025548, 'null_gap_",Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_summary.json,records,list,1,1,"[{'city': 'Berlin', 'graph_cache_file': 'cache\\private_graphs\\berlin_germany__road.pkl', 'n_nodes_road': 28407, 'n_edg",Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_summary.json,replicates,list,1,1,"[{'city': 'Berlin', 'replicate': 1, 'n_nodes': 28407, 'n_edges': 42282, 'lcc_fraction_p1': 0.994579, 'pc_cebh_null': 0.4",Project-derived variable; see round report and manuscript Methods for definition.
+R41_degree_preserving_nulls_summary.json,recommended_interpretation,str,1,1,R41 supports a mechanism upgrade: the observed road thresholds remain well above degree-preserving random null threshold,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,city,text,8,8,Berlin,City or urban-window identifier.
+R56_spatial_length_constrained_nulls_city_summary.csv,graph_cache_file,text,8,8,cache\private_graphs\berlin_germany__road.pkl,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,n_nodes_road,numeric,8,8,28407,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,n_edges_road,numeric,8,8,42285,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,pc_cebh_road,numeric,8,8,0.444985,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R56_spatial_length_constrained_nulls_city_summary.csv,pc_road_fine_grid,numeric,8,8,0.655,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,road_gap,numeric,8,8,0.210015,Difference between observed road threshold and a baseline/null threshold.
+R56_spatial_length_constrained_nulls_city_summary.csv,degree_null_gap_R41,numeric,8,8,0.026017,Difference between observed road threshold and a baseline/null threshold.
+R56_spatial_length_constrained_nulls_city_summary.csv,degree_null_rank_mean_R41,numeric,8,8,0.471652,Degree-sequence or degree-composition metric.
+R56_spatial_length_constrained_nulls_city_summary.csv,spatial_null_rank_mean,numeric,8,8,0.5124850000000001,Spatial-scale null metric or diagnostic.
+R56_spatial_length_constrained_nulls_city_summary.csv,spatial_null_rank_ci_low,numeric,8,8,0.509985,Spatial-scale null metric or diagnostic.
+R56_spatial_length_constrained_nulls_city_summary.csv,spatial_null_rank_ci_high,numeric,8,8,0.524985,Spatial-scale null metric or diagnostic.
+R56_spatial_length_constrained_nulls_city_summary.csv,spatial_null_cebh_mean,numeric,8,8,0.4456024616941008,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R56_spatial_length_constrained_nulls_city_summary.csv,spatial_null_gap,numeric,8,8,0.06750000000000006,Difference between observed road threshold and a baseline/null threshold.
+R56_spatial_length_constrained_nulls_city_summary.csv,spatial_minus_degree_gap,numeric,8,8,0.04148300000000006,Difference between observed road threshold and a baseline/null threshold.
+R56_spatial_length_constrained_nulls_city_summary.csv,road_minus_spatial,numeric,8,8,0.14251499999999995,Spatial-scale null metric or diagnostic.
+R56_spatial_length_constrained_nulls_city_summary.csv,spatial_fraction_of_road_gap,numeric,8,8,0.3214056138847228,Difference between observed road threshold and a baseline/null threshold.
+R56_spatial_length_constrained_nulls_city_summary.csv,remaining_fraction_after_spatial,numeric,8,8,0.6785943861152772,Spatial-scale null metric or diagnostic.
+R56_spatial_length_constrained_nulls_city_summary.csv,accepted_swaps_per_edge_mean,numeric,8,8,0.24999408773796855,Accepted or attempted double-edge swap diagnostic.
+R56_spatial_length_constrained_nulls_city_summary.csv,acceptance_rate_mean,numeric,8,8,0.027780310865459183,Acceptance-rate diagnostic for null-model rewiring.
+R56_spatial_length_constrained_nulls_city_summary.csv,chord_length_bin_tvd_mean,numeric,8,8,0.07910606598084427,Edge-length or chord-length metric/bin diagnostic.
+R56_spatial_length_constrained_nulls_city_summary.csv,degree_max_abs_drift_max,numeric,8,8,0,Degree-sequence or degree-composition metric.
+R56_spatial_length_constrained_nulls_city_summary.csv,n_null,numeric,8,8,4,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,n_perm,numeric,8,8,16,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,length_bins,numeric,8,8,12,Edge-length or chord-length metric/bin diagnostic.
+R56_spatial_length_constrained_nulls_city_summary.csv,bin_tolerance,numeric,8,8,1,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,swap_fraction_target,numeric,8,8,0.25,Accepted or attempted double-edge swap diagnostic.
+R56_spatial_length_constrained_nulls_city_summary.csv,p_grid_min,numeric,8,8,0.194985,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,p_grid_max,numeric,8,8,0.694985,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,p_grid_step,numeric,8,8,0.01,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,boundary_hit_count,numeric,8,8,0,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,status,text,8,8,pass,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_city_summary.csv,notes,text,8,8,Degree sequence is exact; spatial constraint preserves chord-length slots within bin tolerance. Use as a spatial-scale c,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_replicates.csv,city,text,32,32,Berlin,City or urban-window identifier.
+R56_spatial_length_constrained_nulls_replicates.csv,replicate,numeric,32,32,1,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_replicates.csv,n_nodes,numeric,32,32,28407,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_replicates.csv,n_edges,numeric,32,32,42285,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_replicates.csv,pc_cebh_null,numeric,32,32,0.4456024616941008,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R56_spatial_length_constrained_nulls_replicates.csv,pc_rank_null,numeric,32,32,0.514985,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_replicates.csv,pc_rank_ci_low,numeric,32,32,0.514985,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_replicates.csv,pc_rank_ci_high,numeric,32,32,0.534985,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_replicates.csv,lcc_fraction_p1,numeric,32,32,0.9995423663181611,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_replicates.csv,accepted_swaps,numeric,32,32,10571,Accepted or attempted double-edge swap diagnostic.
+R56_spatial_length_constrained_nulls_replicates.csv,attempted_swaps,numeric,32,32,386966,Accepted or attempted double-edge swap diagnostic.
+R56_spatial_length_constrained_nulls_replicates.csv,acceptance_rate,numeric,32,32,0.027317645477897282,Acceptance-rate diagnostic for null-model rewiring.
+R56_spatial_length_constrained_nulls_replicates.csv,accepted_swaps_per_edge,numeric,32,32,0.24999408773796855,Accepted or attempted double-edge swap diagnostic.
+R56_spatial_length_constrained_nulls_replicates.csv,degree_max_abs_drift,numeric,32,32,0,Degree-sequence or degree-composition metric.
+R56_spatial_length_constrained_nulls_replicates.csv,chord_length_mean_ratio,numeric,32,32,16.76606500085136,Edge-length or chord-length metric/bin diagnostic.
+R56_spatial_length_constrained_nulls_replicates.csv,chord_length_median_ratio,numeric,32,32,1.0,Edge-length or chord-length metric/bin diagnostic.
+R56_spatial_length_constrained_nulls_replicates.csv,chord_length_bin_tvd,numeric,32,32,0.07927160931772495,Edge-length or chord-length metric/bin diagnostic.
+R56_spatial_length_constrained_nulls_replicates.csv,length_rejects,numeric,32,32,376309,Edge-length or chord-length metric/bin diagnostic.
+R56_spatial_length_constrained_nulls_replicates.csv,topology_rejects,numeric,32,32,86,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_replicates.csv,threshold_boundary_hit,text,32,32,False,Estimated bond-percolation threshold.
+R56_spatial_length_constrained_nulls_summary.json,created_by,str,1,1,scripts/build_R56_spatial_length_constrained_nulls.py,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_summary.json,elapsed_seconds,float,1,1,354.95372796058655,Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_summary.json,parameters,dict,1,1,"{'n_null': 4, 'n_perm': 16, 'n_bootstrap': 300, 'p_step': 0.01, 'window': 0.25, 'length_bins': 12, 'bin_tolerance': 1, '",Project-derived variable; see round report and manuscript Methods for definition.
+R56_spatial_length_constrained_nulls_summary.json,aggregate,dict,1,1,"{'mean_road_gap': 0.20959387499999999, 'mean_degree_null_gap_R41': 0.025547999999999998, 'mean_spatial_null_gap': 0.0693",Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,city,text,71,71,Lisbon,City or urban-window identifier.
+R61_central_window_screen_results.csv,country,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,query,text,71,71,"Lisbon, Portugal",Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,macro_region,text,71,71,Europe,Macro-region label used for stratification or reporting.
+R61_central_window_screen_results.csv,latitude,numeric,71,71,38.7077507,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,longitude,numeric,71,71,-9.1365919,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,window_radius_m,numeric,71,71,10000,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,graph_cache_file,text,71,71,cache\R61_osmnx_city_windows\lisbon_portugal__drive_10000m.pkl,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,n_nodes,numeric,71,71,26686,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,n_edges,numeric,71,71,36745,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,mean_degree,numeric,71,71,2.7538784381323542,Degree-sequence or degree-composition metric.
+R61_central_window_screen_results.csv,pc_cebh,numeric,71,71,0.4955161486076462,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R61_central_window_screen_results.csv,pc_rank,numeric,71,71,0.75,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,pc_rank_ci_low,numeric,71,71,0.7,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,pc_rank_ci_high,numeric,71,71,0.75,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,road_gap,numeric,71,71,0.2544838513923538,Difference between observed road threshold and a baseline/null threshold.
+R61_central_window_screen_results.csv,lcc_fraction_p1,numeric,71,71,1.0,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,edge_length_mean_m,numeric,71,71,79.29022616210268,Edge-length or chord-length metric/bin diagnostic.
+R61_central_window_screen_results.csv,edge_length_median_m,numeric,71,71,50.09774214527755,Edge-length or chord-length metric/bin diagnostic.
+R61_central_window_screen_results.csv,orientation_entropy,numeric,71,71,0.9973324314912949,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,orientation_dominance,numeric,71,71,0.06719281534902707,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,p_grid_min,numeric,71,71,0.1,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,p_grid_max,numeric,71,71,0.9,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,p_grid_step,numeric,71,71,0.025,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,n_perm,numeric,71,71,6,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,n_bootstrap,numeric,71,71,80,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,threshold_boundary_hit,text,71,71,False,Estimated bond-percolation threshold.
+R61_central_window_screen_results.csv,extraction_seconds,numeric,71,71,38.00325965881348,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,analysis_seconds,numeric,71,71,2.242203950881958,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,status,text,71,71,pass,Project-derived variable; see round report and manuscript Methods for definition.
+R61_central_window_screen_results.csv,notes,text,71,71,standardized OSMnx centre-window screen; not a city-boundary replacement,Project-derived variable; see round report and manuscript Methods for definition.
+R61_R61_summary.json,n_attempted,int,1,1,71,Project-derived variable; see round report and manuscript Methods for definition.
+R61_R61_summary.json,n_pass,int,1,1,71,Project-derived variable; see round report and manuscript Methods for definition.
+R61_R61_summary.json,n_fail,int,1,1,0,Project-derived variable; see round report and manuscript Methods for definition.
+R61_R61_summary.json,n_regions_pass,int,1,1,7,Region label used for stratification or reporting.
+R61_R61_summary.json,regions_pass,list,1,1,"['Africa', 'Asia', 'Europe', 'Latin America', 'Middle East', 'North America', 'Oceania']",Region label used for stratification or reporting.
+R61_R61_summary.json,road_gap_mean,float,1,1,0.21658261833673306,Difference between observed road threshold and a baseline/null threshold.
+R61_R61_summary.json,road_gap_median,float,1,1,0.2123759548797029,Difference between observed road threshold and a baseline/null threshold.
+R61_R61_summary.json,road_gap_min,float,1,1,0.1683153898164039,Difference between observed road threshold and a baseline/null threshold.
+R61_R61_summary.json,road_gap_max,float,1,1,0.2816907863000482,Difference between observed road threshold and a baseline/null threshold.
+R61_R61_summary.json,positive_gap_fraction,float,1,1,1.0,Difference between observed road threshold and a baseline/null threshold.
+R61_R61_summary.json,nodes_total,int,1,1,2492958,Project-derived variable; see round report and manuscript Methods for definition.
+R61_R61_summary.json,edges_total,int,1,1,3557249,Project-derived variable; see round report and manuscript Methods for definition.
+R61_R61_summary.json,r56_primary_n,int,1,1,8,Project-derived variable; see round report and manuscript Methods for definition.
+R61_R61_summary.json,r56_primary_road_gap_mean,float,1,1,0.20959387499999999,Difference between observed road threshold and a baseline/null threshold.
+R61_R61_summary.json,r56_primary_road_gap_min,float,1,1,0.175061,Difference between observed road threshold and a baseline/null threshold.
+R61_R61_summary.json,r56_primary_road_gap_max,float,1,1,0.226399,Difference between observed road threshold and a baseline/null threshold.
+R62_urban_form_covariates.csv,city,text,71,71,Lisbon,City or urban-window identifier.
+R62_urban_form_covariates.csv,country,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,macro_region,text,71,71,Europe,Macro-region label used for stratification or reporting.
+R62_urban_form_covariates.csv,latitude,numeric,71,71,38.7077507,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,longitude,numeric,71,71,-9.1365919,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,window_radius_m,numeric,71,71,10000,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,bbox_area_km2,numeric,71,71,400.0,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,n_nodes,numeric,71,71,26686,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,n_edges,numeric,71,71,36745,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,pc_cebh,numeric,71,71,0.4955161486076462,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R62_urban_form_covariates.csv,pc_rank,numeric,71,71,0.75,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,road_gap,numeric,71,71,0.2544838513923538,Difference between observed road threshold and a baseline/null threshold.
+R62_urban_form_covariates.csv,node_density_per_km2,numeric,71,71,66.715,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,edge_density_per_km2,numeric,71,71,91.8625,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,chord_length_density_km_per_km2,numeric,71,71,7.283798400816158,Edge-length or chord-length metric/bin diagnostic.
+R62_urban_form_covariates.csv,edge_length_mean_m,numeric,71,71,79.29022616210268,Edge-length or chord-length metric/bin diagnostic.
+R62_urban_form_covariates.csv,edge_length_median_m,numeric,71,71,50.09774214527755,Edge-length or chord-length metric/bin diagnostic.
+R62_urban_form_covariates.csv,edge_length_iqr_m,numeric,71,71,68.18401361913405,Edge-length or chord-length metric/bin diagnostic.
+R62_urban_form_covariates.csv,edge_length_cv,numeric,71,71,1.7087578152104208,Edge-length or chord-length metric/bin diagnostic.
+R62_urban_form_covariates.csv,short_edge_share_lt40m,numeric,71,71,0.4095795346305619,SHA checksum or source identifier.
+R62_urban_form_covariates.csv,long_edge_share_gt150m,numeric,71,71,0.1151993468499115,SHA checksum or source identifier.
+R62_urban_form_covariates.csv,orientation_entropy,numeric,71,71,0.9973324314912948,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,orientation_dominance,numeric,71,71,0.067192815349027,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,orientation_fourfold_order,numeric,71,71,0.0841523643597808,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,orthogonal_alignment_share_10deg,numeric,71,71,0.2477071710436794,SHA checksum or source identifier.
+R62_urban_form_covariates.csv,dead_end_share,numeric,71,71,0.1549126883009818,SHA checksum or source identifier.
+R62_urban_form_covariates.csv,degree2_share,numeric,71,71,0.0462414749306752,Degree-sequence or degree-composition metric.
+R62_urban_form_covariates.csv,degree3_share,numeric,71,71,0.6940717979464888,Degree-sequence or degree-composition metric.
+R62_urban_form_covariates.csv,degree4plus_share,numeric,71,71,0.1047740388218541,Degree-sequence or degree-composition metric.
+R62_urban_form_covariates.csv,mean_degree,numeric,71,71,2.7538784381323542,Degree-sequence or degree-composition metric.
+R62_urban_form_covariates.csv,kappa,numeric,71,71,3.018097700367397,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,degree_gini,numeric,71,71,0.1418200866149155,Degree-sequence or degree-composition metric.
+R62_urban_form_covariates.csv,connected_components,numeric,71,71,1,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,cyclomatic_number,numeric,71,71,10060,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,cycle_density,numeric,71,71,0.3769766918983737,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,arterial_length_share,numeric,71,71,0.2092820119274249,Edge-length or chord-length metric/bin diagnostic.
+R62_urban_form_covariates.csv,collector_length_share,numeric,71,71,0.1612789703675397,Edge-length or chord-length metric/bin diagnostic.
+R62_urban_form_covariates.csv,local_length_share,numeric,71,71,0.6294390177050173,Edge-length or chord-length metric/bin diagnostic.
+R62_urban_form_covariates.csv,motorway_trunk_length_share,numeric,71,71,0.0850502330960836,Edge-length or chord-length metric/bin diagnostic.
+R62_urban_form_covariates.csv,residential_length_share,numeric,71,71,0.6249169554864256,Edge-length or chord-length metric/bin diagnostic.
+R62_urban_form_covariates.csv,oneway_length_share,numeric,71,71,0.3421441490502626,Edge-length or chord-length metric/bin diagnostic.
+R62_urban_form_covariates.csv,bridge_tunnel_length_share,numeric,71,71,0.073065716779634,Edge-length or chord-length metric/bin diagnostic.
+R62_urban_form_covariates.csv,maxspeed_coverage_share,numeric,71,71,0.1664473416017207,SHA checksum or source identifier.
+R62_urban_form_covariates.csv,lanes_coverage_share,numeric,71,71,0.3354076863804046,SHA checksum or source identifier.
+R62_urban_form_covariates.csv,edge_circuity_mean,numeric,71,71,1.0844955187858132,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,edge_circuity_median,numeric,71,71,1.000232592296042,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_covariates.csv,graph_cache_file,text,71,71,cache\R61_osmnx_city_windows\lisbon_portugal__drive_10000m.pkl,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_correlations.csv,covariate,text,27,27,kappa,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_correlations.csv,n,numeric,27,27,71,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_correlations.csv,spearman_rho,numeric,27,27,-0.6307176391683432,Spearman rank-correlation coefficient.
+R62_urban_form_correlations.csv,spearman_p,numeric,27,27,3.743011309454672e-09,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_correlations.csv,pearson_r,numeric,27,27,-0.6470301072857352,Pearson correlation coefficient.
+R62_urban_form_correlations.csv,pearson_p,numeric,27,27,1.0840396011841688e-09,Pearson correlation coefficient.
+R62_urban_form_correlations.csv,abs_spearman_rho,numeric,27,27,0.6307176391683432,Spearman rank-correlation coefficient.
+R62_geometry_null_subset_registry.csv,city,text,21,21,Amsterdam,City or urban-window identifier.
+R62_geometry_null_subset_registry.csv,country,text,21,21,Netherlands,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,macro_region,text,21,21,Europe,Macro-region label used for stratification or reporting.
+R62_geometry_null_subset_registry.csv,latitude,numeric,21,21,52.3730796,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,longitude,numeric,21,21,4.8924534,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,window_radius_m,numeric,21,21,10000,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,bbox_area_km2,numeric,21,21,400.0,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,n_nodes,numeric,21,21,23201,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,n_edges,numeric,21,21,32887,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,pc_cebh,numeric,21,21,0.466680857102313,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R62_geometry_null_subset_registry.csv,pc_rank,numeric,21,21,0.7,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,road_gap,numeric,21,21,0.2333191428976869,Difference between observed road threshold and a baseline/null threshold.
+R62_geometry_null_subset_registry.csv,node_density_per_km2,numeric,21,21,58.0025,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,edge_density_per_km2,numeric,21,21,82.2175,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,chord_length_density_km_per_km2,numeric,21,21,7.950673284534412,Edge-length or chord-length metric/bin diagnostic.
+R62_geometry_null_subset_registry.csv,edge_length_mean_m,numeric,21,21,96.7029316694671,Edge-length or chord-length metric/bin diagnostic.
+R62_geometry_null_subset_registry.csv,edge_length_median_m,numeric,21,21,59.15606744263849,Edge-length or chord-length metric/bin diagnostic.
+R62_geometry_null_subset_registry.csv,edge_length_iqr_m,numeric,21,21,79.82278675617601,Edge-length or chord-length metric/bin diagnostic.
+R62_geometry_null_subset_registry.csv,edge_length_cv,numeric,21,21,1.7667545610657238,Edge-length or chord-length metric/bin diagnostic.
+R62_geometry_null_subset_registry.csv,short_edge_share_lt40m,numeric,21,21,0.3560069328306017,SHA checksum or source identifier.
+R62_geometry_null_subset_registry.csv,long_edge_share_gt150m,numeric,21,21,0.1485997506613555,SHA checksum or source identifier.
+R62_geometry_null_subset_registry.csv,orientation_entropy,numeric,21,21,0.9888378756553252,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,orientation_dominance,numeric,21,21,0.0795147018578769,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,orientation_fourfold_order,numeric,21,21,0.1388612213854634,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,orthogonal_alignment_share_10deg,numeric,21,21,0.2758536807857208,SHA checksum or source identifier.
+R62_geometry_null_subset_registry.csv,dead_end_share,numeric,21,21,0.1549933192534804,SHA checksum or source identifier.
+R62_geometry_null_subset_registry.csv,degree2_share,numeric,21,21,0.05517003577432,Degree-sequence or degree-composition metric.
+R62_geometry_null_subset_registry.csv,degree3_share,numeric,21,21,0.6000603422266282,Degree-sequence or degree-composition metric.
+R62_geometry_null_subset_registry.csv,degree4plus_share,numeric,21,21,0.1897763027455713,Degree-sequence or degree-composition metric.
+R62_geometry_null_subset_registry.csv,mean_degree,numeric,21,21,2.8349640101719755,Degree-sequence or degree-composition metric.
+R62_geometry_null_subset_registry.csv,kappa,numeric,21,21,3.142791984674796,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,degree_gini,numeric,21,21,0.162610763581011,Degree-sequence or degree-composition metric.
+R62_geometry_null_subset_registry.csv,connected_components,numeric,21,21,1,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,cyclomatic_number,numeric,21,21,9687,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,cycle_density,numeric,21,21,0.4175251066764364,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,arterial_length_share,numeric,21,21,0.1860659804066756,Edge-length or chord-length metric/bin diagnostic.
+R62_geometry_null_subset_registry.csv,collector_length_share,numeric,21,21,0.3361903086644744,Edge-length or chord-length metric/bin diagnostic.
+R62_geometry_null_subset_registry.csv,local_length_share,numeric,21,21,0.4470573940081732,Edge-length or chord-length metric/bin diagnostic.
+R62_geometry_null_subset_registry.csv,motorway_trunk_length_share,numeric,21,21,0.0771675175951595,Edge-length or chord-length metric/bin diagnostic.
+R62_geometry_null_subset_registry.csv,residential_length_share,numeric,21,21,0.4322384372905797,Edge-length or chord-length metric/bin diagnostic.
+R62_geometry_null_subset_registry.csv,oneway_length_share,numeric,21,21,0.2971628893604442,Edge-length or chord-length metric/bin diagnostic.
+R62_geometry_null_subset_registry.csv,bridge_tunnel_length_share,numeric,21,21,0.1479193441551307,Edge-length or chord-length metric/bin diagnostic.
+R62_geometry_null_subset_registry.csv,maxspeed_coverage_share,numeric,21,21,0.9943583272402958,SHA checksum or source identifier.
+R62_geometry_null_subset_registry.csv,lanes_coverage_share,numeric,21,21,0.3607738827697238,SHA checksum or source identifier.
+R62_geometry_null_subset_registry.csv,edge_circuity_mean,numeric,21,21,1.081457142517727,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,edge_circuity_median,numeric,21,21,1.0000658244781906,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,graph_cache_file,text,21,21,cache\R61_osmnx_city_windows\amsterdam_netherlands__drive_10000m.pkl,Project-derived variable; see round report and manuscript Methods for definition.
+R62_geometry_null_subset_registry.csv,selection_reason,text,21,21,one_per_macro_region_or_morphology_extreme,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_model_summary.json,model,str,1,1,standardized RidgeCV,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_model_summary.json,n,int,1,1,71,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_model_summary.json,predictors,list,1,1,"['node_density_per_km2', 'edge_length_median_m', 'orientation_fourfold_order', 'dead_end_share', 'degree4plus_share', 'c",Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_model_summary.json,alpha,float,1,1,25.11886431509582,Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_model_summary.json,in_sample_r2,float,1,1,0.5011439245640078,Coefficient of determination for descriptive predictive screen.
+R62_urban_form_model_summary.json,cv_r2_mean,float,1,1,0.3888860755392912,Coefficient of determination for descriptive predictive screen.
+R62_urban_form_model_summary.json,cv_r2_sd,float,1,1,0.17334181189012854,Coefficient of determination for descriptive predictive screen.
+R62_urban_form_model_summary.json,coefficients,dict,1,1,"{'node_density_per_km2': -0.003226486947650713, 'edge_length_median_m': -0.002796867743576758, 'orientation_fourfold_ord",Project-derived variable; see round report and manuscript Methods for definition.
+R62_urban_form_model_summary.json,interpretation,str,1,1,descriptive predictive screen only; not a causal model,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_embedded_metrics.csv,city,text,71,71,Lisbon,City or urban-window identifier.
+R63_high_order_embedded_metrics.csv,country,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_embedded_metrics.csv,articulation_point_count,numeric,71,71,4435,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_embedded_metrics.csv,articulation_point_share,numeric,71,71,0.16619201079217566,SHA checksum or source identifier.
+R63_high_order_embedded_metrics.csv,bridge_edge_count,numeric,71,71,5060,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_embedded_metrics.csv,bridge_edge_share,numeric,71,71,0.1377058103143285,SHA checksum or source identifier.
+R63_high_order_embedded_metrics.csv,biconnected_component_count,numeric,71,71,5166,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_embedded_metrics.csv,largest_biconnected_node_fraction,numeric,71,71,0.7744135501761223,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_embedded_metrics.csv,median_biconnected_component_size,numeric,71,71,2.0,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_embedded_metrics.csv,dual_degree_mean,numeric,71,71,4.036195400734794,Degree-sequence or degree-composition metric.
+R63_high_order_embedded_metrics.csv,dual_degree_median,numeric,71,71,4.0,Degree-sequence or degree-composition metric.
+R63_high_order_embedded_metrics.csv,dual_degree_gini,numeric,71,71,0.11932249128726302,Degree-sequence or degree-composition metric.
+R63_high_order_embedded_metrics.csv,angular_pair_count,numeric,71,71,74155,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_embedded_metrics.csv,angular_entropy,numeric,71,71,0.902032206041917,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_embedded_metrics.csv,orthogonal_angle_share_10deg,numeric,71,71,0.2507720315555256,SHA checksum or source identifier.
+R63_high_order_embedded_metrics.csv,straight_angle_share_10deg,numeric,71,71,0.1909783561459106,SHA checksum or source identifier.
+R63_high_order_embedded_metrics.csv,acute_angle_share_lt45deg,numeric,71,71,0.06791180635156092,SHA checksum or source identifier.
+R63_high_order_embedded_metrics.csv,median_intersection_angle_deg,numeric,71,71,109.58849312765832,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_embedded_metrics.csv,mean_min_node_angle_deg,numeric,71,71,70.05312506539316,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,city,text,71,71,Lisbon,City or urban-window identifier.
+R63_integrated_high_order_external_covariates.csv,country,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,macro_region,text,71,71,Europe,Macro-region label used for stratification or reporting.
+R63_integrated_high_order_external_covariates.csv,latitude,numeric,71,71,38.7077507,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,longitude,numeric,71,71,-9.1365919,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,window_radius_m,numeric,71,71,10000,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,bbox_area_km2,numeric,71,71,400.0,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,n_nodes,numeric,71,71,26686,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,n_edges,numeric,71,71,36745,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,pc_cebh,numeric,71,71,0.4955161486076462,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R63_integrated_high_order_external_covariates.csv,pc_rank,numeric,71,71,0.75,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,road_gap,numeric,71,71,0.2544838513923538,Difference between observed road threshold and a baseline/null threshold.
+R63_integrated_high_order_external_covariates.csv,node_density_per_km2,numeric,71,71,66.715,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,edge_density_per_km2,numeric,71,71,91.8625,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,chord_length_density_km_per_km2,numeric,71,71,7.283798400816158,Edge-length or chord-length metric/bin diagnostic.
+R63_integrated_high_order_external_covariates.csv,edge_length_mean_m,numeric,71,71,79.29022616210268,Edge-length or chord-length metric/bin diagnostic.
+R63_integrated_high_order_external_covariates.csv,edge_length_median_m,numeric,71,71,50.09774214527755,Edge-length or chord-length metric/bin diagnostic.
+R63_integrated_high_order_external_covariates.csv,edge_length_iqr_m,numeric,71,71,68.18401361913405,Edge-length or chord-length metric/bin diagnostic.
+R63_integrated_high_order_external_covariates.csv,edge_length_cv,numeric,71,71,1.7087578152104208,Edge-length or chord-length metric/bin diagnostic.
+R63_integrated_high_order_external_covariates.csv,short_edge_share_lt40m,numeric,71,71,0.4095795346305619,SHA checksum or source identifier.
+R63_integrated_high_order_external_covariates.csv,long_edge_share_gt150m,numeric,71,71,0.1151993468499115,SHA checksum or source identifier.
+R63_integrated_high_order_external_covariates.csv,orientation_entropy,numeric,71,71,0.9973324314912948,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,orientation_dominance,numeric,71,71,0.067192815349027,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,orientation_fourfold_order,numeric,71,71,0.0841523643597808,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,orthogonal_alignment_share_10deg,numeric,71,71,0.2477071710436794,SHA checksum or source identifier.
+R63_integrated_high_order_external_covariates.csv,dead_end_share,numeric,71,71,0.1549126883009818,SHA checksum or source identifier.
+R63_integrated_high_order_external_covariates.csv,degree2_share,numeric,71,71,0.0462414749306752,Degree-sequence or degree-composition metric.
+R63_integrated_high_order_external_covariates.csv,degree3_share,numeric,71,71,0.6940717979464888,Degree-sequence or degree-composition metric.
+R63_integrated_high_order_external_covariates.csv,degree4plus_share,numeric,71,71,0.1047740388218541,Degree-sequence or degree-composition metric.
+R63_integrated_high_order_external_covariates.csv,mean_degree,numeric,71,71,2.7538784381323542,Degree-sequence or degree-composition metric.
+R63_integrated_high_order_external_covariates.csv,kappa,numeric,71,71,3.018097700367397,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,degree_gini,numeric,71,71,0.1418200866149155,Degree-sequence or degree-composition metric.
+R63_integrated_high_order_external_covariates.csv,connected_components,numeric,71,71,1,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,cyclomatic_number,numeric,71,71,10060,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,cycle_density,numeric,71,71,0.3769766918983737,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,arterial_length_share,numeric,71,71,0.2092820119274249,Edge-length or chord-length metric/bin diagnostic.
+R63_integrated_high_order_external_covariates.csv,collector_length_share,numeric,71,71,0.1612789703675397,Edge-length or chord-length metric/bin diagnostic.
+R63_integrated_high_order_external_covariates.csv,local_length_share,numeric,71,71,0.6294390177050173,Edge-length or chord-length metric/bin diagnostic.
+R63_integrated_high_order_external_covariates.csv,motorway_trunk_length_share,numeric,71,71,0.0850502330960836,Edge-length or chord-length metric/bin diagnostic.
+R63_integrated_high_order_external_covariates.csv,residential_length_share,numeric,71,71,0.6249169554864256,Edge-length or chord-length metric/bin diagnostic.
+R63_integrated_high_order_external_covariates.csv,oneway_length_share,numeric,71,71,0.3421441490502626,Edge-length or chord-length metric/bin diagnostic.
+R63_integrated_high_order_external_covariates.csv,bridge_tunnel_length_share,numeric,71,71,0.073065716779634,Edge-length or chord-length metric/bin diagnostic.
+R63_integrated_high_order_external_covariates.csv,maxspeed_coverage_share,numeric,71,71,0.1664473416017207,SHA checksum or source identifier.
+R63_integrated_high_order_external_covariates.csv,lanes_coverage_share,numeric,71,71,0.3354076863804046,SHA checksum or source identifier.
+R63_integrated_high_order_external_covariates.csv,edge_circuity_mean,numeric,71,71,1.0844955187858132,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,edge_circuity_median,numeric,71,71,1.000232592296042,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,graph_cache_file,text,71,71,cache\R61_osmnx_city_windows\lisbon_portugal__drive_10000m.pkl,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,articulation_point_count,numeric,71,71,4435,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,articulation_point_share,numeric,71,71,0.16619201079217566,SHA checksum or source identifier.
+R63_integrated_high_order_external_covariates.csv,bridge_edge_count,numeric,71,71,5060,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,bridge_edge_share,numeric,71,71,0.1377058103143285,SHA checksum or source identifier.
+R63_integrated_high_order_external_covariates.csv,biconnected_component_count,numeric,71,71,5166,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,largest_biconnected_node_fraction,numeric,71,71,0.7744135501761223,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,median_biconnected_component_size,numeric,71,71,2.0,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,dual_degree_mean,numeric,71,71,4.036195400734794,Degree-sequence or degree-composition metric.
+R63_integrated_high_order_external_covariates.csv,dual_degree_median,numeric,71,71,4.0,Degree-sequence or degree-composition metric.
+R63_integrated_high_order_external_covariates.csv,dual_degree_gini,numeric,71,71,0.11932249128726302,Degree-sequence or degree-composition metric.
+R63_integrated_high_order_external_covariates.csv,angular_pair_count,numeric,71,71,74155,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,angular_entropy,numeric,71,71,0.902032206041917,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,orthogonal_angle_share_10deg,numeric,71,71,0.2507720315555256,SHA checksum or source identifier.
+R63_integrated_high_order_external_covariates.csv,straight_angle_share_10deg,numeric,71,71,0.1909783561459106,SHA checksum or source identifier.
+R63_integrated_high_order_external_covariates.csv,acute_angle_share_lt45deg,numeric,71,71,0.06791180635156092,SHA checksum or source identifier.
+R63_integrated_high_order_external_covariates.csv,median_intersection_angle_deg,numeric,71,71,109.58849312765832,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,mean_min_node_angle_deg,numeric,71,71,70.05312506539316,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,wikidata_status,text,71,71,no_search_result,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,wikidata_query,text,71,71,"Lisbon, Portugal",Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,wikidata_id,text,71,45,Q1741,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,wikidata_label,text,71,45,Vienna,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,wikidata_description,text,71,45,capital of and state in Austria,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,wikidata_match_rank,numeric,71,45,1.0,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,wikidata_population,numeric,71,30,2028289.0,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,wikidata_area_km2,numeric,71,30,414.83,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,wikidata_population_density_per_km2,numeric,71,30,4889.446279198708,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,wikidata_inception_time,text,71,30,-0100-00-00T00:00:00Z,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,wikidata_retrieved_utc,text,71,45,2026-06-03T14:57:44Z,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,wikidata_boundary,text,71,45,candidate_public_metadata_requires_spot_check,Project-derived variable; see round report and manuscript Methods for definition.
+R63_integrated_high_order_external_covariates.csv,road_minus_geometry_mean,numeric,71,21,0.025,Strict non-crossing geometry-null metric or diagnostic.
+R63_high_order_external_correlations.csv,target,text,14,14,road_gap,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_external_correlations.csv,covariate,text,14,14,dual_degree_mean,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_external_correlations.csv,n,numeric,14,14,71,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_external_correlations.csv,spearman_rho,numeric,14,14,-0.6307176391683432,Spearman rank-correlation coefficient.
+R63_high_order_external_correlations.csv,spearman_p,numeric,14,14,3.743011309454672e-09,Project-derived variable; see round report and manuscript Methods for definition.
+R63_high_order_external_correlations.csv,pearson_r,numeric,14,14,-0.6470301072857352,Pearson correlation coefficient.
+R63_high_order_external_correlations.csv,pearson_p,numeric,14,14,1.0840396011841688e-09,Pearson correlation coefficient.
+R63_high_order_external_correlations.csv,abs_spearman_rho,numeric,14,14,0.6307176391683432,Spearman rank-correlation coefficient.
+R63_R63_model_summary.json,model,str,1,1,R63 standardized RidgeCV high-order + external candidate screen,Project-derived variable; see round report and manuscript Methods for definition.
+R63_R63_model_summary.json,n,int,1,1,71,Project-derived variable; see round report and manuscript Methods for definition.
+R63_R63_model_summary.json,predictors,list,1,1,"['node_density_per_km2', 'orientation_fourfold_order', 'dead_end_share', 'cycle_density', 'arterial_length_share', 'arti",Project-derived variable; see round report and manuscript Methods for definition.
+R63_R63_model_summary.json,alpha,float,1,1,15.848931924611142,Project-derived variable; see round report and manuscript Methods for definition.
+R63_R63_model_summary.json,in_sample_r2,float,1,1,0.5205613405684263,Coefficient of determination for descriptive predictive screen.
+R63_R63_model_summary.json,cv_r2_mean,float,1,1,0.24153242078868295,Coefficient of determination for descriptive predictive screen.
+R63_R63_model_summary.json,cv_r2_sd,float,1,1,0.35432887401758817,Coefficient of determination for descriptive predictive screen.
+R63_R63_model_summary.json,coefficients,dict,1,1,"{'node_density_per_km2': -0.002448818040371445, 'orientation_fourfold_order': -0.004135523076682902, 'dead_end_share': 0",Project-derived variable; see round report and manuscript Methods for definition.
+R63_R63_model_summary.json,interpretation,str,1,1,descriptive screen; Wikidata variables are candidate public metadata pending spot-check,Project-derived variable; see round report and manuscript Methods for definition.
+R64_spatial_null_screen_summary.csv,city,text,71,71,Lisbon,City or urban-window identifier.
+R64_spatial_null_screen_summary.csv,country,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
+R64_spatial_null_screen_summary.csv,macro_region,text,71,71,Europe,Macro-region label used for stratification or reporting.
+R64_spatial_null_screen_summary.csv,n_nodes,numeric,71,71,26686,Project-derived variable; see round report and manuscript Methods for definition.
+R64_spatial_null_screen_summary.csv,n_edges,numeric,71,71,36745,Project-derived variable; see round report and manuscript Methods for definition.
+R64_spatial_null_screen_summary.csv,pc_cebh,numeric,71,71,0.4955161486076462,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R64_spatial_null_screen_summary.csv,pc_road,numeric,71,71,0.75,Project-derived variable; see round report and manuscript Methods for definition.
+R64_spatial_null_screen_summary.csv,road_gap,numeric,71,71,0.2544838513923538,Difference between observed road threshold and a baseline/null threshold.
+R64_spatial_null_screen_summary.csv,pc_spatial_null,numeric,71,71,0.625,Spatial-scale null metric or diagnostic.
+R64_spatial_null_screen_summary.csv,pc_spatial_null_ci_low,numeric,71,71,0.625,Spatial-scale null metric or diagnostic.
+R64_spatial_null_screen_summary.csv,pc_spatial_null_ci_high,numeric,71,71,0.65,Spatial-scale null metric or diagnostic.
+R64_spatial_null_screen_summary.csv,spatial_null_gap,numeric,71,71,0.1294838513923538,Difference between observed road threshold and a baseline/null threshold.
+R64_spatial_null_screen_summary.csv,road_minus_spatial,numeric,71,71,0.125,Spatial-scale null metric or diagnostic.
+R64_spatial_null_screen_summary.csv,spatial_fraction_of_road_gap,numeric,71,71,0.5088096972908523,Difference between observed road threshold and a baseline/null threshold.
+R64_spatial_null_screen_summary.csv,remaining_fraction_after_spatial,numeric,71,71,0.4911903027091476,Spatial-scale null metric or diagnostic.
+R64_spatial_null_screen_summary.csv,threshold_boundary_hit,text,71,71,False,Estimated bond-percolation threshold.
+R64_spatial_null_screen_summary.csv,runtime_seconds,numeric,71,71,0.9909017086029053,Project-derived variable; see round report and manuscript Methods for definition.
+R64_spatial_null_screen_summary.csv,swap_fraction_target,numeric,71,71,0.02,Accepted or attempted double-edge swap diagnostic.
+R64_spatial_null_screen_summary.csv,n_perm,numeric,71,71,6,Project-derived variable; see round report and manuscript Methods for definition.
+R64_spatial_null_screen_summary.csv,n_bootstrap,numeric,71,71,80,Project-derived variable; see round report and manuscript Methods for definition.
+R64_spatial_null_screen_summary.csv,length_bins,numeric,71,71,12,Edge-length or chord-length metric/bin diagnostic.
+R64_spatial_null_screen_summary.csv,bin_tolerance,numeric,71,71,1,Project-derived variable; see round report and manuscript Methods for definition.
+R64_spatial_null_screen_summary.csv,status,text,71,71,pass,Project-derived variable; see round report and manuscript Methods for definition.
+R64_spatial_null_screen_summary.csv,accepted_swaps,numeric,71,71,735.0,Accepted or attempted double-edge swap diagnostic.
+R64_spatial_null_screen_summary.csv,attempted_swaps,numeric,71,71,25312.0,Accepted or attempted double-edge swap diagnostic.
+R64_spatial_null_screen_summary.csv,acceptance_rate,numeric,71,71,0.029037610619469027,Acceptance-rate diagnostic for null-model rewiring.
+R64_spatial_null_screen_summary.csv,accepted_swaps_per_edge,numeric,71,71,0.020002721458701866,Accepted or attempted double-edge swap diagnostic.
+R64_spatial_null_screen_summary.csv,degree_max_abs_drift,numeric,71,71,0.0,Degree-sequence or degree-composition metric.
+R64_spatial_null_screen_summary.csv,chord_length_mean_ratio,numeric,71,71,4.626575048345742,Edge-length or chord-length metric/bin diagnostic.
+R64_spatial_null_screen_summary.csv,chord_length_median_ratio,numeric,71,71,1.0,Edge-length or chord-length metric/bin diagnostic.
+R64_spatial_null_screen_summary.csv,chord_length_bin_tvd,numeric,71,71,0.01709076064770717,Edge-length or chord-length metric/bin diagnostic.
+R64_spatial_null_screen_summary.csv,length_rejects,numeric,71,71,24574.0,Edge-length or chord-length metric/bin diagnostic.
+R64_spatial_null_screen_summary.csv,topology_rejects,numeric,71,71,3.0,Project-derived variable; see round report and manuscript Methods for definition.
+R64_spatial_null_screen_summary.csv,notes,text,71,71,single-replicate 71-city spatial-scale null screen; not a full R56 replacement,Project-derived variable; see round report and manuscript Methods for definition.
+R64_R64_summary.json,n_cities,int,1,1,71,Project-derived variable; see round report and manuscript Methods for definition.
+R64_R64_summary.json,n_pass_like,int,1,1,71,Project-derived variable; see round report and manuscript Methods for definition.
+R64_R64_summary.json,mean_road_gap,float,1,1,0.21658261833673306,Difference between observed road threshold and a baseline/null threshold.
+R64_R64_summary.json,mean_spatial_null_gap,float,1,1,0.1201037450972966,Difference between observed road threshold and a baseline/null threshold.
+R64_R64_summary.json,mean_road_minus_spatial,float,1,1,0.09647887323943663,Spatial-scale null metric or diagnostic.
+R64_R64_summary.json,mean_spatial_fraction,float,1,1,0.557362398642295,Spatial-scale null metric or diagnostic.
+R64_R64_summary.json,mean_remaining_fraction,float,1,1,0.4426376013577051,Project-derived variable; see round report and manuscript Methods for definition.
+R64_R64_summary.json,boundary_hits,int,1,1,0,Project-derived variable; see round report and manuscript Methods for definition.
+R64_R64_summary.json,mean_accepted_swaps_per_edge,float,1,1,0.0200008587223721,Accepted or attempted double-edge swap diagnostic.
+R64_R64_summary.json,mean_acceptance_rate,float,1,1,0.02778164598846336,Acceptance-rate diagnostic for null-model rewiring.
+R65_public_data_source_registry.csv,source_family,text,5,5,GHSL UCDB R2024A,Provenance/source field.
+R65_public_data_source_registry.csv,theme,text,5,5,general,Project-derived variable; see round report and manuscript Methods for definition.
+R65_public_data_source_registry.csv,url,text,5,5,https://jeodpp.jrc.ec.europa.eu/ftp/jrc-opendata/GHSL/GHS_UCDB_GLOBE_R2024A/GHS_UCDB_THEME_GLOBE_R2024A/GHS_UCDB_THEME_G,Project-derived variable; see round report and manuscript Methods for definition.
+R65_public_data_source_registry.csv,local_file,text,5,5,data\R65_public_covariates_and_controls\raw\GHS_UCDB_THEME_GENERAL_CHARACTERISTICS_GLOBE_R2024A_V1_1.zip,Project-derived variable; see round report and manuscript Methods for definition.
+R65_public_data_source_registry.csv,downloaded_bytes,numeric,5,5,10741094,Project-derived variable; see round report and manuscript Methods for definition.
+R65_public_data_source_registry.csv,status,text,5,5,downloaded,Project-derived variable; see round report and manuscript Methods for definition.
+R65_ghsl_match_qc.csv,city,text,71,71,Lisbon,City or urban-window identifier.
+R65_ghsl_match_qc.csv,country,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
+R65_ghsl_match_qc.csv,ID_UC_G0,numeric,71,71,231,Project-derived variable; see round report and manuscript Methods for definition.
+R65_ghsl_match_qc.csv,ghsl_name,text,71,71,Lisbon,Project-derived variable; see round report and manuscript Methods for definition.
+R65_ghsl_match_qc.csv,ghsl_country,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
+R65_ghsl_match_qc.csv,ghsl_latitude,numeric,71,71,38.76045813224219,Project-derived variable; see round report and manuscript Methods for definition.
+R65_ghsl_match_qc.csv,ghsl_longitude,numeric,71,71,-9.21701413491286,Project-derived variable; see round report and manuscript Methods for definition.
+R65_ghsl_match_qc.csv,ghsl_match_similarity,numeric,71,71,1.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_ghsl_match_qc.csv,ghsl_match_distance_km,numeric,71,71,9.110962209860354,Project-derived variable; see round report and manuscript Methods for definition.
+R65_ghsl_match_qc.csv,ghsl_match_score,numeric,71,71,0.9908890377901396,Project-derived variable; see round report and manuscript Methods for definition.
+R65_ghsl_match_qc.csv,ghsl_match_status,text,71,71,high_confidence,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,city,text,71,71,Lisbon,City or urban-window identifier.
+R65_R65_integrated_public_covariates.csv,country,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,macro_region,text,71,71,Europe,Macro-region label used for stratification or reporting.
+R65_R65_integrated_public_covariates.csv,latitude,numeric,71,71,38.7077507,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,longitude,numeric,71,71,-9.1365919,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,window_radius_m,numeric,71,71,10000,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,bbox_area_km2,numeric,71,71,400.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,n_nodes,numeric,71,71,26686,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,n_edges,numeric,71,71,36745,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,pc_cebh,numeric,71,71,0.4955161486076462,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R65_R65_integrated_public_covariates.csv,pc_rank,numeric,71,71,0.75,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,road_gap,numeric,71,71,0.2544838513923538,Difference between observed road threshold and a baseline/null threshold.
+R65_R65_integrated_public_covariates.csv,node_density_per_km2,numeric,71,71,66.715,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,edge_density_per_km2,numeric,71,71,91.8625,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,chord_length_density_km_per_km2,numeric,71,71,7.283798400816158,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,edge_length_mean_m,numeric,71,71,79.29022616210268,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,edge_length_median_m,numeric,71,71,50.09774214527755,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,edge_length_iqr_m,numeric,71,71,68.18401361913405,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,edge_length_cv,numeric,71,71,1.7087578152104208,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,short_edge_share_lt40m,numeric,71,71,0.4095795346305619,SHA checksum or source identifier.
+R65_R65_integrated_public_covariates.csv,long_edge_share_gt150m,numeric,71,71,0.1151993468499115,SHA checksum or source identifier.
+R65_R65_integrated_public_covariates.csv,orientation_entropy,numeric,71,71,0.9973324314912948,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,orientation_dominance,numeric,71,71,0.067192815349027,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,orientation_fourfold_order,numeric,71,71,0.0841523643597808,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,orthogonal_alignment_share_10deg,numeric,71,71,0.2477071710436794,SHA checksum or source identifier.
+R65_R65_integrated_public_covariates.csv,dead_end_share,numeric,71,71,0.1549126883009818,SHA checksum or source identifier.
+R65_R65_integrated_public_covariates.csv,degree2_share,numeric,71,71,0.0462414749306752,Degree-sequence or degree-composition metric.
+R65_R65_integrated_public_covariates.csv,degree3_share,numeric,71,71,0.6940717979464888,Degree-sequence or degree-composition metric.
+R65_R65_integrated_public_covariates.csv,degree4plus_share,numeric,71,71,0.1047740388218541,Degree-sequence or degree-composition metric.
+R65_R65_integrated_public_covariates.csv,mean_degree,numeric,71,71,2.7538784381323542,Degree-sequence or degree-composition metric.
+R65_R65_integrated_public_covariates.csv,kappa,numeric,71,71,3.018097700367397,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,degree_gini,numeric,71,71,0.1418200866149155,Degree-sequence or degree-composition metric.
+R65_R65_integrated_public_covariates.csv,connected_components,numeric,71,71,1,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,cyclomatic_number,numeric,71,71,10060,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,cycle_density,numeric,71,71,0.3769766918983737,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,arterial_length_share,numeric,71,71,0.2092820119274249,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,collector_length_share,numeric,71,71,0.1612789703675397,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,local_length_share,numeric,71,71,0.6294390177050173,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,motorway_trunk_length_share,numeric,71,71,0.0850502330960836,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,residential_length_share,numeric,71,71,0.6249169554864256,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,oneway_length_share,numeric,71,71,0.3421441490502626,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,bridge_tunnel_length_share,numeric,71,71,0.073065716779634,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,maxspeed_coverage_share,numeric,71,71,0.1664473416017207,SHA checksum or source identifier.
+R65_R65_integrated_public_covariates.csv,lanes_coverage_share,numeric,71,71,0.3354076863804046,SHA checksum or source identifier.
+R65_R65_integrated_public_covariates.csv,edge_circuity_mean,numeric,71,71,1.0844955187858132,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,edge_circuity_median,numeric,71,71,1.000232592296042,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,graph_cache_file,text,71,71,cache\R61_osmnx_city_windows\lisbon_portugal__drive_10000m.pkl,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,articulation_point_count,numeric,71,71,4435,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,articulation_point_share,numeric,71,71,0.1661920107921756,SHA checksum or source identifier.
+R65_R65_integrated_public_covariates.csv,bridge_edge_count,numeric,71,71,5060,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,bridge_edge_share,numeric,71,71,0.1377058103143285,SHA checksum or source identifier.
+R65_R65_integrated_public_covariates.csv,biconnected_component_count,numeric,71,71,5166,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,largest_biconnected_node_fraction,numeric,71,71,0.7744135501761223,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,median_biconnected_component_size,numeric,71,71,2.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,dual_degree_mean,numeric,71,71,4.036195400734794,Degree-sequence or degree-composition metric.
+R65_R65_integrated_public_covariates.csv,dual_degree_median,numeric,71,71,4.0,Degree-sequence or degree-composition metric.
+R65_R65_integrated_public_covariates.csv,dual_degree_gini,numeric,71,71,0.119322491287263,Degree-sequence or degree-composition metric.
+R65_R65_integrated_public_covariates.csv,angular_pair_count,numeric,71,71,74155,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,angular_entropy,numeric,71,71,0.902032206041917,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,orthogonal_angle_share_10deg,numeric,71,71,0.2507720315555256,SHA checksum or source identifier.
+R65_R65_integrated_public_covariates.csv,straight_angle_share_10deg,numeric,71,71,0.1909783561459106,SHA checksum or source identifier.
+R65_R65_integrated_public_covariates.csv,acute_angle_share_lt45deg,numeric,71,71,0.0679118063515609,SHA checksum or source identifier.
+R65_R65_integrated_public_covariates.csv,median_intersection_angle_deg,numeric,71,71,109.58849312765832,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,mean_min_node_angle_deg,numeric,71,71,70.05312506539316,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wikidata_status,text,71,71,no_search_result,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wikidata_query,text,71,71,"Lisbon, Portugal",Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wikidata_id,text,71,45,Q1741,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wikidata_label,text,71,45,Vienna,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wikidata_description,text,71,45,capital of and state in Austria,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wikidata_match_rank,numeric,71,45,1.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wikidata_population,numeric,71,30,2028289.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wikidata_area_km2,numeric,71,30,414.83,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wikidata_population_density_per_km2,numeric,71,30,4889.446279198708,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wikidata_inception_time,text,71,30,-0100-00-00T00:00:00Z,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wikidata_retrieved_utc,text,71,45,2026-06-03T14:57:44Z,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wikidata_boundary,text,71,45,candidate_public_metadata_requires_spot_check,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,road_minus_geometry_mean,numeric,71,21,0.025,Strict non-crossing geometry-null metric or diagnostic.
+R65_R65_integrated_public_covariates.csv,pc_spatial_null,numeric,71,71,0.625,Spatial-scale null metric or diagnostic.
+R65_R65_integrated_public_covariates.csv,spatial_null_gap,numeric,71,71,0.1294838513923538,Difference between observed road threshold and a baseline/null threshold.
+R65_R65_integrated_public_covariates.csv,road_minus_spatial,numeric,71,71,0.125,Spatial-scale null metric or diagnostic.
+R65_R65_integrated_public_covariates.csv,spatial_fraction_of_road_gap,numeric,71,71,0.5088096972908523,Difference between observed road threshold and a baseline/null threshold.
+R65_R65_integrated_public_covariates.csv,remaining_fraction_after_spatial,numeric,71,71,0.4911903027091476,Spatial-scale null metric or diagnostic.
+R65_R65_integrated_public_covariates.csv,threshold_boundary_hit,text,71,71,False,Estimated bond-percolation threshold.
+R65_R65_integrated_public_covariates.csv,ID_UC_G0,numeric,71,71,231,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_name,text,71,71,Lisbon,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_country,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_latitude_x,numeric,71,71,38.76045813224219,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_longitude_x,numeric,71,71,-9.21701413491286,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_match_similarity,numeric,71,71,1.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_match_distance_km,numeric,71,71,9.110962209860354,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_match_score,numeric,71,71,0.9908890377901396,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_match_status,text,71,71,high_confidence,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_name_main_2025,text,71,71,Lisbon,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_name_list_2025,text,71,71,Lisbon; Amadora; Agualva-Cacém; Queluz; Odivelas; Loures; Alverca do Ribatejo; Póvoa de Santa Iria; Sacavém,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_country_gadm_2025,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_country_un_2025,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_area_km2_2025,numeric,71,71,426,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_population_total_2025,numeric,71,71,1974573.68,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_world_income_group_2025,text,71,71,High income,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_un_subregion_2025,text,71,71,Europe,Region label used for stratification or reporting.
+R65_R65_integrated_public_covariates.csv,ghsl_place_score_2025,text,71,71,High,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_birth_year_2025,numeric,71,71,1975,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_death_year_2025,numeric,71,71,2030,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_capital_flag,numeric,71,71,1,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,GC_UCC_LON_2025,numeric,71,71,-791521.8295,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,GC_UCC_LAT_2025,numeric,71,71,4650383.367,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_longitude_y,numeric,71,71,-9.21701413491286,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_latitude_y,numeric,71,71,38.76045813224219,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,IN_CIS_ENE_2020,numeric,71,71,0.049406805,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,IN_CIS_TRA_2020,numeric,71,71,0.064332468,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,IN_CIS_WAT_2020,numeric,71,71,0.002878477,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,IN_CIS_WAS_2020,numeric,71,71,0.000155434,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,IN_CIS_TEL_2020,numeric,71,71,0.017056361,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,IN_CIS_HEA_2020,numeric,71,71,0.025245297,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,IN_CIS_EDU_2020,numeric,71,71,0.03709417,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_infrastructure_index_2020,numeric,71,71,0.219878762,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_road_length_m_2024,numeric,71,71,9325293.262,Edge-length or chord-length metric/bin diagnostic.
+R65_R65_integrated_public_covariates.csv,ghsl_road_density_2024,numeric,71,71,0.02189036,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_gdp_avg_2020,numeric,71,71,135063398.6,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_gdp_sum_2020,numeric,71,71,82928926720.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_hdi_2020,numeric,71,69,0.898,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_life_expectancy_2020,numeric,71,69,81.356,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_expected_schooling_2020,numeric,71,69,18.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_mean_schooling_2020,numeric,71,69,10.281,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_lulc_total_hectares_2019,numeric,71,71,36536.476048000004,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_lulc_entropy_2019,numeric,71,71,0.3547135215824594,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_lulc_dominance_2019,numeric,71,71,0.6957893283578337,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_lulc_nonzero_classes_2019,numeric,71,71,6,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_population_density_2025,numeric,71,71,4635.149483568075,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_log_population_2025,numeric,71,71,6.2954733438058685,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_log_area_2025,numeric,71,71,2.629409599102719,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,countryiso3code,text,71,71,PRT,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wdi_gdp_per_capita_constant_2015_usd,numeric,71,70,22647.3791895579,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wdi_gini_index,numeric,71,67,33.9,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wdi_population_density_people_per_km2,numeric,71,70,115.475189289738,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wdi_population_total,numeric,71,70,10694681.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wdi_urban_population_growth_pct,numeric,71,70,1.29665949378498,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wdi_urban_population_pct,numeric,71,70,61.3281907341332,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wdi_gdp_per_capita_constant_2015_usd_year,numeric,71,70,2024.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wdi_gini_index_year,numeric,71,67,2023.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wdi_population_density_people_per_km2_year,numeric,71,70,2023.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wdi_population_total_year,numeric,71,70,2024.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wdi_urban_population_growth_pct_year,numeric,71,70,2024.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,wdi_urban_population_pct_year,numeric,71,70,2024.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_model_comparison.csv,target,text,10,10,road_gap,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_model_comparison.csv,model_group,text,10,10,graph_only,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_model_comparison.csv,n,numeric,10,10,71,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_model_comparison.csv,n_features_used,numeric,10,10,21,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_model_comparison.csv,features_used,text,10,10,node_density_per_km2;edge_density_per_km2;chord_length_density_km_per_km2;edge_length_mean_m;edge_length_cv;orientation_,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_model_comparison.csv,cv_r2,numeric,10,10,0.3439951084746926,Coefficient of determination for descriptive predictive screen.
+R65_R65_model_comparison.csv,in_sample_r2,numeric,10,10,0.5664182834253276,Coefficient of determination for descriptive predictive screen.
+R65_R65_model_comparison.csv,alpha,numeric,10,10,33.035991201283395,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_external_correlations.csv,target,text,40,40,road_gap,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_external_correlations.csv,feature,text,40,40,wdi_urban_population_pct,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_external_correlations.csv,label,text,40,40,WDI urban population %,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_external_correlations.csv,n,numeric,40,40,70,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_external_correlations.csv,spearman_r,numeric,40,40,-0.44380255156116977,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_external_correlations.csv,spearman_p,numeric,40,40,0.00011898880573222326,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_external_correlations.csv,pearson_r,numeric,40,40,-0.5062970413262008,Pearson correlation coefficient.
+R65_R65_external_correlations.csv,pearson_p,numeric,40,40,7.762607061962076e-06,Pearson correlation coefficient.
+R65_R65_external_correlations.csv,abs_spearman_r,numeric,40,40,0.44380255156116977,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,country,text,53,53,Algeria,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,countryiso3code,text,53,53,DZA,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,wdi_gdp_per_capita_constant_2015_usd,numeric,53,52,4765.72900168387,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,wdi_gini_index,numeric,53,49,27.6,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,wdi_population_density_people_per_km2,numeric,53,52,19.3825602290762,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,wdi_population_total,numeric,53,52,46814308.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,wdi_urban_population_growth_pct,numeric,53,52,2.12697498648782,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,wdi_urban_population_pct,numeric,53,52,75.2792907190618,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,wdi_gdp_per_capita_constant_2015_usd_year,numeric,53,52,2024.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,wdi_gini_index_year,numeric,53,49,2011.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,wdi_population_density_people_per_km2_year,numeric,53,52,2023.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,wdi_population_total_year,numeric,53,52,2024.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,wdi_urban_population_growth_pct_year,numeric,53,52,2024.0,Project-derived variable; see round report and manuscript Methods for definition.
+R65_wdi_country_controls.csv,wdi_urban_population_pct_year,numeric,53,52,2024.0,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_city_summary.csv,city,text,54,54,Amsterdam,City or urban-window identifier.
+R67_geometry_null_sensitivity_city_summary.csv,country,text,54,54,Netherlands,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_city_summary.csv,macro_region,text,54,54,Europe,Macro-region label used for stratification or reporting.
+R67_geometry_null_sensitivity_city_summary.csv,swap_fraction,numeric,54,54,0.005,Accepted or attempted double-edge swap diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,n_replicates_total,numeric,54,54,3,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_city_summary.csv,n_replicates_pass,numeric,54,54,3,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_city_summary.csv,n_replicates_fail,numeric,54,54,0,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_city_summary.csv,n_nodes,numeric,54,54,23201,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_city_summary.csv,n_edges,numeric,54,54,32887,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_city_summary.csv,pc_cebh,numeric,54,54,0.466680857102313,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R67_geometry_null_sensitivity_city_summary.csv,pc_road,numeric,54,54,0.7,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_city_summary.csv,road_gap,numeric,54,54,0.2333191428976869,Difference between observed road threshold and a baseline/null threshold.
+R67_geometry_null_sensitivity_city_summary.csv,pc_geometry_null_mean,numeric,54,54,0.6750000000000002,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,pc_geometry_null_std,numeric,54,54,0.0,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,pc_geometry_null_min,numeric,54,54,0.675,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,pc_geometry_null_max,numeric,54,54,0.675,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,geometry_null_gap_mean,numeric,54,54,0.20831914289768702,Difference between observed road threshold and a baseline/null threshold.
+R67_geometry_null_sensitivity_city_summary.csv,road_minus_geometry_mean,numeric,54,54,0.0249999999999999,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,road_minus_geometry_std,numeric,54,54,0.0,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,road_minus_geometry_min,numeric,54,54,0.0249999999999999,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,road_minus_geometry_max,numeric,54,54,0.0249999999999999,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,geometry_fraction_of_road_gap_mean,numeric,54,54,0.8928506264444721,Difference between observed road threshold and a baseline/null threshold.
+R67_geometry_null_sensitivity_city_summary.csv,remaining_fraction_after_geometry_mean,numeric,54,54,0.1071493735555281,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,accepted_swaps_per_edge_mean,numeric,54,54,0.0049867728889834,Accepted or attempted double-edge swap diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,acceptance_rate_mean,numeric,54,54,0.0018841710074671333,Acceptance-rate diagnostic for null-model rewiring.
+R67_geometry_null_sensitivity_city_summary.csv,length_bin_tvd_mean,numeric,54,54,0.0,Edge-length or chord-length metric/bin diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,length_mean_ratio_mean,numeric,54,54,1.0065815308365018,Edge-length or chord-length metric/bin diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,length_median_ratio_mean,numeric,54,54,1.00019115612099,Edge-length or chord-length metric/bin diagnostic.
+R67_geometry_null_sensitivity_city_summary.csv,degree_max_abs_drift_max,numeric,54,54,0,Degree-sequence or degree-composition metric.
+R67_geometry_null_sensitivity_city_summary.csv,threshold_boundary_hits,numeric,54,54,0,Estimated bond-percolation threshold.
+R67_geometry_null_sensitivity_city_summary.csv,null_mobility_index_mean,numeric,54,54,0.002606687557478733,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_city_summary.csv,delta_bridge_edge_share_mean,numeric,54,54,-0.000334478669383,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_city_summary.csv,delta_articulation_point_share_mean,numeric,54,54,-0.0005172190853842,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_city_summary.csv,delta_largest_biconnected_node_fraction_mean,numeric,54,54,0.0003017111331408,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_city_summary.csv,delta_dual_endpoint_degree_mean_mean,numeric,54,54,0.0,Degree-sequence or degree-composition metric.
+R67_geometry_null_sensitivity_city_summary.csv,delta_angular_entropy_mean,numeric,54,54,0.005232077345136633,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_city_summary.csv,runtime_seconds_mean,numeric,54,54,6.596107641855876,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_fraction_summary.csv,swap_fraction,numeric,3,3,0.005,Accepted or attempted double-edge swap diagnostic.
+R67_geometry_null_sensitivity_fraction_summary.csv,n_cities_total,numeric,3,3,21,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_fraction_summary.csv,n_cities_pass,numeric,3,3,21,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_fraction_summary.csv,n_replicates_total,numeric,3,3,63,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_fraction_summary.csv,n_replicates_pass,numeric,3,3,63,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_fraction_summary.csv,road_minus_geometry_mean,numeric,3,3,0.005555555555555543,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_fraction_summary.csv,road_minus_geometry_ci95_low,numeric,3,3,-0.0024408170788732617,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_fraction_summary.csv,road_minus_geometry_ci95_high,numeric,3,3,0.013551928189984347,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_fraction_summary.csv,remaining_fraction_after_geometry_mean,numeric,3,3,0.02233394872751731,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_fraction_summary.csv,remaining_fraction_after_geometry_ci95_low,numeric,3,3,-0.011716339576496884,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_fraction_summary.csv,remaining_fraction_after_geometry_ci95_high,numeric,3,3,0.0563842370315315,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_fraction_summary.csv,geometry_fraction_of_road_gap_mean,numeric,3,3,0.977666051272483,Difference between observed road threshold and a baseline/null threshold.
+R67_geometry_null_sensitivity_fraction_summary.csv,accepted_swaps_per_edge_mean,numeric,3,3,0.004998277207361134,Accepted or attempted double-edge swap diagnostic.
+R67_geometry_null_sensitivity_fraction_summary.csv,acceptance_rate_mean,numeric,3,3,0.0018912862490754144,Acceptance-rate diagnostic for null-model rewiring.
+R67_geometry_null_sensitivity_fraction_summary.csv,length_bin_tvd_mean,numeric,3,3,0.0,Edge-length or chord-length metric/bin diagnostic.
+R67_geometry_null_sensitivity_fraction_summary.csv,degree_max_abs_drift_max,numeric,3,3,0.0,Degree-sequence or degree-composition metric.
+R67_geometry_null_sensitivity_fraction_summary.csv,null_mobility_index_mean,numeric,3,3,0.003219563174434892,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_fraction_summary.csv,positive_residual_city_share,numeric,3,3,0.42857142857142855,City or urban-window identifier.
+R67_geometry_null_sensitivity_replicates.csv,city,text,162,162,Amsterdam,City or urban-window identifier.
+R67_geometry_null_sensitivity_replicates.csv,country,text,162,162,Netherlands,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,macro_region,text,162,162,Europe,Macro-region label used for stratification or reporting.
+R67_geometry_null_sensitivity_replicates.csv,replicate,numeric,162,162,0,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,swap_fraction,numeric,162,162,0.005,Accepted or attempted double-edge swap diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,n_nodes,numeric,162,162,23201,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,n_edges,numeric,162,162,32887,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,pc_cebh,numeric,162,162,0.466680857102313,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R67_geometry_null_sensitivity_replicates.csv,pc_road,numeric,162,162,0.7,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,road_gap,numeric,162,162,0.2333191428976869,Difference between observed road threshold and a baseline/null threshold.
+R67_geometry_null_sensitivity_replicates.csv,pc_geometry_null,numeric,162,162,0.675,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,pc_geometry_null_ci_low,numeric,162,162,0.65,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,pc_geometry_null_ci_high,numeric,162,162,0.7006249999999997,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,geometry_null_gap,numeric,162,162,0.20831914289768705,Difference between observed road threshold and a baseline/null threshold.
+R67_geometry_null_sensitivity_replicates.csv,road_minus_geometry,numeric,162,162,0.02499999999999991,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,geometry_fraction_of_road_gap,numeric,162,162,0.8928506264444721,Difference between observed road threshold and a baseline/null threshold.
+R67_geometry_null_sensitivity_replicates.csv,remaining_fraction_after_geometry,numeric,162,162,0.10714937355552817,Strict non-crossing geometry-null metric or diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,threshold_boundary_hit,text,162,162,False,Estimated bond-percolation threshold.
+R67_geometry_null_sensitivity_replicates.csv,runtime_seconds,numeric,162,162,7.510496139526367,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,accepted_swaps,numeric,162,162,164,Accepted or attempted double-edge swap diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,attempted_swaps,numeric,162,162,87695,Accepted or attempted double-edge swap diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,acceptance_rate,numeric,162,162,0.0018701180226922858,Acceptance-rate diagnostic for null-model rewiring.
+R67_geometry_null_sensitivity_replicates.csv,accepted_swaps_per_edge,numeric,162,162,0.004986772888983489,Accepted or attempted double-edge swap diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,target_swaps,numeric,162,162,164,Accepted or attempted double-edge swap diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,target_swap_fraction,numeric,162,162,0.005,Accepted or attempted double-edge swap diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,topology_rejects,numeric,162,162,4158,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,length_rejects,numeric,162,162,80307,Edge-length or chord-length metric/bin diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,crossing_rejects,numeric,162,162,3066,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,degree_max_abs_drift,numeric,162,162,0,Degree-sequence or degree-composition metric.
+R67_geometry_null_sensitivity_replicates.csv,length_bin_tvd,numeric,162,162,0.0,Edge-length or chord-length metric/bin diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,length_mean_ratio,numeric,162,162,1.0054119184693526,Edge-length or chord-length metric/bin diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,length_median_ratio,numeric,162,162,1.0001775174359,Edge-length or chord-length metric/bin diagnostic.
+R67_geometry_null_sensitivity_replicates.csv,stale_index_guard_calls,numeric,162,162,514,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,max_attempts,numeric,162,162,147600,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,status,text,162,162,pass,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,full_connectivity_metrics,text,162,162,True,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,notes,text,162,162,strict non-crossing degree-preserving geometry-null sensitivity replicate,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,original_connected_components,numeric,162,162,1.0,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,null_connected_components,numeric,162,54,4.0,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,delta_connected_components,numeric,162,54,3.0,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,original_bridge_edge_share,numeric,162,162,0.13996411956092072,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_replicates.csv,null_bridge_edge_share,numeric,162,54,0.13962964089153768,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_replicates.csv,delta_bridge_edge_share,numeric,162,54,-0.00033447866938304815,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_replicates.csv,original_articulation_point_share,numeric,162,162,0.17288047928968578,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_replicates.csv,null_articulation_point_share,numeric,162,54,0.17236326020430154,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_replicates.csv,delta_articulation_point_share,numeric,162,54,-0.0005172190853842407,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_replicates.csv,original_largest_biconnected_node_fraction,numeric,162,162,0.7542347312615836,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,null_largest_biconnected_node_fraction,numeric,162,54,0.7545364423947244,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,delta_largest_biconnected_node_fraction,numeric,162,54,0.000301711133140814,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,original_cyclomatic_density,numeric,162,162,0.4175251066764364,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,null_cyclomatic_density,numeric,162,54,0.4176544114477824,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,delta_cyclomatic_density,numeric,162,54,0.00012930477134603935,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,original_dual_endpoint_degree_mean,numeric,162,162,4.285583969349591,Degree-sequence or degree-composition metric.
+R67_geometry_null_sensitivity_replicates.csv,null_dual_endpoint_degree_mean,numeric,162,162,4.285583969349591,Degree-sequence or degree-composition metric.
+R67_geometry_null_sensitivity_replicates.csv,delta_dual_endpoint_degree_mean,numeric,162,162,0.0,Degree-sequence or degree-composition metric.
+R67_geometry_null_sensitivity_replicates.csv,original_dual_endpoint_degree_cv,numeric,162,162,0.2733076557178945,Degree-sequence or degree-composition metric.
+R67_geometry_null_sensitivity_replicates.csv,null_dual_endpoint_degree_cv,numeric,162,162,0.27327736580685913,Degree-sequence or degree-composition metric.
+R67_geometry_null_sensitivity_replicates.csv,delta_dual_endpoint_degree_cv,numeric,162,162,-3.0289911035374928e-05,Degree-sequence or degree-composition metric.
+R67_geometry_null_sensitivity_replicates.csv,original_angular_entropy,numeric,162,162,0.829914713800308,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,null_angular_entropy,numeric,162,162,0.835087990065983,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,delta_angular_entropy,numeric,162,162,0.0051732762656749864,Project-derived variable; see round report and manuscript Methods for definition.
+R67_geometry_null_sensitivity_replicates.csv,original_straight_angle_share_10deg,numeric,162,162,0.22979991485738613,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_replicates.csv,null_straight_angle_share_10deg,numeric,162,162,0.2267773520647084,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_replicates.csv,delta_straight_angle_share_10deg,numeric,162,162,-0.0030225627926777354,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_replicates.csv,original_right_angle_share_10deg,numeric,162,162,0.3560380303675323,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_replicates.csv,null_right_angle_share_10deg,numeric,162,162,0.35250461189158505,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_replicates.csv,delta_right_angle_share_10deg,numeric,162,162,-0.0035334184759472365,SHA checksum or source identifier.
+R67_geometry_null_sensitivity_replicates.csv,null_mobility_index,numeric,162,162,0.0018403809174582944,Project-derived variable; see round report and manuscript Methods for definition.
+R67_R67_summary.json,status,str,1,1,pass,Project-derived variable; see round report and manuscript Methods for definition.
+R67_R67_summary.json,round,str,1,1,R67_geometry_null_sensitivity,Project-derived variable; see round report and manuscript Methods for definition.
+R67_R67_summary.json,n_replicates_total,int,1,1,162,Project-derived variable; see round report and manuscript Methods for definition.
+R67_R67_summary.json,n_replicates_pass,int,1,1,162,Project-derived variable; see round report and manuscript Methods for definition.
+R67_R67_summary.json,n_cities,int,1,1,21,Project-derived variable; see round report and manuscript Methods for definition.
+R67_R67_summary.json,swap_fractions,list,1,1,"[0.005, 0.01, 0.02]",Accepted or attempted double-edge swap diagnostic.
+R67_R67_summary.json,baseline_swap_fraction,float,1,1,0.005,Accepted or attempted double-edge swap diagnostic.
+R67_R67_summary.json,baseline_road_minus_geometry_mean,float,1,1,0.005555555555555543,Strict non-crossing geometry-null metric or diagnostic.
+R67_R67_summary.json,baseline_remaining_fraction_after_geometry_mean,float,1,1,0.02233394872751731,Strict non-crossing geometry-null metric or diagnostic.
+R67_R67_summary.json,baseline_positive_residual_city_share,float,1,1,0.42857142857142855,City or urban-window identifier.
+R67_R67_summary.json,high_swap_fraction,float,1,1,0.02,Accepted or attempted double-edge swap diagnostic.
+R67_R67_summary.json,high_swap_road_minus_geometry_mean,float,1,1,1.4456028966473393e-18,Accepted or attempted double-edge swap diagnostic.
+R67_R67_summary.json,high_swap_remaining_fraction_after_geometry_mean,float,1,1,-0.006260056846476018,Accepted or attempted double-edge swap diagnostic.
+R67_R67_summary.json,max_degree_drift,float,1,1,0.0,Degree-sequence or degree-composition metric.
+R67_R67_summary.json,mean_length_bin_tvd,float,1,1,3.9947189815064954e-07,Edge-length or chord-length metric/bin diagnostic.
+R67_R67_summary.json,mean_null_mobility_index,float,1,1,0.00691830721158937,Project-derived variable; see round report and manuscript Methods for definition.
+R67_R67_summary.json,claim_boundary,str,1,1,R67 is a sensitivity-tested 21-city strict geometry-null layer; it is not a full 71-city planar ensemble and should be d,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_city_summary.csv,city,text,71,71,Accra,City or urban-window identifier.
+R68_full71_geometry_null_city_summary.csv,country,text,71,71,Ghana,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_city_summary.csv,macro_region,text,71,71,Africa,Macro-region label used for stratification or reporting.
+R68_full71_geometry_null_city_summary.csv,swap_fraction,numeric,71,71,0.005,Accepted or attempted double-edge swap diagnostic.
+R68_full71_geometry_null_city_summary.csv,n_replicates_total,numeric,71,71,1,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_city_summary.csv,n_replicates_pass,numeric,71,71,1,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_city_summary.csv,n_replicates_fail,numeric,71,71,0,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_city_summary.csv,n_nodes,numeric,71,71,19183,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_city_summary.csv,n_edges,numeric,71,71,25655,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_city_summary.csv,pc_cebh,numeric,71,71,0.5030786728370853,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R68_full71_geometry_null_city_summary.csv,pc_road,numeric,71,71,0.725,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_city_summary.csv,road_gap,numeric,71,71,0.2219213271629146,Difference between observed road threshold and a baseline/null threshold.
+R68_full71_geometry_null_city_summary.csv,pc_geometry_null_mean,numeric,71,71,0.725,Strict non-crossing geometry-null metric or diagnostic.
+R68_full71_geometry_null_city_summary.csv,geometry_null_gap_mean,numeric,71,71,0.2219213271629146,Difference between observed road threshold and a baseline/null threshold.
+R68_full71_geometry_null_city_summary.csv,road_minus_geometry_mean,numeric,71,71,0.0,Strict non-crossing geometry-null metric or diagnostic.
+R68_full71_geometry_null_city_summary.csv,geometry_fraction_of_road_gap_mean,numeric,71,71,1.0000000000000004,Difference between observed road threshold and a baseline/null threshold.
+R68_full71_geometry_null_city_summary.csv,remaining_fraction_after_geometry_mean,numeric,71,71,0.0,Strict non-crossing geometry-null metric or diagnostic.
+R68_full71_geometry_null_city_summary.csv,accepted_swaps_per_edge_mean,numeric,71,71,0.0049892808419411,Accepted or attempted double-edge swap diagnostic.
+R68_full71_geometry_null_city_summary.csv,acceptance_rate_mean,numeric,71,71,0.0019348792212111,Acceptance-rate diagnostic for null-model rewiring.
+R68_full71_geometry_null_city_summary.csv,length_bin_tvd_mean,numeric,71,71,0.0,Edge-length or chord-length metric/bin diagnostic.
+R68_full71_geometry_null_city_summary.csv,degree_max_abs_drift_max,numeric,71,71,0,Degree-sequence or degree-composition metric.
+R68_full71_geometry_null_city_summary.csv,threshold_boundary_hits,numeric,71,71,0,Estimated bond-percolation threshold.
+R68_full71_geometry_null_city_summary.csv,null_mobility_index_mean,numeric,71,71,0.0023839412136563,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_city_summary.csv,runtime_seconds_mean,numeric,71,71,4.984123468399048,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_city_summary.csv,pc_spatial_null,numeric,71,71,0.625,Spatial-scale null metric or diagnostic.
+R68_full71_geometry_null_city_summary.csv,spatial_null_gap,numeric,71,71,0.1219213271629147,Difference between observed road threshold and a baseline/null threshold.
+R68_full71_geometry_null_city_summary.csv,road_minus_spatial,numeric,71,71,0.0999999999999999,Spatial-scale null metric or diagnostic.
+R68_full71_geometry_null_city_summary.csv,remaining_fraction_after_spatial,numeric,71,71,0.4506101386397577,Spatial-scale null metric or diagnostic.
+R68_full71_geometry_null_city_summary.csv,geometry_vs_spatial_residual_change,numeric,71,71,-0.0999999999999999,Road-minus-null residual after a specified null-model layer.
+R68_full71_geometry_null_macro_region_summary.csv,macro_region,text,7,7,Africa,Macro-region label used for stratification or reporting.
+R68_full71_geometry_null_macro_region_summary.csv,swap_fraction,numeric,7,7,0.005,Accepted or attempted double-edge swap diagnostic.
+R68_full71_geometry_null_macro_region_summary.csv,n_cities_total,numeric,7,7,12,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_macro_region_summary.csv,n_cities_pass,numeric,7,7,12,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_macro_region_summary.csv,road_minus_geometry_mean,numeric,7,7,0.006249999999999992,Strict non-crossing geometry-null metric or diagnostic.
+R68_full71_geometry_null_macro_region_summary.csv,road_minus_geometry_ci95_low,numeric,7,7,-0.004412256427286489,Strict non-crossing geometry-null metric or diagnostic.
+R68_full71_geometry_null_macro_region_summary.csv,road_minus_geometry_ci95_high,numeric,7,7,0.01691225642728647,Strict non-crossing geometry-null metric or diagnostic.
+R68_full71_geometry_null_macro_region_summary.csv,remaining_fraction_after_geometry_mean,numeric,7,7,0.020120557219461304,Strict non-crossing geometry-null metric or diagnostic.
+R68_full71_geometry_null_macro_region_summary.csv,road_minus_spatial_mean,numeric,7,7,0.11249999999999995,Spatial-scale null metric or diagnostic.
+R68_full71_geometry_null_replicates.csv,city,text,71,71,Amsterdam,City or urban-window identifier.
+R68_full71_geometry_null_replicates.csv,country,text,71,71,Netherlands,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,macro_region,text,71,71,Europe,Macro-region label used for stratification or reporting.
+R68_full71_geometry_null_replicates.csv,replicate,numeric,71,71,0,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,swap_fraction,numeric,71,71,0.005,Accepted or attempted double-edge swap diagnostic.
+R68_full71_geometry_null_replicates.csv,n_nodes,numeric,71,71,23201,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,n_edges,numeric,71,71,32887,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,pc_cebh,numeric,71,71,0.466680857102313,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R68_full71_geometry_null_replicates.csv,pc_road,numeric,71,71,0.7,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,road_gap,numeric,71,71,0.2333191428976869,Difference between observed road threshold and a baseline/null threshold.
+R68_full71_geometry_null_replicates.csv,pc_geometry_null,numeric,71,71,0.675,Strict non-crossing geometry-null metric or diagnostic.
+R68_full71_geometry_null_replicates.csv,pc_geometry_null_ci_low,numeric,71,71,0.65,Strict non-crossing geometry-null metric or diagnostic.
+R68_full71_geometry_null_replicates.csv,pc_geometry_null_ci_high,numeric,71,71,0.7006249999999997,Strict non-crossing geometry-null metric or diagnostic.
+R68_full71_geometry_null_replicates.csv,geometry_null_gap,numeric,71,71,0.208319142897687,Difference between observed road threshold and a baseline/null threshold.
+R68_full71_geometry_null_replicates.csv,road_minus_geometry,numeric,71,71,0.0249999999999999,Strict non-crossing geometry-null metric or diagnostic.
+R68_full71_geometry_null_replicates.csv,geometry_fraction_of_road_gap,numeric,71,71,0.8928506264444721,Difference between observed road threshold and a baseline/null threshold.
+R68_full71_geometry_null_replicates.csv,remaining_fraction_after_geometry,numeric,71,71,0.1071493735555281,Strict non-crossing geometry-null metric or diagnostic.
+R68_full71_geometry_null_replicates.csv,threshold_boundary_hit,text,71,71,False,Estimated bond-percolation threshold.
+R68_full71_geometry_null_replicates.csv,runtime_seconds,numeric,71,71,7.510496139526367,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,accepted_swaps,numeric,71,71,164,Accepted or attempted double-edge swap diagnostic.
+R68_full71_geometry_null_replicates.csv,attempted_swaps,numeric,71,71,87695,Accepted or attempted double-edge swap diagnostic.
+R68_full71_geometry_null_replicates.csv,acceptance_rate,numeric,71,71,0.0018701180226922,Acceptance-rate diagnostic for null-model rewiring.
+R68_full71_geometry_null_replicates.csv,accepted_swaps_per_edge,numeric,71,71,0.0049867728889834,Accepted or attempted double-edge swap diagnostic.
+R68_full71_geometry_null_replicates.csv,target_swaps,numeric,71,71,164,Accepted or attempted double-edge swap diagnostic.
+R68_full71_geometry_null_replicates.csv,target_swap_fraction,numeric,71,71,0.005,Accepted or attempted double-edge swap diagnostic.
+R68_full71_geometry_null_replicates.csv,topology_rejects,numeric,71,71,4158,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,length_rejects,numeric,71,71,80307,Edge-length or chord-length metric/bin diagnostic.
+R68_full71_geometry_null_replicates.csv,crossing_rejects,numeric,71,71,3066,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,degree_max_abs_drift,numeric,71,71,0,Degree-sequence or degree-composition metric.
+R68_full71_geometry_null_replicates.csv,length_bin_tvd,numeric,71,71,0.0,Edge-length or chord-length metric/bin diagnostic.
+R68_full71_geometry_null_replicates.csv,length_mean_ratio,numeric,71,71,1.0054119184693526,Edge-length or chord-length metric/bin diagnostic.
+R68_full71_geometry_null_replicates.csv,length_median_ratio,numeric,71,71,1.0001775174359,Edge-length or chord-length metric/bin diagnostic.
+R68_full71_geometry_null_replicates.csv,stale_index_guard_calls,numeric,71,71,514,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,max_attempts,numeric,71,71,147600,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,status,text,71,71,pass,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,full_connectivity_metrics,text,71,71,True,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,notes,text,71,71,reused R67 0.005 replicate 0 for full-71 low-intensity geometry-null coverage,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,original_connected_components,numeric,71,71,1.0,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,null_connected_components,numeric,71,71,4.0,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,delta_connected_components,numeric,71,71,3.0,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,original_bridge_edge_share,numeric,71,71,0.1399641195609207,SHA checksum or source identifier.
+R68_full71_geometry_null_replicates.csv,null_bridge_edge_share,numeric,71,71,0.1396296408915376,SHA checksum or source identifier.
+R68_full71_geometry_null_replicates.csv,delta_bridge_edge_share,numeric,71,71,-0.000334478669383,SHA checksum or source identifier.
+R68_full71_geometry_null_replicates.csv,original_articulation_point_share,numeric,71,71,0.1728804792896857,SHA checksum or source identifier.
+R68_full71_geometry_null_replicates.csv,null_articulation_point_share,numeric,71,71,0.1723632602043015,SHA checksum or source identifier.
+R68_full71_geometry_null_replicates.csv,delta_articulation_point_share,numeric,71,71,-0.0005172190853842,SHA checksum or source identifier.
+R68_full71_geometry_null_replicates.csv,original_largest_biconnected_node_fraction,numeric,71,71,0.7542347312615836,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,null_largest_biconnected_node_fraction,numeric,71,71,0.7545364423947244,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,delta_largest_biconnected_node_fraction,numeric,71,71,0.0003017111331408,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,original_cyclomatic_density,numeric,71,71,0.4175251066764364,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,null_cyclomatic_density,numeric,71,71,0.4176544114477824,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,delta_cyclomatic_density,numeric,71,71,0.000129304771346,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,original_dual_endpoint_degree_mean,numeric,71,71,4.285583969349591,Degree-sequence or degree-composition metric.
+R68_full71_geometry_null_replicates.csv,null_dual_endpoint_degree_mean,numeric,71,71,4.285583969349591,Degree-sequence or degree-composition metric.
+R68_full71_geometry_null_replicates.csv,delta_dual_endpoint_degree_mean,numeric,71,71,0.0,Degree-sequence or degree-composition metric.
+R68_full71_geometry_null_replicates.csv,original_dual_endpoint_degree_cv,numeric,71,71,0.2733076557178945,Degree-sequence or degree-composition metric.
+R68_full71_geometry_null_replicates.csv,null_dual_endpoint_degree_cv,numeric,71,71,0.2732773658068591,Degree-sequence or degree-composition metric.
+R68_full71_geometry_null_replicates.csv,delta_dual_endpoint_degree_cv,numeric,71,71,-3.0289911035374928e-05,Degree-sequence or degree-composition metric.
+R68_full71_geometry_null_replicates.csv,original_angular_entropy,numeric,71,71,0.829914713800308,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,null_angular_entropy,numeric,71,71,0.835087990065983,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,delta_angular_entropy,numeric,71,71,0.0051732762656749,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,original_straight_angle_share_10deg,numeric,71,71,0.2297999148573861,SHA checksum or source identifier.
+R68_full71_geometry_null_replicates.csv,null_straight_angle_share_10deg,numeric,71,71,0.2267773520647084,SHA checksum or source identifier.
+R68_full71_geometry_null_replicates.csv,delta_straight_angle_share_10deg,numeric,71,71,-0.0030225627926777,SHA checksum or source identifier.
+R68_full71_geometry_null_replicates.csv,original_right_angle_share_10deg,numeric,71,71,0.3560380303675323,SHA checksum or source identifier.
+R68_full71_geometry_null_replicates.csv,null_right_angle_share_10deg,numeric,71,71,0.352504611891585,SHA checksum or source identifier.
+R68_full71_geometry_null_replicates.csv,delta_right_angle_share_10deg,numeric,71,71,-0.0035334184759472,SHA checksum or source identifier.
+R68_full71_geometry_null_replicates.csv,null_mobility_index,numeric,71,71,0.0018403809174582,Project-derived variable; see round report and manuscript Methods for definition.
+R68_full71_geometry_null_replicates.csv,source_round,text,71,71,R67_reused_same_algorithm,Provenance/source field.
+R68_R68_summary.json,status,str,1,1,pass,Project-derived variable; see round report and manuscript Methods for definition.
+R68_R68_summary.json,round,str,1,1,R68_full71_geometry_null_ensemble,Project-derived variable; see round report and manuscript Methods for definition.
+R68_R68_summary.json,expected_cities,int,1,1,71,Project-derived variable; see round report and manuscript Methods for definition.
+R68_R68_summary.json,passed_cities,int,1,1,71,Project-derived variable; see round report and manuscript Methods for definition.
+R68_R68_summary.json,n_replicates_total,int,1,1,71,Project-derived variable; see round report and manuscript Methods for definition.
+R68_R68_summary.json,n_replicates_pass,int,1,1,71,Project-derived variable; see round report and manuscript Methods for definition.
+R68_R68_summary.json,n_replicates_fail,int,1,1,0,Project-derived variable; see round report and manuscript Methods for definition.
+R68_R68_summary.json,swap_fractions,list,1,1,[0.005],Accepted or attempted double-edge swap diagnostic.
+R68_R68_summary.json,road_minus_geometry_mean,float,1,1,0.0014084507042253476,Strict non-crossing geometry-null metric or diagnostic.
+R68_R68_summary.json,road_minus_geometry_ci95_low,float,1,1,-0.0027487938167931316,Strict non-crossing geometry-null metric or diagnostic.
+R68_R68_summary.json,road_minus_geometry_ci95_high,float,1,1,0.005565695225243827,Strict non-crossing geometry-null metric or diagnostic.
+R68_R68_summary.json,remaining_fraction_after_geometry_mean,float,1,1,0.004172699905853008,Strict non-crossing geometry-null metric or diagnostic.
+R68_R68_summary.json,remaining_fraction_after_geometry_ci95_low,float,1,1,-0.014092429217534605,Strict non-crossing geometry-null metric or diagnostic.
+R68_R68_summary.json,remaining_fraction_after_geometry_ci95_high,float,1,1,0.022437829029240623,Strict non-crossing geometry-null metric or diagnostic.
+R68_R68_summary.json,positive_residual_city_share,float,1,1,0.18309859154929578,City or urban-window identifier.
+R68_R68_summary.json,road_minus_spatial_mean,float,1,1,0.09647887323943655,Spatial-scale null metric or diagnostic.
+R68_R68_summary.json,mean_residual_reduction_vs_spatial,float,1,1,0.09507042253521121,Road-minus-null residual after a specified null-model layer.
+R68_R68_summary.json,max_degree_drift,float,1,1,0.0,Degree-sequence or degree-composition metric.
+R68_R68_summary.json,mean_length_bin_tvd,float,1,1,0.0,Edge-length or chord-length metric/bin diagnostic.
+R68_R68_summary.json,mean_accepted_swaps_per_edge,float,1,1,0.004999784178997895,Accepted or attempted double-edge swap diagnostic.
+R68_R68_summary.json,reused_r67_records,int,1,1,21,Project-derived variable; see round report and manuscript Methods for definition.
+R68_R68_summary.json,claim_boundary,str,1,1,R68 is full 71-city strict non-crossing geometry-null coverage at low accepted-swap intensity and one replicate per city,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,city,text,54,54,Dakar,City or urban-window identifier.
+R72_matched_intensity_geometry_vs_spatial_city.csv,country,text,54,54,Senegal,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,macro_region,text,54,54,Africa,Macro-region label used for stratification or reporting.
+R72_matched_intensity_geometry_vs_spatial_city.csv,swap_fraction,numeric,54,54,0.005,Accepted or attempted double-edge swap diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,n_nodes,numeric,54,54,28624,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,n_edges,numeric,54,54,43129,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,pc_cebh,numeric,54,54,0.4600377595972308,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R72_matched_intensity_geometry_vs_spatial_city.csv,pc_road,numeric,54,54,0.7,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,road_gap,numeric,54,54,0.2399622404027691,Difference between observed road threshold and a baseline/null threshold.
+R72_matched_intensity_geometry_vs_spatial_city.csv,pc_spatial_null,numeric,54,54,0.625,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,pc_spatial_null_ci_low,numeric,54,54,0.625,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,pc_spatial_null_ci_high,numeric,54,54,0.625,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,spatial_null_gap,numeric,54,54,0.1649622404027692,Difference between observed road threshold and a baseline/null threshold.
+R72_matched_intensity_geometry_vs_spatial_city.csv,road_minus_spatial,numeric,54,54,0.0749999999999999,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,spatial_fraction_of_road_gap,numeric,54,54,0.6874508261211649,Difference between observed road threshold and a baseline/null threshold.
+R72_matched_intensity_geometry_vs_spatial_city.csv,remaining_fraction_after_spatial,numeric,54,54,0.3125491738788353,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,threshold_boundary_hit,text,54,54,False,Estimated bond-percolation threshold.
+R72_matched_intensity_geometry_vs_spatial_city.csv,runtime_seconds,numeric,54,54,0.7442615032196045,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,n_perm,numeric,54,54,6,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,n_bootstrap,numeric,54,54,80,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,length_bins,numeric,54,54,12,Edge-length or chord-length metric/bin diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,bin_tolerance,numeric,54,54,1,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,status,text,54,54,pass,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,accepted_swaps,numeric,54,54,216.0,Accepted or attempted double-edge swap diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,attempted_swaps,numeric,54,54,8019.0,Accepted or attempted double-edge swap diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,acceptance_rate,numeric,54,54,0.0269360269360269,Acceptance-rate diagnostic for null-model rewiring.
+R72_matched_intensity_geometry_vs_spatial_city.csv,accepted_swaps_per_edge,numeric,54,54,0.0050082311205917,Accepted or attempted double-edge swap diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,degree_max_abs_drift,numeric,54,54,0.0,Degree-sequence or degree-composition metric.
+R72_matched_intensity_geometry_vs_spatial_city.csv,chord_length_mean_ratio,numeric,54,54,2.099264208075369,Edge-length or chord-length metric/bin diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,chord_length_median_ratio,numeric,54,54,1.0,Edge-length or chord-length metric/bin diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,chord_length_bin_tvd,numeric,54,54,0.0047068098031486,Edge-length or chord-length metric/bin diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,length_rejects,numeric,54,54,7801.0,Edge-length or chord-length metric/bin diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,topology_rejects,numeric,54,54,2.0,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,notes,text,54,54,R72 matched-intensity spatial-scale null on the R67 geometry subset,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,road_minus_geometry_mean,numeric,54,54,0.0083333333333333,Strict non-crossing geometry-null metric or diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,remaining_fraction_after_geometry_mean,numeric,54,54,0.0347276859865371,Strict non-crossing geometry-null metric or diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,geometry_fraction_of_road_gap_mean,numeric,54,54,0.965272314013463,Difference between observed road threshold and a baseline/null threshold.
+R72_matched_intensity_geometry_vs_spatial_city.csv,accepted_swaps_per_edge_mean,numeric,54,54,0.0050082311205917,Accepted or attempted double-edge swap diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,acceptance_rate_mean,numeric,54,54,0.0016243999656156,Acceptance-rate diagnostic for null-model rewiring.
+R72_matched_intensity_geometry_vs_spatial_city.csv,length_bin_tvd_mean,numeric,54,54,0.0,Edge-length or chord-length metric/bin diagnostic.
+R72_matched_intensity_geometry_vs_spatial_city.csv,degree_max_abs_drift_max,numeric,54,54,0,Degree-sequence or degree-composition metric.
+R72_matched_intensity_geometry_vs_spatial_city.csv,null_mobility_index_mean,numeric,54,54,0.0041991623591571,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,n_replicates_pass,numeric,54,54,3,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_geometry_vs_spatial_city.csv,spatial_minus_geometry_residual,numeric,54,54,0.0666666666666666,Road-minus-null residual after a specified null-model layer.
+R72_matched_intensity_summary.csv,swap_fraction,numeric,3,3,0.005,Accepted or attempted double-edge swap diagnostic.
+R72_matched_intensity_summary.csv,n_cities_matched,numeric,3,3,21,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_summary.csv,road_minus_spatial_mean,numeric,3,3,0.05952380952380944,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_summary.csv,road_minus_spatial_ci95_low,numeric,3,3,0.049114945779651566,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_summary.csv,road_minus_spatial_ci95_high,numeric,3,3,0.0699326732679673,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_summary.csv,road_minus_geometry_mean,numeric,3,3,0.005555555555555543,Strict non-crossing geometry-null metric or diagnostic.
+R72_matched_intensity_summary.csv,road_minus_geometry_ci95_low,numeric,3,3,-0.002440817078873248,Strict non-crossing geometry-null metric or diagnostic.
+R72_matched_intensity_summary.csv,road_minus_geometry_ci95_high,numeric,3,3,0.013551928189984333,Strict non-crossing geometry-null metric or diagnostic.
+R72_matched_intensity_summary.csv,mean_spatial_minus_geometry_residual,numeric,3,3,0.053968253968253915,Road-minus-null residual after a specified null-model layer.
+R72_matched_intensity_summary.csv,positive_geometry_residual_share,numeric,3,3,0.42857142857142855,Road-minus-null residual after a specified null-model layer.
+R72_matched_intensity_summary.csv,spatial_accepted_swaps_per_edge_mean,numeric,3,3,0.004998277207361133,Accepted or attempted double-edge swap diagnostic.
+R72_matched_intensity_summary.csv,geometry_accepted_swaps_per_edge_mean,numeric,3,3,0.004998277207361133,Accepted or attempted double-edge swap diagnostic.
+R72_matched_intensity_summary.csv,spatial_acceptance_rate_mean,numeric,3,3,0.027100720240829806,Acceptance-rate diagnostic for null-model rewiring.
+R72_matched_intensity_summary.csv,geometry_acceptance_rate_mean,numeric,3,3,0.001891286249075381,Acceptance-rate diagnostic for null-model rewiring.
+R72_matched_intensity_summary.csv,geometry_null_mobility_index_mean,numeric,3,3,0.0032195631744348524,Strict non-crossing geometry-null metric or diagnostic.
+R72_matched_intensity_summary.csv,geometry_length_bin_tvd_mean,numeric,3,3,0.0,Edge-length or chord-length metric/bin diagnostic.
+R72_matched_intensity_summary.csv,geometry_degree_drift_max,numeric,3,3,0.0,Degree-sequence or degree-composition metric.
+R72_matched_intensity_spatial_null_replicates.csv,city,text,63,63,Dakar,City or urban-window identifier.
+R72_matched_intensity_spatial_null_replicates.csv,country,text,63,63,Senegal,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_spatial_null_replicates.csv,macro_region,text,63,63,Africa,Macro-region label used for stratification or reporting.
+R72_matched_intensity_spatial_null_replicates.csv,swap_fraction,numeric,63,63,0.005,Accepted or attempted double-edge swap diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,n_nodes,numeric,63,63,28624,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_spatial_null_replicates.csv,n_edges,numeric,63,63,43129,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_spatial_null_replicates.csv,pc_cebh,numeric,63,63,0.4600377595972308,Cohen-Erez-ben-Avraham-Havlin degree-moment baseline or related gap.
+R72_matched_intensity_spatial_null_replicates.csv,pc_road,numeric,63,63,0.7,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_spatial_null_replicates.csv,road_gap,numeric,63,63,0.2399622404027691,Difference between observed road threshold and a baseline/null threshold.
+R72_matched_intensity_spatial_null_replicates.csv,pc_spatial_null,numeric,63,63,0.625,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,pc_spatial_null_ci_low,numeric,63,63,0.625,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,pc_spatial_null_ci_high,numeric,63,63,0.625,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,spatial_null_gap,numeric,63,63,0.1649622404027692,Difference between observed road threshold and a baseline/null threshold.
+R72_matched_intensity_spatial_null_replicates.csv,road_minus_spatial,numeric,63,63,0.07499999999999996,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,spatial_fraction_of_road_gap,numeric,63,63,0.6874508261211649,Difference between observed road threshold and a baseline/null threshold.
+R72_matched_intensity_spatial_null_replicates.csv,remaining_fraction_after_spatial,numeric,63,63,0.3125491738788353,Spatial-scale null metric or diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,threshold_boundary_hit,text,63,63,False,Estimated bond-percolation threshold.
+R72_matched_intensity_spatial_null_replicates.csv,runtime_seconds,numeric,63,63,0.7442615032196045,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_spatial_null_replicates.csv,n_perm,numeric,63,63,6,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_spatial_null_replicates.csv,n_bootstrap,numeric,63,63,80,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_spatial_null_replicates.csv,length_bins,numeric,63,63,12,Edge-length or chord-length metric/bin diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,bin_tolerance,numeric,63,63,1,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_spatial_null_replicates.csv,status,text,63,63,pass,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_spatial_null_replicates.csv,accepted_swaps,numeric,63,63,216.0,Accepted or attempted double-edge swap diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,attempted_swaps,numeric,63,63,8019.0,Accepted or attempted double-edge swap diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,acceptance_rate,numeric,63,63,0.026936026936026935,Acceptance-rate diagnostic for null-model rewiring.
+R72_matched_intensity_spatial_null_replicates.csv,accepted_swaps_per_edge,numeric,63,63,0.005008231120591713,Accepted or attempted double-edge swap diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,degree_max_abs_drift,numeric,63,63,0.0,Degree-sequence or degree-composition metric.
+R72_matched_intensity_spatial_null_replicates.csv,chord_length_mean_ratio,numeric,63,63,2.099264208075369,Edge-length or chord-length metric/bin diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,chord_length_median_ratio,numeric,63,63,1.0,Edge-length or chord-length metric/bin diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,chord_length_bin_tvd,numeric,63,63,0.004706809803148693,Edge-length or chord-length metric/bin diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,length_rejects,numeric,63,63,7801.0,Edge-length or chord-length metric/bin diagnostic.
+R72_matched_intensity_spatial_null_replicates.csv,topology_rejects,numeric,63,63,2.0,Project-derived variable; see round report and manuscript Methods for definition.
+R72_matched_intensity_spatial_null_replicates.csv,notes,text,63,63,R72 matched-intensity spatial-scale null on the R67 geometry subset,Project-derived variable; see round report and manuscript Methods for definition.
+R72_geometry_null_mobility_summary.csv,swap_fraction,numeric,3,3,0.005,Accepted or attempted double-edge swap diagnostic.
+R72_geometry_null_mobility_summary.csv,n_replicates,numeric,3,3,63,Project-derived variable; see round report and manuscript Methods for definition.
+R72_geometry_null_mobility_summary.csv,accepted_swaps_per_edge_mean,numeric,3,3,0.004998277207361131,Accepted or attempted double-edge swap diagnostic.
+R72_geometry_null_mobility_summary.csv,acceptance_rate_mean,numeric,3,3,0.001891286249075414,Acceptance-rate diagnostic for null-model rewiring.
+R72_geometry_null_mobility_summary.csv,attempts_per_accepted_swap,numeric,3,3,558.1646766169155,Accepted or attempted double-edge swap diagnostic.
+R72_geometry_null_mobility_summary.csv,topology_reject_share,numeric,3,3,0.048108002403783906,SHA checksum or source identifier.
+R72_geometry_null_mobility_summary.csv,length_reject_share,numeric,3,3,0.9176346837800842,Edge-length or chord-length metric/bin diagnostic.
+R72_geometry_null_mobility_summary.csv,crossing_reject_share,numeric,3,3,0.03425731381613196,SHA checksum or source identifier.
+R72_geometry_null_mobility_summary.csv,null_mobility_index_mean,numeric,3,3,0.003219563174434892,Project-derived variable; see round report and manuscript Methods for definition.
+R72_geometry_null_mobility_summary.csv,abs_delta_angular_entropy_mean,numeric,3,3,0.00690043124753835,Project-derived variable; see round report and manuscript Methods for definition.
+R72_geometry_null_mobility_summary.csv,abs_delta_straight_angle_share_mean,numeric,3,3,0.0029448128115292403,SHA checksum or source identifier.
+R72_geometry_null_mobility_summary.csv,abs_delta_right_angle_share_mean,numeric,3,3,0.004518795882952006,SHA checksum or source identifier.
+R72_geometry_null_mobility_summary.csv,abs_delta_dual_endpoint_degree_cv_mean,numeric,3,3,9.066403577548098e-05,Degree-sequence or degree-composition metric.
+R72_geometry_null_mobility_summary.csv,length_bin_tvd_mean,numeric,3,3,0.0,Edge-length or chord-length metric/bin diagnostic.
+R72_geometry_null_mobility_summary.csv,degree_max_abs_drift_max,numeric,3,3,0.0,Degree-sequence or degree-composition metric.
+R72_R72_summary.json,status,str,1,1,pass,Project-derived variable; see round report and manuscript Methods for definition.
+R72_R72_summary.json,round,str,1,1,R72_geometry_defense,Project-derived variable; see round report and manuscript Methods for definition.
+R72_R72_summary.json,matched_spatial_records,int,1,1,63,Spatial-scale null metric or diagnostic.
+R72_R72_summary.json,matched_city_records,int,1,1,54,City or urban-window identifier.
+R72_R72_summary.json,swap_fractions,list,1,1,"[0.005, 0.01, 0.02]",Accepted or attempted double-edge swap diagnostic.
+R72_R72_summary.json,baseline_fraction,float,1,1,0.005,Project-derived variable; see round report and manuscript Methods for definition.
+R72_R72_summary.json,baseline_n_cities,int,1,1,21,Project-derived variable; see round report and manuscript Methods for definition.
+R72_R72_summary.json,baseline_spatial_residual_mean,float,1,1,0.05952380952380944,Road-minus-null residual after a specified null-model layer.
+R72_R72_summary.json,baseline_geometry_residual_mean,float,1,1,0.005555555555555543,Road-minus-null residual after a specified null-model layer.
+R72_R72_summary.json,highest_fraction,float,1,1,0.02,Project-derived variable; see round report and manuscript Methods for definition.
+R72_R72_summary.json,highest_fraction_n_cities,int,1,1,12,Project-derived variable; see round report and manuscript Methods for definition.
+R72_R72_summary.json,highest_spatial_residual_mean,float,1,1,0.08958333333333328,Road-minus-null residual after a specified null-model layer.
+R72_R72_summary.json,highest_geometry_residual_mean,float,1,1,8.673617379884035e-18,Road-minus-null residual after a specified null-model layer.
+R72_R72_summary.json,r68_full71_geometry_residual_mean,float,1,1,0.0014084507042253476,Road-minus-null residual after a specified null-model layer.
+R72_R72_summary.json,r68_full71_geometry_residual_ci95_low,float,1,1,-0.0027487938167931316,Road-minus-null residual after a specified null-model layer.
+R72_R72_summary.json,r68_full71_geometry_residual_ci95_high,float,1,1,0.005565695225243827,Road-minus-null residual after a specified null-model layer.
+R72_R72_summary.json,r68_full71_spatial_residual_mean,float,1,1,0.09647887323943655,Road-minus-null residual after a specified null-model layer.
+R72_R72_summary.json,geometry_acceptance_rate_mean,float,1,1,0.0018958967823354616,Acceptance-rate diagnostic for null-model rewiring.
+R72_R72_summary.json,geometry_attempts_per_accepted_swap_mean,float,1,1,547.2587301461137,Accepted or attempted double-edge swap diagnostic.
+R72_R72_summary.json,geometry_null_mobility_index_mean,float,1,1,0.00691830721158937,Strict non-crossing geometry-null metric or diagnostic.
+R72_R72_summary.json,max_degree_drift,float,1,1,0.0,Degree-sequence or degree-composition metric.
+R72_R72_summary.json,claim_boundary,str,1,1,"R72 supports a matched-intensity empirical defense on the R67 subset, not full mixing or a theorem.",Project-derived variable; see round report and manuscript Methods for definition.

@@ -1,0 +1,28 @@
+{
+  "status": "pass",
+  "round": "R72_geometry_defense",
+  "matched_spatial_records": 63,
+  "matched_city_records": 54,
+  "swap_fractions": [
+    0.005,
+    0.01,
+    0.02
+  ],
+  "baseline_fraction": 0.005,
+  "baseline_n_cities": 21,
+  "baseline_spatial_residual_mean": 0.05952380952380944,
+  "baseline_geometry_residual_mean": 0.005555555555555543,
+  "highest_fraction": 0.02,
+  "highest_fraction_n_cities": 12,
+  "highest_spatial_residual_mean": 0.08958333333333328,
+  "highest_geometry_residual_mean": 8.673617379884035e-18,
+  "r68_full71_geometry_residual_mean": 0.0014084507042253476,
+  "r68_full71_geometry_residual_ci95_low": -0.0027487938167931316,
+  "r68_full71_geometry_residual_ci95_high": 0.005565695225243827,
+  "r68_full71_spatial_residual_mean": 0.09647887323943655,
+  "geometry_acceptance_rate_mean": 0.0018958967823354616,
+  "geometry_attempts_per_accepted_swap_mean": 547.2587301461137,
+  "geometry_null_mobility_index_mean": 0.00691830721158937,
+  "max_degree_drift": 0.0,
+  "claim_boundary": "R72 supports a matched-intensity empirical defense on the R67 subset, not full mixing or a theorem."
+}
