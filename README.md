@@ -47,6 +47,18 @@ families under five-fold and leave-region-out cross-validation. Embedded
 street form remains the strongest descriptive mechanism signal, including for
 the post-spatial residual; this is predictive evidence, not causal inference.
 
+R75 hardens the submission source-data layer by adding explicit nested
+validation aliases, geometry-null rejection-share summaries, mobility/fidelity
+proxies and an edge-Jaccard availability table. The edge-Jaccard table records
+that true edge-set Jaccard cannot be reconstructed from the archived summaries
+because final null edge sets were not stored; accepted-swap and mobility
+metrics are reported as proxies only.
+
+R76 rebuilds the submission Fig. 5 from the nested validation, public-control
+comparison and high-order embedded-feature tables. The figure also includes a
+claim-boundary panel stating that the 71-city geometry-null screen is
+low-intensity and descriptive, not a causal urban-design rule or planar theorem.
+
 ## What Is Included
 
 - `scripts/build_R41_degree_preserving_nulls.py`: full R41 analysis script.
@@ -69,6 +81,12 @@ the post-spatial residual; this is predictive evidence, not causal inference.
   geometry defense on the 21-city sensitivity subset.
 - `scripts/build_R73_urban_form_nested_cv.py`: nested urban-form model ladder
   and leave-region-out validation script.
+- `scripts/build_R75_submission_hardening_tables.py`: source-data hardening
+  script for nested-validation aliases, geometry mobility/rejection diagnostics
+  and edge-Jaccard availability boundaries.
+- `scripts/build_R76_fig5_nested_submission_figure.py`: submission Fig. 5
+  builder that combines nested validation, public-control checks, high-order
+  feature correlations and explicit claim-boundary notes.
 - `scripts/build_R62_urban_form_mechanism.py`: R62 covariate and Fig.3 source
   workflow; full geometry-pilot reruns require local cached graph objects.
 - `scripts/build_R72_geometry_defense.py`: R72 matched-intensity spatial vs
@@ -101,6 +119,10 @@ the post-spatial residual; this is predictive evidence, not causal inference.
   replicates, geometry-vs-spatial city summaries, mobility summaries and report.
 - `data/R73_urban_form_nested_cv/`: derived nested urban-form model summaries,
   city-level predictions, leave-region-out diagnostics and report.
+- `data/R75_submission_hardening/`: derived submission-hardening aliases,
+  geometry-null rejection summaries, mobility/fidelity proxy tables and
+  figure-source-data tables.
+- `data/R76_fig5_nested_submission/`: derived Fig. 5 source data and summary.
 - `source_data/`: submission-facing source-data bundle, column dictionary,
   claim-to-table map and run manifest. It contains derived project tables only.
 - `figures/Fig_R56_spatial_length_constrained_nulls.*`: exported figure.
@@ -115,6 +137,8 @@ the post-spatial residual; this is predictive evidence, not causal inference.
 - `figures/Fig_R70_null_ladder_schematic.*`: exported current Fig. 1 schematic.
 - `figures/Fig_R73_urban_form_nested_cv.*`: exported supplementary nested
   urban-form validation figure.
+- `figures/Fig_R76_fig5_nested_submission.*`: exported submission Fig. 5 with
+  nested validation and public-control checks.
 
 ## What Is Not Included
 
@@ -135,6 +159,8 @@ python scripts/build_R65_public_covariates_and_controls.py
 python scripts/build_R67_geometry_null_sensitivity.py --skip-compute
 python scripts/build_R68_full71_geometry_null_ensemble.py --skip-compute
 python scripts/build_R72_geometry_defense.py
+python scripts/build_R75_submission_hardening_tables.py
+python scripts/build_R76_fig5_nested_submission_figure.py
 python scripts/fig1_R70_null_ladder_schematic.py
 ```
 
@@ -149,6 +175,8 @@ full 71-city geometry-null regeneration requires local cached OSMnx graph
 objects and is computationally heavier.
 R72 can be redrawn from included derived tables without `--force`; a matched
 spatial-null recomputation requires local cached OSMnx graph objects.
+R75 and R76 are derived-table packaging and plotting steps; they do not require
+raw third-party downloads or cached graph objects.
 
 ## Boundary
 
@@ -167,8 +195,12 @@ per city. It answers the low-intensity coverage objection, but it is not a
 high-intensity multi-replicate planar-null theorem and does not establish a
 causal urban-design rule.
 
-R72 adds a matched-intensity empirical defense on the 21-city 21-city subset. It
+R72 adds a matched-intensity empirical defense on the 21-city subset. It
 shows that the spatial-scale null and strict-geometry null behave differently
 under the same accepted-swap targets, but it does not prove full mixing or
 isolate planarity alone from degree, length scale, angular and block structure.
+
+R75/R76 add submission-facing diagnostics and visualization. They do not add a
+new null-model ensemble, do not recover true edge-set Jaccard distances and do
+not turn the nested urban-form screens into causal inference.
 

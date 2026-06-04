@@ -11,3 +11,4 @@ R68,full 71-city geometry null ensemble,data/R68_full71_geometry_null_ensemble,o
 R72,matched-intensity geometry defense,data/R72_geometry_defense,spatial vs strict-geometry nulls at matched accepted-swap targets,completed
 R39,threshold estimator sensitivity,data/R39_threshold_sensitivity,eight-city fine-grid and rank-order threshold estimator audit,completed
 R73,urban-form nested cross-validation,data/R73_urban_form_nested_cv,nested model ladder and leave-region-out validation for road-form mechanism signal,completed
+R75,submission hardening source tables,data/R75_submission_hardening,"submission-facing aliases, feature groups, figure source data and geometry mobility proxy tables",completed

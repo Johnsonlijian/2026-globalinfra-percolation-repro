@@ -1,0 +1,177 @@
+target,model_group,model_label,feature_order,feature_name
+road_gap,M0_size,M0 size,1,n_nodes
+road_gap,M0_size,M0 size,2,n_edges
+road_gap,M0_size,M0 size,3,node_density_per_km2
+road_gap,M0_size,M0 size,4,edge_density_per_km2
+road_gap,M1_degree,M1 degree,1,mean_degree
+road_gap,M1_degree,M1 degree,2,kappa
+road_gap,M1_degree,M1 degree,3,degree2_share
+road_gap,M1_degree,M1 degree,4,degree3_share
+road_gap,M1_degree,M1 degree,5,degree4plus_share
+road_gap,M1_degree,M1 degree,6,degree_gini
+road_gap,M2_degree_edge_scale,M2 + edge scale,1,mean_degree
+road_gap,M2_degree_edge_scale,M2 + edge scale,2,kappa
+road_gap,M2_degree_edge_scale,M2 + edge scale,3,degree2_share
+road_gap,M2_degree_edge_scale,M2 + edge scale,4,degree3_share
+road_gap,M2_degree_edge_scale,M2 + edge scale,5,degree4plus_share
+road_gap,M2_degree_edge_scale,M2 + edge scale,6,degree_gini
+road_gap,M2_degree_edge_scale,M2 + edge scale,7,chord_length_density_km_per_km2
+road_gap,M2_degree_edge_scale,M2 + edge scale,8,edge_length_mean_m
+road_gap,M2_degree_edge_scale,M2 + edge scale,9,edge_length_cv
+road_gap,M2_degree_edge_scale,M2 + edge scale,10,short_edge_share_lt40m
+road_gap,M2_degree_edge_scale,M2 + edge scale,11,long_edge_share_gt150m
+road_gap,M3_embedded_form,M3 embedded form,1,mean_degree
+road_gap,M3_embedded_form,M3 embedded form,2,kappa
+road_gap,M3_embedded_form,M3 embedded form,3,degree2_share
+road_gap,M3_embedded_form,M3 embedded form,4,degree3_share
+road_gap,M3_embedded_form,M3 embedded form,5,degree4plus_share
+road_gap,M3_embedded_form,M3 embedded form,6,degree_gini
+road_gap,M3_embedded_form,M3 embedded form,7,chord_length_density_km_per_km2
+road_gap,M3_embedded_form,M3 embedded form,8,edge_length_mean_m
+road_gap,M3_embedded_form,M3 embedded form,9,edge_length_cv
+road_gap,M3_embedded_form,M3 embedded form,10,short_edge_share_lt40m
+road_gap,M3_embedded_form,M3 embedded form,11,long_edge_share_gt150m
+road_gap,M3_embedded_form,M3 embedded form,12,orientation_entropy
+road_gap,M3_embedded_form,M3 embedded form,13,orientation_dominance
+road_gap,M3_embedded_form,M3 embedded form,14,orientation_fourfold_order
+road_gap,M3_embedded_form,M3 embedded form,15,orthogonal_alignment_share_10deg
+road_gap,M3_embedded_form,M3 embedded form,16,dead_end_share
+road_gap,M3_embedded_form,M3 embedded form,17,cycle_density
+road_gap,M3_embedded_form,M3 embedded form,18,residential_length_share
+road_gap,M3_embedded_form,M3 embedded form,19,oneway_length_share
+road_gap,M3_embedded_form,M3 embedded form,20,edge_circuity_mean
+road_gap,M3_embedded_form,M3 embedded form,21,articulation_point_share
+road_gap,M3_embedded_form,M3 embedded form,22,bridge_edge_share
+road_gap,M3_embedded_form,M3 embedded form,23,largest_biconnected_node_fraction
+road_gap,M3_embedded_form,M3 embedded form,24,dual_degree_mean
+road_gap,M3_embedded_form,M3 embedded form,25,angular_entropy
+road_gap,M3_embedded_form,M3 embedded form,26,straight_angle_share_10deg
+road_gap,M4_embedded_form_public_controls,M4 + public controls,1,mean_degree
+road_gap,M4_embedded_form_public_controls,M4 + public controls,2,kappa
+road_gap,M4_embedded_form_public_controls,M4 + public controls,3,degree2_share
+road_gap,M4_embedded_form_public_controls,M4 + public controls,4,degree3_share
+road_gap,M4_embedded_form_public_controls,M4 + public controls,5,degree4plus_share
+road_gap,M4_embedded_form_public_controls,M4 + public controls,6,degree_gini
+road_gap,M4_embedded_form_public_controls,M4 + public controls,7,chord_length_density_km_per_km2
+road_gap,M4_embedded_form_public_controls,M4 + public controls,8,edge_length_mean_m
+road_gap,M4_embedded_form_public_controls,M4 + public controls,9,edge_length_cv
+road_gap,M4_embedded_form_public_controls,M4 + public controls,10,short_edge_share_lt40m
+road_gap,M4_embedded_form_public_controls,M4 + public controls,11,long_edge_share_gt150m
+road_gap,M4_embedded_form_public_controls,M4 + public controls,12,orientation_entropy
+road_gap,M4_embedded_form_public_controls,M4 + public controls,13,orientation_dominance
+road_gap,M4_embedded_form_public_controls,M4 + public controls,14,orientation_fourfold_order
+road_gap,M4_embedded_form_public_controls,M4 + public controls,15,orthogonal_alignment_share_10deg
+road_gap,M4_embedded_form_public_controls,M4 + public controls,16,dead_end_share
+road_gap,M4_embedded_form_public_controls,M4 + public controls,17,cycle_density
+road_gap,M4_embedded_form_public_controls,M4 + public controls,18,residential_length_share
+road_gap,M4_embedded_form_public_controls,M4 + public controls,19,oneway_length_share
+road_gap,M4_embedded_form_public_controls,M4 + public controls,20,edge_circuity_mean
+road_gap,M4_embedded_form_public_controls,M4 + public controls,21,articulation_point_share
+road_gap,M4_embedded_form_public_controls,M4 + public controls,22,bridge_edge_share
+road_gap,M4_embedded_form_public_controls,M4 + public controls,23,largest_biconnected_node_fraction
+road_gap,M4_embedded_form_public_controls,M4 + public controls,24,dual_degree_mean
+road_gap,M4_embedded_form_public_controls,M4 + public controls,25,angular_entropy
+road_gap,M4_embedded_form_public_controls,M4 + public controls,26,straight_angle_share_10deg
+road_gap,M4_embedded_form_public_controls,M4 + public controls,27,ghsl_population_density_2025
+road_gap,M4_embedded_form_public_controls,M4 + public controls,28,ghsl_log_population_2025
+road_gap,M4_embedded_form_public_controls,M4 + public controls,29,ghsl_log_area_2025
+road_gap,M4_embedded_form_public_controls,M4 + public controls,30,ghsl_infrastructure_index_2020
+road_gap,M4_embedded_form_public_controls,M4 + public controls,31,ghsl_road_density_2024
+road_gap,M4_embedded_form_public_controls,M4 + public controls,32,ghsl_gdp_avg_2020
+road_gap,M4_embedded_form_public_controls,M4 + public controls,33,ghsl_hdi_2020
+road_gap,M4_embedded_form_public_controls,M4 + public controls,34,ghsl_lulc_entropy_2019
+road_gap,M4_embedded_form_public_controls,M4 + public controls,35,ghsl_lulc_dominance_2019
+road_gap,M4_embedded_form_public_controls,M4 + public controls,36,wdi_urban_population_pct
+road_gap,M4_embedded_form_public_controls,M4 + public controls,37,wdi_urban_population_growth_pct
+road_gap,M4_embedded_form_public_controls,M4 + public controls,38,wdi_population_density_people_per_km2
+road_gap,M4_embedded_form_public_controls,M4 + public controls,39,wdi_gdp_per_capita_constant_2015_usd
+road_gap,M4_embedded_form_public_controls,M4 + public controls,40,wdi_population_total
+road_gap,M4_embedded_form_public_controls,M4 + public controls,41,wdi_gini_index
+road_minus_spatial,M0_size,M0 size,1,n_nodes
+road_minus_spatial,M0_size,M0 size,2,n_edges
+road_minus_spatial,M0_size,M0 size,3,node_density_per_km2
+road_minus_spatial,M0_size,M0 size,4,edge_density_per_km2
+road_minus_spatial,M1_degree,M1 degree,1,mean_degree
+road_minus_spatial,M1_degree,M1 degree,2,kappa
+road_minus_spatial,M1_degree,M1 degree,3,degree2_share
+road_minus_spatial,M1_degree,M1 degree,4,degree3_share
+road_minus_spatial,M1_degree,M1 degree,5,degree4plus_share
+road_minus_spatial,M1_degree,M1 degree,6,degree_gini
+road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,1,mean_degree
+road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,2,kappa
+road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,3,degree2_share
+road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,4,degree3_share
+road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,5,degree4plus_share
+road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,6,degree_gini
+road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,7,chord_length_density_km_per_km2
+road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,8,edge_length_mean_m
+road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,9,edge_length_cv
+road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,10,short_edge_share_lt40m
+road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,11,long_edge_share_gt150m
+road_minus_spatial,M3_embedded_form,M3 embedded form,1,mean_degree
+road_minus_spatial,M3_embedded_form,M3 embedded form,2,kappa
+road_minus_spatial,M3_embedded_form,M3 embedded form,3,degree2_share
+road_minus_spatial,M3_embedded_form,M3 embedded form,4,degree3_share
+road_minus_spatial,M3_embedded_form,M3 embedded form,5,degree4plus_share
+road_minus_spatial,M3_embedded_form,M3 embedded form,6,degree_gini
+road_minus_spatial,M3_embedded_form,M3 embedded form,7,chord_length_density_km_per_km2
+road_minus_spatial,M3_embedded_form,M3 embedded form,8,edge_length_mean_m
+road_minus_spatial,M3_embedded_form,M3 embedded form,9,edge_length_cv
+road_minus_spatial,M3_embedded_form,M3 embedded form,10,short_edge_share_lt40m
+road_minus_spatial,M3_embedded_form,M3 embedded form,11,long_edge_share_gt150m
+road_minus_spatial,M3_embedded_form,M3 embedded form,12,orientation_entropy
+road_minus_spatial,M3_embedded_form,M3 embedded form,13,orientation_dominance
+road_minus_spatial,M3_embedded_form,M3 embedded form,14,orientation_fourfold_order
+road_minus_spatial,M3_embedded_form,M3 embedded form,15,orthogonal_alignment_share_10deg
+road_minus_spatial,M3_embedded_form,M3 embedded form,16,dead_end_share
+road_minus_spatial,M3_embedded_form,M3 embedded form,17,cycle_density
+road_minus_spatial,M3_embedded_form,M3 embedded form,18,residential_length_share
+road_minus_spatial,M3_embedded_form,M3 embedded form,19,oneway_length_share
+road_minus_spatial,M3_embedded_form,M3 embedded form,20,edge_circuity_mean
+road_minus_spatial,M3_embedded_form,M3 embedded form,21,articulation_point_share
+road_minus_spatial,M3_embedded_form,M3 embedded form,22,bridge_edge_share
+road_minus_spatial,M3_embedded_form,M3 embedded form,23,largest_biconnected_node_fraction
+road_minus_spatial,M3_embedded_form,M3 embedded form,24,dual_degree_mean
+road_minus_spatial,M3_embedded_form,M3 embedded form,25,angular_entropy
+road_minus_spatial,M3_embedded_form,M3 embedded form,26,straight_angle_share_10deg
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,1,mean_degree
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,2,kappa
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,3,degree2_share
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,4,degree3_share
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,5,degree4plus_share
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,6,degree_gini
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,7,chord_length_density_km_per_km2
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,8,edge_length_mean_m
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,9,edge_length_cv
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,10,short_edge_share_lt40m
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,11,long_edge_share_gt150m
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,12,orientation_entropy
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,13,orientation_dominance
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,14,orientation_fourfold_order
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,15,orthogonal_alignment_share_10deg
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,16,dead_end_share
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,17,cycle_density
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,18,residential_length_share
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,19,oneway_length_share
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,20,edge_circuity_mean
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,21,articulation_point_share
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,22,bridge_edge_share
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,23,largest_biconnected_node_fraction
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,24,dual_degree_mean
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,25,angular_entropy
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,26,straight_angle_share_10deg
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,27,ghsl_population_density_2025
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,28,ghsl_log_population_2025
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,29,ghsl_log_area_2025
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,30,ghsl_infrastructure_index_2020
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,31,ghsl_road_density_2024
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,32,ghsl_gdp_avg_2020
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,33,ghsl_hdi_2020
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,34,ghsl_lulc_entropy_2019
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,35,ghsl_lulc_dominance_2019
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,36,wdi_urban_population_pct
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,37,wdi_urban_population_growth_pct
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,38,wdi_population_density_people_per_km2
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,39,wdi_gdp_per_capita_constant_2015_usd
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,40,wdi_population_total
+road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,41,wdi_gini_index

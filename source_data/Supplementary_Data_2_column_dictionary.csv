@@ -1127,3 +1127,95 @@ R62_geometry_null_pilot_replicates.csv,stale_index_guard_calls,numeric,21,21,478
 R62_geometry_null_pilot_replicates.csv,max_attempts,numeric,21,21,147600,Project-derived variable; see R62 report and manuscript Methods for definition.
 R62_geometry_null_pilot_replicates.csv,status,text,21,21,pass,Project-derived variable; see R62 report and manuscript Methods for definition.
 R62_geometry_null_pilot_replicates.csv,notes,text,21,21,strict non-crossing degree-preserving geometry-null pilot,Project-derived variable; see R62 report and manuscript Methods for definition.
+R73_feature_groups.csv,target,text,176,176,road_gap,Prediction target: road_gap or road_minus_spatial.
+R73_feature_groups.csv,model_group,text,176,176,M0_size,Nested model family identifier.
+R73_feature_groups.csv,model_label,text,176,176,M0 size,Human-readable nested model label.
+R73_feature_groups.csv,feature_order,numeric,176,176,1,Feature order within the model family.
+R73_feature_groups.csv,feature_name,text,176,176,n_nodes,Predictor included in the nested feature group.
+R73_nested_model_ladder_summary.csv,target,text,10,10,road_gap,Prediction target: road_gap or road_minus_spatial.
+R73_nested_model_ladder_summary.csv,model_group,text,10,10,M0_size,Nested model family identifier.
+R73_nested_model_ladder_summary.csv,model_label,text,10,10,M0 size,Human-readable nested model label.
+R73_nested_model_ladder_summary.csv,n,numeric,10,10,71,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,n_features_used,numeric,10,10,4,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,features_used,text,10,10,n_nodes;n_edges;node_density_per_km2;edge_density_per_km2,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,cv5_r2,numeric,10,10,0.0798157243414321,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,cv5_mae,numeric,10,10,0.0183196542171944,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,cv5_spearman_r,numeric,10,10,0.3947686116700201,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,cv5_spearman_p,numeric,10,10,0.0006572193808073,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,leave_region_out_r2,numeric,10,10,0.0568324863523594,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,leave_region_out_mae,numeric,10,10,0.0187295583575047,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,leave_region_out_spearman_r,numeric,10,10,0.3215962441314554,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,leave_region_out_spearman_p,numeric,10,10,0.0062422611908526,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,in_sample_r2,numeric,10,10,0.2449479822518337,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,in_sample_mae,numeric,10,10,0.0169195100542793,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_summary.csv,alpha,numeric,10,10,0.1501310728908172,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_city_predictions.csv,city,text,710,710,Lisbon,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_city_predictions.csv,country,text,710,710,Portugal,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_city_predictions.csv,macro_region,text,710,710,Europe,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_city_predictions.csv,target,text,710,710,road_gap,Prediction target: road_gap or road_minus_spatial.
+R73_nested_model_ladder_city_predictions.csv,model_group,text,710,710,M0_size,Nested model family identifier.
+R73_nested_model_ladder_city_predictions.csv,observed,numeric,710,710,0.2544838513923538,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_nested_model_ladder_city_predictions.csv,predicted_cv5,numeric,710,710,0.2196210893078216,Prediction from fixed five-fold cross-validation.
+R73_nested_model_ladder_city_predictions.csv,predicted_leave_region_out,numeric,710,710,0.2203467591134906,Prediction when the city's macro-region is held out.
+R73_nested_model_ladder_city_predictions.csv,predicted_fit,numeric,710,710,0.2206206105312326,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_leave_region_out_predictions.csv,city,text,710,710,Lisbon,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_leave_region_out_predictions.csv,country,text,710,710,Portugal,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_leave_region_out_predictions.csv,macro_region,text,710,710,Europe,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_leave_region_out_predictions.csv,target,text,710,710,road_gap,Prediction target: road_gap or road_minus_spatial.
+R73_leave_region_out_predictions.csv,model_group,text,710,710,M0_size,Nested model family identifier.
+R73_leave_region_out_predictions.csv,observed,numeric,710,710,0.2544838513923538,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R73_leave_region_out_predictions.csv,predicted_leave_region_out,numeric,710,710,0.2203467591134906,Prediction when the city's macro-region is held out.
+R72_geometry_graph_distance_summary.csv,swap_fraction,numeric,3,3,0.005,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_graph_distance_summary.csv,n_city_fraction_records,numeric,3,3,21,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_graph_distance_summary.csv,accepted_swaps_per_edge_mean,numeric,3,3,0.0049982772073611,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_graph_distance_summary.csv,edge_turnover_proxy_fraction_mean,numeric,3,3,0.0099965544147223,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_graph_distance_summary.csv,acceptance_rate_mean,numeric,3,3,0.0271007202408298,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_graph_distance_summary.csv,null_mobility_index_mean,numeric,3,3,0.0032195631744348,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_graph_distance_summary.csv,length_bin_tvd_mean,numeric,3,3,0.0,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_graph_distance_summary.csv,degree_max_abs_drift_max,numeric,3,3,0,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_graph_distance_summary.csv,road_minus_spatial_mean,numeric,3,3,0.0595238095238094,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_graph_distance_summary.csv,road_minus_geometry_mean,numeric,3,3,0.0055555555555555,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_graph_distance_summary.csv,edge_jaccard_available,numeric,3,3,False,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_graph_distance_summary.csv,edge_jaccard_boundary,text,3,3,True edge-set Jaccard requires archived rewired edge sets; this table reports a ,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_rejection_reason_summary.csv,swap_fraction,numeric,3,3,0.005,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_rejection_reason_summary.csv,n_replicates,numeric,3,3,63,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_rejection_reason_summary.csv,accepted_swaps_per_edge_mean,numeric,3,3,0.0049982772073611,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_rejection_reason_summary.csv,acceptance_rate_mean,numeric,3,3,0.0018912862490754,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_rejection_reason_summary.csv,attempts_per_accepted_swap,numeric,3,3,558.1646766169155,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_rejection_reason_summary.csv,topology_reject_share,numeric,3,3,0.0481080024037839,Share of rejected proposals caused by topology constraints such as self-loops or duplicate edges.
+R72_geometry_rejection_reason_summary.csv,length_reject_share,numeric,3,3,0.9176346837800842,Share of rejected proposals caused by length-bin constraints.
+R72_geometry_rejection_reason_summary.csv,crossing_reject_share,numeric,3,3,0.0342573138161319,Share of rejected proposals caused by non-crossing geometry constraints.
+R72_geometry_rejection_reason_summary.csv,length_bin_tvd_mean,numeric,3,3,0.0,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_rejection_reason_summary.csv,degree_max_abs_drift_max,numeric,3,3,0.0,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_rejection_reason_summary.csv,rejection_categories_logged,numeric,3,3,True,Whether rejection categories were logged for this diagnostic.
+R72_geometry_rejection_reason_summary.csv,category_note,text,3,3,"Shares summarize proposal rejections into topology, length-bin and crossing clas",Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,city,text,54,54,Dakar,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,country,text,54,54,Senegal,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,macro_region,text,54,54,Africa,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,swap_fraction,numeric,54,54,0.005,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,n_edges,numeric,54,54,43129,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,accepted_swaps,numeric,54,54,216.0,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,attempted_swaps,numeric,54,54,8019.0,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,accepted_swaps_per_edge,numeric,54,54,0.0050082311205917,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,acceptance_rate,numeric,54,54,0.0269360269360269,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,road_minus_spatial,numeric,54,54,0.0749999999999999,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,road_minus_geometry_mean,numeric,54,54,0.0083333333333333,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,spatial_minus_geometry_residual,numeric,54,54,0.0666666666666666,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,length_bin_tvd_mean,numeric,54,54,0.0,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,degree_max_abs_drift_max,numeric,54,54,0,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,null_mobility_index_mean,numeric,54,54,0.0041991623591571,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,edge_turnover_proxy_fraction,numeric,54,54,0.0100164622411834,"Accepted-swap-derived proxy equal to two accepted swaps per edge count, clipped at one; not a true Jaccard distance."
+R72_geometry_edge_jaccard_by_city.csv,edge_jaccard_distance,numeric,54,0,,True edge-set Jaccard distance; unavailable when rewired edge sets are not archived.
+R72_geometry_edge_jaccard_by_city.csv,edge_jaccard_status,text,54,54,not_computable_from_archived_summary_tables_edge_sets_not_stored,Availability status for edge-set Jaccard distance.
+R72_geometry_edge_jaccard_by_city.csv,interpretation,text,54,54,Accepted-swap-derived turnover proxy only; it is not a true edge-set Jaccard dis,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+Fig5_nested_validation_source_data.csv,target,text,10,10,road_gap,Prediction target: road_gap or road_minus_spatial.
+Fig5_nested_validation_source_data.csv,model_group,text,10,10,M0_size,Nested model family identifier.
+Fig5_nested_validation_source_data.csv,model_label,text,10,10,M0 size,Human-readable nested model label.
+Fig5_nested_validation_source_data.csv,n,numeric,10,10,71,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+Fig5_nested_validation_source_data.csv,n_features_used,numeric,10,10,4,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+Fig5_nested_validation_source_data.csv,cv5_r2,numeric,10,10,0.0798157243414321,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+Fig5_nested_validation_source_data.csv,cv5_mae,numeric,10,10,0.0183196542171944,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+Fig5_nested_validation_source_data.csv,leave_region_out_r2,numeric,10,10,0.0568324863523594,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+Fig5_nested_validation_source_data.csv,leave_region_out_mae,numeric,10,10,0.0187295583575047,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+Fig5_nested_validation_source_data.csv,in_sample_r2,numeric,10,10,0.2449479822518337,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+Fig5_nested_validation_source_data.csv,alpha,numeric,10,10,0.1501310728908172,Project-derived submission-hardening variable; see manuscript Methods and R75 report.

@@ -1,0 +1,16 @@
+{
+  "status": "pass",
+  "round": "R75_submission_hardening",
+  "outputs": [
+    "Fig5_nested_validation_source_data.csv",
+    "R72_geometry_edge_jaccard_by_city.csv",
+    "R72_geometry_graph_distance_summary.csv",
+    "R72_geometry_rejection_reason_summary.csv",
+    "R73_feature_groups.csv",
+    "R73_leave_region_out_predictions.csv",
+    "R73_leave_region_out_region_summary.csv",
+    "R73_nested_model_ladder_city_predictions.csv",
+    "R73_nested_model_ladder_summary.csv"
+  ],
+  "claim_boundary": "True edge-set Jaccard is not computed because archived summary tables do not store rewired edge sets."
+}

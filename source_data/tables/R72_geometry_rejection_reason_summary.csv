@@ -1,0 +1,4 @@
+swap_fraction,n_replicates,accepted_swaps_per_edge_mean,acceptance_rate_mean,attempts_per_accepted_swap,topology_reject_share,length_reject_share,crossing_reject_share,length_bin_tvd_mean,degree_max_abs_drift_max,rejection_categories_logged,category_note
+0.005,63,0.0049982772073611,0.0018912862490754,558.1646766169155,0.0481080024037839,0.9176346837800842,0.0342573138161319,0.0,0.0,True,"Shares summarize proposal rejections into topology, length-bin and crossing classes."
+0.01,63,0.0099966535934785,0.0018800307112749,552.7845595184798,0.0482211218816274,0.917501109981722,0.0342777681366505,1.1984156944519486e-06,0.0,True,"Shares summarize proposal rejections into topology, length-bin and crossing classes."
+0.02,36,0.0200009983222069,0.0019163733866559,530.826954302946,0.0502808784615627,0.9138144656676376,0.0359046558707998,0.0,0.0,True,"Shares summarize proposal rejections into topology, length-bin and crossing classes."

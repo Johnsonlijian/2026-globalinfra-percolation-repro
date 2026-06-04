@@ -1,0 +1,711 @@
+city,country,macro_region,target,model_group,observed,predicted_leave_region_out
+Lisbon,Portugal,Europe,road_gap,M0_size,0.2544838513923538,0.2203467591134906
+Vienna,Austria,Europe,road_gap,M0_size,0.2293014969141065,0.2158845814092501
+Athens,Greece,Europe,road_gap,M0_size,0.2114430357292901,0.1889622536073343
+Istanbul,Turkey,Middle East,road_gap,M0_size,0.2136966149952546,0.2058103583623875
+Dubai,United Arab Emirates,Middle East,road_gap,M0_size,0.2341388324763428,0.2172963746548911
+Cairo,Egypt,Africa,road_gap,M0_size,0.2094187185016547,0.2256893733280193
+Nairobi,Kenya,Africa,road_gap,M0_size,0.2816907863000482,0.2218253418662367
+Accra,Ghana,Africa,road_gap,M0_size,0.2219213271629146,0.2163326217549233
+Johannesburg,South Africa,Africa,road_gap,M0_size,0.195749404902766,0.2117176459532721
+Casablanca,Morocco,Africa,road_gap,M0_size,0.2151172715801975,0.2078747890690073
+Mexico City,Mexico,Latin America,road_gap,M0_size,0.1984000442438305,0.1995096789133281
+Bogota,Colombia,Latin America,road_gap,M0_size,0.2006048806586807,0.2107414780734091
+Lima,Peru,Latin America,road_gap,M0_size,0.2071654757801135,0.2030291158573315
+Santiago,Chile,Latin America,road_gap,M0_size,0.1956594220795258,0.2103481480612819
+Sao Paulo,Brazil,Latin America,road_gap,M0_size,0.2224532431356944,0.2054934416137713
+Tokyo,Japan,Asia,road_gap,M0_size,0.1973733830921686,0.1967897349285799
+Seoul,South Korea,Asia,road_gap,M0_size,0.2233346100630051,0.2078698714336305
+Taipei,Taiwan,Asia,road_gap,M0_size,0.1683153898164039,0.2166932929685639
+Bangkok,Thailand,Asia,road_gap,M0_size,0.2810948175304116,0.2392109916808214
+Kuala Lumpur,Malaysia,Asia,road_gap,M0_size,0.2030983884482723,0.2185720179562045
+Jakarta,Indonesia,Asia,road_gap,M0_size,0.1876742784227459,0.2224449702900865
+Manila,Philippines,Asia,road_gap,M0_size,0.2007020470791676,0.2159336463137296
+Mumbai,India,Asia,road_gap,M0_size,0.2424962845727741,0.2202819849477115
+Bengaluru,India,Asia,road_gap,M0_size,0.2123759548797029,0.2164677549274929
+Los Angeles,United States,North America,road_gap,M0_size,0.1750696737916047,0.2158491554834804
+New York City,United States,North America,road_gap,M0_size,0.1873573172809358,0.2105825891719857
+Montreal,Canada,North America,road_gap,M0_size,0.2018337424446379,0.2156485961271814
+Vancouver,Canada,North America,road_gap,M0_size,0.1972933468689489,0.2200257802019737
+London,United Kingdom,Europe,road_gap,M0_size,0.2550152834075354,0.2298450631296438
+Paris,France,Europe,road_gap,M0_size,0.196025947956002,0.2100230032519161
+Amsterdam,Netherlands,Europe,road_gap,M0_size,0.2333191428976869,0.2180986718397243
+Barcelona,Spain,Europe,road_gap,M0_size,0.1861858032492349,0.2129175152526549
+Warsaw,Poland,Europe,road_gap,M0_size,0.2199203187250994,0.2200407536956903
+Prague,Czechia,Europe,road_gap,M0_size,0.2231987994904814,0.2201633744594473
+Rome,Italy,Europe,road_gap,M0_size,0.2044670289211081,0.2168103063709427
+Milan,Italy,Europe,road_gap,M0_size,0.1851227591582229,0.2137974546789152
+Lagos,Nigeria,Africa,road_gap,M0_size,0.2546630980630208,0.2146907285412076
+Addis Ababa,Ethiopia,Africa,road_gap,M0_size,0.2177258105420519,0.2150980769115732
+Dakar,Senegal,Africa,road_gap,M0_size,0.2399622404027691,0.2090937052890988
+Kampala,Uganda,Africa,road_gap,M0_size,0.2505478606026119,0.2320032099239624
+Dar es Salaam,Tanzania,Africa,road_gap,M0_size,0.2674011640769924,0.2169616516170451
+Tunis,Tunisia,Africa,road_gap,M0_size,0.2198067701589378,0.2122786813035255
+Algiers,Algeria,Africa,road_gap,M0_size,0.2434144758764622,0.2170806689505331
+Buenos Aires,Argentina,Latin America,road_gap,M0_size,0.1943842622218158,0.2026211728673528
+Rio de Janeiro,Brazil,Latin America,road_gap,M0_size,0.2206516221330009,0.2196054670659652
+Quito,Ecuador,Latin America,road_gap,M0_size,0.2438223411225157,0.2221396101116345
+Montevideo,Uruguay,Latin America,road_gap,M0_size,0.1930316873323181,0.2120673448648491
+Panama City,Panama,Latin America,road_gap,M0_size,0.2313600979093936,0.221032849584556
+Delhi,India,Asia,road_gap,M0_size,0.231035462077478,0.2096952394390611
+Chennai,India,Asia,road_gap,M0_size,0.2265510804984489,0.2200648854187742
+Hyderabad,India,Asia,road_gap,M0_size,0.2618441377985055,0.2175373331013473
+Karachi,Pakistan,Asia,road_gap,M0_size,0.2283793945699003,0.2059007883521536
+Dhaka,Bangladesh,Asia,road_gap,M0_size,0.2238723688606749,0.2204876253513554
+Hanoi,Vietnam,Asia,road_gap,M0_size,0.2610331976658657,0.2197074865111939
+Ho Chi Minh City,Vietnam,Asia,road_gap,M0_size,0.2190502853136501,0.2235829040634996
+Singapore,Singapore,Asia,road_gap,M0_size,0.2081795684974292,0.2191890958072936
+Hong Kong,China,Asia,road_gap,M0_size,0.2098224633863661,0.2197215096472081
+Osaka,Japan,Asia,road_gap,M0_size,0.1782642727378145,0.1956366611882348
+Sydney,Australia,Oceania,road_gap,M0_size,0.2127036751881589,0.2196349891924924
+Melbourne,Australia,Oceania,road_gap,M0_size,0.2313912743513861,0.2127075235686489
+Auckland,New Zealand,Oceania,road_gap,M0_size,0.2205494075900642,0.2216968000173632
+Brisbane,Australia,Oceania,road_gap,M0_size,0.208880201061156,0.2200192593733798
+Chicago,United States,North America,road_gap,M0_size,0.2040052968599778,0.2173250702808425
+Toronto,Canada,North America,road_gap,M0_size,0.1996750232126277,0.2223161346573666
+Seattle,United States,North America,road_gap,M0_size,0.2082283123291324,0.2197307474726368
+San Francisco,United States,North America,road_gap,M0_size,0.1980232784966512,0.2193304874638635
+Boston,United States,North America,road_gap,M0_size,0.2120018730220242,0.2205582367412254
+Miami,United States,North America,road_gap,M0_size,0.1811689258125637,0.2160893695641199
+Riyadh,Saudi Arabia,Middle East,road_gap,M0_size,0.2084371144921578,0.2005524311736638
+Tel Aviv,Israel,Middle East,road_gap,M0_size,0.2045443592892564,0.2179153984326086
+Tehran,Iran,Middle East,road_gap,M0_size,0.1904347744059465,0.2593819591348027
+Lisbon,Portugal,Europe,road_gap,M1_degree,0.2544838513923538,0.2251147410358333
+Vienna,Austria,Europe,road_gap,M1_degree,0.2293014969141065,0.199750992863775
+Athens,Greece,Europe,road_gap,M1_degree,0.2114430357292901,0.1948880723202949
+Istanbul,Turkey,Middle East,road_gap,M1_degree,0.2136966149952546,0.2111432560576679
+Dubai,United Arab Emirates,Middle East,road_gap,M1_degree,0.2341388324763428,0.224979577457367
+Cairo,Egypt,Africa,road_gap,M1_degree,0.2094187185016547,0.2212805402940608
+Nairobi,Kenya,Africa,road_gap,M1_degree,0.2816907863000482,0.249898495611343
+Accra,Ghana,Africa,road_gap,M1_degree,0.2219213271629146,0.2287983340331069
+Johannesburg,South Africa,Africa,road_gap,M1_degree,0.195749404902766,0.2094073527712027
+Casablanca,Morocco,Africa,road_gap,M1_degree,0.2151172715801975,0.2094711006401938
+Mexico City,Mexico,Latin America,road_gap,M1_degree,0.1984000442438305,0.1954387397425149
+Bogota,Colombia,Latin America,road_gap,M1_degree,0.2006048806586807,0.2048749528565639
+Lima,Peru,Latin America,road_gap,M1_degree,0.2071654757801135,0.2028749013913796
+Santiago,Chile,Latin America,road_gap,M1_degree,0.1956594220795258,0.2063956355050312
+Sao Paulo,Brazil,Latin America,road_gap,M1_degree,0.2224532431356944,0.2076913481880048
+Tokyo,Japan,Asia,road_gap,M1_degree,0.1973733830921686,0.1978584822013228
+Seoul,South Korea,Asia,road_gap,M1_degree,0.2233346100630051,0.2063879583610104
+Taipei,Taiwan,Asia,road_gap,M1_degree,0.1683153898164039,0.1964160721933875
+Bangkok,Thailand,Asia,road_gap,M1_degree,0.2810948175304116,0.2646615539734755
+Kuala Lumpur,Malaysia,Asia,road_gap,M1_degree,0.2030983884482723,0.2300712841507424
+Jakarta,Indonesia,Asia,road_gap,M1_degree,0.1876742784227459,0.2355090438559465
+Manila,Philippines,Asia,road_gap,M1_degree,0.2007020470791676,0.2068338218723298
+Mumbai,India,Asia,road_gap,M1_degree,0.2424962845727741,0.2216090627344605
+Bengaluru,India,Asia,road_gap,M1_degree,0.2123759548797029,0.2223795179806887
+Los Angeles,United States,North America,road_gap,M1_degree,0.1750696737916047,0.1978572014298107
+New York City,United States,North America,road_gap,M1_degree,0.1873573172809358,0.1939570514764508
+Montreal,Canada,North America,road_gap,M1_degree,0.2018337424446379,0.2033934135365127
+Vancouver,Canada,North America,road_gap,M1_degree,0.1972933468689489,0.199973908061004
+London,United Kingdom,Europe,road_gap,M1_degree,0.2550152834075354,0.2364390136594855
+Paris,France,Europe,road_gap,M1_degree,0.196025947956002,0.2048566092279519
+Amsterdam,Netherlands,Europe,road_gap,M1_degree,0.2333191428976869,0.2071555734618043
+Barcelona,Spain,Europe,road_gap,M1_degree,0.1861858032492349,0.2013898591202918
+Warsaw,Poland,Europe,road_gap,M1_degree,0.2199203187250994,0.2167784372951963
+Prague,Czechia,Europe,road_gap,M1_degree,0.2231987994904814,0.213036486230084
+Rome,Italy,Europe,road_gap,M1_degree,0.2044670289211081,0.2135647366895144
+Milan,Italy,Europe,road_gap,M1_degree,0.1851227591582229,0.2136781489851073
+Lagos,Nigeria,Africa,road_gap,M1_degree,0.2546630980630208,0.2246190657200466
+Addis Ababa,Ethiopia,Africa,road_gap,M1_degree,0.2177258105420519,0.2180147017583922
+Dakar,Senegal,Africa,road_gap,M1_degree,0.2399622404027691,0.2084666353159316
+Kampala,Uganda,Africa,road_gap,M1_degree,0.2505478606026119,0.2644647691735649
+Dar es Salaam,Tanzania,Africa,road_gap,M1_degree,0.2674011640769924,0.2308116196611743
+Tunis,Tunisia,Africa,road_gap,M1_degree,0.2198067701589378,0.2181748375231715
+Algiers,Algeria,Africa,road_gap,M1_degree,0.2434144758764622,0.2312837271523118
+Buenos Aires,Argentina,Latin America,road_gap,M1_degree,0.1943842622218158,0.1912456633142057
+Rio de Janeiro,Brazil,Latin America,road_gap,M1_degree,0.2206516221330009,0.2190917098778203
+Quito,Ecuador,Latin America,road_gap,M1_degree,0.2438223411225157,0.2186714712580064
+Montevideo,Uruguay,Latin America,road_gap,M1_degree,0.1930316873323181,0.1916997621156102
+Panama City,Panama,Latin America,road_gap,M1_degree,0.2313600979093936,0.2258768817082642
+Delhi,India,Asia,road_gap,M1_degree,0.231035462077478,0.2159713982358573
+Chennai,India,Asia,road_gap,M1_degree,0.2265510804984489,0.2285525449839458
+Hyderabad,India,Asia,road_gap,M1_degree,0.2618441377985055,0.2228976193827691
+Karachi,Pakistan,Asia,road_gap,M1_degree,0.2283793945699003,0.2051274702761248
+Dhaka,Bangladesh,Asia,road_gap,M1_degree,0.2238723688606749,0.2293678464304434
+Hanoi,Vietnam,Asia,road_gap,M1_degree,0.2610331976658657,0.2244518067667398
+Ho Chi Minh City,Vietnam,Asia,road_gap,M1_degree,0.2190502853136501,0.2326830960880231
+Singapore,Singapore,Asia,road_gap,M1_degree,0.2081795684974292,0.2161735932734303
+Hong Kong,China,Asia,road_gap,M1_degree,0.2098224633863661,0.2180879684748439
+Osaka,Japan,Asia,road_gap,M1_degree,0.1782642727378145,0.2046878952665156
+Sydney,Australia,Oceania,road_gap,M1_degree,0.2127036751881589,0.2258253110341807
+Melbourne,Australia,Oceania,road_gap,M1_degree,0.2313912743513861,0.2167939580303214
+Auckland,New Zealand,Oceania,road_gap,M1_degree,0.2205494075900642,0.2345073159411868
+Brisbane,Australia,Oceania,road_gap,M1_degree,0.208880201061156,0.2277371910275111
+Chicago,United States,North America,road_gap,M1_degree,0.2040052968599778,0.1956363698998592
+Toronto,Canada,North America,road_gap,M1_degree,0.1996750232126277,0.2102599487197513
+Seattle,United States,North America,road_gap,M1_degree,0.2082283123291324,0.2030221804336958
+San Francisco,United States,North America,road_gap,M1_degree,0.1980232784966512,0.1907596302696121
+Boston,United States,North America,road_gap,M1_degree,0.2120018730220242,0.211651989847204
+Miami,United States,North America,road_gap,M1_degree,0.1811689258125637,0.1961591729003085
+Riyadh,Saudi Arabia,Middle East,road_gap,M1_degree,0.2084371144921578,0.2141133504529095
+Tel Aviv,Israel,Middle East,road_gap,M1_degree,0.2045443592892564,0.2165656590165295
+Tehran,Iran,Middle East,road_gap,M1_degree,0.1904347744059465,0.2404290306536159
+Lisbon,Portugal,Europe,road_gap,M2_degree_edge_scale,0.2544838513923538,0.2340645178023334
+Vienna,Austria,Europe,road_gap,M2_degree_edge_scale,0.2293014969141065,0.2027289464520228
+Athens,Greece,Europe,road_gap,M2_degree_edge_scale,0.2114430357292901,0.2010888261173677
+Istanbul,Turkey,Middle East,road_gap,M2_degree_edge_scale,0.2136966149952546,0.2128359891889739
+Dubai,United Arab Emirates,Middle East,road_gap,M2_degree_edge_scale,0.2341388324763428,0.2072778960560141
+Cairo,Egypt,Africa,road_gap,M2_degree_edge_scale,0.2094187185016547,0.2092263190503183
+Nairobi,Kenya,Africa,road_gap,M2_degree_edge_scale,0.2816907863000482,0.2426895382723002
+Accra,Ghana,Africa,road_gap,M2_degree_edge_scale,0.2219213271629146,0.2243177333158245
+Johannesburg,South Africa,Africa,road_gap,M2_degree_edge_scale,0.195749404902766,0.1992884976954696
+Casablanca,Morocco,Africa,road_gap,M2_degree_edge_scale,0.2151172715801975,0.2194361803016752
+Mexico City,Mexico,Latin America,road_gap,M2_degree_edge_scale,0.1984000442438305,0.1835437984705702
+Bogota,Colombia,Latin America,road_gap,M2_degree_edge_scale,0.2006048806586807,0.2164243336744377
+Lima,Peru,Latin America,road_gap,M2_degree_edge_scale,0.2071654757801135,0.202923785485033
+Santiago,Chile,Latin America,road_gap,M2_degree_edge_scale,0.1956594220795258,0.2069388500985473
+Sao Paulo,Brazil,Latin America,road_gap,M2_degree_edge_scale,0.2224532431356944,0.1984512985255478
+Tokyo,Japan,Asia,road_gap,M2_degree_edge_scale,0.1973733830921686,0.2009659491856827
+Seoul,South Korea,Asia,road_gap,M2_degree_edge_scale,0.2233346100630051,0.2089436221453854
+Taipei,Taiwan,Asia,road_gap,M2_degree_edge_scale,0.1683153898164039,0.1940773957819989
+Bangkok,Thailand,Asia,road_gap,M2_degree_edge_scale,0.2810948175304116,0.2530772115351588
+Kuala Lumpur,Malaysia,Asia,road_gap,M2_degree_edge_scale,0.2030983884482723,0.2254046029316755
+Jakarta,Indonesia,Asia,road_gap,M2_degree_edge_scale,0.1876742784227459,0.2305767163276174
+Manila,Philippines,Asia,road_gap,M2_degree_edge_scale,0.2007020470791676,0.2100996244049209
+Mumbai,India,Asia,road_gap,M2_degree_edge_scale,0.2424962845727741,0.2258019194674527
+Bengaluru,India,Asia,road_gap,M2_degree_edge_scale,0.2123759548797029,0.2080258414372665
+Los Angeles,United States,North America,road_gap,M2_degree_edge_scale,0.1750696737916047,0.1722735424613661
+New York City,United States,North America,road_gap,M2_degree_edge_scale,0.1873573172809358,0.1641408035391539
+Montreal,Canada,North America,road_gap,M2_degree_edge_scale,0.2018337424446379,0.1860458237588432
+Vancouver,Canada,North America,road_gap,M2_degree_edge_scale,0.1972933468689489,0.1893887122313411
+London,United Kingdom,Europe,road_gap,M2_degree_edge_scale,0.2550152834075354,0.2391085835792484
+Paris,France,Europe,road_gap,M2_degree_edge_scale,0.196025947956002,0.20032056249799
+Amsterdam,Netherlands,Europe,road_gap,M2_degree_edge_scale,0.2333191428976869,0.2146475007246377
+Barcelona,Spain,Europe,road_gap,M2_degree_edge_scale,0.1861858032492349,0.2107437034748418
+Warsaw,Poland,Europe,road_gap,M2_degree_edge_scale,0.2199203187250994,0.212141166734467
+Prague,Czechia,Europe,road_gap,M2_degree_edge_scale,0.2231987994904814,0.2186084003822195
+Rome,Italy,Europe,road_gap,M2_degree_edge_scale,0.2044670289211081,0.2162486393938508
+Milan,Italy,Europe,road_gap,M2_degree_edge_scale,0.1851227591582229,0.2127768163569533
+Lagos,Nigeria,Africa,road_gap,M2_degree_edge_scale,0.2546630980630208,0.2160992972026279
+Addis Ababa,Ethiopia,Africa,road_gap,M2_degree_edge_scale,0.2177258105420519,0.2219530810987297
+Dakar,Senegal,Africa,road_gap,M2_degree_edge_scale,0.2399622404027691,0.2277178475450831
+Kampala,Uganda,Africa,road_gap,M2_degree_edge_scale,0.2505478606026119,0.256809271260269
+Dar es Salaam,Tanzania,Africa,road_gap,M2_degree_edge_scale,0.2674011640769924,0.2343598728374697
+Tunis,Tunisia,Africa,road_gap,M2_degree_edge_scale,0.2198067701589378,0.2230154277759871
+Algiers,Algeria,Africa,road_gap,M2_degree_edge_scale,0.2434144758764622,0.238735324508234
+Buenos Aires,Argentina,Latin America,road_gap,M2_degree_edge_scale,0.1943842622218158,0.2390631727136485
+Rio de Janeiro,Brazil,Latin America,road_gap,M2_degree_edge_scale,0.2206516221330009,0.2202151378363744
+Quito,Ecuador,Latin America,road_gap,M2_degree_edge_scale,0.2438223411225157,0.2323652939638212
+Montevideo,Uruguay,Latin America,road_gap,M2_degree_edge_scale,0.1930316873323181,0.224052797987086
+Panama City,Panama,Latin America,road_gap,M2_degree_edge_scale,0.2313600979093936,0.2370146132576687
+Delhi,India,Asia,road_gap,M2_degree_edge_scale,0.231035462077478,0.2086029340557802
+Chennai,India,Asia,road_gap,M2_degree_edge_scale,0.2265510804984489,0.2334357474151573
+Hyderabad,India,Asia,road_gap,M2_degree_edge_scale,0.2618441377985055,0.2157555135637388
+Karachi,Pakistan,Asia,road_gap,M2_degree_edge_scale,0.2283793945699003,0.199653264095036
+Dhaka,Bangladesh,Asia,road_gap,M2_degree_edge_scale,0.2238723688606749,0.2283660831653907
+Hanoi,Vietnam,Asia,road_gap,M2_degree_edge_scale,0.2610331976658657,0.2253405173136879
+Ho Chi Minh City,Vietnam,Asia,road_gap,M2_degree_edge_scale,0.2190502853136501,0.2354814545162763
+Singapore,Singapore,Asia,road_gap,M2_degree_edge_scale,0.2081795684974292,0.2128500656419322
+Hong Kong,China,Asia,road_gap,M2_degree_edge_scale,0.2098224633863661,0.2215416240281849
+Osaka,Japan,Asia,road_gap,M2_degree_edge_scale,0.1782642727378145,0.1986453357030808
+Sydney,Australia,Oceania,road_gap,M2_degree_edge_scale,0.2127036751881589,0.2229744093827992
+Melbourne,Australia,Oceania,road_gap,M2_degree_edge_scale,0.2313912743513861,0.2112911724624845
+Auckland,New Zealand,Oceania,road_gap,M2_degree_edge_scale,0.2205494075900642,0.2323110580780798
+Brisbane,Australia,Oceania,road_gap,M2_degree_edge_scale,0.208880201061156,0.2229630345149565
+Chicago,United States,North America,road_gap,M2_degree_edge_scale,0.2040052968599778,0.1711426127285882
+Toronto,Canada,North America,road_gap,M2_degree_edge_scale,0.1996750232126277,0.2054082713659897
+Seattle,United States,North America,road_gap,M2_degree_edge_scale,0.2082283123291324,0.2054528329257513
+San Francisco,United States,North America,road_gap,M2_degree_edge_scale,0.1980232784966512,0.189313228402339
+Boston,United States,North America,road_gap,M2_degree_edge_scale,0.2120018730220242,0.2179565886052598
+Miami,United States,North America,road_gap,M2_degree_edge_scale,0.1811689258125637,0.1870379649665396
+Riyadh,Saudi Arabia,Middle East,road_gap,M2_degree_edge_scale,0.2084371144921578,0.1956215287911119
+Tel Aviv,Israel,Middle East,road_gap,M2_degree_edge_scale,0.2045443592892564,0.2245419040541724
+Tehran,Iran,Middle East,road_gap,M2_degree_edge_scale,0.1904347744059465,0.234805060653452
+Lisbon,Portugal,Europe,road_gap,M3_embedded_form,0.2544838513923538,0.2331134262729384
+Vienna,Austria,Europe,road_gap,M3_embedded_form,0.2293014969141065,0.2094547441072089
+Athens,Greece,Europe,road_gap,M3_embedded_form,0.2114430357292901,0.2001222824258255
+Istanbul,Turkey,Middle East,road_gap,M3_embedded_form,0.2136966149952546,0.2166258042799133
+Dubai,United Arab Emirates,Middle East,road_gap,M3_embedded_form,0.2341388324763428,0.2017316643817535
+Cairo,Egypt,Africa,road_gap,M3_embedded_form,0.2094187185016547,0.2277065068432353
+Nairobi,Kenya,Africa,road_gap,M3_embedded_form,0.2816907863000482,0.2448701630980216
+Accra,Ghana,Africa,road_gap,M3_embedded_form,0.2219213271629146,0.2270522061791352
+Johannesburg,South Africa,Africa,road_gap,M3_embedded_form,0.195749404902766,0.2130853165144454
+Casablanca,Morocco,Africa,road_gap,M3_embedded_form,0.2151172715801975,0.2223053116182382
+Mexico City,Mexico,Latin America,road_gap,M3_embedded_form,0.1984000442438305,0.1806175869993049
+Bogota,Colombia,Latin America,road_gap,M3_embedded_form,0.2006048806586807,0.207098020634401
+Lima,Peru,Latin America,road_gap,M3_embedded_form,0.2071654757801135,0.2061534285515327
+Santiago,Chile,Latin America,road_gap,M3_embedded_form,0.1956594220795258,0.1803254755026808
+Sao Paulo,Brazil,Latin America,road_gap,M3_embedded_form,0.2224532431356944,0.1988512891370983
+Tokyo,Japan,Asia,road_gap,M3_embedded_form,0.1973733830921686,0.1979285088929296
+Seoul,South Korea,Asia,road_gap,M3_embedded_form,0.2233346100630051,0.2149058144124889
+Taipei,Taiwan,Asia,road_gap,M3_embedded_form,0.1683153898164039,0.2049819211535537
+Bangkok,Thailand,Asia,road_gap,M3_embedded_form,0.2810948175304116,0.2508730070721849
+Kuala Lumpur,Malaysia,Asia,road_gap,M3_embedded_form,0.2030983884482723,0.2234295625628446
+Jakarta,Indonesia,Asia,road_gap,M3_embedded_form,0.1876742784227459,0.2243560083098981
+Manila,Philippines,Asia,road_gap,M3_embedded_form,0.2007020470791676,0.2146419413853617
+Mumbai,India,Asia,road_gap,M3_embedded_form,0.2424962845727741,0.2246361858691922
+Bengaluru,India,Asia,road_gap,M3_embedded_form,0.2123759548797029,0.2199847589301853
+Los Angeles,United States,North America,road_gap,M3_embedded_form,0.1750696737916047,0.1847467258292429
+New York City,United States,North America,road_gap,M3_embedded_form,0.1873573172809358,0.1735636188804005
+Montreal,Canada,North America,road_gap,M3_embedded_form,0.2018337424446379,0.2035565250384052
+Vancouver,Canada,North America,road_gap,M3_embedded_form,0.1972933468689489,0.1912534632133071
+London,United Kingdom,Europe,road_gap,M3_embedded_form,0.2550152834075354,0.2344664360015367
+Paris,France,Europe,road_gap,M3_embedded_form,0.196025947956002,0.2047431551630262
+Amsterdam,Netherlands,Europe,road_gap,M3_embedded_form,0.2333191428976869,0.2173095750897322
+Barcelona,Spain,Europe,road_gap,M3_embedded_form,0.1861858032492349,0.2044569344444863
+Warsaw,Poland,Europe,road_gap,M3_embedded_form,0.2199203187250994,0.2170677723571354
+Prague,Czechia,Europe,road_gap,M3_embedded_form,0.2231987994904814,0.222768097588012
+Rome,Italy,Europe,road_gap,M3_embedded_form,0.2044670289211081,0.219330511826495
+Milan,Italy,Europe,road_gap,M3_embedded_form,0.1851227591582229,0.2083640435523425
+Lagos,Nigeria,Africa,road_gap,M3_embedded_form,0.2546630980630208,0.2204842569539029
+Addis Ababa,Ethiopia,Africa,road_gap,M3_embedded_form,0.2177258105420519,0.2252362359597154
+Dakar,Senegal,Africa,road_gap,M3_embedded_form,0.2399622404027691,0.2282837047381831
+Kampala,Uganda,Africa,road_gap,M3_embedded_form,0.2505478606026119,0.2495840798026053
+Dar es Salaam,Tanzania,Africa,road_gap,M3_embedded_form,0.2674011640769924,0.2338044878577847
+Tunis,Tunisia,Africa,road_gap,M3_embedded_form,0.2198067701589378,0.228017318326253
+Algiers,Algeria,Africa,road_gap,M3_embedded_form,0.2434144758764622,0.2382429128103083
+Buenos Aires,Argentina,Latin America,road_gap,M3_embedded_form,0.1943842622218158,0.2128990681921179
+Rio de Janeiro,Brazil,Latin America,road_gap,M3_embedded_form,0.2206516221330009,0.2179126982159762
+Quito,Ecuador,Latin America,road_gap,M3_embedded_form,0.2438223411225157,0.2283272490518013
+Montevideo,Uruguay,Latin America,road_gap,M3_embedded_form,0.1930316873323181,0.2272154292507358
+Panama City,Panama,Latin America,road_gap,M3_embedded_form,0.2313600979093936,0.2383182167793246
+Delhi,India,Asia,road_gap,M3_embedded_form,0.231035462077478,0.2174895381052612
+Chennai,India,Asia,road_gap,M3_embedded_form,0.2265510804984489,0.2244555116401811
+Hyderabad,India,Asia,road_gap,M3_embedded_form,0.2618441377985055,0.2244202123350687
+Karachi,Pakistan,Asia,road_gap,M3_embedded_form,0.2283793945699003,0.2105284190482386
+Dhaka,Bangladesh,Asia,road_gap,M3_embedded_form,0.2238723688606749,0.2253550945599425
+Hanoi,Vietnam,Asia,road_gap,M3_embedded_form,0.2610331976658657,0.2274252869272819
+Ho Chi Minh City,Vietnam,Asia,road_gap,M3_embedded_form,0.2190502853136501,0.2354265400367449
+Singapore,Singapore,Asia,road_gap,M3_embedded_form,0.2081795684974292,0.216143919169307
+Hong Kong,China,Asia,road_gap,M3_embedded_form,0.2098224633863661,0.2128484307544367
+Osaka,Japan,Asia,road_gap,M3_embedded_form,0.1782642727378145,0.1996590504693745
+Sydney,Australia,Oceania,road_gap,M3_embedded_form,0.2127036751881589,0.2252114019030121
+Melbourne,Australia,Oceania,road_gap,M3_embedded_form,0.2313912743513861,0.2031850820914646
+Auckland,New Zealand,Oceania,road_gap,M3_embedded_form,0.2205494075900642,0.2340560688624505
+Brisbane,Australia,Oceania,road_gap,M3_embedded_form,0.208880201061156,0.2203359873902343
+Chicago,United States,North America,road_gap,M3_embedded_form,0.2040052968599778,0.1616814068275595
+Toronto,Canada,North America,road_gap,M3_embedded_form,0.1996750232126277,0.2149411679275791
+Seattle,United States,North America,road_gap,M3_embedded_form,0.2082283123291324,0.2026582003048595
+San Francisco,United States,North America,road_gap,M3_embedded_form,0.1980232784966512,0.1910783889527963
+Boston,United States,North America,road_gap,M3_embedded_form,0.2120018730220242,0.2170804719347416
+Miami,United States,North America,road_gap,M3_embedded_form,0.1811689258125637,0.1851472899913931
+Riyadh,Saudi Arabia,Middle East,road_gap,M3_embedded_form,0.2084371144921578,0.1983328832040933
+Tel Aviv,Israel,Middle East,road_gap,M3_embedded_form,0.2045443592892564,0.2176565868154901
+Tehran,Iran,Middle East,road_gap,M3_embedded_form,0.1904347744059465,0.2280972274276739
+Lisbon,Portugal,Europe,road_gap,M4_embedded_form_public_controls,0.2544838513923538,0.227096525728266
+Vienna,Austria,Europe,road_gap,M4_embedded_form_public_controls,0.2293014969141065,0.210843198806803
+Athens,Greece,Europe,road_gap,M4_embedded_form_public_controls,0.2114430357292901,0.2020174051660156
+Istanbul,Turkey,Middle East,road_gap,M4_embedded_form_public_controls,0.2136966149952546,0.2101478869309757
+Dubai,United Arab Emirates,Middle East,road_gap,M4_embedded_form_public_controls,0.2341388324763428,0.2120648830195818
+Cairo,Egypt,Africa,road_gap,M4_embedded_form_public_controls,0.2094187185016547,0.2246379266947392
+Nairobi,Kenya,Africa,road_gap,M4_embedded_form_public_controls,0.2816907863000482,0.2411527674458902
+Accra,Ghana,Africa,road_gap,M4_embedded_form_public_controls,0.2219213271629146,0.2258155066846765
+Johannesburg,South Africa,Africa,road_gap,M4_embedded_form_public_controls,0.195749404902766,0.2122328392178167
+Casablanca,Morocco,Africa,road_gap,M4_embedded_form_public_controls,0.2151172715801975,0.2154928218159099
+Mexico City,Mexico,Latin America,road_gap,M4_embedded_form_public_controls,0.1984000442438305,0.1923379069551534
+Bogota,Colombia,Latin America,road_gap,M4_embedded_form_public_controls,0.2006048806586807,0.2016092225549445
+Lima,Peru,Latin America,road_gap,M4_embedded_form_public_controls,0.2071654757801135,0.2012407949972799
+Santiago,Chile,Latin America,road_gap,M4_embedded_form_public_controls,0.1956594220795258,0.187781019195406
+Sao Paulo,Brazil,Latin America,road_gap,M4_embedded_form_public_controls,0.2224532431356944,0.195894834686055
+Tokyo,Japan,Asia,road_gap,M4_embedded_form_public_controls,0.1973733830921686,0.1984621871715988
+Seoul,South Korea,Asia,road_gap,M4_embedded_form_public_controls,0.2233346100630051,0.2128810651950636
+Taipei,Taiwan,Asia,road_gap,M4_embedded_form_public_controls,0.1683153898164039,0.2077628665798224
+Bangkok,Thailand,Asia,road_gap,M4_embedded_form_public_controls,0.2810948175304116,0.2404742879096806
+Kuala Lumpur,Malaysia,Asia,road_gap,M4_embedded_form_public_controls,0.2030983884482723,0.2203567650988699
+Jakarta,Indonesia,Asia,road_gap,M4_embedded_form_public_controls,0.1876742784227459,0.2253621872488336
+Manila,Philippines,Asia,road_gap,M4_embedded_form_public_controls,0.2007020470791676,0.2218122846779971
+Mumbai,India,Asia,road_gap,M4_embedded_form_public_controls,0.2424962845727741,0.2258377688951693
+Bengaluru,India,Asia,road_gap,M4_embedded_form_public_controls,0.2123759548797029,0.221947498083718
+Los Angeles,United States,North America,road_gap,M4_embedded_form_public_controls,0.1750696737916047,0.1908105181028011
+New York City,United States,North America,road_gap,M4_embedded_form_public_controls,0.1873573172809358,0.1818641161152271
+Montreal,Canada,North America,road_gap,M4_embedded_form_public_controls,0.2018337424446379,0.2067693089734134
+Vancouver,Canada,North America,road_gap,M4_embedded_form_public_controls,0.1972933468689489,0.1953864250990044
+London,United Kingdom,Europe,road_gap,M4_embedded_form_public_controls,0.2550152834075354,0.2254734275992878
+Paris,France,Europe,road_gap,M4_embedded_form_public_controls,0.196025947956002,0.2062518382632209
+Amsterdam,Netherlands,Europe,road_gap,M4_embedded_form_public_controls,0.2333191428976869,0.2156733818282878
+Barcelona,Spain,Europe,road_gap,M4_embedded_form_public_controls,0.1861858032492349,0.2068120772238018
+Warsaw,Poland,Europe,road_gap,M4_embedded_form_public_controls,0.2199203187250994,0.2178333677052419
+Prague,Czechia,Europe,road_gap,M4_embedded_form_public_controls,0.2231987994904814,0.2210816349630986
+Rome,Italy,Europe,road_gap,M4_embedded_form_public_controls,0.2044670289211081,0.2183350713571852
+Milan,Italy,Europe,road_gap,M4_embedded_form_public_controls,0.1851227591582229,0.2100784486435657
+Lagos,Nigeria,Africa,road_gap,M4_embedded_form_public_controls,0.2546630980630208,0.2239045894697453
+Addis Ababa,Ethiopia,Africa,road_gap,M4_embedded_form_public_controls,0.2177258105420519,0.2287730032645568
+Dakar,Senegal,Africa,road_gap,M4_embedded_form_public_controls,0.2399622404027691,0.2215635193560267
+Kampala,Uganda,Africa,road_gap,M4_embedded_form_public_controls,0.2505478606026119,0.2491448664709946
+Dar es Salaam,Tanzania,Africa,road_gap,M4_embedded_form_public_controls,0.2674011640769924,0.2333969402404436
+Tunis,Tunisia,Africa,road_gap,M4_embedded_form_public_controls,0.2198067701589378,0.2207843666523471
+Algiers,Algeria,Africa,road_gap,M4_embedded_form_public_controls,0.2434144758764622,0.2333877643886974
+Buenos Aires,Argentina,Latin America,road_gap,M4_embedded_form_public_controls,0.1943842622218158,0.1775186592409127
+Rio de Janeiro,Brazil,Latin America,road_gap,M4_embedded_form_public_controls,0.2206516221330009,0.2118057185344516
+Quito,Ecuador,Latin America,road_gap,M4_embedded_form_public_controls,0.2438223411225157,0.2282672144800429
+Montevideo,Uruguay,Latin America,road_gap,M4_embedded_form_public_controls,0.1930316873323181,0.2071451077749053
+Panama City,Panama,Latin America,road_gap,M4_embedded_form_public_controls,0.2313600979093936,0.2293801393760886
+Delhi,India,Asia,road_gap,M4_embedded_form_public_controls,0.231035462077478,0.2196973195952323
+Chennai,India,Asia,road_gap,M4_embedded_form_public_controls,0.2265510804984489,0.2248552539569353
+Hyderabad,India,Asia,road_gap,M4_embedded_form_public_controls,0.2618441377985055,0.2249367603135065
+Karachi,Pakistan,Asia,road_gap,M4_embedded_form_public_controls,0.2283793945699003,0.2198036144842375
+Dhaka,Bangladesh,Asia,road_gap,M4_embedded_form_public_controls,0.2238723688606749,0.2365993795342
+Hanoi,Vietnam,Asia,road_gap,M4_embedded_form_public_controls,0.2610331976658657,0.2313778088218606
+Ho Chi Minh City,Vietnam,Asia,road_gap,M4_embedded_form_public_controls,0.2190502853136501,0.2349367652533566
+Singapore,Singapore,Asia,road_gap,M4_embedded_form_public_controls,0.2081795684974292,0.2464098224637972
+Hong Kong,China,Asia,road_gap,M4_embedded_form_public_controls,0.2098224633863661,0.2075780477347963
+Osaka,Japan,Asia,road_gap,M4_embedded_form_public_controls,0.1782642727378145,0.2014359949395548
+Sydney,Australia,Oceania,road_gap,M4_embedded_form_public_controls,0.2127036751881589,0.2195068910368519
+Melbourne,Australia,Oceania,road_gap,M4_embedded_form_public_controls,0.2313912743513861,0.202593356372879
+Auckland,New Zealand,Oceania,road_gap,M4_embedded_form_public_controls,0.2205494075900642,0.2287162699784113
+Brisbane,Australia,Oceania,road_gap,M4_embedded_form_public_controls,0.208880201061156,0.2191621665620732
+Chicago,United States,North America,road_gap,M4_embedded_form_public_controls,0.2040052968599778,0.1627851775102439
+Toronto,Canada,North America,road_gap,M4_embedded_form_public_controls,0.1996750232126277,0.2083276465079294
+Seattle,United States,North America,road_gap,M4_embedded_form_public_controls,0.2082283123291324,0.2003400174834871
+San Francisco,United States,North America,road_gap,M4_embedded_form_public_controls,0.1980232784966512,0.1911000624506157
+Boston,United States,North America,road_gap,M4_embedded_form_public_controls,0.2120018730220242,0.2174915602370946
+Miami,United States,North America,road_gap,M4_embedded_form_public_controls,0.1811689258125637,0.182544311824698
+Riyadh,Saudi Arabia,Middle East,road_gap,M4_embedded_form_public_controls,0.2084371144921578,0.202777769741993
+Tel Aviv,Israel,Middle East,road_gap,M4_embedded_form_public_controls,0.2045443592892564,0.2166361815785427
+Tehran,Iran,Middle East,road_gap,M4_embedded_form_public_controls,0.1904347744059465,0.2317590504986468
+Lisbon,Portugal,Europe,road_minus_spatial,M0_size,0.125,0.0970647002563209
+Vienna,Austria,Europe,road_minus_spatial,M0_size,0.075,0.0926036111806338
+Athens,Greece,Europe,road_minus_spatial,M0_size,0.0999999999999999,0.0908930111259453
+Istanbul,Turkey,Middle East,road_minus_spatial,M0_size,0.1,0.0958689031749758
+Dubai,United Arab Emirates,Middle East,road_minus_spatial,M0_size,0.0749999999999999,0.0917885895346569
+Cairo,Egypt,Africa,road_minus_spatial,M0_size,0.0999999999999999,0.1318281379073188
+Nairobi,Kenya,Africa,road_minus_spatial,M0_size,0.1499999999999999,0.0916119885213102
+Accra,Ghana,Africa,road_minus_spatial,M0_size,0.0999999999999999,0.0880954306471152
+Johannesburg,South Africa,Africa,road_minus_spatial,M0_size,0.075,0.0877090978914603
+Casablanca,Morocco,Africa,road_minus_spatial,M0_size,0.1,0.0922874518073534
+Mexico City,Mexico,Latin America,road_minus_spatial,M0_size,0.0999999999999999,0.0948543602564746
+Bogota,Colombia,Latin America,road_minus_spatial,M0_size,0.0999999999999999,0.0947388843670814
+Lima,Peru,Latin America,road_minus_spatial,M0_size,0.0999999999999999,0.0936462163874929
+Santiago,Chile,Latin America,road_minus_spatial,M0_size,0.0999999999999999,0.1005648496263667
+Sao Paulo,Brazil,Latin America,road_minus_spatial,M0_size,0.1,0.095394231634015
+Tokyo,Japan,Asia,road_minus_spatial,M0_size,0.0999999999999999,0.0924514571733627
+Seoul,South Korea,Asia,road_minus_spatial,M0_size,0.125,0.0957843203527049
+Taipei,Taiwan,Asia,road_minus_spatial,M0_size,0.0499999999999999,0.091398317851974
+Bangkok,Thailand,Asia,road_minus_spatial,M0_size,0.125,0.1173435166327221
+Kuala Lumpur,Malaysia,Asia,road_minus_spatial,M0_size,0.0749999999999999,0.0982106125233539
+Jakarta,Indonesia,Asia,road_minus_spatial,M0_size,0.0749999999999999,0.1040127448517534
+Manila,Philippines,Asia,road_minus_spatial,M0_size,0.075,0.093365362501205
+Mumbai,India,Asia,road_minus_spatial,M0_size,0.0999999999999999,0.0939923529928809
+Bengaluru,India,Asia,road_minus_spatial,M0_size,0.125,0.1146272322301791
+Los Angeles,United States,North America,road_minus_spatial,M0_size,0.0749999999999999,0.091331963018567
+New York City,United States,North America,road_minus_spatial,M0_size,0.0749999999999999,0.0880385540346525
+Montreal,Canada,North America,road_minus_spatial,M0_size,0.0999999999999999,0.0906022005423809
+Vancouver,Canada,North America,road_minus_spatial,M0_size,0.0749999999999999,0.0910169732506993
+London,United Kingdom,Europe,road_minus_spatial,M0_size,0.125,0.1072160552734077
+Paris,France,Europe,road_minus_spatial,M0_size,0.075,0.0953098674228063
+Amsterdam,Netherlands,Europe,road_minus_spatial,M0_size,0.0999999999999999,0.0951130057420139
+Barcelona,Spain,Europe,road_minus_spatial,M0_size,0.0749999999999999,0.091576810531551
+Warsaw,Poland,Europe,road_minus_spatial,M0_size,0.0999999999999999,0.0944307449607645
+Prague,Czechia,Europe,road_minus_spatial,M0_size,0.0749999999999999,0.0950901668318947
+Rome,Italy,Europe,road_minus_spatial,M0_size,0.075,0.0952676810203501
+Milan,Italy,Europe,road_minus_spatial,M0_size,0.05,0.0939041835419196
+Lagos,Nigeria,Africa,road_minus_spatial,M0_size,0.125,0.0850768302626495
+Addis Ababa,Ethiopia,Africa,road_minus_spatial,M0_size,0.0999999999999999,0.1006483721336307
+Dakar,Senegal,Africa,road_minus_spatial,M0_size,0.125,0.0893366386049606
+Kampala,Uganda,Africa,road_minus_spatial,M0_size,0.125,0.1005602004658221
+Dar es Salaam,Tanzania,Africa,road_minus_spatial,M0_size,0.15,0.0895969692982653
+Tunis,Tunisia,Africa,road_minus_spatial,M0_size,0.0999999999999999,0.0978578729233885
+Algiers,Algeria,Africa,road_minus_spatial,M0_size,0.0999999999999999,0.0893916454198607
+Buenos Aires,Argentina,Latin America,road_minus_spatial,M0_size,0.0749999999999999,0.0850774620159207
+Rio de Janeiro,Brazil,Latin America,road_minus_spatial,M0_size,0.0999999999999999,0.0911896137738198
+Quito,Ecuador,Latin America,road_minus_spatial,M0_size,0.125,0.0957923150653945
+Montevideo,Uruguay,Latin America,road_minus_spatial,M0_size,0.0749999999999999,0.0872296005345788
+Panama City,Panama,Latin America,road_minus_spatial,M0_size,0.0999999999999999,0.0901659873106071
+Delhi,India,Asia,road_minus_spatial,M0_size,0.0999999999999999,0.0991465962908022
+Chennai,India,Asia,road_minus_spatial,M0_size,0.125,0.1005125698314348
+Hyderabad,India,Asia,road_minus_spatial,M0_size,0.125,0.1144499972512658
+Karachi,Pakistan,Asia,road_minus_spatial,M0_size,0.1,0.0949863328558374
+Dhaka,Bangladesh,Asia,road_minus_spatial,M0_size,0.0999999999999999,0.0989553873693808
+Hanoi,Vietnam,Asia,road_minus_spatial,M0_size,0.15,0.0966977454554782
+Ho Chi Minh City,Vietnam,Asia,road_minus_spatial,M0_size,0.125,0.1020045292474075
+Singapore,Singapore,Asia,road_minus_spatial,M0_size,0.075,0.0920425366955952
+Hong Kong,China,Asia,road_minus_spatial,M0_size,0.075,0.0911291682473
+Osaka,Japan,Asia,road_minus_spatial,M0_size,0.0999999999999999,0.1001271236811469
+Sydney,Australia,Oceania,road_minus_spatial,M0_size,0.0749999999999999,0.0951080938509743
+Melbourne,Australia,Oceania,road_minus_spatial,M0_size,0.0999999999999999,0.0953327561820472
+Auckland,New Zealand,Oceania,road_minus_spatial,M0_size,0.0749999999999999,0.0933875886880546
+Brisbane,Australia,Oceania,road_minus_spatial,M0_size,0.0749999999999999,0.0961778894527708
+Chicago,United States,North America,road_minus_spatial,M0_size,0.0999999999999999,0.0891668754003792
+Toronto,Canada,North America,road_minus_spatial,M0_size,0.075,0.0913661081807314
+Seattle,United States,North America,road_minus_spatial,M0_size,0.0999999999999999,0.0917355073044611
+San Francisco,United States,North America,road_minus_spatial,M0_size,0.0749999999999999,0.0895919853799067
+Boston,United States,North America,road_minus_spatial,M0_size,0.1,0.0944684829214471
+Miami,United States,North America,road_minus_spatial,M0_size,0.0749999999999999,0.0900722789107035
+Riyadh,Saudi Arabia,Middle East,road_minus_spatial,M0_size,0.1,0.0944338645846521
+Tel Aviv,Israel,Middle East,road_minus_spatial,M0_size,0.075,0.0936249179577689
+Tehran,Iran,Middle East,road_minus_spatial,M0_size,0.0999999999999999,0.1308555391182202
+Lisbon,Portugal,Europe,road_minus_spatial,M1_degree,0.125,0.0911046411333368
+Vienna,Austria,Europe,road_minus_spatial,M1_degree,0.075,0.0881752698551601
+Athens,Greece,Europe,road_minus_spatial,M1_degree,0.0999999999999999,0.0903828464471107
+Istanbul,Turkey,Middle East,road_minus_spatial,M1_degree,0.1,0.0930439904819922
+Dubai,United Arab Emirates,Middle East,road_minus_spatial,M1_degree,0.0749999999999999,0.0877408867895589
+Cairo,Egypt,Africa,road_minus_spatial,M1_degree,0.0999999999999999,0.1018768776346987
+Nairobi,Kenya,Africa,road_minus_spatial,M1_degree,0.1499999999999999,0.1097816108036982
+Accra,Ghana,Africa,road_minus_spatial,M1_degree,0.0999999999999999,0.1023662764502158
+Johannesburg,South Africa,Africa,road_minus_spatial,M1_degree,0.075,0.0928861453644535
+Casablanca,Morocco,Africa,road_minus_spatial,M1_degree,0.1,0.0889314784070334
+Mexico City,Mexico,Latin America,road_minus_spatial,M1_degree,0.0999999999999999,0.0897567258274554
+Bogota,Colombia,Latin America,road_minus_spatial,M1_degree,0.0999999999999999,0.0949276233336202
+Lima,Peru,Latin America,road_minus_spatial,M1_degree,0.0999999999999999,0.093427663433684
+Santiago,Chile,Latin America,road_minus_spatial,M1_degree,0.0999999999999999,0.0982486498512837
+Sao Paulo,Brazil,Latin America,road_minus_spatial,M1_degree,0.1,0.0928975763463538
+Tokyo,Japan,Asia,road_minus_spatial,M1_degree,0.0999999999999999,0.0847040242733762
+Seoul,South Korea,Asia,road_minus_spatial,M1_degree,0.125,0.0859380282755901
+Taipei,Taiwan,Asia,road_minus_spatial,M1_degree,0.0499999999999999,0.0714629550239842
+Bangkok,Thailand,Asia,road_minus_spatial,M1_degree,0.125,0.1392248336670048
+Kuala Lumpur,Malaysia,Asia,road_minus_spatial,M1_degree,0.0749999999999999,0.1012186560905402
+Jakarta,Indonesia,Asia,road_minus_spatial,M1_degree,0.0749999999999999,0.1136706477596187
+Manila,Philippines,Asia,road_minus_spatial,M1_degree,0.075,0.0918382324752637
+Mumbai,India,Asia,road_minus_spatial,M1_degree,0.0999999999999999,0.1039926355420521
+Bengaluru,India,Asia,road_minus_spatial,M1_degree,0.125,0.1082361656233352
+Los Angeles,United States,North America,road_minus_spatial,M1_degree,0.0749999999999999,0.0842577834493062
+New York City,United States,North America,road_minus_spatial,M1_degree,0.0749999999999999,0.0742802869441817
+Montreal,Canada,North America,road_minus_spatial,M1_degree,0.0999999999999999,0.0606421471088127
+Vancouver,Canada,North America,road_minus_spatial,M1_degree,0.0749999999999999,0.0846240334455329
+London,United Kingdom,Europe,road_minus_spatial,M1_degree,0.125,0.0968593756977088
+Paris,France,Europe,road_minus_spatial,M1_degree,0.075,0.0875426285083287
+Amsterdam,Netherlands,Europe,road_minus_spatial,M1_degree,0.0999999999999999,0.0844683268626234
+Barcelona,Spain,Europe,road_minus_spatial,M1_degree,0.0749999999999999,0.0894200061491096
+Warsaw,Poland,Europe,road_minus_spatial,M1_degree,0.0999999999999999,0.0938482023574592
+Prague,Czechia,Europe,road_minus_spatial,M1_degree,0.0749999999999999,0.0913544749288297
+Rome,Italy,Europe,road_minus_spatial,M1_degree,0.075,0.0941273524231365
+Milan,Italy,Europe,road_minus_spatial,M1_degree,0.05,0.0902193379739474
+Lagos,Nigeria,Africa,road_minus_spatial,M1_degree,0.125,0.102420348066412
+Addis Ababa,Ethiopia,Africa,road_minus_spatial,M1_degree,0.0999999999999999,0.0984106990895735
+Dakar,Senegal,Africa,road_minus_spatial,M1_degree,0.125,0.0915583607899838
+Kampala,Uganda,Africa,road_minus_spatial,M1_degree,0.125,0.1184513873179931
+Dar es Salaam,Tanzania,Africa,road_minus_spatial,M1_degree,0.15,0.1022489415804669
+Tunis,Tunisia,Africa,road_minus_spatial,M1_degree,0.0999999999999999,0.0932772614632283
+Algiers,Algeria,Africa,road_minus_spatial,M1_degree,0.0999999999999999,0.1005984869812723
+Buenos Aires,Argentina,Latin America,road_minus_spatial,M1_degree,0.0749999999999999,0.0843440600804875
+Rio de Janeiro,Brazil,Latin America,road_minus_spatial,M1_degree,0.0999999999999999,0.0991947969580436
+Quito,Ecuador,Latin America,road_minus_spatial,M1_degree,0.125,0.1078500707598169
+Montevideo,Uruguay,Latin America,road_minus_spatial,M1_degree,0.0749999999999999,0.0890383996501613
+Panama City,Panama,Latin America,road_minus_spatial,M1_degree,0.0999999999999999,0.1062474100051546
+Delhi,India,Asia,road_minus_spatial,M1_degree,0.0999999999999999,0.1011686576721843
+Chennai,India,Asia,road_minus_spatial,M1_degree,0.125,0.1102357353584565
+Hyderabad,India,Asia,road_minus_spatial,M1_degree,0.125,0.1089182415947603
+Karachi,Pakistan,Asia,road_minus_spatial,M1_degree,0.1,0.0987700344902169
+Dhaka,Bangladesh,Asia,road_minus_spatial,M1_degree,0.0999999999999999,0.1102674003795511
+Hanoi,Vietnam,Asia,road_minus_spatial,M1_degree,0.15,0.1019213154774646
+Ho Chi Minh City,Vietnam,Asia,road_minus_spatial,M1_degree,0.125,0.1100708210616905
+Singapore,Singapore,Asia,road_minus_spatial,M1_degree,0.075,0.0958892355568264
+Hong Kong,China,Asia,road_minus_spatial,M1_degree,0.075,0.0889458317280548
+Osaka,Japan,Asia,road_minus_spatial,M1_degree,0.0999999999999999,0.0904150810956528
+Sydney,Australia,Oceania,road_minus_spatial,M1_degree,0.0749999999999999,0.0989316514058453
+Melbourne,Australia,Oceania,road_minus_spatial,M1_degree,0.0999999999999999,0.0954769103781166
+Auckland,New Zealand,Oceania,road_minus_spatial,M1_degree,0.0749999999999999,0.1025117596301348
+Brisbane,Australia,Oceania,road_minus_spatial,M1_degree,0.0749999999999999,0.100275886754341
+Chicago,United States,North America,road_minus_spatial,M1_degree,0.0999999999999999,0.062502083515984
+Toronto,Canada,North America,road_minus_spatial,M1_degree,0.075,0.0818877220978536
+Seattle,United States,North America,road_minus_spatial,M1_degree,0.0999999999999999,0.0913161672488432
+San Francisco,United States,North America,road_minus_spatial,M1_degree,0.0749999999999999,0.0754343662892673
+Boston,United States,North America,road_minus_spatial,M1_degree,0.1,0.0934161040096185
+Miami,United States,North America,road_minus_spatial,M1_degree,0.0749999999999999,0.0809129530961397
+Riyadh,Saudi Arabia,Middle East,road_minus_spatial,M1_degree,0.1,0.0912997338309801
+Tel Aviv,Israel,Middle East,road_minus_spatial,M1_degree,0.075,0.0951834451292729
+Tehran,Iran,Middle East,road_minus_spatial,M1_degree,0.0999999999999999,0.1173673206650597
+Lisbon,Portugal,Europe,road_minus_spatial,M2_degree_edge_scale,0.125,0.0954483678824292
+Vienna,Austria,Europe,road_minus_spatial,M2_degree_edge_scale,0.075,0.0875024807459099
+Athens,Greece,Europe,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.1016345055306274
+Istanbul,Turkey,Middle East,road_minus_spatial,M2_degree_edge_scale,0.1,0.0970607496052953
+Dubai,United Arab Emirates,Middle East,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.0492669924863718
+Cairo,Egypt,Africa,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.1008338423984656
+Nairobi,Kenya,Africa,road_minus_spatial,M2_degree_edge_scale,0.1499999999999999,0.1001739892221414
+Accra,Ghana,Africa,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.0975844332852995
+Johannesburg,South Africa,Africa,road_minus_spatial,M2_degree_edge_scale,0.075,0.0798206168939958
+Casablanca,Morocco,Africa,road_minus_spatial,M2_degree_edge_scale,0.1,0.0967777277831912
+Mexico City,Mexico,Latin America,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.0946393388722792
+Bogota,Colombia,Latin America,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.1074831778758501
+Lima,Peru,Latin America,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.1024647208585973
+Santiago,Chile,Latin America,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.1057761419714816
+Sao Paulo,Brazil,Latin America,road_minus_spatial,M2_degree_edge_scale,0.1,0.09660790225869
+Tokyo,Japan,Asia,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.0980889006626853
+Seoul,South Korea,Asia,road_minus_spatial,M2_degree_edge_scale,0.125,0.09687341568939
+Taipei,Taiwan,Asia,road_minus_spatial,M2_degree_edge_scale,0.0499999999999999,0.0694578413226185
+Bangkok,Thailand,Asia,road_minus_spatial,M2_degree_edge_scale,0.125,0.1350391798870814
+Kuala Lumpur,Malaysia,Asia,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.1022132050485561
+Jakarta,Indonesia,Asia,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.1126011621553004
+Manila,Philippines,Asia,road_minus_spatial,M2_degree_edge_scale,0.075,0.0948038914361672
+Mumbai,India,Asia,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.1005333981002971
+Bengaluru,India,Asia,road_minus_spatial,M2_degree_edge_scale,0.125,0.103589339789053
+Los Angeles,United States,North America,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.052168510288789
+New York City,United States,North America,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.0483242391708903
+Montreal,Canada,North America,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.0512141383134918
+Vancouver,Canada,North America,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.0635932952853769
+London,United Kingdom,Europe,road_minus_spatial,M2_degree_edge_scale,0.125,0.1128625436984063
+Paris,France,Europe,road_minus_spatial,M2_degree_edge_scale,0.075,0.0902458536481969
+Amsterdam,Netherlands,Europe,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.0865787974873902
+Barcelona,Spain,Europe,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.0902738670606528
+Warsaw,Poland,Europe,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.0867199993884166
+Prague,Czechia,Europe,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.094961293133233
+Rome,Italy,Europe,road_minus_spatial,M2_degree_edge_scale,0.075,0.0940427197141077
+Milan,Italy,Europe,road_minus_spatial,M2_degree_edge_scale,0.05,0.0845528188825662
+Lagos,Nigeria,Africa,road_minus_spatial,M2_degree_edge_scale,0.125,0.0860178075841651
+Addis Ababa,Ethiopia,Africa,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.1105014376047554
+Dakar,Senegal,Africa,road_minus_spatial,M2_degree_edge_scale,0.125,0.1042948239393999
+Kampala,Uganda,Africa,road_minus_spatial,M2_degree_edge_scale,0.125,0.1148265260949038
+Dar es Salaam,Tanzania,Africa,road_minus_spatial,M2_degree_edge_scale,0.15,0.1063662781877754
+Tunis,Tunisia,Africa,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.1041959982329112
+Algiers,Algeria,Africa,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.1047384269359918
+Buenos Aires,Argentina,Latin America,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.097765072211143
+Rio de Janeiro,Brazil,Latin America,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.0915815402182132
+Quito,Ecuador,Latin America,road_minus_spatial,M2_degree_edge_scale,0.125,0.1124849769945287
+Montevideo,Uruguay,Latin America,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.0991778329352461
+Panama City,Panama,Latin America,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.0994306420874091
+Delhi,India,Asia,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.0930062580063597
+Chennai,India,Asia,road_minus_spatial,M2_degree_edge_scale,0.125,0.1137325769598553
+Hyderabad,India,Asia,road_minus_spatial,M2_degree_edge_scale,0.125,0.110105253324217
+Karachi,Pakistan,Asia,road_minus_spatial,M2_degree_edge_scale,0.1,0.0892545229337233
+Dhaka,Bangladesh,Asia,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.1088283222909931
+Hanoi,Vietnam,Asia,road_minus_spatial,M2_degree_edge_scale,0.15,0.1025462153527561
+Ho Chi Minh City,Vietnam,Asia,road_minus_spatial,M2_degree_edge_scale,0.125,0.116725062120734
+Singapore,Singapore,Asia,road_minus_spatial,M2_degree_edge_scale,0.075,0.078960469948051
+Hong Kong,China,Asia,road_minus_spatial,M2_degree_edge_scale,0.075,0.0771286180905769
+Osaka,Japan,Asia,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.098180032935774
+Sydney,Australia,Oceania,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.096128665624717
+Melbourne,Australia,Oceania,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.0907926362730403
+Auckland,New Zealand,Oceania,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.0967740267018779
+Brisbane,Australia,Oceania,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.0966771526125593
+Chicago,United States,North America,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.0394556885289599
+Toronto,Canada,North America,road_minus_spatial,M2_degree_edge_scale,0.075,0.0714679689645393
+Seattle,United States,North America,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.0839356609953566
+San Francisco,United States,North America,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.0650618024214855
+Boston,United States,North America,road_minus_spatial,M2_degree_edge_scale,0.1,0.0963939490141446
+Miami,United States,North America,road_minus_spatial,M2_degree_edge_scale,0.0749999999999999,0.0651800569359893
+Riyadh,Saudi Arabia,Middle East,road_minus_spatial,M2_degree_edge_scale,0.1,0.0933078873469576
+Tel Aviv,Israel,Middle East,road_minus_spatial,M2_degree_edge_scale,0.075,0.0948530777115965
+Tehran,Iran,Middle East,road_minus_spatial,M2_degree_edge_scale,0.0999999999999999,0.1186028465107765
+Lisbon,Portugal,Europe,road_minus_spatial,M3_embedded_form,0.125,0.095131818800406
+Vienna,Austria,Europe,road_minus_spatial,M3_embedded_form,0.075,0.0879982649296141
+Athens,Greece,Europe,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0937948663835128
+Istanbul,Turkey,Middle East,road_minus_spatial,M3_embedded_form,0.1,0.094569445608174
+Dubai,United Arab Emirates,Middle East,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.0724462485393381
+Cairo,Egypt,Africa,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.1162967516579708
+Nairobi,Kenya,Africa,road_minus_spatial,M3_embedded_form,0.1499999999999999,0.1091212556527141
+Accra,Ghana,Africa,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0987180479308225
+Johannesburg,South Africa,Africa,road_minus_spatial,M3_embedded_form,0.075,0.0871307310273967
+Casablanca,Morocco,Africa,road_minus_spatial,M3_embedded_form,0.1,0.1001930563150871
+Mexico City,Mexico,Latin America,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.092997444960742
+Bogota,Colombia,Latin America,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.1069051209636797
+Lima,Peru,Latin America,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.1027994759885012
+Santiago,Chile,Latin America,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0948551637055013
+Sao Paulo,Brazil,Latin America,road_minus_spatial,M3_embedded_form,0.1,0.0917542326275858
+Tokyo,Japan,Asia,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0822689672864342
+Seoul,South Korea,Asia,road_minus_spatial,M3_embedded_form,0.125,0.0947647035160622
+Taipei,Taiwan,Asia,road_minus_spatial,M3_embedded_form,0.0499999999999999,0.0649867516368383
+Bangkok,Thailand,Asia,road_minus_spatial,M3_embedded_form,0.125,0.1495991974265602
+Kuala Lumpur,Malaysia,Asia,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.1002008719023139
+Jakarta,Indonesia,Asia,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.1102196685125266
+Manila,Philippines,Asia,road_minus_spatial,M3_embedded_form,0.075,0.0938010139263575
+Mumbai,India,Asia,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0965980142033453
+Bengaluru,India,Asia,road_minus_spatial,M3_embedded_form,0.125,0.1122438902315312
+Los Angeles,United States,North America,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.0670902182178835
+New York City,United States,North America,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.0600787900283467
+Montreal,Canada,North America,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0723775469922252
+Vancouver,Canada,North America,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.0703719116610555
+London,United Kingdom,Europe,road_minus_spatial,M3_embedded_form,0.125,0.1094609179800883
+Paris,France,Europe,road_minus_spatial,M3_embedded_form,0.075,0.0862761252608251
+Amsterdam,Netherlands,Europe,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0887440913354191
+Barcelona,Spain,Europe,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.0828245748935403
+Warsaw,Poland,Europe,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0911303014258296
+Prague,Czechia,Europe,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.0940040023899992
+Rome,Italy,Europe,road_minus_spatial,M3_embedded_form,0.075,0.091511649244388
+Milan,Italy,Europe,road_minus_spatial,M3_embedded_form,0.05,0.0832902706994365
+Lagos,Nigeria,Africa,road_minus_spatial,M3_embedded_form,0.125,0.0887083109101643
+Addis Ababa,Ethiopia,Africa,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.1068107001876359
+Dakar,Senegal,Africa,road_minus_spatial,M3_embedded_form,0.125,0.1072767100732491
+Kampala,Uganda,Africa,road_minus_spatial,M3_embedded_form,0.125,0.1156798746490265
+Dar es Salaam,Tanzania,Africa,road_minus_spatial,M3_embedded_form,0.15,0.102597853354191
+Tunis,Tunisia,Africa,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.1057860519295536
+Algiers,Algeria,Africa,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.1054802222118837
+Buenos Aires,Argentina,Latin America,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.0859944946750442
+Rio de Janeiro,Brazil,Latin America,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0912566555375506
+Quito,Ecuador,Latin America,road_minus_spatial,M3_embedded_form,0.125,0.1105530744336459
+Montevideo,Uruguay,Latin America,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.1054490954250202
+Panama City,Panama,Latin America,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0994620878459717
+Delhi,India,Asia,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.1071009285910862
+Chennai,India,Asia,road_minus_spatial,M3_embedded_form,0.125,0.1239454316164804
+Hyderabad,India,Asia,road_minus_spatial,M3_embedded_form,0.125,0.1177750998230353
+Karachi,Pakistan,Asia,road_minus_spatial,M3_embedded_form,0.1,0.098891872027373
+Dhaka,Bangladesh,Asia,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.1080541969752174
+Hanoi,Vietnam,Asia,road_minus_spatial,M3_embedded_form,0.15,0.1070451011469449
+Ho Chi Minh City,Vietnam,Asia,road_minus_spatial,M3_embedded_form,0.125,0.1257272128595386
+Singapore,Singapore,Asia,road_minus_spatial,M3_embedded_form,0.075,0.0788807224522853
+Hong Kong,China,Asia,road_minus_spatial,M3_embedded_form,0.075,0.0690934939051605
+Osaka,Japan,Asia,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.08790465979328
+Sydney,Australia,Oceania,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.0910386014009647
+Melbourne,Australia,Oceania,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0667623785657947
+Auckland,New Zealand,Oceania,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.087910827164253
+Brisbane,Australia,Oceania,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.0753987653486514
+Chicago,United States,North America,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0478180197014132
+Toronto,Canada,North America,road_minus_spatial,M3_embedded_form,0.075,0.0829362616232174
+Seattle,United States,North America,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.0847030276581335
+San Francisco,United States,North America,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.0707661926449789
+Boston,United States,North America,road_minus_spatial,M3_embedded_form,0.1,0.0944991552405551
+Miami,United States,North America,road_minus_spatial,M3_embedded_form,0.0749999999999999,0.0688471291967975
+Riyadh,Saudi Arabia,Middle East,road_minus_spatial,M3_embedded_form,0.1,0.0974441542527398
+Tel Aviv,Israel,Middle East,road_minus_spatial,M3_embedded_form,0.075,0.0880392300546802
+Tehran,Iran,Middle East,road_minus_spatial,M3_embedded_form,0.0999999999999999,0.1161264714782142
+Lisbon,Portugal,Europe,road_minus_spatial,M4_embedded_form_public_controls,0.125,0.0965427546922777
+Vienna,Austria,Europe,road_minus_spatial,M4_embedded_form_public_controls,0.075,0.0903793319276858
+Athens,Greece,Europe,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0924189567751422
+Istanbul,Turkey,Middle East,road_minus_spatial,M4_embedded_form_public_controls,0.1,0.0936352554973774
+Dubai,United Arab Emirates,Middle East,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0820752501236346
+Cairo,Egypt,Africa,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.1157289215184824
+Nairobi,Kenya,Africa,road_minus_spatial,M4_embedded_form_public_controls,0.1499999999999999,0.1099236162220512
+Accra,Ghana,Africa,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0994854997037399
+Johannesburg,South Africa,Africa,road_minus_spatial,M4_embedded_form_public_controls,0.075,0.091487853606519
+Casablanca,Morocco,Africa,road_minus_spatial,M4_embedded_form_public_controls,0.1,0.0994383469636633
+Mexico City,Mexico,Latin America,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0943643504252212
+Bogota,Colombia,Latin America,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0975031579553793
+Lima,Peru,Latin America,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0952110698953607
+Santiago,Chile,Latin America,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0912458672430467
+Sao Paulo,Brazil,Latin America,road_minus_spatial,M4_embedded_form_public_controls,0.1,0.0903358492015752
+Tokyo,Japan,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0838317615863966
+Seoul,South Korea,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.125,0.0928817524964961
+Taipei,Taiwan,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.0499999999999999,0.0855589140683492
+Bangkok,Thailand,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.125,0.1200115387327656
+Kuala Lumpur,Malaysia,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0957270249660371
+Jakarta,Indonesia,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.1104028181226913
+Manila,Philippines,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.075,0.1048872982633649
+Mumbai,India,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.1133957219623942
+Bengaluru,India,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.125,0.1208724449453568
+Los Angeles,United States,North America,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0732892599857658
+New York City,United States,North America,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.066993564750928
+Montreal,Canada,North America,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0754377019761236
+Vancouver,Canada,North America,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0769895702429363
+London,United Kingdom,Europe,road_minus_spatial,M4_embedded_form_public_controls,0.125,0.1026257415414684
+Paris,France,Europe,road_minus_spatial,M4_embedded_form_public_controls,0.075,0.0865356189059076
+Amsterdam,Netherlands,Europe,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0876990626150856
+Barcelona,Spain,Europe,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0860611705482403
+Warsaw,Poland,Europe,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0938885652897295
+Prague,Czechia,Europe,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0942428324145782
+Rome,Italy,Europe,road_minus_spatial,M4_embedded_form_public_controls,0.075,0.0919782144863725
+Milan,Italy,Europe,road_minus_spatial,M4_embedded_form_public_controls,0.05,0.0860517066173305
+Lagos,Nigeria,Africa,road_minus_spatial,M4_embedded_form_public_controls,0.125,0.0917736207913473
+Addis Ababa,Ethiopia,Africa,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.1070073500502097
+Dakar,Senegal,Africa,road_minus_spatial,M4_embedded_form_public_controls,0.125,0.1043736828368671
+Kampala,Uganda,Africa,road_minus_spatial,M4_embedded_form_public_controls,0.125,0.1179313361358283
+Dar es Salaam,Tanzania,Africa,road_minus_spatial,M4_embedded_form_public_controls,0.15,0.103647462321451
+Tunis,Tunisia,Africa,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.1037053451434236
+Algiers,Algeria,Africa,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.1007917689963483
+Buenos Aires,Argentina,Latin America,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0797233308164379
+Rio de Janeiro,Brazil,Latin America,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0907037392435864
+Quito,Ecuador,Latin America,road_minus_spatial,M4_embedded_form_public_controls,0.125,0.1065629553970853
+Montevideo,Uruguay,Latin America,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0939933805750082
+Panama City,Panama,Latin America,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.1005126703149139
+Delhi,India,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.1134871712739498
+Chennai,India,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.125,0.118755585310798
+Hyderabad,India,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.125,0.1212450725329889
+Karachi,Pakistan,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.1,0.1119745924494982
+Dhaka,Bangladesh,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.1158114687935945
+Hanoi,Vietnam,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.15,0.1081599340755401
+Ho Chi Minh City,Vietnam,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.125,0.1159538947008981
+Singapore,Singapore,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.075,0.0938970642299789
+Hong Kong,China,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.075,0.0874895255085602
+Osaka,Japan,Asia,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0881481494821113
+Sydney,Australia,Oceania,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0946571460006688
+Melbourne,Australia,Oceania,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.090168419133421
+Auckland,New Zealand,Oceania,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0976830984110334
+Brisbane,Australia,Oceania,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0950742888814215
+Chicago,United States,North America,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0587925763016807
+Toronto,Canada,North America,road_minus_spatial,M4_embedded_form_public_controls,0.075,0.0806688891866321
+Seattle,United States,North America,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.0836539078710319
+San Francisco,United States,North America,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0741004914960746
+Boston,United States,North America,road_minus_spatial,M4_embedded_form_public_controls,0.1,0.0899956222400736
+Miami,United States,North America,road_minus_spatial,M4_embedded_form_public_controls,0.0749999999999999,0.0733135548836463
+Riyadh,Saudi Arabia,Middle East,road_minus_spatial,M4_embedded_form_public_controls,0.1,0.095532383260544
+Tel Aviv,Israel,Middle East,road_minus_spatial,M4_embedded_form_public_controls,0.075,0.0894803221892263
+Tehran,Iran,Middle East,road_minus_spatial,M4_embedded_form_public_controls,0.0999999999999999,0.1135660417360118

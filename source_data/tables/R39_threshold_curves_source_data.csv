@@ -1,0 +1,337 @@
+city,estimator,p,lcc_mean,lcc_sd
+Berlin,fine_grid,0.575,0.037763,0.014823
+Berlin,fine_grid,0.585,0.045516,0.016773
+Berlin,fine_grid,0.595,0.066426,0.02391
+Berlin,fine_grid,0.605,0.083425,0.033074
+Berlin,fine_grid,0.615,0.114019,0.042515
+Berlin,fine_grid,0.625,0.146913,0.048032
+Berlin,fine_grid,0.635,0.189748,0.064899
+Berlin,fine_grid,0.645,0.252231,0.065767
+Berlin,fine_grid,0.655,0.315728,0.075503
+Berlin,fine_grid,0.665,0.386874,0.064574
+Berlin,fine_grid,0.675,0.427623,0.070152
+Berlin,fine_grid,0.685,0.48962,0.06731
+Berlin,fine_grid,0.695,0.549684,0.057128
+Berlin,fine_grid,0.705,0.601361,0.056362
+Berlin,fine_grid,0.715,0.650526,0.051852
+Berlin,fine_grid,0.725,0.693106,0.046843
+Berlin,fine_grid,0.735,0.732931,0.034477
+Berlin,fine_grid,0.745,0.763885,0.03282
+Berlin,fine_grid,0.755,0.793267,0.022687
+Berlin,fine_grid,0.765,0.808389,0.02278
+Berlin,fine_grid,0.775,0.830647,0.021511
+Berlin,rank_order,0.575,0.035201,0.013799
+Berlin,rank_order,0.585,0.048045,0.018703
+Berlin,rank_order,0.595,0.062998,0.024469
+Berlin,rank_order,0.605,0.080778,0.030325
+Berlin,rank_order,0.615,0.109552,0.0378
+Berlin,rank_order,0.625,0.155366,0.064429
+Berlin,rank_order,0.635,0.20825,0.068947
+Berlin,rank_order,0.645,0.266221,0.066504
+Berlin,rank_order,0.655,0.331429,0.065181
+Berlin,rank_order,0.665,0.391926,0.071988
+Berlin,rank_order,0.675,0.460328,0.053966
+Berlin,rank_order,0.685,0.513708,0.046945
+Berlin,rank_order,0.695,0.56523,0.044463
+Berlin,rank_order,0.705,0.609242,0.047615
+Berlin,rank_order,0.715,0.661634,0.041179
+Berlin,rank_order,0.725,0.704421,0.030049
+Berlin,rank_order,0.735,0.74138,0.029756
+Berlin,rank_order,0.745,0.765112,0.03028
+Berlin,rank_order,0.755,0.791235,0.026175
+Berlin,rank_order,0.765,0.81312,0.024062
+Berlin,rank_order,0.775,0.833498,0.019922
+Buenos Aires,fine_grid,0.45,0.018111,0.005324
+Buenos Aires,fine_grid,0.46,0.021769,0.007615
+Buenos Aires,fine_grid,0.47,0.02709,0.010374
+Buenos Aires,fine_grid,0.48,0.035934,0.01204
+Buenos Aires,fine_grid,0.49,0.046933,0.016388
+Buenos Aires,fine_grid,0.5,0.062064,0.02085
+Buenos Aires,fine_grid,0.51,0.08556,0.03469
+Buenos Aires,fine_grid,0.52,0.115488,0.051723
+Buenos Aires,fine_grid,0.53,0.192929,0.083781
+Buenos Aires,fine_grid,0.54,0.259792,0.094697
+Buenos Aires,fine_grid,0.55,0.368261,0.110627
+Buenos Aires,fine_grid,0.56,0.501598,0.111927
+Buenos Aires,fine_grid,0.57,0.588241,0.097419
+Buenos Aires,fine_grid,0.58,0.666936,0.057149
+Buenos Aires,fine_grid,0.59,0.70854,0.055591
+Buenos Aires,fine_grid,0.6,0.753729,0.045136
+Buenos Aires,fine_grid,0.61,0.785744,0.027221
+Buenos Aires,fine_grid,0.62,0.817221,0.018917
+Buenos Aires,fine_grid,0.63,0.840362,0.0181
+Buenos Aires,fine_grid,0.64,0.858727,0.01584
+Buenos Aires,fine_grid,0.65,0.873493,0.013907
+Buenos Aires,rank_order,0.45,0.016896,0.004791
+Buenos Aires,rank_order,0.46,0.021873,0.00597
+Buenos Aires,rank_order,0.47,0.027683,0.007685
+Buenos Aires,rank_order,0.48,0.037358,0.012397
+Buenos Aires,rank_order,0.49,0.046959,0.015582
+Buenos Aires,rank_order,0.5,0.065337,0.023784
+Buenos Aires,rank_order,0.51,0.09106,0.043623
+Buenos Aires,rank_order,0.52,0.132462,0.053537
+Buenos Aires,rank_order,0.53,0.209506,0.075146
+Buenos Aires,rank_order,0.54,0.300084,0.086629
+Buenos Aires,rank_order,0.55,0.399784,0.097728
+Buenos Aires,rank_order,0.56,0.49848,0.09229
+Buenos Aires,rank_order,0.57,0.584452,0.086984
+Buenos Aires,rank_order,0.58,0.669419,0.061744
+Buenos Aires,rank_order,0.59,0.711214,0.059224
+Buenos Aires,rank_order,0.6,0.754453,0.040677
+Buenos Aires,rank_order,0.61,0.788238,0.026917
+Buenos Aires,rank_order,0.62,0.816451,0.022377
+Buenos Aires,rank_order,0.63,0.839179,0.020575
+Buenos Aires,rank_order,0.64,0.858334,0.016769
+Buenos Aires,rank_order,0.65,0.873899,0.014393
+Chicago,fine_grid,0.5,0.018642,0.005518
+Chicago,fine_grid,0.51,0.023849,0.006915
+Chicago,fine_grid,0.52,0.028734,0.007667
+Chicago,fine_grid,0.53,0.036834,0.010093
+Chicago,fine_grid,0.54,0.04957,0.015917
+Chicago,fine_grid,0.55,0.068295,0.026265
+Chicago,fine_grid,0.56,0.089894,0.036302
+Chicago,fine_grid,0.57,0.144816,0.0583
+Chicago,fine_grid,0.58,0.18953,0.065752
+Chicago,fine_grid,0.59,0.263668,0.09154
+Chicago,fine_grid,0.6,0.37263,0.124446
+Chicago,fine_grid,0.61,0.488883,0.134111
+Chicago,fine_grid,0.62,0.602845,0.109171
+Chicago,fine_grid,0.63,0.671611,0.083269
+Chicago,fine_grid,0.64,0.700451,0.093365
+Chicago,fine_grid,0.65,0.751916,0.046544
+Chicago,fine_grid,0.66,0.776906,0.057057
+Chicago,fine_grid,0.67,0.806916,0.046301
+Chicago,fine_grid,0.68,0.83358,0.021987
+Chicago,fine_grid,0.69,0.847162,0.017344
+Chicago,fine_grid,0.7,0.867231,0.014332
+Chicago,rank_order,0.5,0.020255,0.006474
+Chicago,rank_order,0.51,0.024479,0.007452
+Chicago,rank_order,0.52,0.032051,0.010759
+Chicago,rank_order,0.53,0.038018,0.01517
+Chicago,rank_order,0.54,0.04805,0.016299
+Chicago,rank_order,0.55,0.067014,0.020295
+Chicago,rank_order,0.56,0.094753,0.031502
+Chicago,rank_order,0.57,0.141056,0.042816
+Chicago,rank_order,0.58,0.19293,0.054033
+Chicago,rank_order,0.59,0.269073,0.090256
+Chicago,rank_order,0.6,0.355321,0.113086
+Chicago,rank_order,0.61,0.464404,0.140264
+Chicago,rank_order,0.62,0.566427,0.131376
+Chicago,rank_order,0.63,0.653402,0.100516
+Chicago,rank_order,0.64,0.718044,0.050838
+Chicago,rank_order,0.65,0.757868,0.020777
+Chicago,rank_order,0.66,0.787548,0.020704
+Chicago,rank_order,0.67,0.810806,0.020373
+Chicago,rank_order,0.68,0.830117,0.016051
+Chicago,rank_order,0.69,0.848075,0.016258
+Chicago,rank_order,0.7,0.863783,0.013149
+Madrid,fine_grid,0.55,0.025855,0.01102
+Madrid,fine_grid,0.56,0.033122,0.013604
+Madrid,fine_grid,0.57,0.044868,0.018598
+Madrid,fine_grid,0.58,0.062566,0.026433
+Madrid,fine_grid,0.59,0.075774,0.029777
+Madrid,fine_grid,0.6,0.113386,0.041309
+Madrid,fine_grid,0.61,0.150061,0.049994
+Madrid,fine_grid,0.62,0.197032,0.060565
+Madrid,fine_grid,0.63,0.260574,0.06728
+Madrid,fine_grid,0.64,0.329386,0.066523
+Madrid,fine_grid,0.65,0.404991,0.057197
+Madrid,fine_grid,0.66,0.483594,0.066514
+Madrid,fine_grid,0.67,0.545807,0.063162
+Madrid,fine_grid,0.68,0.618754,0.049107
+Madrid,fine_grid,0.69,0.677072,0.033631
+Madrid,fine_grid,0.7,0.719085,0.028218
+Madrid,fine_grid,0.71,0.757092,0.031449
+Madrid,fine_grid,0.72,0.792241,0.019814
+Madrid,fine_grid,0.73,0.818869,0.021436
+Madrid,fine_grid,0.74,0.839948,0.015551
+Madrid,fine_grid,0.75,0.857494,0.015453
+Madrid,rank_order,0.55,0.027476,0.009849
+Madrid,rank_order,0.56,0.035999,0.014088
+Madrid,rank_order,0.57,0.046749,0.015043
+Madrid,rank_order,0.58,0.058163,0.018739
+Madrid,rank_order,0.59,0.077954,0.026861
+Madrid,rank_order,0.6,0.103137,0.032861
+Madrid,rank_order,0.61,0.140871,0.044072
+Madrid,rank_order,0.62,0.189033,0.050945
+Madrid,rank_order,0.63,0.237329,0.062608
+Madrid,rank_order,0.64,0.294285,0.064011
+Madrid,rank_order,0.65,0.404287,0.069512
+Madrid,rank_order,0.66,0.481487,0.072062
+Madrid,rank_order,0.67,0.556004,0.057174
+Madrid,rank_order,0.68,0.623508,0.034394
+Madrid,rank_order,0.69,0.681171,0.034733
+Madrid,rank_order,0.7,0.720502,0.030638
+Madrid,rank_order,0.71,0.757375,0.031604
+Madrid,rank_order,0.72,0.79482,0.022342
+Madrid,rank_order,0.73,0.821703,0.020589
+Madrid,rank_order,0.74,0.843794,0.015512
+Madrid,rank_order,0.75,0.86203,0.01297
+Rotterdam,fine_grid,0.575,0.034818,0.013201
+Rotterdam,fine_grid,0.585,0.04382,0.015223
+Rotterdam,fine_grid,0.595,0.053065,0.022326
+Rotterdam,fine_grid,0.605,0.064213,0.026437
+Rotterdam,fine_grid,0.615,0.09058,0.038117
+Rotterdam,fine_grid,0.625,0.110055,0.042675
+Rotterdam,fine_grid,0.635,0.15096,0.062957
+Rotterdam,fine_grid,0.645,0.17115,0.070122
+Rotterdam,fine_grid,0.655,0.219602,0.077923
+Rotterdam,fine_grid,0.665,0.286963,0.085849
+Rotterdam,fine_grid,0.675,0.330967,0.086489
+Rotterdam,fine_grid,0.685,0.407536,0.091035
+Rotterdam,fine_grid,0.695,0.446769,0.08309
+Rotterdam,fine_grid,0.705,0.485834,0.089744
+Rotterdam,fine_grid,0.715,0.55058,0.051198
+Rotterdam,fine_grid,0.725,0.597122,0.045699
+Rotterdam,fine_grid,0.735,0.628084,0.043707
+Rotterdam,fine_grid,0.745,0.64816,0.048378
+Rotterdam,fine_grid,0.755,0.67641,0.058273
+Rotterdam,fine_grid,0.765,0.706813,0.050394
+Rotterdam,fine_grid,0.775,0.748165,0.037324
+Rotterdam,rank_order,0.575,0.036267,0.011629
+Rotterdam,rank_order,0.585,0.042722,0.01351
+Rotterdam,rank_order,0.595,0.052084,0.01688
+Rotterdam,rank_order,0.605,0.070832,0.02947
+Rotterdam,rank_order,0.615,0.089174,0.03745
+Rotterdam,rank_order,0.625,0.114201,0.051768
+Rotterdam,rank_order,0.635,0.139332,0.058081
+Rotterdam,rank_order,0.645,0.185952,0.07906
+Rotterdam,rank_order,0.655,0.226791,0.089265
+Rotterdam,rank_order,0.665,0.275708,0.096933
+Rotterdam,rank_order,0.675,0.320363,0.096198
+Rotterdam,rank_order,0.685,0.393718,0.10546
+Rotterdam,rank_order,0.695,0.444764,0.090319
+Rotterdam,rank_order,0.705,0.492914,0.083261
+Rotterdam,rank_order,0.715,0.549803,0.04894
+Rotterdam,rank_order,0.725,0.585026,0.043436
+Rotterdam,rank_order,0.735,0.617676,0.045088
+Rotterdam,rank_order,0.745,0.649904,0.05004
+Rotterdam,rank_order,0.755,0.676311,0.044936
+Rotterdam,rank_order,0.765,0.710068,0.042947
+Rotterdam,rank_order,0.775,0.741363,0.037155
+Stockholm,fine_grid,0.65,0.102366,0.035853
+Stockholm,fine_grid,0.66,0.121551,0.049038
+Stockholm,fine_grid,0.67,0.143329,0.05616
+Stockholm,fine_grid,0.68,0.17524,0.052631
+Stockholm,fine_grid,0.69,0.206151,0.071229
+Stockholm,fine_grid,0.7,0.248846,0.071695
+Stockholm,fine_grid,0.71,0.278499,0.074249
+Stockholm,fine_grid,0.72,0.331061,0.070384
+Stockholm,fine_grid,0.73,0.377756,0.067494
+Stockholm,fine_grid,0.74,0.39118,0.079674
+Stockholm,fine_grid,0.75,0.447731,0.069829
+Stockholm,fine_grid,0.76,0.482363,0.073573
+Stockholm,fine_grid,0.77,0.512339,0.07802
+Stockholm,fine_grid,0.78,0.568994,0.082733
+Stockholm,fine_grid,0.79,0.596752,0.095353
+Stockholm,fine_grid,0.8,0.651216,0.082835
+Stockholm,fine_grid,0.81,0.674421,0.086654
+Stockholm,fine_grid,0.82,0.694051,0.093966
+Stockholm,fine_grid,0.83,0.740651,0.082267
+Stockholm,fine_grid,0.84,0.788364,0.054858
+Stockholm,fine_grid,0.85,0.804734,0.047547
+Stockholm,rank_order,0.65,0.099195,0.036682
+Stockholm,rank_order,0.66,0.125983,0.04026
+Stockholm,rank_order,0.67,0.14721,0.048319
+Stockholm,rank_order,0.68,0.173563,0.061247
+Stockholm,rank_order,0.69,0.204481,0.068138
+Stockholm,rank_order,0.7,0.238771,0.079894
+Stockholm,rank_order,0.71,0.27641,0.08079
+Stockholm,rank_order,0.72,0.326968,0.085255
+Stockholm,rank_order,0.73,0.380947,0.078293
+Stockholm,rank_order,0.74,0.428336,0.065525
+Stockholm,rank_order,0.75,0.464558,0.071639
+Stockholm,rank_order,0.76,0.509685,0.075088
+Stockholm,rank_order,0.77,0.547315,0.06817
+Stockholm,rank_order,0.78,0.595452,0.064155
+Stockholm,rank_order,0.79,0.625132,0.068964
+Stockholm,rank_order,0.8,0.654223,0.074254
+Stockholm,rank_order,0.81,0.687056,0.076598
+Stockholm,rank_order,0.82,0.716831,0.073435
+Stockholm,rank_order,0.83,0.761206,0.039128
+Stockholm,rank_order,0.84,0.792228,0.018301
+Stockholm,rank_order,0.85,0.812271,0.017529
+Sydney,fine_grid,0.625,0.013076,0.005414
+Sydney,fine_grid,0.635,0.017401,0.006768
+Sydney,fine_grid,0.645,0.022935,0.008637
+Sydney,fine_grid,0.655,0.029811,0.0142
+Sydney,fine_grid,0.665,0.043598,0.015961
+Sydney,fine_grid,0.675,0.061098,0.021367
+Sydney,fine_grid,0.685,0.091164,0.028519
+Sydney,fine_grid,0.695,0.12645,0.04856
+Sydney,fine_grid,0.705,0.173178,0.05367
+Sydney,fine_grid,0.715,0.245108,0.062536
+Sydney,fine_grid,0.725,0.330338,0.058156
+Sydney,fine_grid,0.735,0.391657,0.056462
+Sydney,fine_grid,0.745,0.458961,0.050142
+Sydney,fine_grid,0.755,0.530272,0.031644
+Sydney,fine_grid,0.765,0.571864,0.029975
+Sydney,fine_grid,0.775,0.610675,0.027329
+Sydney,fine_grid,0.785,0.655458,0.022558
+Sydney,fine_grid,0.795,0.690186,0.020166
+Sydney,fine_grid,0.805,0.72715,0.012467
+Sydney,fine_grid,0.815,0.75118,0.012439
+Sydney,fine_grid,0.825,0.778396,0.010588
+Sydney,rank_order,0.625,0.013649,0.006613
+Sydney,rank_order,0.635,0.01813,0.00876
+Sydney,rank_order,0.645,0.022659,0.010498
+Sydney,rank_order,0.655,0.030425,0.013557
+Sydney,rank_order,0.665,0.04485,0.02027
+Sydney,rank_order,0.675,0.059397,0.024315
+Sydney,rank_order,0.685,0.084162,0.030082
+Sydney,rank_order,0.695,0.121342,0.035938
+Sydney,rank_order,0.705,0.169114,0.048831
+Sydney,rank_order,0.715,0.238933,0.059289
+Sydney,rank_order,0.725,0.312532,0.058279
+Sydney,rank_order,0.735,0.387062,0.051952
+Sydney,rank_order,0.745,0.459392,0.039126
+Sydney,rank_order,0.755,0.512483,0.036164
+Sydney,rank_order,0.765,0.564889,0.026336
+Sydney,rank_order,0.775,0.615952,0.019255
+Sydney,rank_order,0.785,0.653972,0.020583
+Sydney,rank_order,0.795,0.690376,0.019327
+Sydney,rank_order,0.805,0.719076,0.018926
+Sydney,rank_order,0.815,0.750808,0.011445
+Sydney,rank_order,0.825,0.776334,0.010162
+Toronto,fine_grid,0.575,0.0245,0.008764
+Toronto,fine_grid,0.585,0.034134,0.013753
+Toronto,fine_grid,0.595,0.043389,0.017438
+Toronto,fine_grid,0.605,0.056737,0.024176
+Toronto,fine_grid,0.615,0.072379,0.030525
+Toronto,fine_grid,0.625,0.090133,0.034528
+Toronto,fine_grid,0.635,0.121118,0.046054
+Toronto,fine_grid,0.645,0.1631,0.06327
+Toronto,fine_grid,0.655,0.230118,0.075276
+Toronto,fine_grid,0.665,0.26391,0.077247
+Toronto,fine_grid,0.675,0.352759,0.086669
+Toronto,fine_grid,0.685,0.417753,0.102728
+Toronto,fine_grid,0.695,0.514205,0.070307
+Toronto,fine_grid,0.705,0.579086,0.087965
+Toronto,fine_grid,0.715,0.643819,0.058699
+Toronto,fine_grid,0.725,0.70474,0.042166
+Toronto,fine_grid,0.735,0.750007,0.029363
+Toronto,fine_grid,0.745,0.780317,0.021452
+Toronto,fine_grid,0.755,0.810317,0.018253
+Toronto,fine_grid,0.765,0.835641,0.015799
+Toronto,fine_grid,0.775,0.85366,0.013783
+Toronto,rank_order,0.575,0.024879,0.009352
+Toronto,rank_order,0.585,0.030954,0.011544
+Toronto,rank_order,0.595,0.041025,0.017626
+Toronto,rank_order,0.605,0.054573,0.023626
+Toronto,rank_order,0.615,0.075415,0.032408
+Toronto,rank_order,0.625,0.10339,0.043184
+Toronto,rank_order,0.635,0.132367,0.04773
+Toronto,rank_order,0.645,0.160041,0.06201
+Toronto,rank_order,0.655,0.207495,0.067707
+Toronto,rank_order,0.665,0.288452,0.057644
+Toronto,rank_order,0.675,0.364484,0.067377
+Toronto,rank_order,0.685,0.440509,0.077837
+Toronto,rank_order,0.695,0.511675,0.082924
+Toronto,rank_order,0.705,0.573721,0.076771
+Toronto,rank_order,0.715,0.648288,0.063573
+Toronto,rank_order,0.725,0.713455,0.033279
+Toronto,rank_order,0.735,0.751297,0.025411
+Toronto,rank_order,0.745,0.784,0.018394
+Toronto,rank_order,0.755,0.812226,0.014015
+Toronto,rank_order,0.765,0.833407,0.012394
+Toronto,rank_order,0.775,0.854639,0.008563

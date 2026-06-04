@@ -1,6 +1,6 @@
-﻿"""R72: geometry-null defense analysis for submission hardening.
+"""R72: geometry-null defense analysis for submission hardening.
 
-This round addresses the main reviewer objection on R68: a low-intensity
+This round addresses the main reviewer objection to R68: a low-intensity
 strict-geometry null could be close to the road graph simply because it did
 not move far enough. R72 therefore builds a matched-intensity comparison on
 the R67 21-city geometry subset, using the same swap fractions for a
@@ -38,7 +38,7 @@ import build_R56_spatial_length_constrained_nulls as r56  # noqa: E402
 
 
 OUT = ROOT / "data" / "R72_geometry_defense"
-ROUND_DIR = ROOT / "validation_reports" / "R72_geometry_defense"
+ROUND_DIR = ROOT / "rounds" / "R72_geometry_defense"
 FIG_BASE = ROOT / "figures" / "Fig_R72_geometry_null_defense"
 R62_COVARIATES = ROOT / "data" / "R62_urban_form_mechanism" / "urban_form_covariates.csv"
 R67_CITY_SUMMARY = ROOT / "data" / "R67_geometry_null_sensitivity" / "geometry_null_sensitivity_city_summary.csv"
@@ -342,7 +342,7 @@ def make_figure(
     ax0.set_yticklabels(base.loc[::2, "city"], fontsize=5.0)
     ax0.set_xlabel(r"Observed road $p_c$ minus null $p_c$")
     ax0.set_title(
-        "a  Full 71-city residual collapse after strict local geometry",
+        "a  Full 71-city residual reduction after strict local geometry",
         loc="left",
         fontweight="bold",
         fontsize=8.5,
@@ -501,7 +501,7 @@ mechanism candidate for the post-spatial residual.
   structure.
 """
     (OUT / "R72_report.md").write_text(report, encoding="utf-8")
-    (ROUND_DIR / "validation_report.md").write_text(report, encoding="utf-8")
+    (ROUND_DIR / "gate_report.md").write_text(report, encoding="utf-8")
 
 
 def parse_args() -> argparse.Namespace:
@@ -569,4 +569,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

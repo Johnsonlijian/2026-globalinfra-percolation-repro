@@ -185,3 +185,73 @@ Interpret R72 as a matched-intensity empirical defense on the 21-city R67
 subset. It weakens the low-perturbation artifact objection, but it is not a
 proof of full Markov-chain mixing or a high-intensity all-71 planar ensemble.
 
+## Recreate R73 Nested Urban-form Validation
+
+R73 uses the included integrated public-covariate table and does not require
+raw graph caches or third-party downloads.
+
+```bash
+python scripts/build_R73_urban_form_nested_cv.py
+```
+
+Expected outputs:
+
+- `data/R73_urban_form_nested_cv/nested_model_summary.csv`
+- `data/R73_urban_form_nested_cv/nested_model_predictions.csv`
+- `data/R73_urban_form_nested_cv/leave_region_out_region_summary.csv`
+- `data/R73_urban_form_nested_cv/R73_summary.json`
+- `figures/Fig_R73_urban_form_nested_cv.png`
+- `figures/Fig_R73_urban_form_nested_cv.svg`
+- `figures/Fig_R73_urban_form_nested_cv.pdf`
+- `figures/Fig_R73_urban_form_nested_cv.tiff`
+
+Interpret R73 as descriptive mechanism-screen evidence. It supports a
+street-form signal under nested and regional holdout validation; it does not
+identify causal urban-design effects.
+
+## Recreate R75 Submission-hardening Tables
+
+R75 derives additional submission-facing tables from the existing source-data
+bundle. It records geometry-null rejection shares, mobility/fidelity proxies,
+nested-validation aliases and the availability boundary for true edge-set
+Jaccard distances.
+
+```bash
+python scripts/build_R75_submission_hardening_tables.py
+```
+
+Expected outputs:
+
+- `data/R75_submission_hardening/R72_geometry_rejection_reason_summary.csv`
+- `data/R75_submission_hardening/R72_geometry_graph_distance_summary.csv`
+- `data/R75_submission_hardening/R72_geometry_edge_jaccard_by_city.csv`
+- `data/R75_submission_hardening/R73_nested_model_ladder_summary.csv`
+- `data/R75_submission_hardening/R73_leave_region_out_predictions.csv`
+- `data/R75_submission_hardening/Fig5_nested_validation_source_data.csv`
+
+Do not interpret the edge-Jaccard availability table as a measured edge-set
+Jaccard distance. The archived null summaries do not store final rewired edge
+sets, so accepted-swap and mobility metrics are proxies only.
+
+## Recreate R76 Submission Fig. 5
+
+R76 rebuilds Fig. 5 from included derived tables and copies the combined figure
+source data into `source_data/figures/`.
+
+```bash
+python scripts/build_R76_fig5_nested_submission_figure.py
+```
+
+Expected outputs:
+
+- `data/R76_fig5_nested_submission/Fig5_combined_nested_public_source_data.csv`
+- `data/R76_fig5_nested_submission/R76_summary.json`
+- `figures/Fig_R76_fig5_nested_submission.png`
+- `figures/Fig_R76_fig5_nested_submission.svg`
+- `figures/Fig_R76_fig5_nested_submission.pdf`
+- `source_data/figures/Fig5_combined_nested_public_source_data.csv`
+
+Interpret R76 as visualization and source-data packaging. It does not add a
+new null ensemble or convert the descriptive nested model screen into causal
+inference.
+
