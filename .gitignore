@@ -2,6 +2,10 @@
 cache/
 private_graphs/
 raw/
+data/R65_public_covariates_and_controls/raw/
+data/R65_public_covariates_and_controls/ghsl_city_covariates_all.csv
+data/R65_public_covariates_and_controls/wdi_indicator_long_all_years.csv
+data/R65_public_covariates_and_controls/wdi_indicator_long_latest.csv
 *.pkl
 *.gpkg
 *.osm
