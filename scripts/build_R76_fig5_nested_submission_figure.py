@@ -214,7 +214,7 @@ def make_combined_source_data(
             {
                 "panel": "f",
                 "record_type": "claim_boundary",
-                "metric": "true_edge_jaccard_available",
+                "metric": "exact_edge_overlap_available",
                 "value": 0,
                 "note": "Existing null summaries do not store final edge sets; mobility/fidelity proxies are reported instead.",
             },
@@ -346,7 +346,7 @@ def make_figure(
         ("0.005", "low-intensity full-city geometry-null target"),
         ("1/city", "full-city strict-geometry replicate count"),
         ("no", "causal urban-design rule or planar theorem"),
-        ("no", "true edge-set Jaccard from archived summaries"),
+        ("no", "exact edge overlap from archived summaries"),
     ]
     y0 = 0.86
     for i, (num, txt) in enumerate(boundary):
@@ -418,7 +418,7 @@ def main() -> None:
         "source_data": str(OUT / "Fig5_combined_nested_public_source_data.csv"),
         "claim_boundary": (
             "Fig5 integrates nested validation, public-control comparison, high-order "
-            "embedded-feature correlations and explicit non-causal/no-Jaccard boundaries."
+            "embedded-feature correlations and explicit non-causal/exact-overlap boundaries."
         ),
     }
     (OUT / "R76_summary.json").write_text(json.dumps(payload, indent=2), encoding="utf-8")

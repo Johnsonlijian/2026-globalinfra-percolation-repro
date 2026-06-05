@@ -200,8 +200,7 @@ identify causal urban-design effects.
 
 R75 derives additional submission-facing tables from the existing source-data
 bundle. It records geometry-null rejection shares, mobility/fidelity proxies,
-nested-validation aliases and the availability boundary for true edge-set
-Jaccard distances.
+nested-validation aliases and the availability boundary for exact edge-overlap measures.
 
 ```bash
 python scripts/build_R75_submission_hardening_tables.py
@@ -216,8 +215,7 @@ Expected outputs:
 - `data/R75_submission_hardening/R73_leave_region_out_predictions.csv`
 - `data/R75_submission_hardening/Fig5_nested_validation_source_data.csv`
 
-Do not interpret the edge-Jaccard availability table as a measured edge-set
-Jaccard distance. The archived null summaries do not store final rewired edge
+Do not interpret the edge-overlap availability table as a measured exact edge-overlap measure. The archived null summaries do not store final rewired edge
 sets, so accepted-swap and mobility metrics are proxies only.
 
 ## Recreate R76 Submission Fig. 5
@@ -264,7 +262,7 @@ Expected outputs:
 - `figures/Fig_R77_physics_takeaway.pdf`
 
 Interpret R77 as a figure and derived-evidence synthesis. It does not regenerate
-null edge sets, does not compute true edge-set Jaccard distance and does not
+null edge sets, does not compute exact rewired-edge overlap measure and does not
 claim a causal design law.
 
 ## Recreate R78 Observed-Road Fine Estimator Check

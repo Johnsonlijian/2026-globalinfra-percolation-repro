@@ -1,11 +1,11 @@
-"""R77 physics-takeaway figure and source data.
+﻿"""R77 physics-takeaway figure and source data.
 
 This round promotes the matched-intensity geometry contrast from a defensive
 diagnostic to the main physical result: at the same accepted-swap intensity,
 the spatial-scale null and the strict non-crossing geometry null separate.
 
 The analysis uses existing derived tables only. It does not regenerate null
-edge sets, compute true edge-set Jaccard distance, or claim causal inference.
+edge sets, compute exact rewired-edge overlap measure, or claim causal inference.
 """
 
 from __future__ import annotations
@@ -411,7 +411,7 @@ def main() -> None:
         "| Geometry absorption correlations | Pass | `data/R77_physics_takeaway/R77_geometry_absorption_correlations.csv` |\n"
         "| Kappa predictive relation | Pass | `data/R77_physics_takeaway/R77_kappa_predictive_relation.csv` |\n"
         "| Fig. 1 replacement generated | Pass | `figures/Fig_R77_physics_takeaway.*` copied to target packages as `Fig1_matched_geometry_partition.*` |\n"
-        "| Claim boundary | Pass | Empirical, descriptive, no theorem, no causal design rule, no true edge-Jaccard. |\n",
+        "| Claim boundary | Pass | Empirical, descriptive, no theorem, no causal design rule, no true edge-overlap. |\n",
         encoding="utf-8",
     )
     print(json.dumps(payload, indent=2))

@@ -49,8 +49,8 @@ the post-spatial residual; this is predictive evidence, not causal inference.
 
 R75 hardens the submission source-data layer by adding explicit nested
 validation aliases, geometry-null rejection-share summaries, mobility/fidelity
-proxies and an edge-Jaccard availability table. The edge-Jaccard table records
-that true edge-set Jaccard cannot be reconstructed from the archived summaries
+proxies and an edge-overlap availability table. The edge-overlap table records
+that exact rewired-edge overlap cannot be reconstructed from the archived summaries
 because final null edge sets were not stored; accepted-swap and mobility
 metrics are reported as proxies only.
 
@@ -91,7 +91,7 @@ substituted.
   and leave-region-out validation script.
 - `scripts/build_R75_submission_hardening_tables.py`: source-data hardening
   script for nested-validation aliases, geometry mobility/rejection diagnostics
-  and edge-Jaccard availability boundaries.
+  and edge-overlap availability boundaries.
 - `scripts/build_R76_fig5_nested_submission_figure.py`: submission Fig. 5
   builder that combines nested validation, public-control checks, high-order
   feature correlations and explicit claim-boundary notes.

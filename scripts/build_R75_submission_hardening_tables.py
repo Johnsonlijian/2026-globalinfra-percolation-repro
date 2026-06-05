@@ -1,9 +1,9 @@
-"""R75 submission hardening source tables.
+﻿"""R75 submission hardening source tables.
 
 This script creates submission-facing helper tables requested by the final
 npj/CP package audit. It does not create new scientific measurements. It
 renames and reorganizes already derived R72/R73 outputs, and it records the
-boundary that true edge-set Jaccard distances cannot be recovered from archived
+boundary that exact rewired-edge overlap measures cannot be recovered from archived
 summary tables alone.
 """
 
@@ -102,7 +102,7 @@ def write_geometry_proxy_tables() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFr
     proxy["edge_jaccard_distance"] = pd.NA
     proxy["edge_jaccard_status"] = "not_computable_from_archived_summary_tables_edge_sets_not_stored"
     proxy["interpretation"] = (
-        "Accepted-swap-derived turnover proxy only; it is not a true edge-set Jaccard distance."
+        "Accepted-swap-derived turnover proxy only; it is not an exact rewired-edge overlap measure."
     )
     proxy.to_csv(OUT / "R72_geometry_edge_jaccard_by_city.csv", index=False)
 
@@ -122,7 +122,7 @@ def write_geometry_proxy_tables() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFr
     )
     graph_summary["edge_jaccard_available"] = False
     graph_summary["edge_jaccard_boundary"] = (
-        "True edge-set Jaccard requires archived rewired edge sets; this table reports a turnover proxy."
+        "Exact rewired-edge overlap requires archived rewired edge sets; this table reports a turnover proxy."
     )
     graph_summary.to_csv(OUT / "R72_geometry_graph_distance_summary.csv", index=False)
 
@@ -195,7 +195,7 @@ def upsert_manifest(sd: Path) -> None:
     for path in sorted((sd / "tables").glob("R72_geometry_*summary.csv")):
         specs.append(("R75", "geometry mobility and graph-distance proxy", f"data/R75_submission_hardening/{path.name}", f"tables/{path.name}", "csv"))
     for path in sorted((sd / "tables").glob("R72_geometry_edge_jaccard_by_city.csv")):
-        specs.append(("R75", "edge-jaccard availability and turnover proxy", f"data/R75_submission_hardening/{path.name}", f"tables/{path.name}", "csv"))
+        specs.append(("R75", "edge-overlap availability and turnover proxy", f"data/R75_submission_hardening/{path.name}", f"tables/{path.name}", "csv"))
     for path in sorted((sd / "tables").glob("R73_*")):
         if path.name in {
             "R73_nested_model_ladder_summary.csv",
@@ -274,9 +274,9 @@ def upsert_column_dictionary(sd: Path) -> None:
         "feature_name": "Predictor included in the nested feature group.",
         "predicted_cv5": "Prediction from fixed five-fold cross-validation.",
         "predicted_leave_region_out": "Prediction when the city's macro-region is held out.",
-        "edge_turnover_proxy_fraction": "Accepted-swap-derived proxy equal to two accepted swaps per edge count, clipped at one; not a true Jaccard distance.",
-        "edge_jaccard_distance": "True edge-set Jaccard distance; unavailable when rewired edge sets are not archived.",
-        "edge_jaccard_status": "Availability status for edge-set Jaccard distance.",
+        "edge_turnover_proxy_fraction": "Accepted-swap-derived proxy equal to two accepted swaps per edge count, clipped at one; not an exact edge-overlap measure.",
+        "edge_jaccard_distance": "Exact rewired-edge overlap; unavailable when rewired edge sets are not archived.",
+        "edge_jaccard_status": "Availability status for exact rewired-edge overlap.",
         "topology_reject_share": "Share of rejected proposals caused by topology constraints such as self-loops or duplicate edges.",
         "length_reject_share": "Share of rejected proposals caused by length-bin constraints.",
         "crossing_reject_share": "Share of rejected proposals caused by non-crossing geometry constraints.",
@@ -360,7 +360,7 @@ def main() -> None:
         "status": "pass",
         "round": "R75_submission_hardening",
         "outputs": sorted(path.name for path in OUT.glob("*.csv")),
-        "claim_boundary": "True edge-set Jaccard is not computed because archived summary tables do not store rewired edge sets.",
+        "claim_boundary": "True exact rewired-edge overlap is not computed because archived summary tables do not store rewired edge sets.",
     }
     (OUT / "R75_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     print(json.dumps(summary, indent=2))

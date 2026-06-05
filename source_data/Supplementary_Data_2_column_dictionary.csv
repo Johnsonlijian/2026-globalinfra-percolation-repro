@@ -1,4 +1,4 @@
-file,column,inferred_type,n_rows,non_empty_count,example_value,description
+﻿file,column,inferred_type,n_rows,non_empty_count,example_value,description
 R41_degree_preserving_nulls_city_summary.csv,city,text,8,8,Berlin,City or urban-window identifier.
 R41_degree_preserving_nulls_city_summary.csv,graph_cache_file,text,8,8,cache\private_graphs\berlin_germany__road.pkl,Project-derived variable; see round report and manuscript Methods for definition.
 R41_degree_preserving_nulls_city_summary.csv,n_nodes_road,numeric,8,8,28407,Project-derived variable; see round report and manuscript Methods for definition.
@@ -519,7 +519,7 @@ R65_R65_integrated_public_covariates.csv,ghsl_match_distance_km,numeric,71,71,9.
 R65_R65_integrated_public_covariates.csv,ghsl_match_score,numeric,71,71,0.9908890377901396,Project-derived variable; see round report and manuscript Methods for definition.
 R65_R65_integrated_public_covariates.csv,ghsl_match_status,text,71,71,high_confidence,Project-derived variable; see round report and manuscript Methods for definition.
 R65_R65_integrated_public_covariates.csv,ghsl_name_main_2025,text,71,71,Lisbon,Project-derived variable; see round report and manuscript Methods for definition.
-R65_R65_integrated_public_covariates.csv,ghsl_name_list_2025,text,71,71,Lisbon; Amadora; Agualva-Cacém; Queluz; Odivelas; Loures; Alverca do Ribatejo; Póvoa de Santa Iria; Sacavém,Project-derived variable; see round report and manuscript Methods for definition.
+R65_R65_integrated_public_covariates.csv,ghsl_name_list_2025,text,71,71,Lisbon; Amadora; Agualva-Cac茅m; Queluz; Odivelas; Loures; Alverca do Ribatejo; P贸voa de Santa Iria; Sacav茅m,Project-derived variable; see round report and manuscript Methods for definition.
 R65_R65_integrated_public_covariates.csv,ghsl_country_gadm_2025,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
 R65_R65_integrated_public_covariates.csv,ghsl_country_un_2025,text,71,71,Portugal,Project-derived variable; see round report and manuscript Methods for definition.
 R65_R65_integrated_public_covariates.csv,ghsl_area_km2_2025,numeric,71,71,426,Project-derived variable; see round report and manuscript Methods for definition.
@@ -1176,7 +1176,7 @@ R72_geometry_graph_distance_summary.csv,degree_max_abs_drift_max,numeric,3,3,0,P
 R72_geometry_graph_distance_summary.csv,road_minus_spatial_mean,numeric,3,3,0.0595238095238094,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
 R72_geometry_graph_distance_summary.csv,road_minus_geometry_mean,numeric,3,3,0.0055555555555555,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
 R72_geometry_graph_distance_summary.csv,edge_jaccard_available,numeric,3,3,False,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
-R72_geometry_graph_distance_summary.csv,edge_jaccard_boundary,text,3,3,True edge-set Jaccard requires archived rewired edge sets; this table reports a ,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_graph_distance_summary.csv,edge_jaccard_boundary,text,3,3,Exact rewired-edge overlap requires archived rewired edge sets; this table reports a ,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
 R72_geometry_rejection_reason_summary.csv,swap_fraction,numeric,3,3,0.005,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
 R72_geometry_rejection_reason_summary.csv,n_replicates,numeric,3,3,63,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
 R72_geometry_rejection_reason_summary.csv,accepted_swaps_per_edge_mean,numeric,3,3,0.0049982772073611,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
@@ -1204,10 +1204,10 @@ R72_geometry_edge_jaccard_by_city.csv,spatial_minus_geometry_residual,numeric,54
 R72_geometry_edge_jaccard_by_city.csv,length_bin_tvd_mean,numeric,54,54,0.0,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
 R72_geometry_edge_jaccard_by_city.csv,degree_max_abs_drift_max,numeric,54,54,0,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
 R72_geometry_edge_jaccard_by_city.csv,null_mobility_index_mean,numeric,54,54,0.0041991623591571,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
-R72_geometry_edge_jaccard_by_city.csv,edge_turnover_proxy_fraction,numeric,54,54,0.0100164622411834,"Accepted-swap-derived proxy equal to two accepted swaps per edge count, clipped at one; not a true Jaccard distance."
-R72_geometry_edge_jaccard_by_city.csv,edge_jaccard_distance,numeric,54,0,,True edge-set Jaccard distance; unavailable when rewired edge sets are not archived.
-R72_geometry_edge_jaccard_by_city.csv,edge_jaccard_status,text,54,54,not_computable_from_archived_summary_tables_edge_sets_not_stored,Availability status for edge-set Jaccard distance.
-R72_geometry_edge_jaccard_by_city.csv,interpretation,text,54,54,Accepted-swap-derived turnover proxy only; it is not a true edge-set Jaccard dis,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
+R72_geometry_edge_jaccard_by_city.csv,edge_turnover_proxy_fraction,numeric,54,54,0.0100164622411834,"Accepted-swap-derived proxy equal to two accepted swaps per edge count, clipped at one; not an exact edge-overlap measure."
+R72_geometry_edge_jaccard_by_city.csv,edge_jaccard_distance,numeric,54,0,,Exact rewired-edge overlap; unavailable when rewired edge sets are not archived.
+R72_geometry_edge_jaccard_by_city.csv,edge_jaccard_status,text,54,54,not_computable_from_archived_summary_tables_edge_sets_not_stored,Availability status for exact rewired-edge overlap.
+R72_geometry_edge_jaccard_by_city.csv,interpretation,text,54,54,Accepted-swap-derived turnover proxy only; it is not an exact rewired-edge overlap dis,Project-derived submission-hardening variable; see manuscript Methods and R75 report.
 Fig5_nested_validation_source_data.csv,target,text,10,10,road_gap,Prediction target: road_gap or road_minus_spatial.
 Fig5_nested_validation_source_data.csv,model_group,text,10,10,M0_size,Nested model family identifier.
 Fig5_nested_validation_source_data.csv,model_label,text,10,10,M0 size,Human-readable nested model label.

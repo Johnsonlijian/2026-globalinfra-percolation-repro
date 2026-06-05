@@ -1,4 +1,4 @@
-{
+﻿{
   "status": "pass",
   "round": "R75_submission_hardening",
   "outputs": [
@@ -12,5 +12,5 @@
     "R73_nested_model_ladder_city_predictions.csv",
     "R73_nested_model_ladder_summary.csv"
   ],
-  "claim_boundary": "True edge-set Jaccard is not computed because archived summary tables do not store rewired edge sets."
+  "claim_boundary": "True exact rewired-edge overlap is not computed because archived summary tables do not store rewired edge sets."
 }
