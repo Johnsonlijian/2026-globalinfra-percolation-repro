@@ -638,7 +638,7 @@ analytical proof and not a causal urban-design law.
 | Preserve degree and report null fidelity | Done | Maximum degree drift {summary['max_degree_drift']:.1f}; mean length-bin TVD {summary['mean_length_bin_tvd']:.6f}. |
 | Compare strict geometry null against spatial-scale null | Done | Mean residual reduction versus spatial null {summary['mean_residual_reduction_vs_spatial']:.4f}. |
 | Produce publication-grade R68 figure | Done | `Fig_R68_full71_geometry_null_ensemble` exported as SVG, PDF, PNG and TIFF. |
-| Full 71-city high-intensity multi-replicate planar null | Deferred | R68 intentionally completes low-intensity full coverage first; high-intensity all-city sensitivity remains computationally larger. |
+| Full 71-city intensive multi-replicate planar null | Deferred | R68 intentionally completes low-intensity full coverage first; deeper full-city sensitivity remains computationally larger. |
 | Analytical theorem / causal urban-design rule | Deferred | R68 supports a bounded mechanism note, but not a proof or causal rule. |
 """
     CLOSEOUT_MD.write_text(closeout, encoding="utf-8")

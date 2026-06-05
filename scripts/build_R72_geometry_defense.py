@@ -1,4 +1,4 @@
-"""R72: geometry-null defense analysis for submission hardening.
+"""R72: matched-intensity geometry-null contrast analysis.
 
 This round addresses the main reviewer objection to R68: a low-intensity
 strict-geometry null could be close to the road graph simply because it did
@@ -8,7 +8,7 @@ degree-preserving spatial-scale null, and combines it with existing R67/R68
 mobility and fidelity diagnostics.
 
 The analysis is empirical and bounded. It does not claim full null mixing, an
-analytical planar theorem, or a high-intensity all-city geometry ensemble.
+analytical planar theorem, or an all-city intensive geometry ensemble.
 """
 
 from __future__ import annotations
@@ -391,7 +391,7 @@ def make_figure(
     ax1.tick_params(axis="x", which="minor", bottom=False)
     ax1.set_xlabel("Matched accepted-swap target")
     ax1.set_ylabel("Mean road-minus-null residual")
-    ax1.set_title("b  Matched-intensity defense on 21-city subset", loc="left", fontweight="bold", fontsize=8.5)
+    ax1.set_title("b  Matched-intensity contrast on 21-city subset", loc="left", fontweight="bold", fontsize=8.5)
     ax1.grid(axis="y", color="#eef1f5", lw=0.6)
     ax1.legend(fontsize=6.0, loc="upper right")
 
@@ -557,7 +557,7 @@ def main() -> None:
         "geometry_null_mobility_index_mean": float(mobility["null_mobility_index_mean"].mean()),
         "max_degree_drift": float(mobility["degree_max_abs_drift_max"].max()),
         "claim_boundary": (
-            "This analysis supports a matched-intensity empirical defense on the 21-city subset, "
+            "This analysis supports a matched-intensity empirical contrast on the 21-city subset, "
             "not full mixing or a theorem."
         ),
     }

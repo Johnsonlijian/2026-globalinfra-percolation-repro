@@ -1,0 +1,39 @@
+{
+  "status": "pass",
+  "round": "R77_physics_takeaway",
+  "matched_intensity_spatial_residuals": [
+    0.059524,
+    0.077381,
+    0.089583
+  ],
+  "matched_intensity_geometry_residuals": [
+    0.005556,
+    0.003175,
+    0.0
+  ],
+  "top_absorption_feature": {
+    "feature": "dual_degree_mean",
+    "feature_label": "dual-degree mean",
+    "n": 71,
+    "spearman_rho": -0.3842470330012929,
+    "spearman_p": 0.0009388486380882199,
+    "pearson_r": -0.424568181089426,
+    "pearson_p": 0.00022409109628677038,
+    "abs_spearman_rho": 0.3842470330012929
+  },
+  "kappa_metrics": {
+    "n": 71.0,
+    "slope": -0.0909694944745455,
+    "intercept": 0.5032090076251167,
+    "in_sample_r2": 0.41864795973419044,
+    "cv5_r2": 0.39258836763132476,
+    "leave_region_out_r2": 0.38311114120542356,
+    "cv5_mae": 0.015226343878305786,
+    "leave_region_out_mae": 0.015314012891261683,
+    "spearman_rho": -0.6307176391683432,
+    "spearman_p": 3.743011309454672e-09,
+    "pearson_r": -0.6470301072857352,
+    "pearson_p": 1.0840396011841688e-09
+  },
+  "claim_boundary": "R77 promotes the matched-intensity contrast and a kappa-anchored predictive relation. It remains empirical, descriptive and model-conditional."
+}

@@ -1001,7 +1001,7 @@ R72_R72_summary.json,geometry_acceptance_rate_mean,float,1,1,0.00189589678233546
 R72_R72_summary.json,geometry_attempts_per_accepted_swap_mean,float,1,1,547.2587301461137,Accepted or attempted double-edge swap diagnostic.
 R72_R72_summary.json,geometry_null_mobility_index_mean,float,1,1,0.00691830721158937,Strict non-crossing geometry-null metric or diagnostic.
 R72_R72_summary.json,max_degree_drift,float,1,1,0.0,Degree-sequence or degree-composition metric.
-R72_R72_summary.json,claim_boundary,str,1,1,"R72 supports a matched-intensity empirical defense on the R67 subset, not full mixing or a theorem.",Project-derived variable; see round report and manuscript Methods for definition.
+R72_R72_summary.json,claim_boundary,str,1,1,"R72 supports a matched-intensity empirical contrast on the R67 subset, not full mixing or a theorem.",Project-derived variable; see round report and manuscript Methods for definition.
 R39_threshold_sensitivity_source_data.csv,city,text,8,8,Berlin,City or urban-window identifier.
 R39_threshold_sensitivity_source_data.csv,graph_cache_file,text,8,8,cache\private_graphs\berlin_germany__road.pkl,Project-derived variable; see round report and manuscript Methods for definition.
 R39_threshold_sensitivity_source_data.csv,n_nodes,numeric,8,8,28407,Project-derived variable; see round report and manuscript Methods for definition.

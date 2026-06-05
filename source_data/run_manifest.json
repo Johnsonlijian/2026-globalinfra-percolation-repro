@@ -69,7 +69,7 @@
     },
     {
       "round": "R72",
-      "analysis": "matched-intensity geometry defense",
+      "analysis": "matched-intensity geometry contrast",
       "data_directory": "data/R72_geometry_defense",
       "purpose": "spatial vs strict-geometry nulls at matched accepted-swap targets",
       "status": "completed"

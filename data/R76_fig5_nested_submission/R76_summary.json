@@ -1,8 +1,8 @@
 {
   "status": "pass",
   "round": "R76_fig5_nested_submission",
-  "figure": "R:\\NAS_DRIVE\\IMUT\\1-Research_Output\\1-Papers\\1_In_Preparation\\2026-GlobalInfra-Percolation\\figures\\Fig_R76_fig5_nested_submission.svg",
+  "figure": "figures/Fig_R76_fig5_nested_submission.svg",
   "target_figure_name": "Fig5_public_controls_boundary_checks",
-  "source_data": "R:\\NAS_DRIVE\\IMUT\\1-Research_Output\\1-Papers\\1_In_Preparation\\2026-GlobalInfra-Percolation\\data\\R76_fig5_nested_submission\\Fig5_combined_nested_public_source_data.csv",
+  "source_data": "data/R76_fig5_nested_submission/Fig5_combined_nested_public_source_data.csv",
   "claim_boundary": "Fig5 integrates nested validation, public-control comparison, high-order embedded-feature correlations and explicit non-causal/no-Jaccard boundaries."
 }

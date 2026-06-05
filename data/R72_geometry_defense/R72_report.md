@@ -40,7 +40,7 @@ ensemble.
   "geometry_attempts_per_accepted_swap_mean": 547.2587301461137,
   "geometry_null_mobility_index_mean": 0.00691830721158937,
   "max_degree_drift": 0.0,
-  "claim_boundary": "This analysis supports a matched-intensity empirical defense on the 21-city subset, not full mixing or a theorem."
+  "claim_boundary": "This analysis supports a matched-intensity empirical contrast on the 21-city subset, not full mixing or a theorem."
 }
 ```
 

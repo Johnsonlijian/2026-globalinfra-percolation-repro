@@ -1,6 +1,78 @@
-﻿{
-    "generated_utc":  "2026-06-04T15:11:53Z",
-    "row_count":  56,
-    "source":  "submission/communications_physics/target_submission/source_data/Supplementary_Data_1_source_data_manifest.csv",
-    "boundary":  "derived source-data manifest only; raw third-party data excluded"
+{
+  "generated_at": "2026-06-04T19:23:32",
+  "project": "2026-GlobalInfra-Percolation",
+  "target_package": "Communications Physics v29/R72 submission candidate",
+  "raw_data_boundary": "Raw third-party OSM/Geofabrik/GHSL/WDI downloads are not redistributed; source-data bundle contains derived project tables and provider links/QC records.",
+  "runs": [
+    {
+      "round": "R41",
+      "analysis": "degree-preserving nulls",
+      "data_directory": "data/R41_degree_preserving_nulls",
+      "purpose": "six configuration-model null projections per eight-city graph",
+      "status": "completed"
+    },
+    {
+      "round": "R56",
+      "analysis": "spatial-scale nulls",
+      "data_directory": "data/R56_spatial_length_constrained_nulls",
+      "purpose": "degree-preserving chord-length-bin constrained nulls, four replicates per main city",
+      "status": "completed"
+    },
+    {
+      "round": "R61",
+      "analysis": "71-city center-window screen",
+      "data_directory": "data/R61_nature_cities_scale_screen",
+      "purpose": "10-km standardized OSMnx city windows",
+      "status": "completed"
+    },
+    {
+      "round": "R62",
+      "analysis": "urban-form mechanism screen",
+      "data_directory": "data/R62_urban_form_mechanism",
+      "purpose": "road-form covariates and descriptive Ridge screen",
+      "status": "completed"
+    },
+    {
+      "round": "R63",
+      "analysis": "high-order embedded metrics",
+      "data_directory": "data/R63_high_order_external_covariates",
+      "purpose": "block/bridge/angular/dual metrics and subset expansion",
+      "status": "completed"
+    },
+    {
+      "round": "R64",
+      "analysis": "71-city spatial null screen",
+      "data_directory": "data/R64_71city_spatial_null_screen",
+      "purpose": "one spatial-scale null per 71-city window",
+      "status": "completed"
+    },
+    {
+      "round": "R65",
+      "analysis": "public covariate controls",
+      "data_directory": "data/R65_public_covariates_and_controls",
+      "purpose": "GHSL/WDI matching and model comparisons",
+      "status": "completed"
+    },
+    {
+      "round": "R67",
+      "analysis": "geometry null sensitivity",
+      "data_directory": "data/R67_geometry_null_sensitivity",
+      "purpose": "21-city multi-replicate strict non-crossing geometry-null sensitivity",
+      "status": "completed"
+    },
+    {
+      "round": "R68",
+      "analysis": "full 71-city geometry null ensemble",
+      "data_directory": "data/R68_full71_geometry_null_ensemble",
+      "purpose": "one low-intensity strict geometry-null record per 71-city window",
+      "status": "completed"
+    },
+    {
+      "round": "R72",
+      "analysis": "matched-intensity geometry contrast",
+      "data_directory": "data/R72_geometry_defense",
+      "purpose": "spatial vs strict-geometry nulls at matched accepted-swap targets",
+      "status": "completed"
+    }
+  ]
 }

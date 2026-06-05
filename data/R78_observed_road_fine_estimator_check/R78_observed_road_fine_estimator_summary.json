@@ -1,0 +1,56 @@
+{
+  "status": "diagnostic",
+  "round": "R78_observed_road_fine_estimator_check",
+  "n_cities": 21,
+  "n_perm": 32,
+  "n_bootstrap": 500,
+  "p_step": 0.005,
+  "window": 0.075,
+  "mean_delta_fine_minus_coarse": -0.005238095238095227,
+  "mean_abs_delta": 0.015238095238095226,
+  "median_abs_delta": 0.010000000000000009,
+  "max_abs_delta": 0.06499999999999995,
+  "max_abs_delta_city": "Nairobi",
+  "cities_abs_delta_gt_0_01": 14,
+  "cities_abs_delta_gt_0_025": 3,
+  "boundary_hit_count": 0,
+  "claim_boundary": "Observed-road fine-grid check only; geometry-null fine curves were not regenerated.",
+  "matched_intensity_fine_observed_substitution": [
+    {
+      "swap_fraction": 0.005,
+      "n_cities": 21,
+      "coarse_road_minus_spatial_mean": 0.05952380952380944,
+      "coarse_road_minus_geometry_mean": 0.005555555555555543,
+      "fine_road_minus_spatial_mean": 0.05428571428571427,
+      "fine_road_minus_geometry_mean": 0.0003174603174603195,
+      "coarse_spatial_minus_geometry_mean": 0.0539682539682539,
+      "fine_spatial_minus_geometry_mean": 0.05396825396825394,
+      "positive_fine_geometry_residual_share": 0.5238095238095238,
+      "mean_observed_threshold_shift": -0.005238095238095227
+    },
+    {
+      "swap_fraction": 0.01,
+      "n_cities": 21,
+      "coarse_road_minus_spatial_mean": 0.07738095238095233,
+      "coarse_road_minus_geometry_mean": 0.0031746031746031633,
+      "fine_road_minus_spatial_mean": 0.07214285714285715,
+      "fine_road_minus_geometry_mean": -0.0020634920634920637,
+      "coarse_spatial_minus_geometry_mean": 0.07420634920634914,
+      "fine_spatial_minus_geometry_mean": 0.0742063492063492,
+      "positive_fine_geometry_residual_share": 0.47619047619047616,
+      "mean_observed_threshold_shift": -0.005238095238095227
+    },
+    {
+      "swap_fraction": 0.02,
+      "n_cities": 12,
+      "coarse_road_minus_spatial_mean": 0.08958333333333328,
+      "coarse_road_minus_geometry_mean": 8.673617379884035e-18,
+      "fine_road_minus_spatial_mean": 0.08083333333333333,
+      "fine_road_minus_geometry_mean": -0.008749999999999989,
+      "coarse_spatial_minus_geometry_mean": 0.08958333333333325,
+      "fine_spatial_minus_geometry_mean": 0.0895833333333333,
+      "positive_fine_geometry_residual_share": 0.3333333333333333,
+      "mean_observed_threshold_shift": -0.008749999999999999
+    }
+  ]
+}

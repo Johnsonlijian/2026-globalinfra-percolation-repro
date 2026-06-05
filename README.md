@@ -33,12 +33,12 @@ road-minus-spatial residual of 0.0965 and mean road-minus-geometry residual of
 coverage, not an analytical theorem or high-intensity multi-replicate planar
 ensemble.
 
-R72 adds the matched-intensity defense requested by the reviewer-objection audit.
+R72 adds a matched-intensity spatial-versus-geometry contrast.
 On the 21-city sensitivity subset, spatial-scale and strict non-crossing geometry nulls
 are compared at the same accepted-swap targets. Spatial-scale nulls retain
 positive residuals at 0.005, 0.01 and 0.02 accepted swaps per edge, whereas
 strict-geometry residuals remain near zero at the tested estimator resolution.
-This weakens the low-perturbation artifact objection but does not prove full
+This separates edge scale from strict local geometry but does not prove full
 Markov-chain mixing.
 
 R73 adds a nested urban-form validation layer. It compares size/density,
@@ -59,6 +59,14 @@ comparison and high-order embedded-feature tables. The figure also includes a
 claim-boundary panel stating that the 71-city geometry-null screen is
 low-intensity and descriptive, not a causal urban-design rule or planar theorem.
 
+R77 promotes the matched-intensity contrast to the head evidence figure and
+adds two compact mechanism checks: geometry absorption against embedded
+road-form metrics and a kappa-anchored one-variable relation for the 71-city
+road-minus-CEBH gap. R78 recomputes observed-road thresholds for the 21-city
+geometry subset on a local fine grid and shows that the matched spatial-minus-
+geometry separation is unchanged when the shared observed threshold is
+substituted.
+
 ## What Is Included
 
 - `scripts/build_R41_degree_preserving_nulls.py`: full R41 analysis script.
@@ -78,7 +86,7 @@ low-intensity and descriptive, not a causal urban-design rule or planar theorem.
   low-intensity geometry-null script. With `--skip-compute`, it recreates R68
   summaries and figures from included derived tables.
 - `scripts/build_R72_geometry_defense.py`: matched-intensity spatial-versus-
-  geometry defense on the 21-city sensitivity subset.
+  geometry contrast on the 21-city sensitivity subset.
 - `scripts/build_R73_urban_form_nested_cv.py`: nested urban-form model ladder
   and leave-region-out validation script.
 - `scripts/build_R75_submission_hardening_tables.py`: source-data hardening
@@ -87,14 +95,17 @@ low-intensity and descriptive, not a causal urban-design rule or planar theorem.
 - `scripts/build_R76_fig5_nested_submission_figure.py`: submission Fig. 5
   builder that combines nested validation, public-control checks, high-order
   feature correlations and explicit claim-boundary notes.
+- `scripts/build_R77_physics_takeaway.py`: matched-geometry head figure and
+  kappa/geometry-absorption source-data builder.
+- `scripts/build_R78_observed_road_fine_estimator_check.py`: 21-city
+  observed-road fine-threshold estimator check and matched-intensity
+  fine-observed substitution table.
 - `scripts/build_R62_urban_form_mechanism.py`: R62 covariate and Fig.3 source
   workflow; full geometry-pilot reruns require local cached graph objects.
 - `scripts/build_R72_geometry_defense.py`: R72 matched-intensity spatial vs
-  strict-geometry defense and Fig. 4 script. Without `--force`, it recreates
+  strict-geometry contrast and Fig. 4 script. Without `--force`, it recreates
   summaries and figures from included derived tables; with `--force`, it reruns
   matched spatial nulls and requires local cached graph objects.
-- `scripts/fig1_R70_null_ladder_schematic.py`: code-generated schematic for
-  the current Fig. 1 null-ladder framing.
 - `run_manifest.csv` and `run_manifest.json`: compact run-level provenance for
   the submission source-data bundle.
 - `data/R41_degree_preserving_nulls/`: derived degree-null source tables.
@@ -123,6 +134,10 @@ low-intensity and descriptive, not a causal urban-design rule or planar theorem.
   geometry-null rejection summaries, mobility/fidelity proxy tables and
   figure-source-data tables.
 - `data/R76_fig5_nested_submission/`: derived Fig. 5 source data and summary.
+- `data/R77_physics_takeaway/`: derived matched-intensity head-figure source
+  data, geometry-absorption table, kappa predictions and summary.
+- `data/R78_observed_road_fine_estimator_check/`: derived 21-city fine
+  observed-road estimator check and fine-observed substitution summaries.
 - `source_data/`: submission-facing source-data bundle, column dictionary,
   claim-to-table map and run manifest. It contains derived project tables only.
 - `figures/Fig_R56_spatial_length_constrained_nulls.*`: exported figure.
@@ -133,12 +148,14 @@ low-intensity and descriptive, not a causal urban-design rule or planar theorem.
 - `figures/Fig_R68_full71_geometry_null_ensemble.*`: exported R68 full-city
   geometry-null figure.
 - `figures/Fig_R72_geometry_null_defense.*`: exported Fig. 4 R72
-  matched-intensity geometry-null defense figure.
-- `figures/Fig_R70_null_ladder_schematic.*`: exported current Fig. 1 schematic.
+  matched-intensity geometry-null contrast figure.
 - `figures/Fig_R73_urban_form_nested_cv.*`: exported supplementary nested
   urban-form validation figure.
 - `figures/Fig_R76_fig5_nested_submission.*`: exported submission Fig. 5 with
   nested validation and public-control checks.
+- `figures/Fig_R77_physics_takeaway.*`: exported matched-geometry head figure.
+- `figures/Fig_R78_observed_road_fine_estimator_check.*`: exported observed-road
+  fine-estimator sensitivity figure.
 
 ## What Is Not Included
 
@@ -161,7 +178,8 @@ python scripts/build_R68_full71_geometry_null_ensemble.py --skip-compute
 python scripts/build_R72_geometry_defense.py
 python scripts/build_R75_submission_hardening_tables.py
 python scripts/build_R76_fig5_nested_submission_figure.py
-python scripts/fig1_R70_null_ladder_schematic.py
+python scripts/build_R77_physics_takeaway.py
+python scripts/build_R78_observed_road_fine_estimator_check.py
 ```
 
 The full R56 null-model regeneration requires local graph caches or a
@@ -175,7 +193,7 @@ full 71-city geometry-null regeneration requires local cached OSMnx graph
 objects and is computationally heavier.
 R72 can be redrawn from included derived tables without `--force`; a matched
 spatial-null recomputation requires local cached OSMnx graph objects.
-R75 and R76 are derived-table packaging and plotting steps; they do not require
+R75, R76, R77 and R78 are derived-table packaging and plotting/checking steps; they do not require
 raw third-party downloads or cached graph objects.
 
 ## Boundary
@@ -195,12 +213,13 @@ per city. It answers the low-intensity coverage objection, but it is not a
 high-intensity multi-replicate planar-null theorem and does not establish a
 causal urban-design rule.
 
-R72 adds a matched-intensity empirical defense on the 21-city subset. It
+R72 adds a matched-intensity empirical contrast on the 21-city subset. It
 shows that the spatial-scale null and strict-geometry null behave differently
 under the same accepted-swap targets, but it does not prove full mixing or
 isolate planarity alone from degree, length scale, angular and block structure.
 
-R75/R76 add submission-facing diagnostics and visualization. They do not add a
-new null-model ensemble, do not recover true edge-set Jaccard distances and do
-not turn the nested urban-form screens into causal inference.
+R77/R78 add a head-figure synthesis, a kappa predictive relation and an
+observed-road estimator check. They do not add a new null-model ensemble, do
+not regenerate geometry-null fine curves and do not turn the urban-form screens
+into causal inference.
 

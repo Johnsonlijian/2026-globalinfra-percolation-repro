@@ -8,19 +8,6 @@ Use Python 3.11 or newer.
 pip install -r requirements.txt
 ```
 
-## Recreate current Fig. 1 Null-ladder Schematic
-
-```bash
-python scripts/fig1_R70_null_ladder_schematic.py
-```
-
-Expected outputs:
-
-- `figures/Fig_R70_null_ladder_schematic.png`
-- `figures/Fig_R70_null_ladder_schematic.svg`
-- `figures/Fig_R70_null_ladder_schematic.pdf`
-- `figures/Fig_R70_null_ladder_schematic.tiff`
-
 ## Recreate The Public R56 Figure
 
 ```bash
@@ -181,7 +168,7 @@ available in the expected project layout, run:
 python scripts/build_R72_geometry_defense.py --force
 ```
 
-Interpret R72 as a matched-intensity empirical defense on the 21-city R67
+Interpret R72 as a matched-intensity empirical contrast on the 21-city R67
 subset. It weakens the low-perturbation artifact objection, but it is not a
 proof of full Markov-chain mixing or a high-intensity all-71 planar ensemble.
 
@@ -254,4 +241,54 @@ Expected outputs:
 Interpret R76 as visualization and source-data packaging. It does not add a
 new null ensemble or convert the descriptive nested model screen into causal
 inference.
+
+## Recreate R77 Matched-Geometry Head Figure
+
+R77 promotes the matched-intensity spatial-versus-geometry contrast to the
+head figure and adds compact source data for geometry absorption and the kappa
+predictive relation.
+
+```bash
+python scripts/build_R77_physics_takeaway.py
+```
+
+Expected outputs:
+
+- `data/R77_physics_takeaway/R77_matched_intensity_main_result_source_data.csv`
+- `data/R77_physics_takeaway/R77_geometry_absorption_city_table.csv`
+- `data/R77_physics_takeaway/R77_geometry_absorption_correlations.csv`
+- `data/R77_physics_takeaway/R77_kappa_predictive_relation.csv`
+- `data/R77_physics_takeaway/R77_kappa_predictive_metrics.json`
+- `figures/Fig_R77_physics_takeaway.png`
+- `figures/Fig_R77_physics_takeaway.svg`
+- `figures/Fig_R77_physics_takeaway.pdf`
+
+Interpret R77 as a figure and derived-evidence synthesis. It does not regenerate
+null edge sets, does not compute true edge-set Jaccard distance and does not
+claim a causal design law.
+
+## Recreate R78 Observed-Road Fine Estimator Check
+
+R78 recomputes observed-road thresholds for the 21-city geometry subset on a
+local fine p-grid. It then substitutes the fine observed thresholds into the
+matched-intensity residual table to test whether the spatial-versus-geometry
+contrast depends on the registered observed-road grid.
+
+```bash
+python scripts/build_R78_observed_road_fine_estimator_check.py
+```
+
+Expected outputs:
+
+- `data/R78_observed_road_fine_estimator_check/R78_observed_road_fine_estimator_21city.csv`
+- `data/R78_observed_road_fine_estimator_check/R78_observed_road_fine_estimator_summary.json`
+- `data/R78_observed_road_fine_estimator_check/R78_matched_intensity_fine_observed_substitution.csv`
+- `data/R78_observed_road_fine_estimator_check/R78_matched_intensity_fine_observed_summary.csv`
+- `figures/Fig_R78_observed_road_fine_estimator_check.png`
+- `figures/Fig_R78_observed_road_fine_estimator_check.svg`
+- `figures/Fig_R78_observed_road_fine_estimator_check.pdf`
+
+Interpret R78 as an observed-road estimator check only. It does not regenerate
+fine-grid geometry-null curves; the matched contrast is preserved because both
+null residuals share the same observed-road threshold.
 
