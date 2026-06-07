@@ -4,7 +4,7 @@ Generated from the 71-city integrated public-covariate table.
 
 ## Purpose
 
-R73 strengthens the urban-form mechanism layer by comparing nested
+R73 strengthens the urban-form mechanism-candidate layer by comparing nested
 feature blocks and adding leave-region-out validation. It is a
 descriptive predictive screen, not a causal model.
 
