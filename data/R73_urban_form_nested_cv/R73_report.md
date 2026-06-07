@@ -25,7 +25,7 @@ descriptive predictive screen, not a causal model.
   "post_spatial_m3_leave_region_out_r2": 0.2960063021529121,
   "post_spatial_m4_cv5_r2": 0.05980399945412729,
   "post_spatial_m4_leave_region_out_r2": 0.2932422848681261,
-  "claim_boundary": "R73 is a descriptive predictive screen. It supports a road-form mechanism signal under nested and regional holdout tests, not causal inference."
+  "claim_boundary": "R73 is a descriptive predictive screen. It supports a road-form mechanism-candidate signal under nested and regional holdout tests, not causal inference."
 }
 ```
 

@@ -40,13 +40,12 @@ stronger feasible swap fractions.
 |          0.0100 |         21.0000 |             63.0000 |                     0.0032 |                        -0.0039 |                          0.0103 |                                   0.0083 |                         0.0100 |                0.0000 |                     0.0000 |
 |          0.0200 |         12.0000 |             36.0000 |                     0.0000 |                        -0.0090 |                          0.0090 |                                  -0.0063 |                         0.0200 |                0.0000 |                     0.0000 |
 
-## Reviewer-facing Interpretation
+## Interpretation Boundary
 
-This result should be used as a hardening test, not as a universal full-planar ensemble. A critical reviewer can no
-longer say that the manuscript has only a one-replicate geometry pilot, because R67 reports replicate-level
-stability, stronger-swap feasibility, degree drift, length-bin drift, and structural mobility. However, it still does
-not close the full 71-city planar-null objection. The safe claim is that the strict geometry null absorbs part of the
-gap but leaves a measurable residual under the tested perturbation range.
+This result is a sensitivity test, not a universal full-planar ensemble. R67 reports replicate-level stability,
+stronger-swap feasibility, degree drift, length-bin drift, and structural mobility for the 21-city geometry subset.
+However, it does not close the full 71-city high-intensity planar-null boundary. The safe claim is that the strict
+geometry null absorbs part of the gap but leaves a measurable residual under the tested perturbation range.
 
 ## Outputs
 

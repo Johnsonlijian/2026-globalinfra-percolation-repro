@@ -44,7 +44,7 @@ Markov-chain mixing.
 R73 adds a nested urban-form validation layer. It compares size/density,
 degree-composition, edge-scale, embedded street-form and public-control model
 families under five-fold and leave-region-out cross-validation. Embedded
-street form remains the strongest descriptive mechanism signal, including for
+street form remains the strongest descriptive mechanism-candidate signal, including for
 the post-spatial residual; this is predictive evidence, not causal inference.
 
 R75 hardens the submission source-data layer by adding explicit nested

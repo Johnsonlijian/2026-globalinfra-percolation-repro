@@ -42,4 +42,4 @@ e,leave_region_out_region_error,road_minus_spatial,M3_embedded_form,,leave_regio
 f,claim_boundary,,,,full_city_window_count,71.0,,,,,"Standardized 10-km-radius centre windows, not whole metropolitan systems."
 f,claim_boundary,,,,strict_geometry_full_city_replicates,1.0,,,,,One low-intensity strict geometry-null record per city at accepted-swap fraction 0.005.
 f,claim_boundary,,,,causal_design_rule,0.0,,,,,"Nested validation is descriptive prediction, not causal urban-design inference."
-f,claim_boundary,,,,exact_edge_overlap_available,0.0,,,,,Existing null summaries do not store final edge sets; mobility/fidelity proxies are reported instead.
+f,claim_boundary,,,,full_mixing_proof_available,0.0,,,,,No full-mixing proof is claimed; mobility/fidelity proxies are reported instead.

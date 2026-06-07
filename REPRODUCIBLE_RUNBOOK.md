@@ -36,7 +36,7 @@ licensing or size concerns.
 ## Interpretation Check
 
 Use `data/R56_spatial_length_constrained_nulls/spatial_length_constrained_nulls_report.md`
-as the manuscript-safe boundary statement. Do not interpret R56 as a full
+as the interpretation boundary statement. Do not interpret R56 as a full
 planar null or causal mechanism proof.
 
 ## Recreate R65 Public-Covariate Controls
