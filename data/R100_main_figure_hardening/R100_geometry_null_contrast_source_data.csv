@@ -1,0 +1,14 @@
+panel,source_file,series,n,mean,median,mean_edge_jaccard,n_below_090
+a,data/R68_full71_geometry_null_ensemble/full71_geometry_null_city_summary.csv,71-city spatial residual,71,0.09647887323943655,0.0999999999999999,,
+a,data/R68_full71_geometry_null_ensemble/full71_geometry_null_city_summary.csv,71-city geometry residual f=0.005,71,0.0014084507042253476,0.0,,
+a,data/R81_full71_high_intensity_geometry_null_ensemble/full71_geometry_null_city_summary.csv,71-city geometry residual f=0.010,71,-0.001643192488262907,0.0,,
+a,data/R81_full71_high_intensity_geometry_null_ensemble/full71_geometry_null_city_summary.csv,71-city geometry residual f=0.020,71,-0.001995305164319242,0.0,,
+b,data/R72_geometry_defense/matched_intensity_geometry_vs_spatial_city.csv,21-city matched spatial f=0.005,21,0.05952380952380944,0.0499999999999999,,
+b,data/R72_geometry_defense/matched_intensity_geometry_vs_spatial_city.csv,21-city matched geometry f=0.005,21,0.005555555555555543,0.0,,
+b,data/R72_geometry_defense/matched_intensity_geometry_vs_spatial_city.csv,21-city matched spatial f=0.010,21,0.07738095238095233,0.0749999999999999,,
+b,data/R72_geometry_defense/matched_intensity_geometry_vs_spatial_city.csv,21-city matched geometry f=0.010,21,0.0031746031746031633,0.0,,
+b,data/R72_geometry_defense/matched_intensity_geometry_vs_spatial_city.csv,21-city matched spatial f=0.020,12,0.08958333333333328,0.07499999999999996,,
+b,data/R72_geometry_defense/matched_intensity_geometry_vs_spatial_city.csv,21-city matched geometry f=0.020,12,8.673617379884035e-18,0.0,,
+c,data/R90_finegrid_edge_audit/R90_finegrid_null_thresholds.csv,R90 fine-grid geometry,42,-0.003214285714285721,-0.0025,,
+c,data/R90_finegrid_edge_audit/R90_finegrid_null_thresholds.csv,R90 fine-grid spatial,42,0.040595238095238045,0.04,,
+d,data/N99_low_overlap_geometry_surrogate/N99_low_overlap_surrogate_records.csv,N99 low-overlap residual,24,-0.005624999999999987,-0.0025,0.8476068800914627,22.0

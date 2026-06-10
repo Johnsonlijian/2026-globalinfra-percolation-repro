@@ -1,0 +1,22 @@
+{
+  "round": "R80_npj_complexity_hardening",
+  "n_r67_replicates": 162,
+  "n_r68_records": 71,
+  "mobility_by_fraction": {
+    "0.005": 0.003219563174434892,
+    "0.01": 0.006111707067359088,
+    "0.02": 0.011423651392974132
+  },
+  "geometry_residual_by_fraction": {
+    "0.005": 0.005555555555555542,
+    "0.01": 0.0031746031746031664,
+    "0.02": 0.0
+  },
+  "spatial_residual_by_fraction": {
+    "0.005": 0.05952380952380944,
+    "0.01": 0.07738095238095233,
+    "0.02": 0.08958333333333328
+  },
+  "figure": "R:\\IMUT_WORKPOOL\\01_PROJECTS\\NAS_DRIVE\\IMUT\\1-Research_Output\\1-Papers\\1_In_Preparation\\2026-GlobalInfra-Percolation\\figures\\Fig_R80_geometry_null_distance_audit.svg",
+  "claim_boundary": "Distance audit from archived metrics; no exact edge-overlap reconstruction."
+}

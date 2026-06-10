@@ -1,14 +1,20 @@
-round,analysis,data_directory,purpose,status
-R41,degree-preserving nulls,data/R41_degree_preserving_nulls,six configuration-model null projections per eight-city graph,completed
-R56,spatial-scale nulls,data/R56_spatial_length_constrained_nulls,"degree-preserving chord-length-bin constrained nulls, four replicates per main city",completed
-R61,71-city center-window screen,data/R61_nature_cities_scale_screen,10-km standardized OSMnx city windows,completed
-R62,urban-form mechanism screen,data/R62_urban_form_mechanism,road-form covariates and descriptive Ridge screen,completed
-R63,high-order embedded metrics,data/R63_high_order_external_covariates,block/bridge/angular/dual metrics and subset expansion,completed
-R64,71-city spatial null screen,data/R64_71city_spatial_null_screen,one spatial-scale null per 71-city window,completed
-R65,public covariate controls,data/R65_public_covariates_and_controls,GHSL/WDI matching and model comparisons,completed
-R67,geometry null sensitivity,data/R67_geometry_null_sensitivity,21-city multi-replicate strict non-crossing geometry-null sensitivity,completed
-R68,full 71-city geometry null ensemble,data/R68_full71_geometry_null_ensemble,one low-intensity strict geometry-null record per 71-city window,completed
-R72,matched-intensity geometry contrast,data/R72_geometry_defense,spatial vs strict-geometry nulls at matched accepted-swap targets,completed
-R39,threshold estimator sensitivity,data/R39_threshold_sensitivity,eight-city fine-grid and rank-order threshold estimator audit,completed
-R73,urban-form nested cross-validation,data/R73_urban_form_nested_cv,nested model ladder and leave-region-out validation for road-form mechanism-candidate signal,completed
-R75,submission hardening source tables,data/R75_submission_hardening,"submission-facing aliases, feature groups, figure source data and geometry mobility proxy tables",completed
+round,analysis,data_directory,purpose,status,script_or_source,output_files
+R41,degree-preserving nulls,data/R41_degree_preserving_nulls,six configuration-model null projections per eight-city graph,completed,,
+R56,spatial-scale nulls,data/R56_spatial_length_constrained_nulls,"degree-preserving chord-length-bin constrained nulls, four replicates per main city",completed,,
+R61,71-city center-window screen,data/R61_nature_cities_scale_screen,10-km standardized OSMnx city windows,completed,,
+R62,urban-form mechanism screen,data/R62_urban_form_mechanism,road-form covariates and descriptive Ridge screen,completed,,
+R63,high-order embedded metrics,data/R63_high_order_external_covariates,block/bridge/angular/dual metrics and subset expansion,completed,,
+R64,71-city spatial null screen,data/R64_71city_spatial_null_screen,one spatial-scale null per 71-city window,completed,,
+R65,public covariate controls,data/R65_public_covariates_and_controls,GHSL/WDI matching and model comparisons,completed,,
+R67,geometry null sensitivity,data/R67_geometry_null_sensitivity,21-city multi-replicate strict non-crossing geometry-null sensitivity,completed,,
+R68,full 71-city geometry null ensemble,data/R68_full71_geometry_null_ensemble,one low-intensity strict geometry-null record per 71-city window,completed,,
+R72,matched-intensity geometry contrast,data/R72_geometry_defense,spatial vs strict-geometry nulls at matched accepted-swap targets,completed,,
+R39,threshold estimator sensitivity,data/R39_threshold_sensitivity,eight-city fine-grid and rank-order threshold estimator audit,completed,,
+R73,urban-form nested cross-validation,data/R73_urban_form_nested_cv,nested model ladder and leave-region-out validation for road-form mechanism signal,completed,,
+R75,submission hardening source tables,data/R75_submission_hardening,"submission-facing aliases, feature groups, figure source data and geometry mobility proxy tables",completed,,
+R81,,,Full 71-city high-intensity strict non-crossing geometry-null ensemble,complete,scripts/build_R81_full71_high_intensity_geometry_null_ensemble.py,data/R81_full71_high_intensity_geometry_null_ensemble/full71_geometry_null_replicates.csv; figures/Fig_R81_full71_high_intensity_geometry_null_ensemble.svg
+R90,fine-grid null and exact edge-overlap audit,data/R90_finegrid_edge_audit,Fine-grid matched null-threshold and exact edge-overlap audit,complete,scripts/build_R90_finegrid_edge_audit.py,data/R90_finegrid_edge_audit/R90_finegrid_null_thresholds.csv; data/R90_finegrid_edge_audit/R90_edge_overlap_audit.csv; figures/Fig_R90_finegrid_edge_audit.svg
+R95,non-backtracking spectral audit,data/R95_nonbacktracking_spectral_layer,Test whether a non-backtracking spectral threshold proxy closes the road threshold gap,complete,scripts/build_R95_nonbacktracking_spectral_layer.py; scripts/build_R95_nb_iteration_stability_audit.py,data/R95_nonbacktracking_spectral_layer/N95_nonbacktracking_thresholds.csv; data/R95_nonbacktracking_spectral_layer/N95_cebh_nb_geometry_decomposition.csv; data/R95_nonbacktracking_spectral_layer/R95_nb_iteration_stability_audit.csv; figures/Fig_R95_nonbacktracking_spectral_layer.svg
+N99,compact transfer-error correction and permutation audit,data/N99_prediction_correction_law,Cross-validated empirical correction of the CEBH road-threshold transfer error,complete,scripts/build_N99_prediction_correction_law.py,data/N99_prediction_correction_law/N99_prediction_city_predictions.csv; data/N99_prediction_correction_law/N99_prediction_permutation_baseline.csv; figures/Fig_N99_compact_correction.svg
+N99,12-city low-overlap strict-geometry surrogate audit,data/N99_low_overlap_geometry_surrogate,Test whether the strict non-crossing local-swap null can be pushed to lower exact edge overlap,complete_stratified_audit,scripts/build_N99_low_overlap_geometry_surrogate.py,data/N99_low_overlap_geometry_surrogate/N99_low_overlap_surrogate_records.csv; figures/Fig_N99_low_overlap_geometry_surrogate.svg
+R100,main Fig. 4 geometry-null contrast hardening,data/R100_main_figure_hardening,Promote the 12-city low-overlap evidence into the main geometry-null figure,complete,scripts/build_R100_main_fig4_geometry_null_contrast.py,data/R100_main_figure_hardening/R100_geometry_null_contrast_source_data.csv; figures/Fig_R100_geometry_null_contrast.svg; submission/npj_complexity/target_submission/figures/Fig5_geometry_null_contrast.svg

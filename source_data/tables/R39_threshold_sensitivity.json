@@ -3,7 +3,7 @@
   "parameters": {
     "w7_results": "data\\W7_nc10_R23_best_effort_matrix\\w7_microbatch_simulation_results.csv",
     "r38_json": "data\\R38_nature_hardening\\road_offset_hardening.json",
-    "graph_cache_dir": "cache\\private_graphs",
+    "graph_cache_dir": "local_graph_cache",
     "cities": [
       "Berlin",
       "Buenos Aires",
@@ -188,7 +188,7 @@
   "records": [
     {
       "city": "Berlin",
-      "graph_cache_file": "cache\\private_graphs\\berlin_germany__road.pkl",
+      "graph_cache_file": "local_graph_cache\\berlin_germany__road.pkl",
       "n_nodes": 28407,
       "n_edges": 42452,
       "pc_cebh": 0.444985,
@@ -220,7 +220,7 @@
     },
     {
       "city": "Buenos Aires",
-      "graph_cache_file": "cache\\private_graphs\\buenos_aires_argentina__road.pkl",
+      "graph_cache_file": "local_graph_cache\\buenos_aires_argentina__road.pkl",
       "n_nodes": 17908,
       "n_edges": 31619,
       "pc_cebh": 0.374939,
@@ -252,7 +252,7 @@
     },
     {
       "city": "Chicago",
-      "graph_cache_file": "cache\\private_graphs\\chicago_united_states__road.pkl",
+      "graph_cache_file": "local_graph_cache\\chicago_united_states__road.pkl",
       "n_nodes": 29581,
       "n_edges": 49030,
       "pc_cebh": 0.393386,
@@ -284,7 +284,7 @@
     },
     {
       "city": "Madrid",
-      "graph_cache_file": "cache\\private_graphs\\madrid_spain__road.pkl",
+      "graph_cache_file": "local_graph_cache\\madrid_spain__road.pkl",
       "n_nodes": 31430,
       "n_edges": 48088,
       "pc_cebh": 0.449106,
@@ -316,7 +316,7 @@
     },
     {
       "city": "Rotterdam",
-      "graph_cache_file": "cache\\private_graphs\\rotterdam_netherlands__road.pkl",
+      "graph_cache_file": "local_graph_cache\\rotterdam_netherlands__road.pkl",
       "n_nodes": 11445,
       "n_edges": 16529,
       "pc_cebh": 0.462401,
@@ -348,7 +348,7 @@
     },
     {
       "city": "Stockholm",
-      "graph_cache_file": "cache\\private_graphs\\stockholm_sweden__road.pkl",
+      "graph_cache_file": "local_graph_cache\\stockholm_sweden__road.pkl",
       "n_nodes": 13781,
       "n_edges": 18398,
       "pc_cebh": 0.493601,
@@ -380,7 +380,7 @@
     },
     {
       "city": "Sydney",
-      "graph_cache_file": "cache\\private_graphs\\sydney_australia__road.pkl",
+      "graph_cache_file": "local_graph_cache\\sydney_australia__road.pkl",
       "n_nodes": 118520,
       "n_edges": 159194,
       "pc_cebh": 0.505461,
@@ -412,7 +412,7 @@
     },
     {
       "city": "Toronto",
-      "graph_cache_file": "cache\\private_graphs\\toronto_canada__road.pkl",
+      "graph_cache_file": "local_graph_cache\\toronto_canada__road.pkl",
       "n_nodes": 27438,
       "n_edges": 40273,
       "pc_cebh": 0.45937,

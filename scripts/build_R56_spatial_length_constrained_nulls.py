@@ -1,4 +1,4 @@
-﻿"""R56 degree-preserving, spatial-scale-constrained null models.
+"""R56 degree-preserving, spatial-scale-constrained null models.
 
 This round tests whether the R41 degree-preserving null gap changes after
 adding a real spatial constraint. The null keeps the road degree sequence
@@ -618,19 +618,9 @@ def plot_figure(out_stem: Path, summaries: list[SpatialNullSummary]) -> None:
     import matplotlib as mpl
     import matplotlib.pyplot as plt
 
-    mpl.rcParams.update(
-        {
-            "font.family": "sans-serif",
-            "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"],
-            "svg.fonttype": "none",
-            "pdf.fonttype": 42,
-            "font.size": 7,
-            "axes.spines.right": False,
-            "axes.spines.top": False,
-            "axes.linewidth": 0.8,
-            "legend.frameon": False,
-        }
-    )
+    import pub_style
+
+    pub_style.apply()
 
     cities = [s.city for s in summaries]
     x = np.arange(len(cities))
@@ -641,7 +631,7 @@ def plot_figure(out_stem: Path, summaries: list[SpatialNullSummary]) -> None:
     swap = np.asarray([s.accepted_swaps_per_edge_mean for s in summaries])
     tvd = np.asarray([s.chord_length_bin_tvd_mean for s in summaries])
 
-    fig = plt.figure(figsize=(8.2, 5.1), constrained_layout=False)
+    fig = plt.figure(figsize=(pub_style.FIG_WIDTH_2COL, 4.7), constrained_layout=False)
     gs = fig.add_gridspec(
         2,
         3,
@@ -660,11 +650,11 @@ def plot_figure(out_stem: Path, summaries: list[SpatialNullSummary]) -> None:
     ax3 = fig.add_subplot(gs[1, 2])
 
     colors = {
-        "road": "#313A46",
-        "degree": "#7C8DA6",
-        "spatial": "#3F8F8C",
-        "remaining": "#D9A441",
-        "accent": "#B65C5A",
+        "road": pub_style.COLORS["observed"],
+        "degree": pub_style.COLORS["degree_null"],
+        "spatial": pub_style.COLORS["spatial_null"],
+        "remaining": pub_style.COLORS["residual"],
+        "accent": pub_style.COLORS["accent"],
     }
 
     ax0.bar(x, degree, color=colors["degree"], label="Degree null", width=0.68)
@@ -674,7 +664,7 @@ def plot_figure(out_stem: Path, summaries: list[SpatialNullSummary]) -> None:
     ax0.set_ylabel("Threshold gap relative to CEBH")
     ax0.set_xticks(x)
     ax0.set_xticklabels([c.replace("Buenos Aires", "B. Aires") for c in cities], rotation=45, ha="right")
-    ax0.set_title("a  Gap decomposition after a spatial null", loc="left", fontweight="bold")
+    pub_style.panel_title(ax0, "a", "Eight-city null-ladder decomposition")
     ax0.legend(ncol=1, loc="upper left", bbox_to_anchor=(0.0, 1.0))
     ax0.set_ylim(0, max(float(np.max(road)) * 1.18, 0.05))
     ax0.grid(axis="y", color="#ECECEC", lw=0.6)
@@ -704,7 +694,7 @@ def plot_figure(out_stem: Path, summaries: list[SpatialNullSummary]) -> None:
     ax1.set_xticks([0, 1])
     ax1.set_xticklabels(["Degree\nonly", "Degree +\nspatial scale"])
     ax1.set_ylabel("Null threshold gap")
-    ax1.set_title("b  Spatial scale shifts the null threshold", loc="left", fontweight="bold")
+    pub_style.panel_title(ax1, "b", "Degree versus degree + edge-scale nulls")
     ax1.grid(axis="y", color="#ECECEC", lw=0.6)
 
     order = np.argsort(remaining)
@@ -713,7 +703,7 @@ def plot_figure(out_stem: Path, summaries: list[SpatialNullSummary]) -> None:
     ax2.set_yticklabels([cities[i].replace("Buenos Aires", "B. Aires") for i in order])
     ax2.set_xlim(0, 1.05)
     ax2.set_xlabel("Fraction of road gap not reproduced")
-    ax2.set_title("c  Residual after spatial null", loc="left", fontweight="bold")
+    pub_style.panel_title(ax2, "c", "Post-spatial residual fraction")
     ax2.grid(axis="x", color="#ECECEC", lw=0.6)
 
     means = np.asarray([float(np.mean(swap)), float(np.mean(tvd))])
@@ -726,14 +716,10 @@ def plot_figure(out_stem: Path, summaries: list[SpatialNullSummary]) -> None:
     ax3.set_xticklabels(["Swaps\nper edge", "Length-bin\nTVD"])
     ax3.set_ylim(0, max(float(np.max(swap)), float(np.max(tvd))) * 1.24)
     ax3.set_ylabel("Diagnostic value")
-    ax3.set_title("d  Null diagnostics", loc="left", fontweight="bold")
+    pub_style.panel_title(ax3, "d", "Null-fidelity diagnostics")
     ax3.grid(axis="y", color="#ECECEC", lw=0.6)
 
-    out_stem.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(f"{out_stem}.svg", bbox_inches="tight")
-    fig.savefig(f"{out_stem}.pdf", bbox_inches="tight")
-    fig.savefig(f"{out_stem}.png", dpi=450, bbox_inches="tight")
-    fig.savefig(f"{out_stem}.tiff", dpi=600, bbox_inches="tight")
+    pub_style.save(fig, out_stem)
     plt.close(fig)
 
 
@@ -823,4 +809,3 @@ def main() -> int:
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

@@ -1,11 +1,11 @@
-﻿"""R77 physics-takeaway figure and source data.
+"""R77 physics-takeaway figure and source data.
 
 This round promotes the matched-intensity geometry contrast from a defensive
 diagnostic to the main physical result: at the same accepted-swap intensity,
 the spatial-scale null and the strict non-crossing geometry null separate.
 
 The analysis uses existing derived tables only. It does not regenerate null
-edge sets, compute exact rewired-edge overlap measure, or claim causal inference.
+edge sets, compute true edge-set Jaccard distance, or claim causal inference.
 """
 
 from __future__ import annotations
@@ -24,6 +24,8 @@ from scipy.stats import pearsonr, spearmanr
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error, r2_score
 from sklearn.model_selection import KFold, LeaveOneGroupOut, cross_val_predict
+
+import pub_style
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -62,19 +64,146 @@ def sha256_file(path: Path) -> str:
 
 
 def set_style() -> None:
-    mpl.rcParams.update(
-        {
-            "font.family": "sans-serif",
-            "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"],
-            "svg.fonttype": "none",
-            "pdf.fonttype": 42,
-            "font.size": 7.2,
-            "axes.spines.right": False,
-            "axes.spines.top": False,
-            "axes.linewidth": 0.8,
-            "legend.frameon": False,
-        }
-    )
+    pub_style.apply()
+
+
+def _segments_cross(p1, p2, q1, q2) -> bool:
+    """Strict crossing test for the schematic; shared endpoints do not count."""
+    if len({p1, p2, q1, q2}) < 4:
+        return False
+
+    def orient(a, b, c) -> float:
+        return (b[0] - a[0]) * (c[1] - a[1]) - (b[1] - a[1]) * (c[0] - a[0])
+
+    d1, d2 = orient(q1, q2, p1), orient(q1, q2, p2)
+    d3, d4 = orient(p1, p2, q1), orient(p1, p2, q2)
+    return d1 * d2 < 0 and d3 * d4 < 0
+
+
+def _toy_street_patch(seed: int = 12):
+    """Small jittered street patch used only as an explanatory schematic."""
+    rng = np.random.default_rng(seed)
+    nx_, ny_ = 6, 4
+    pos = {}
+    for j in range(ny_):
+        for i in range(nx_):
+            pos[(i, j)] = (i + rng.uniform(-0.16, 0.16), j + rng.uniform(-0.16, 0.16))
+    edges = []
+    for j in range(ny_):
+        for i in range(nx_):
+            if i + 1 < nx_ and rng.random() > 0.08:
+                edges.append(((i, j), (i + 1, j)))
+            if j + 1 < ny_ and rng.random() > 0.14:
+                edges.append(((i, j), (i, j + 1)))
+    return pos, edges
+
+
+def _rewire_schematic(pos, edges, seed, n_target, length_tol=None, non_crossing=False):
+    """Degree-preserving double-edge swaps mirroring the real null constraints."""
+    rng = np.random.default_rng(seed)
+    edges = [tuple(e) for e in edges]
+    edge_set = set(map(frozenset, edges))
+
+    def chord(e) -> float:
+        (x1, y1), (x2, y2) = pos[e[0]], pos[e[1]]
+        return float(np.hypot(x2 - x1, y2 - y1))
+
+    accepted, attempts = 0, 0
+    while accepted < n_target and attempts < 6000:
+        attempts += 1
+        i, j = rng.choice(len(edges), size=2, replace=False)
+        (a, b), (c, d) = edges[i], edges[j]
+        if len({a, b, c, d}) < 4:
+            continue
+        new1, new2 = (a, c), (b, d)
+        if frozenset(new1) in edge_set or frozenset(new2) in edge_set:
+            continue
+        if length_tol is not None:
+            if abs(chord(new1) - chord(edges[i])) > length_tol or abs(chord(new2) - chord(edges[j])) > length_tol:
+                continue
+        if non_crossing:
+            others = [edges[k] for k in range(len(edges)) if k not in (i, j)]
+            blocked = _segments_cross(pos[new1[0]], pos[new1[1]], pos[new2[0]], pos[new2[1]])
+            for u, v in () if blocked else (new1, new2):
+                for p, q in others:
+                    if _segments_cross(pos[u], pos[v], pos[p], pos[q]):
+                        blocked = True
+                        break
+                if blocked:
+                    break
+            if blocked:
+                continue
+        edge_set.discard(frozenset(edges[i]))
+        edge_set.discard(frozenset(edges[j]))
+        edges[i], edges[j] = new1, new2
+        edge_set.add(frozenset(new1))
+        edge_set.add(frozenset(new2))
+        accepted += 1
+    return edges
+
+
+def _draw_glyph(ax, pos, edges, base_edges, x0, highlight, title, subtitle) -> None:
+    base_set = set(map(frozenset, base_edges))
+    for u, v in edges:
+        changed = frozenset((u, v)) not in base_set
+        ax.plot(
+            [pos[u][0] + x0, pos[v][0] + x0],
+            [pos[u][1], pos[v][1]],
+            lw=1.25 if changed else 0.85,
+            color=highlight if changed else "#C2C7CC",
+            zorder=3 if changed else 2,
+            solid_capstyle="round",
+        )
+    xs = [p[0] + x0 for p in pos.values()]
+    ys = [p[1] for p in pos.values()]
+    ax.scatter(xs, ys, s=5.0, color="#3B3F44", zorder=4, linewidths=0)
+    cx = x0 + 2.5
+    ax.text(cx, -0.75, title, ha="center", va="top", fontsize=6.8, fontweight="bold", color="#1A1A1A")
+    ax.text(cx, -1.32, subtitle, ha="center", va="top", fontsize=6.0, color=pub_style.COLORS["annot"])
+
+
+def draw_null_ladder_schematic(ax) -> None:
+    """Panel a: explanatory schematic of the constrained null-model ladder."""
+    pos, base = _toy_street_patch()
+    observed = list(base)
+    degree_null = _rewire_schematic(pos, base, seed=21, n_target=6)
+    spatial_null = _rewire_schematic(pos, base, seed=33, n_target=7, length_tol=0.34)
+    geometry_null = _rewire_schematic(pos, base, seed=46, n_target=6, length_tol=0.34, non_crossing=True)
+
+    gap = 2.1
+    width = 5.0
+    glyphs = [
+        (observed, pub_style.COLORS["observed"], "Observed road graph", "finite, spatially embedded"),
+        (degree_null, "#6E6E6E", "Degree null", "degree sequence preserved"),
+        (spatial_null, pub_style.COLORS["spatial_null"], "Spatial-scale null", "+ chord-length bins"),
+        (geometry_null, pub_style.COLORS["geometry_null"], "Strict geometry null", "+ non-crossing chords"),
+    ]
+    arrow_labels = ["degree-preserving\nrewiring", "+ length bins", "+ non-crossing"]
+    for k, (edges, color, title, subtitle) in enumerate(glyphs):
+        x0 = k * (width + gap)
+        _draw_glyph(ax, pos, edges, base, x0, color, title, subtitle)
+        if k < len(glyphs) - 1:
+            x_a0 = x0 + width + 0.25
+            x_a1 = x0 + width + gap - 0.45
+            ax.annotate(
+                "",
+                xy=(x_a1, 1.5),
+                xytext=(x_a0, 1.5),
+                arrowprops={"arrowstyle": "-|>", "color": "#4D4D4D", "lw": 0.9},
+            )
+            ax.text(
+                (x_a0 + x_a1) / 2,
+                1.78,
+                arrow_labels[k],
+                ha="center",
+                va="bottom",
+                fontsize=5.8,
+                color=pub_style.COLORS["annot"],
+            )
+    ax.set_xlim(-0.6, 3 * (width + gap) + width + 0.4)
+    ax.set_ylim(-1.95, 3.75)
+    ax.set_aspect("equal")
+    ax.axis("off")
 
 
 def label_feature(name: str) -> str:
@@ -162,18 +291,22 @@ def make_figure(
 ) -> None:
     set_style()
     colors = {
-        "spatial": "#7F9F52",
-        "geometry": "#C75146",
-        "kappa": "#4E79A7",
-        "absorb": "#7A5195",
-        "neutral": "#222222",
-        "light": "#E7EAEE",
+        "spatial": pub_style.COLORS["spatial_null"],
+        "geometry": pub_style.COLORS["geometry_null"],
+        "kappa": "#7C7C7C",
+        "absorb": pub_style.COLORS["accent"],
+        "neutral": pub_style.COLORS["observed"],
+        "light": pub_style.COLORS["grid"],
     }
-    fig = plt.figure(figsize=(7.35, 5.9), constrained_layout=True)
-    gs = fig.add_gridspec(2, 2, height_ratios=[0.92, 1.08])
-    ax_a = fig.add_subplot(gs[0, :])
-    ax_b = fig.add_subplot(gs[1, 0])
-    ax_c = fig.add_subplot(gs[1, 1])
+    fig = plt.figure(figsize=(pub_style.FIG_WIDTH_2COL, 7.9), constrained_layout=True)
+    gs = fig.add_gridspec(3, 2, height_ratios=[0.62, 0.92, 1.02])
+    ax_s = fig.add_subplot(gs[0, :])
+    ax_a = fig.add_subplot(gs[1, :])
+    ax_b = fig.add_subplot(gs[2, 0])
+    ax_c = fig.add_subplot(gs[2, 1])
+
+    draw_null_ladder_schematic(ax_s)
+    pub_style.panel_title(ax_s, "a", "Constrained null-model ladder (schematic)")
 
     fractions = matched_summary["swap_fraction"].to_numpy()
     for null_name, color, mean_col, lo_col, hi_col, label in [
@@ -211,9 +344,9 @@ def make_figure(
     ax_a.tick_params(axis="x", which="minor", bottom=False)
     ax_a.set_xlabel("Matched accepted-swap target")
     ax_a.set_ylabel("Road minus null threshold")
-    ax_a.set_title("a  Matched perturbation separates non-crossing geometry", loc="left", fontweight="bold")
-    ax_a.grid(axis="y", color=colors["light"], lw=0.45)
-    ax_a.legend(fontsize=6.1, loc="upper left")
+    pub_style.panel_title(ax_a, "b", "Matched-intensity null contrast (21 cities)")
+    pub_style.light_grid(ax_a, axis="y")
+    ax_a.legend(fontsize=6.3, loc="upper left")
 
     top = absorption_corr.iloc[0]
     feature = str(top["feature"])
@@ -231,18 +364,11 @@ def make_figure(
         xline = np.linspace(sub[feature].min(), sub[feature].max(), 80)
         coef = np.polyfit(sub[feature], sub["geometry_absorption"], 1)
         ax_b.plot(xline, coef[0] * xline + coef[1], color=colors["neutral"], lw=0.9)
-    ax_b.set_xlabel(label_feature(feature))
+    ax_b.set_xlabel(label_feature(feature).capitalize())
     ax_b.set_ylabel("Spatial residual absorbed by geometry")
-    ax_b.set_title("b  Geometry absorption tracks road form", loc="left", fontweight="bold")
-    ax_b.text(
-        0.03,
-        0.96,
-        rf"$\rho$={top['spearman_rho']:.2f}",
-        transform=ax_b.transAxes,
-        va="top",
-        fontsize=7,
-    )
-    ax_b.grid(color=colors["light"], lw=0.45)
+    pub_style.panel_title(ax_b, "c", "Geometry absorption versus road form")
+    pub_style.annot(ax_b, 0.03, 0.96, rf"Spearman $\rho$ = {top['spearman_rho']:.2f}; $n$ = {int(top['n'])}")
+    pub_style.light_grid(ax_b, axis="both")
 
     ax_c.scatter(
         kappa_pred["kappa"],
@@ -267,27 +393,23 @@ def make_figure(
         kappa_pred["predicted_leave_region_out"],
         s=13,
         color="none",
-        edgecolor=colors["geometry"],
+        edgecolor=pub_style.COLORS["model"],
         linewidth=0.7,
         label="Held-region prediction",
     )
     ax_c.set_xlabel(r"$\kappa=\langle k^2\rangle/\langle k\rangle$")
     ax_c.set_ylabel("Road minus CEBH threshold")
-    ax_c.set_title("c  Kappa gives a theory-anchored relation", loc="left", fontweight="bold")
-    ax_c.text(
+    pub_style.panel_title(ax_c, "d", "Road gap versus degree-moment ratio")
+    pub_style.annot(
+        ax_c,
         0.03,
         0.96,
-        rf"$\rho$={kappa_metrics['spearman_rho']:.2f}; LRO $R^2$={kappa_metrics['leave_region_out_r2']:.2f}",
-        transform=ax_c.transAxes,
-        va="top",
-        fontsize=7,
+        rf"Spearman $\rho$ = {kappa_metrics['spearman_rho']:.2f}; LRO $R^2$ = {kappa_metrics['leave_region_out_r2']:.2f}; $n$ = {int(kappa_metrics['n'])}",
     )
-    ax_c.grid(color=colors["light"], lw=0.45)
-    ax_c.legend(fontsize=5.8, loc="lower left")
+    pub_style.light_grid(ax_c, axis="both")
+    ax_c.legend(fontsize=6.0, loc="lower left")
 
-    for ext in ["svg", "pdf", "png", "tiff"]:
-        kwargs = {"dpi": 600} if ext in {"png", "tiff"} else {}
-        fig.savefig(FIG_BASE.with_suffix(f".{ext}"), bbox_inches="tight", **kwargs)
+    pub_style.save(fig, FIG_BASE)
     plt.close(fig)
 
 
@@ -411,7 +533,7 @@ def main() -> None:
         "| Geometry absorption correlations | Pass | `data/R77_physics_takeaway/R77_geometry_absorption_correlations.csv` |\n"
         "| Kappa predictive relation | Pass | `data/R77_physics_takeaway/R77_kappa_predictive_relation.csv` |\n"
         "| Fig. 1 replacement generated | Pass | `figures/Fig_R77_physics_takeaway.*` copied to target packages as `Fig1_matched_geometry_partition.*` |\n"
-        "| Claim boundary | Pass | Empirical, descriptive, no theorem, no causal design rule, no true edge-overlap. |\n",
+        "| Claim boundary | Pass | Empirical, descriptive, no theorem, no causal design rule, no true edge-Jaccard. |\n",
         encoding="utf-8",
     )
     print(json.dumps(payload, indent=2))

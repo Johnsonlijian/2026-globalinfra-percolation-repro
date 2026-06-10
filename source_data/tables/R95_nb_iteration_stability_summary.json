@@ -1,0 +1,14 @@
+{
+  "status": "pass",
+  "n_records_total": 71,
+  "n_records_pass": 71,
+  "short_iterations": 160,
+  "long_iterations": 640,
+  "mean_abs_pc_delta_short_vs_long": 0.00013587363790957489,
+  "ci95_abs_pc_delta_low": 8.903240666172828e-05,
+  "ci95_abs_pc_delta_high": 0.0001827148691574215,
+  "median_abs_pc_delta_short_vs_long": 2.58750422369447e-05,
+  "max_abs_pc_delta_short_vs_long": 0.0009109522389819102,
+  "n_long_converged": 52,
+  "claim_boundary": "Iteration-stability diagnostic for the R95 non-backtracking spectral proxy."
+}

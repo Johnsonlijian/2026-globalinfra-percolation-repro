@@ -1,0 +1,289 @@
+feature,n_folds,mean_standardized_coefficient,sd_standardized_coefficient,min_standardized_coefficient,max_standardized_coefficient,sign_consistency,median_alpha,record_type,fold_id,held_out_city,standardized_coefficient,coefficient_sign,alpha
+kappa,71.0,-0.05724616352960386,0.0035612366954382983,-0.07240816187767335,-0.04393548220051438,1.0,0.1,summary,,,,,
+dead_end_share,71.0,-0.007939679999200361,0.001687341513002802,-0.011979635682154863,-0.0013296712031442975,1.0,0.1,summary,,,,,
+degree4plus_share,71.0,0.031723690508451564,0.0024472247573512572,0.022784406238835396,0.04018096125139621,1.0,0.1,summary,,,,,
+cycle_density,71.0,0.004791338390709197,0.002435446619867534,-0.0016446759288070434,0.01384160954080868,0.9859154929577465,0.1,summary,,,,,
+kappa,,,,,,,,fold,0.0,Accra,-0.05771384321717349,-1.0,0.1
+dead_end_share,,,,,,,,fold,0.0,Accra,-0.007705644626395058,-1.0,0.1
+degree4plus_share,,,,,,,,fold,0.0,Accra,0.03173132551908703,1.0,0.1
+cycle_density,,,,,,,,fold,0.0,Accra,0.005348711209701651,1.0,0.1
+kappa,,,,,,,,fold,1.0,Addis Ababa,-0.05778515114278757,-1.0,0.1
+dead_end_share,,,,,,,,fold,1.0,Addis Ababa,-0.007765514754657921,-1.0,0.1
+degree4plus_share,,,,,,,,fold,1.0,Addis Ababa,0.03170632627947463,1.0,0.1
+cycle_density,,,,,,,,fold,1.0,Addis Ababa,0.005363284280769334,1.0,0.1
+kappa,,,,,,,,fold,2.0,Algiers,-0.05707917215885977,-1.0,0.1
+dead_end_share,,,,,,,,fold,2.0,Algiers,-0.00786124123145926,-1.0,0.1
+degree4plus_share,,,,,,,,fold,2.0,Algiers,0.03167712304647005,1.0,0.1
+cycle_density,,,,,,,,fold,2.0,Algiers,0.004934182448512556,1.0,0.1
+kappa,,,,,,,,fold,3.0,Cairo,-0.05748623318216912,-1.0,0.1
+dead_end_share,,,,,,,,fold,3.0,Cairo,-0.006219961656154502,-1.0,0.1
+degree4plus_share,,,,,,,,fold,3.0,Cairo,0.03024616531572017,1.0,0.1
+cycle_density,,,,,,,,fold,3.0,Cairo,0.007719483713816519,1.0,0.1
+kappa,,,,,,,,fold,4.0,Casablanca,-0.057529216892590176,-1.0,0.1
+dead_end_share,,,,,,,,fold,4.0,Casablanca,-0.008021470552929691,-1.0,0.1
+degree4plus_share,,,,,,,,fold,4.0,Casablanca,0.03205206039579565,1.0,0.1
+cycle_density,,,,,,,,fold,4.0,Casablanca,0.004494504566704666,1.0,0.1
+kappa,,,,,,,,fold,5.0,Dakar,-0.05493195941280798,-1.0,0.1
+dead_end_share,,,,,,,,fold,5.0,Dakar,-0.01024399313991714,-1.0,0.1
+degree4plus_share,,,,,,,,fold,5.0,Dakar,0.033608947434625135,1.0,0.1
+cycle_density,,,,,,,,fold,5.0,Dakar,-0.0016446759288070434,-1.0,0.1
+kappa,,,,,,,,fold,6.0,Dar es Salaam,-0.055021138037114545,-1.0,0.1
+dead_end_share,,,,,,,,fold,6.0,Dar es Salaam,-0.009325942248208402,-1.0,0.1
+degree4plus_share,,,,,,,,fold,6.0,Dar es Salaam,0.03213412845664374,1.0,0.1
+cycle_density,,,,,,,,fold,6.0,Dar es Salaam,0.0014999368346267639,1.0,0.1
+kappa,,,,,,,,fold,7.0,Johannesburg,-0.05674596258292028,-1.0,0.1
+dead_end_share,,,,,,,,fold,7.0,Johannesburg,-0.00897375068731561,-1.0,0.1
+degree4plus_share,,,,,,,,fold,7.0,Johannesburg,0.03236894757794159,1.0,0.1
+cycle_density,,,,,,,,fold,7.0,Johannesburg,0.002729061916613207,1.0,0.1
+kappa,,,,,,,,fold,8.0,Kampala,-0.07240816187767335,-1.0,0.05623413251903491
+dead_end_share,,,,,,,,fold,8.0,Kampala,-0.006314009578011676,-1.0,0.05623413251903491
+degree4plus_share,,,,,,,,fold,8.0,Kampala,0.04018096125139621,1.0,0.05623413251903491
+cycle_density,,,,,,,,fold,8.0,Kampala,0.01384160954080868,1.0,0.05623413251903491
+kappa,,,,,,,,fold,9.0,Lagos,-0.05799803682100348,-1.0,0.1
+dead_end_share,,,,,,,,fold,9.0,Lagos,-0.010047482738531802,-1.0,0.1
+degree4plus_share,,,,,,,,fold,9.0,Lagos,0.03384477654217058,1.0,0.1
+cycle_density,,,,,,,,fold,9.0,Lagos,0.0019666841501534277,1.0,0.1
+kappa,,,,,,,,fold,10.0,Nairobi,-0.050151447589650934,-1.0,0.1
+dead_end_share,,,,,,,,fold,10.0,Nairobi,-0.007834539485020275,-1.0,0.1
+degree4plus_share,,,,,,,,fold,10.0,Nairobi,0.02795606329160675,1.0,0.1
+cycle_density,,,,,,,,fold,10.0,Nairobi,0.002617328026960103,1.0,0.1
+kappa,,,,,,,,fold,11.0,Tunis,-0.057886198059069346,-1.0,0.1
+dead_end_share,,,,,,,,fold,11.0,Tunis,-0.008038043392319769,-1.0,0.1
+degree4plus_share,,,,,,,,fold,11.0,Tunis,0.0319671713061607,1.0,0.1
+cycle_density,,,,,,,,fold,11.0,Tunis,0.004939812192418139,1.0,0.1
+kappa,,,,,,,,fold,12.0,Bangkok,-0.04393548220051438,-1.0,0.1778279410038923
+dead_end_share,,,,,,,,fold,12.0,Bangkok,-0.006103184646089388,-1.0,0.1778279410038923
+degree4plus_share,,,,,,,,fold,12.0,Bangkok,0.023468557406827465,1.0,0.1778279410038923
+cycle_density,,,,,,,,fold,12.0,Bangkok,0.0022385973819713106,1.0,0.1778279410038923
+kappa,,,,,,,,fold,13.0,Bengaluru,-0.05617235804864228,-1.0,0.1
+dead_end_share,,,,,,,,fold,13.0,Bengaluru,-0.006739233525144564,-1.0,0.1
+degree4plus_share,,,,,,,,fold,13.0,Bengaluru,0.030548532658455085,1.0,0.1
+cycle_density,,,,,,,,fold,13.0,Bengaluru,0.005663237490046866,1.0,0.1
+kappa,,,,,,,,fold,14.0,Chennai,-0.05754657819526652,-1.0,0.1
+dead_end_share,,,,,,,,fold,14.0,Chennai,-0.00787606496225654,-1.0,0.1
+degree4plus_share,,,,,,,,fold,14.0,Chennai,0.031863419955096374,1.0,0.1
+cycle_density,,,,,,,,fold,14.0,Chennai,0.004968582594764598,1.0,0.1
+kappa,,,,,,,,fold,15.0,Delhi,-0.057655019627878966,-1.0,0.1
+dead_end_share,,,,,,,,fold,15.0,Delhi,-0.008371377256903734,-1.0,0.1
+degree4plus_share,,,,,,,,fold,15.0,Delhi,0.03250696166315208,1.0,0.1
+cycle_density,,,,,,,,fold,15.0,Delhi,0.003963795025204914,1.0,0.1
+kappa,,,,,,,,fold,16.0,Dhaka,-0.057498654456726764,-1.0,0.1
+dead_end_share,,,,,,,,fold,16.0,Dhaka,-0.007509747842241177,-1.0,0.1
+degree4plus_share,,,,,,,,fold,16.0,Dhaka,0.031537098855817576,1.0,0.1
+cycle_density,,,,,,,,fold,16.0,Dhaka,0.005514900294177408,1.0,0.1
+kappa,,,,,,,,fold,17.0,Hanoi,-0.06070647743229448,-1.0,0.1
+dead_end_share,,,,,,,,fold,17.0,Hanoi,-0.009017324996603487,-1.0,0.1
+degree4plus_share,,,,,,,,fold,17.0,Hanoi,0.03411911327025288,1.0,0.1
+cycle_density,,,,,,,,fold,17.0,Hanoi,0.005348761889090586,1.0,0.1
+kappa,,,,,,,,fold,18.0,Ho Chi Minh City,-0.056081574372576826,-1.0,0.1
+dead_end_share,,,,,,,,fold,18.0,Ho Chi Minh City,-0.0073739309672735814,-1.0,0.1
+degree4plus_share,,,,,,,,fold,18.0,Ho Chi Minh City,0.03142550312705668,1.0,0.1
+cycle_density,,,,,,,,fold,18.0,Ho Chi Minh City,0.0041547359348744345,1.0,0.1
+kappa,,,,,,,,fold,19.0,Hong Kong,-0.05817951089436346,-1.0,0.1
+dead_end_share,,,,,,,,fold,19.0,Hong Kong,-0.009416590409144623,-1.0,0.1
+degree4plus_share,,,,,,,,fold,19.0,Hong Kong,0.033105172707576694,1.0,0.1
+cycle_density,,,,,,,,fold,19.0,Hong Kong,0.0029948556418679523,1.0,0.1
+kappa,,,,,,,,fold,20.0,Hyderabad,-0.06319254162632304,-1.0,0.1
+dead_end_share,,,,,,,,fold,20.0,Hyderabad,-0.011979635682154863,-1.0,0.1
+degree4plus_share,,,,,,,,fold,20.0,Hyderabad,0.036895632163193234,1.0,0.1
+cycle_density,,,,,,,,fold,20.0,Hyderabad,0.0026559646433161055,1.0,0.1
+kappa,,,,,,,,fold,21.0,Jakarta,-0.0595057371790707,-1.0,0.1
+dead_end_share,,,,,,,,fold,21.0,Jakarta,-0.006145645873689473,-1.0,0.1
+degree4plus_share,,,,,,,,fold,21.0,Jakarta,0.03181224831953708,1.0,0.1
+cycle_density,,,,,,,,fold,21.0,Jakarta,0.007815472488443817,1.0,0.1
+kappa,,,,,,,,fold,22.0,Karachi,-0.057613456407273875,-1.0,0.1
+dead_end_share,,,,,,,,fold,22.0,Karachi,-0.009761266833732338,-1.0,0.1
+degree4plus_share,,,,,,,,fold,22.0,Karachi,0.033566887360315316,1.0,0.1
+cycle_density,,,,,,,,fold,22.0,Karachi,0.0015804373298861918,1.0,0.1
+kappa,,,,,,,,fold,23.0,Kuala Lumpur,-0.058946887694703985,-1.0,0.1
+dead_end_share,,,,,,,,fold,23.0,Kuala Lumpur,-0.009301402997269531,-1.0,0.1
+degree4plus_share,,,,,,,,fold,23.0,Kuala Lumpur,0.03294608017978555,1.0,0.1
+cycle_density,,,,,,,,fold,23.0,Kuala Lumpur,0.003843137226228366,1.0,0.1
+kappa,,,,,,,,fold,24.0,Manila,-0.056769170797761025,-1.0,0.1
+dead_end_share,,,,,,,,fold,24.0,Manila,-0.008012728964965077,-1.0,0.1
+degree4plus_share,,,,,,,,fold,24.0,Manila,0.03162288054203449,1.0,0.1
+cycle_density,,,,,,,,fold,24.0,Manila,0.004294278907996801,1.0,0.1
+kappa,,,,,,,,fold,25.0,Mumbai,-0.05990957939571874,-1.0,0.1
+dead_end_share,,,,,,,,fold,25.0,Mumbai,-0.008441346526738364,-1.0,0.1
+degree4plus_share,,,,,,,,fold,25.0,Mumbai,0.03316926268078076,1.0,0.1
+cycle_density,,,,,,,,fold,25.0,Mumbai,0.005726780526769462,1.0,0.1
+kappa,,,,,,,,fold,26.0,Osaka,-0.05520347804838935,-1.0,0.1
+dead_end_share,,,,,,,,fold,26.0,Osaka,-0.006167921567764148,-1.0,0.1
+degree4plus_share,,,,,,,,fold,26.0,Osaka,0.029287310174563843,1.0,0.1
+cycle_density,,,,,,,,fold,26.0,Osaka,0.006727003263976669,1.0,0.1
+kappa,,,,,,,,fold,27.0,Seoul,-0.05959222691082916,-1.0,0.1
+dead_end_share,,,,,,,,fold,27.0,Seoul,-0.009618456930873848,-1.0,0.1
+degree4plus_share,,,,,,,,fold,27.0,Seoul,0.034458003393717074,1.0,0.1
+cycle_density,,,,,,,,fold,27.0,Seoul,0.0029128098115870915,1.0,0.1
+kappa,,,,,,,,fold,28.0,Singapore,-0.05755414018382057,-1.0,0.1
+dead_end_share,,,,,,,,fold,28.0,Singapore,-0.008570066910570204,-1.0,0.1
+degree4plus_share,,,,,,,,fold,28.0,Singapore,0.032256450106289684,1.0,0.1
+cycle_density,,,,,,,,fold,28.0,Singapore,0.003922782433731203,1.0,0.1
+kappa,,,,,,,,fold,29.0,Taipei,-0.04961326812795707,-1.0,0.1
+dead_end_share,,,,,,,,fold,29.0,Taipei,-0.004480139807361852,-1.0,0.1
+degree4plus_share,,,,,,,,fold,29.0,Taipei,0.025898433711253964,1.0,0.1
+cycle_density,,,,,,,,fold,29.0,Taipei,0.006047888466459206,1.0,0.1
+kappa,,,,,,,,fold,30.0,Tokyo,-0.057519977369864944,-1.0,0.1
+dead_end_share,,,,,,,,fold,30.0,Tokyo,-0.007950092331784453,-1.0,0.1
+degree4plus_share,,,,,,,,fold,30.0,Tokyo,0.031943444907617066,1.0,0.1
+cycle_density,,,,,,,,fold,30.0,Tokyo,0.004946191661924268,1.0,0.1
+kappa,,,,,,,,fold,31.0,Amsterdam,-0.06008047135962199,-1.0,0.1
+dead_end_share,,,,,,,,fold,31.0,Amsterdam,-0.0038176395473568103,-1.0,0.1
+degree4plus_share,,,,,,,,fold,31.0,Amsterdam,0.029893410541347493,1.0,0.1
+cycle_density,,,,,,,,fold,31.0,Amsterdam,0.012889187697714952,1.0,0.1
+kappa,,,,,,,,fold,32.0,Athens,-0.056270620633205676,-1.0,0.1
+dead_end_share,,,,,,,,fold,32.0,Athens,-0.010197449115869214,-1.0,0.1
+degree4plus_share,,,,,,,,fold,32.0,Athens,0.03264634804890532,1.0,0.1
+cycle_density,,,,,,,,fold,32.0,Athens,0.000777414155405956,1.0,0.1
+kappa,,,,,,,,fold,33.0,Barcelona,-0.05741258608687814,-1.0,0.1
+dead_end_share,,,,,,,,fold,33.0,Barcelona,-0.007827525043504174,-1.0,0.1
+degree4plus_share,,,,,,,,fold,33.0,Barcelona,0.03153538601958139,1.0,0.1
+cycle_density,,,,,,,,fold,33.0,Barcelona,0.005406059883372935,1.0,0.1
+kappa,,,,,,,,fold,34.0,Lisbon,-0.05545267151318413,-1.0,0.1
+dead_end_share,,,,,,,,fold,34.0,Lisbon,-0.0030354996788964916,-1.0,0.1
+degree4plus_share,,,,,,,,fold,34.0,Lisbon,0.027749395909492373,1.0,0.1
+cycle_density,,,,,,,,fold,34.0,Lisbon,0.011242357198044242,1.0,0.1
+kappa,,,,,,,,fold,35.0,London,-0.05521167646438942,-1.0,0.1
+dead_end_share,,,,,,,,fold,35.0,London,-0.0053823852525612115,-1.0,0.1
+degree4plus_share,,,,,,,,fold,35.0,London,0.028928747488147413,1.0,0.1
+cycle_density,,,,,,,,fold,35.0,London,0.008078713617696756,1.0,0.1
+kappa,,,,,,,,fold,36.0,Milan,-0.05928922376577822,-1.0,0.1
+dead_end_share,,,,,,,,fold,36.0,Milan,-0.009986200972856435,-1.0,0.1
+degree4plus_share,,,,,,,,fold,36.0,Milan,0.03302269547655848,1.0,0.1
+cycle_density,,,,,,,,fold,36.0,Milan,0.003702769467838235,1.0,0.1
+kappa,,,,,,,,fold,37.0,Paris,-0.05682449710567607,-1.0,0.1
+dead_end_share,,,,,,,,fold,37.0,Paris,-0.008612652520293418,-1.0,0.1
+degree4plus_share,,,,,,,,fold,37.0,Paris,0.03176903391619937,1.0,0.1
+cycle_density,,,,,,,,fold,37.0,Paris,0.0036818325436596133,1.0,0.1
+kappa,,,,,,,,fold,38.0,Prague,-0.05819346163509864,-1.0,0.1
+dead_end_share,,,,,,,,fold,38.0,Prague,-0.007526180780837929,-1.0,0.1
+degree4plus_share,,,,,,,,fold,38.0,Prague,0.03184214342608861,1.0,0.1
+cycle_density,,,,,,,,fold,38.0,Prague,0.005901776329540295,1.0,0.1
+kappa,,,,,,,,fold,39.0,Rome,-0.057020183288219346,-1.0,0.1
+dead_end_share,,,,,,,,fold,39.0,Rome,-0.008492827754981919,-1.0,0.1
+degree4plus_share,,,,,,,,fold,39.0,Rome,0.0318106249328305,1.0,0.1
+cycle_density,,,,,,,,fold,39.0,Rome,0.0038475860792398092,1.0,0.1
+kappa,,,,,,,,fold,40.0,Vienna,-0.06232205499206702,-1.0,0.1
+dead_end_share,,,,,,,,fold,40.0,Vienna,-0.006575773053733344,-1.0,0.1
+degree4plus_share,,,,,,,,fold,40.0,Vienna,0.032979576019079374,1.0,0.1
+cycle_density,,,,,,,,fold,40.0,Vienna,0.009688427427951105,1.0,0.1
+kappa,,,,,,,,fold,41.0,Warsaw,-0.057587578898035466,-1.0,0.1
+dead_end_share,,,,,,,,fold,41.0,Warsaw,-0.008409642038837234,-1.0,0.1
+degree4plus_share,,,,,,,,fold,41.0,Warsaw,0.03225722145238308,1.0,0.1
+cycle_density,,,,,,,,fold,41.0,Warsaw,0.004109780666453872,1.0,0.1
+kappa,,,,,,,,fold,42.0,Bogota,-0.057089131410595836,-1.0,0.1
+dead_end_share,,,,,,,,fold,42.0,Bogota,-0.007691563077358549,-1.0,0.1
+degree4plus_share,,,,,,,,fold,42.0,Bogota,0.03147955518623158,1.0,0.1
+cycle_density,,,,,,,,fold,42.0,Bogota,0.005044743491730799,1.0,0.1
+kappa,,,,,,,,fold,43.0,Buenos Aires,-0.05330662530860264,-1.0,0.1
+dead_end_share,,,,,,,,fold,43.0,Buenos Aires,-0.008881264243578796,-1.0,0.1
+degree4plus_share,,,,,,,,fold,43.0,Buenos Aires,0.029027865328565928,1.0,0.1
+cycle_density,,,,,,,,fold,43.0,Buenos Aires,0.0025727740268795263,1.0,0.1
+kappa,,,,,,,,fold,44.0,Lima,-0.05763048078518274,-1.0,0.1
+dead_end_share,,,,,,,,fold,44.0,Lima,-0.008189913398950602,-1.0,0.1
+degree4plus_share,,,,,,,,fold,44.0,Lima,0.03220165224953336,1.0,0.1
+cycle_density,,,,,,,,fold,44.0,Lima,0.004431293504970818,1.0,0.1
+kappa,,,,,,,,fold,45.0,Mexico City,-0.057731109059626404,-1.0,0.1
+dead_end_share,,,,,,,,fold,45.0,Mexico City,-0.008212678338391913,-1.0,0.1
+degree4plus_share,,,,,,,,fold,45.0,Mexico City,0.03205378787239624,1.0,0.1
+cycle_density,,,,,,,,fold,45.0,Mexico City,0.004781427552603662,1.0,0.1
+kappa,,,,,,,,fold,46.0,Montevideo,-0.0570958817382934,-1.0,0.1
+dead_end_share,,,,,,,,fold,46.0,Montevideo,-0.008089558341417113,-1.0,0.1
+degree4plus_share,,,,,,,,fold,46.0,Montevideo,0.031590682397367224,1.0,0.1
+cycle_density,,,,,,,,fold,46.0,Montevideo,0.004865046999002795,1.0,0.1
+kappa,,,,,,,,fold,47.0,Panama City,-0.058084688305897365,-1.0,0.1
+dead_end_share,,,,,,,,fold,47.0,Panama City,-0.008115152592080788,-1.0,0.1
+degree4plus_share,,,,,,,,fold,47.0,Panama City,0.03226692122903204,1.0,0.1
+cycle_density,,,,,,,,fold,47.0,Panama City,0.00496151216937335,1.0,0.1
+kappa,,,,,,,,fold,48.0,Quito,-0.06301494395109483,-1.0,0.1
+dead_end_share,,,,,,,,fold,48.0,Quito,-0.010451958317688442,-1.0,0.1
+degree4plus_share,,,,,,,,fold,48.0,Quito,0.03574740105510437,1.0,0.1
+cycle_density,,,,,,,,fold,48.0,Quito,0.0046543982909098,1.0,0.1
+kappa,,,,,,,,fold,49.0,Rio de Janeiro,-0.05779280697652637,-1.0,0.1
+dead_end_share,,,,,,,,fold,49.0,Rio de Janeiro,-0.008059812533598817,-1.0,0.1
+degree4plus_share,,,,,,,,fold,49.0,Rio de Janeiro,0.032067160191941085,1.0,0.1
+cycle_density,,,,,,,,fold,49.0,Rio de Janeiro,0.004809063863973395,1.0,0.1
+kappa,,,,,,,,fold,50.0,Santiago,-0.055717847466327554,-1.0,0.1
+dead_end_share,,,,,,,,fold,50.0,Santiago,-0.006995146918247777,-1.0,0.1
+degree4plus_share,,,,,,,,fold,50.0,Santiago,0.030407625967733047,1.0,0.1
+cycle_density,,,,,,,,fold,50.0,Santiago,0.0052656092343560945,1.0,0.1
+kappa,,,,,,,,fold,51.0,Sao Paulo,-0.057404057828183405,-1.0,0.1
+dead_end_share,,,,,,,,fold,51.0,Sao Paulo,-0.008526400001096487,-1.0,0.1
+degree4plus_share,,,,,,,,fold,51.0,Sao Paulo,0.03261898386297136,1.0,0.1
+cycle_density,,,,,,,,fold,51.0,Sao Paulo,0.0033924210993846182,1.0,0.1
+kappa,,,,,,,,fold,52.0,Dubai,-0.056018822355668164,-1.0,0.1
+dead_end_share,,,,,,,,fold,52.0,Dubai,-0.0068343455251507895,-1.0,0.1
+degree4plus_share,,,,,,,,fold,52.0,Dubai,0.03087343560820335,1.0,0.1
+cycle_density,,,,,,,,fold,52.0,Dubai,0.005104273665565123,1.0,0.1
+kappa,,,,,,,,fold,53.0,Istanbul,-0.05769018377481424,-1.0,0.1
+dead_end_share,,,,,,,,fold,53.0,Istanbul,-0.008090028548134703,-1.0,0.1
+degree4plus_share,,,,,,,,fold,53.0,Istanbul,0.03213902273144667,1.0,0.1
+cycle_density,,,,,,,,fold,53.0,Istanbul,0.004527381703116173,1.0,0.1
+kappa,,,,,,,,fold,54.0,Riyadh,-0.05924185536451501,-1.0,0.1
+dead_end_share,,,,,,,,fold,54.0,Riyadh,-0.007502965531841502,-1.0,0.1
+degree4plus_share,,,,,,,,fold,54.0,Riyadh,0.031804776097960286,1.0,0.1
+cycle_density,,,,,,,,fold,54.0,Riyadh,0.006795582712962614,1.0,0.1
+kappa,,,,,,,,fold,55.0,Tehran,-0.04445076734335472,-1.0,0.1778279410038923
+dead_end_share,,,,,,,,fold,55.0,Tehran,-0.0013296712031442975,-1.0,0.1778279410038923
+degree4plus_share,,,,,,,,fold,55.0,Tehran,0.022784406238835396,1.0,0.1778279410038923
+cycle_density,,,,,,,,fold,55.0,Tehran,0.005315168005201855,1.0,0.1778279410038923
+kappa,,,,,,,,fold,56.0,Tel Aviv,-0.05694508070177073,-1.0,0.1
+dead_end_share,,,,,,,,fold,56.0,Tel Aviv,-0.008723876973952618,-1.0,0.1
+degree4plus_share,,,,,,,,fold,56.0,Tel Aviv,0.032029525249320616,1.0,0.1
+cycle_density,,,,,,,,fold,56.0,Tel Aviv,0.0033675071341242313,1.0,0.1
+kappa,,,,,,,,fold,57.0,Boston,-0.057896681728703395,-1.0,0.1
+dead_end_share,,,,,,,,fold,57.0,Boston,-0.00806524750779597,-1.0,0.1
+degree4plus_share,,,,,,,,fold,57.0,Boston,0.032130366218361794,1.0,0.1
+cycle_density,,,,,,,,fold,57.0,Boston,0.004834278142995266,1.0,0.1
+kappa,,,,,,,,fold,58.0,Chicago,-0.055057178236865206,-1.0,0.1
+dead_end_share,,,,,,,,fold,58.0,Chicago,-0.005833108581995039,-1.0,0.1
+degree4plus_share,,,,,,,,fold,58.0,Chicago,0.027768051157602818,1.0,0.1
+cycle_density,,,,,,,,fold,58.0,Chicago,0.007994738086046033,1.0,0.1
+kappa,,,,,,,,fold,59.0,Los Angeles,-0.05542573248884619,-1.0,0.1
+dead_end_share,,,,,,,,fold,59.0,Los Angeles,-0.007843433742093758,-1.0,0.1
+degree4plus_share,,,,,,,,fold,59.0,Los Angeles,0.031199423427827038,1.0,0.1
+cycle_density,,,,,,,,fold,59.0,Los Angeles,0.0039877687318694705,1.0,0.1
+kappa,,,,,,,,fold,60.0,Miami,-0.057746850516885224,-1.0,0.1
+dead_end_share,,,,,,,,fold,60.0,Miami,-0.007755017182895507,-1.0,0.1
+degree4plus_share,,,,,,,,fold,60.0,Miami,0.03197799168549133,1.0,0.1
+cycle_density,,,,,,,,fold,60.0,Miami,0.0056711286146342715,1.0,0.1
+kappa,,,,,,,,fold,61.0,Montreal,-0.0578225726762996,-1.0,0.1
+dead_end_share,,,,,,,,fold,61.0,Montreal,-0.00904046244036466,-1.0,0.1
+degree4plus_share,,,,,,,,fold,61.0,Montreal,0.032801405352201746,1.0,0.1
+cycle_density,,,,,,,,fold,61.0,Montreal,0.0034354084093314585,1.0,0.1
+kappa,,,,,,,,fold,62.0,New York City,-0.05718541489123353,-1.0,0.1
+dead_end_share,,,,,,,,fold,62.0,New York City,-0.00822926355699935,-1.0,0.1
+degree4plus_share,,,,,,,,fold,62.0,New York City,0.031324478312122574,1.0,0.1
+cycle_density,,,,,,,,fold,62.0,New York City,0.005209270104291452,1.0,0.1
+kappa,,,,,,,,fold,63.0,San Francisco,-0.05828384445014608,-1.0,0.1
+dead_end_share,,,,,,,,fold,63.0,San Francisco,-0.008739913159299464,-1.0,0.1
+degree4plus_share,,,,,,,,fold,63.0,San Francisco,0.03187326068907656,1.0,0.1
+cycle_density,,,,,,,,fold,63.0,San Francisco,0.005035309911618949,1.0,0.1
+kappa,,,,,,,,fold,64.0,Seattle,-0.05829206555181249,-1.0,0.1
+dead_end_share,,,,,,,,fold,64.0,Seattle,-0.008318662558555706,-1.0,0.1
+degree4plus_share,,,,,,,,fold,64.0,Seattle,0.03252792880276942,1.0,0.1
+cycle_density,,,,,,,,fold,64.0,Seattle,0.004680336412656777,1.0,0.1
+kappa,,,,,,,,fold,65.0,Toronto,-0.05758827265940513,-1.0,0.1
+dead_end_share,,,,,,,,fold,65.0,Toronto,-0.010091555159296606,-1.0,0.1
+degree4plus_share,,,,,,,,fold,65.0,Toronto,0.0335513109355496,1.0,0.1
+cycle_density,,,,,,,,fold,65.0,Toronto,0.0014975699181552643,1.0,0.1
+kappa,,,,,,,,fold,66.0,Vancouver,-0.05724162915593401,-1.0,0.1
+dead_end_share,,,,,,,,fold,66.0,Vancouver,-0.008186634053018768,-1.0,0.1
+degree4plus_share,,,,,,,,fold,66.0,Vancouver,0.03187425426272512,1.0,0.1
+cycle_density,,,,,,,,fold,66.0,Vancouver,0.004487420018509089,1.0,0.1
+kappa,,,,,,,,fold,67.0,Auckland,-0.058033967347290494,-1.0,0.1
+dead_end_share,,,,,,,,fold,67.0,Auckland,-0.009096346459274665,-1.0,0.1
+degree4plus_share,,,,,,,,fold,67.0,Auckland,0.032828975818373976,1.0,0.1
+cycle_density,,,,,,,,fold,67.0,Auckland,0.0033953477449218256,1.0,0.1
+kappa,,,,,,,,fold,68.0,Brisbane,-0.05835584783623516,-1.0,0.1
+dead_end_share,,,,,,,,fold,68.0,Brisbane,-0.008943091013837765,-1.0,0.1
+degree4plus_share,,,,,,,,fold,68.0,Brisbane,0.0325259282453501,1.0,0.1
+cycle_density,,,,,,,,fold,68.0,Brisbane,0.004045613477827725,1.0,0.1
+kappa,,,,,,,,fold,69.0,Melbourne,-0.056800074944177076,-1.0,0.1
+dead_end_share,,,,,,,,fold,69.0,Melbourne,-0.008030991019051296,-1.0,0.1
+degree4plus_share,,,,,,,,fold,69.0,Melbourne,0.03219195714950121,1.0,0.1
+cycle_density,,,,,,,,fold,69.0,Melbourne,0.0036280288655683862,1.0,0.1
+kappa,,,,,,,,fold,70.0,Sydney,-0.05793553006163572,-1.0,0.1
+dead_end_share,,,,,,,,fold,70.0,Sydney,-0.008797689080903281,-1.0,0.1
+degree4plus_share,,,,,,,,fold,70.0,Sydney,0.032374319945437005,1.0,0.1
+cycle_density,,,,,,,,fold,70.0,Sydney,0.00393856281625915,1.0,0.1

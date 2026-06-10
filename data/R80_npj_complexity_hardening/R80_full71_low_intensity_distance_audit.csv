@@ -1,0 +1,11 @@
+scope,swap_fraction,n_records,metric,metric_label,mean_abs_delta,ci95_low_abs_delta,ci95_high_abs_delta
+full71_low_intensity,0.005,71,delta_connected_components,Connected components,4.901408450704225,3.565659227643489,6.237157673764961
+full71_low_intensity,0.005,71,delta_bridge_edge_share,Bridge-edge share,0.00019935322020732686,0.0001504210247403276,0.0002482854156743261
+full71_low_intensity,0.005,71,delta_articulation_point_share,Articulation-point share,0.0002734377681973581,0.00020907306701340532,0.00033780246938131095
+full71_low_intensity,0.005,71,delta_largest_biconnected_node_fraction,Largest biconnected fraction,0.0023062048344542063,0.0007533344925260551,0.0038590751763823575
+full71_low_intensity,0.005,71,delta_cyclomatic_density,Cyclomatic density,0.00013686324996741545,0.0001094084287415035,0.0001643180711933274
+full71_low_intensity,0.005,71,delta_dual_endpoint_degree_mean,Dual endpoint degree mean,0.0,0.0,0.0
+full71_low_intensity,0.005,71,delta_dual_endpoint_degree_cv,Dual endpoint degree CV,6.792774431216454e-05,5.272828061768228e-05,8.312720800664681e-05
+full71_low_intensity,0.005,71,delta_angular_entropy,Angular entropy,0.007709417343855411,0.0070047009115270864,0.008414133776183734
+full71_low_intensity,0.005,71,delta_straight_angle_share_10deg,Straight-angle share,0.0032697688892203993,0.0030761742457795834,0.003463363532661215
+full71_low_intensity,0.005,71,delta_right_angle_share_10deg,Right-angle share,0.005093165164297378,0.004656369963517114,0.005529960365077642

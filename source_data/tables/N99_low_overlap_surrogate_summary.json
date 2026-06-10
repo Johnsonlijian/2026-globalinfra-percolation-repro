@@ -1,0 +1,24 @@
+{
+  "round": "N99_low_overlap_geometry_surrogate",
+  "status": "pass_low_overlap_stratified_audit",
+  "n_records_total": 24,
+  "n_records_usable": 24,
+  "n_cities": 12,
+  "target_swap_fractions": [
+    0.04,
+    0.08
+  ],
+  "low_overlap_jaccard_threshold": 0.9,
+  "n_records_below_low_overlap_jaccard": 22,
+  "min_edge_jaccard": 0.7828696982775533,
+  "mean_edge_jaccard": 0.8476068800914627,
+  "ci95_edge_jaccard_low": 0.8312251089610749,
+  "ci95_edge_jaccard_high": 0.8639886512218504,
+  "mean_road_minus_geometry_fine": -0.005624999999999987,
+  "ci95_road_minus_geometry_fine_low": -0.016362185233529784,
+  "ci95_road_minus_geometry_fine_high": 0.005112185233529811,
+  "mean_accepted_swaps_per_edge": 0.05218771885977188,
+  "mean_length_bin_tvd": 0.0,
+  "max_degree_drift": 0.0,
+  "claim_boundary": "Stratified audit only. The test asks whether the implemented strict non-crossing local-swap algorithm can be pushed toward lower exact edge overlap while preserving degree and length-bin constraints. It is not a full planar-ensemble mixing proof."
+}

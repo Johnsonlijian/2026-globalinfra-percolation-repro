@@ -1,0 +1,41 @@
+panel,record_type,target,model_group,model_label,metric,value,n,source_model_group,covariate,macro_region
+a,nested_model_ladder,road_gap,M0_size,M0 size,cv5_r2,0.0798157243414321,71,,,
+a,nested_model_ladder,road_gap,M0_size,M0 size,leave_region_out_r2,0.0568324863523594,71,,,
+a,nested_model_ladder,road_gap,M1_degree,M1 degree,cv5_r2,0.3818586055962629,71,,,
+a,nested_model_ladder,road_gap,M1_degree,M1 degree,leave_region_out_r2,0.4115636969696529,71,,,
+a,nested_model_ladder,road_gap,M2_degree_edge_scale,M2 + edge scale,cv5_r2,0.3799863794095725,71,,,
+a,nested_model_ladder,road_gap,M2_degree_edge_scale,M2 + edge scale,leave_region_out_r2,0.3259400022003845,71,,,
+a,nested_model_ladder,road_gap,M3_embedded_form,M3 embedded form,cv5_r2,0.4097188355260461,71,,,
+a,nested_model_ladder,road_gap,M3_embedded_form,M3 embedded form,leave_region_out_r2,0.3961184751953727,71,,,
+a,nested_model_ladder,road_gap,M4_embedded_form_public_controls,M4 + public controls,cv5_r2,0.3480404879441049,71,,,
+a,nested_model_ladder,road_gap,M4_embedded_form_public_controls,M4 + public controls,leave_region_out_r2,0.3692174949543791,71,,,
+a,nested_model_ladder,road_minus_spatial,M0_size,M0 size,cv5_r2,0.0931336515854095,71,,,
+a,nested_model_ladder,road_minus_spatial,M0_size,M0 size,leave_region_out_r2,0.0582429120420516,71,,,
+a,nested_model_ladder,road_minus_spatial,M1_degree,M1 degree,cv5_r2,0.0990788629352359,71,,,
+a,nested_model_ladder,road_minus_spatial,M1_degree,M1 degree,leave_region_out_r2,0.1980024270316834,71,,,
+a,nested_model_ladder,road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,cv5_r2,0.2614451581657577,71,,,
+a,nested_model_ladder,road_minus_spatial,M2_degree_edge_scale,M2 + edge scale,leave_region_out_r2,0.1182573022451193,71,,,
+a,nested_model_ladder,road_minus_spatial,M3_embedded_form,M3 embedded form,cv5_r2,0.2081217325947196,71,,,
+a,nested_model_ladder,road_minus_spatial,M3_embedded_form,M3 embedded form,leave_region_out_r2,0.2960063021529121,71,,,
+a,nested_model_ladder,road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,cv5_r2,0.0598039994541272,71,,,
+a,nested_model_ladder,road_minus_spatial,M4_embedded_form_public_controls,M4 + public controls,leave_region_out_r2,0.2932422848681261,71,,,
+b,public_control_screen,road_gap,public_only,,cv_r2,0.1115158653171577,71,wdi_only,,
+b,public_control_screen,road_gap,road_form_only,,cv_r2,0.3439951084746926,71,graph_only,,
+b,public_control_screen,road_gap,road_form_plus_public,,cv_r2,0.331310658612551,71,graph_plus_ghsl_wdi,,
+b,public_control_screen,road_minus_spatial,public_only,,cv_r2,0.1186932673755699,71,ghsl_only,,
+b,public_control_screen,road_minus_spatial,road_form_only,,cv_r2,0.3141884182541898,71,graph_only,,
+b,public_control_screen,road_minus_spatial,road_form_plus_public,,cv_r2,0.3187656344037147,71,graph_plus_ghsl_wdi,,
+c,high_order_correlation,road_gap,,,spearman_rho,-0.6307176391683432,71,,dual_degree_mean,
+c,high_order_correlation,road_gap,,,spearman_rho,-0.5333333333333332,71,,largest_biconnected_node_fraction,
+c,high_order_correlation,road_gap,,,spearman_rho,0.5237089201877934,71,,bridge_edge_share,
+c,high_order_correlation,road_gap,,,spearman_rho,0.5139168343393695,71,,articulation_point_share,
+c,high_order_correlation,road_gap,,,spearman_rho,-0.4134138162307176,71,,straight_angle_share_10deg,
+c,high_order_correlation,road_gap,,,spearman_rho,0.3819584171696847,71,,median_intersection_angle_deg,
+c,high_order_correlation,road_gap,,,spearman_rho,0.3189470154258886,71,,angular_entropy,
+e,leave_region_out_region_error,road_minus_spatial,M3_embedded_form,,leave_region_out_mae_region,0.01663295506328,12,,,Africa
+e,leave_region_out_region_error,road_minus_spatial,M3_embedded_form,,leave_region_out_mae_region,0.0143704910912145,19,,,Asia
+e,leave_region_out_region_error,road_minus_spatial,M3_embedded_form,,leave_region_out_mae_region,0.0156948083175043,11,,,Europe
+e,leave_region_out_region_error,road_minus_spatial,M3_embedded_form,,leave_region_out_mae_region,0.0095269527941247,10,,,Latin America
+e,leave_region_out_region_error,road_minus_spatial,M3_embedded_form,,leave_region_out_mae_region,0.0079411706265285,5,,,Middle East
+e,leave_region_out_region_error,road_minus_spatial,M3_embedded_form,,leave_region_out_mae_region,0.0146384270281827,10,,,North America
+e,leave_region_out_region_error,road_minus_spatial,M3_embedded_form,,leave_region_out_mae_region,0.0156464538370186,4,,,Oceania

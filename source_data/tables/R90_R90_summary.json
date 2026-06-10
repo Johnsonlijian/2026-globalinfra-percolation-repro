@@ -1,0 +1,24 @@
+{
+  "status": "pass",
+  "round": "R90_finegrid_edge_audit",
+  "n_records_total": 84,
+  "n_records_pass": 84,
+  "n_records_fail": 0,
+  "n_cities": 21,
+  "swap_fractions": [
+    0.005,
+    0.01
+  ],
+  "mean_fine_road_minus_spatial": 0.040595238095238045,
+  "ci95_fine_road_minus_spatial_low": 0.0312425041935217,
+  "ci95_fine_road_minus_spatial_high": 0.04994797199695439,
+  "mean_fine_road_minus_geometry": -0.003214285714285721,
+  "ci95_fine_road_minus_geometry_low": -0.010718295482511363,
+  "ci95_fine_road_minus_geometry_high": 0.004289724053939922,
+  "mean_fine_spatial_minus_geometry": 0.04380952380952376,
+  "ci95_fine_spatial_minus_geometry_low": 0.03705670647115157,
+  "ci95_fine_spatial_minus_geometry_high": 0.05056234114789594,
+  "mean_geometry_edge_jaccard": 0.971392439846722,
+  "mean_geometry_lcc_curve_l2": 0.03239940678406788,
+  "claim_boundary": "R90 regenerates fine-grid null thresholds and exact edge-overlap diagnostics for the 21-city geometry subset. It is an estimator/copy-artifact stress test, not a mixing theorem or causal rule."
+}

@@ -1,78 +1,173 @@
-{
-  "generated_at": "2026-06-04T19:23:32",
-  "project": "2026-GlobalInfra-Percolation",
-  "target_package": "Communications Physics v29/R72 submission candidate",
-  "raw_data_boundary": "Raw third-party OSM/Geofabrik/GHSL/WDI downloads are not redistributed; source-data bundle contains derived project tables and provider links/QC records.",
-  "runs": [
-    {
-      "round": "R41",
-      "analysis": "degree-preserving nulls",
-      "data_directory": "data/R41_degree_preserving_nulls",
-      "purpose": "six configuration-model null projections per eight-city graph",
-      "status": "completed"
-    },
-    {
-      "round": "R56",
-      "analysis": "spatial-scale nulls",
-      "data_directory": "data/R56_spatial_length_constrained_nulls",
-      "purpose": "degree-preserving chord-length-bin constrained nulls, four replicates per main city",
-      "status": "completed"
-    },
-    {
-      "round": "R61",
-      "analysis": "71-city center-window screen",
-      "data_directory": "data/R61_nature_cities_scale_screen",
-      "purpose": "10-km standardized OSMnx city windows",
-      "status": "completed"
-    },
-    {
-      "round": "R62",
-      "analysis": "urban-form mechanism screen",
-      "data_directory": "data/R62_urban_form_mechanism",
-      "purpose": "road-form covariates and descriptive Ridge screen",
-      "status": "completed"
-    },
-    {
-      "round": "R63",
-      "analysis": "high-order embedded metrics",
-      "data_directory": "data/R63_high_order_external_covariates",
-      "purpose": "block/bridge/angular/dual metrics and subset expansion",
-      "status": "completed"
-    },
-    {
-      "round": "R64",
-      "analysis": "71-city spatial null screen",
-      "data_directory": "data/R64_71city_spatial_null_screen",
-      "purpose": "one spatial-scale null per 71-city window",
-      "status": "completed"
-    },
-    {
-      "round": "R65",
-      "analysis": "public covariate controls",
-      "data_directory": "data/R65_public_covariates_and_controls",
-      "purpose": "GHSL/WDI matching and model comparisons",
-      "status": "completed"
-    },
-    {
-      "round": "R67",
-      "analysis": "geometry null sensitivity",
-      "data_directory": "data/R67_geometry_null_sensitivity",
-      "purpose": "21-city multi-replicate strict non-crossing geometry-null sensitivity",
-      "status": "completed"
-    },
-    {
-      "round": "R68",
-      "analysis": "full 71-city geometry null ensemble",
-      "data_directory": "data/R68_full71_geometry_null_ensemble",
-      "purpose": "one low-intensity strict geometry-null record per 71-city window",
-      "status": "completed"
-    },
-    {
-      "round": "R72",
-      "analysis": "matched-intensity geometry contrast",
-      "data_directory": "data/R72_geometry_defense",
-      "purpose": "spatial vs strict-geometry nulls at matched accepted-swap targets",
-      "status": "completed"
-    }
-  ]
-}
+[
+  {
+    "round": "R41",
+    "analysis": "degree-preserving nulls",
+    "data_directory": "data/R41_degree_preserving_nulls",
+    "purpose": "six configuration-model null projections per eight-city graph",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R56",
+    "analysis": "spatial-scale nulls",
+    "data_directory": "data/R56_spatial_length_constrained_nulls",
+    "purpose": "degree-preserving chord-length-bin constrained nulls, four replicates per main city",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R61",
+    "analysis": "71-city center-window screen",
+    "data_directory": "data/R61_nature_cities_scale_screen",
+    "purpose": "10-km standardized OSMnx city windows",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R62",
+    "analysis": "urban-form mechanism screen",
+    "data_directory": "data/R62_urban_form_mechanism",
+    "purpose": "road-form covariates and descriptive Ridge screen",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R63",
+    "analysis": "high-order embedded metrics",
+    "data_directory": "data/R63_high_order_external_covariates",
+    "purpose": "block/bridge/angular/dual metrics and subset expansion",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R64",
+    "analysis": "71-city spatial null screen",
+    "data_directory": "data/R64_71city_spatial_null_screen",
+    "purpose": "one spatial-scale null per 71-city window",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R65",
+    "analysis": "public covariate controls",
+    "data_directory": "data/R65_public_covariates_and_controls",
+    "purpose": "GHSL/WDI matching and model comparisons",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R67",
+    "analysis": "geometry null sensitivity",
+    "data_directory": "data/R67_geometry_null_sensitivity",
+    "purpose": "21-city multi-replicate strict non-crossing geometry-null sensitivity",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R68",
+    "analysis": "full 71-city geometry null ensemble",
+    "data_directory": "data/R68_full71_geometry_null_ensemble",
+    "purpose": "one low-intensity strict geometry-null record per 71-city window",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R72",
+    "analysis": "matched-intensity geometry contrast",
+    "data_directory": "data/R72_geometry_defense",
+    "purpose": "spatial vs strict-geometry nulls at matched accepted-swap targets",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R39",
+    "analysis": "threshold estimator sensitivity",
+    "data_directory": "data/R39_threshold_sensitivity",
+    "purpose": "eight-city fine-grid and rank-order threshold estimator audit",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R73",
+    "analysis": "urban-form nested cross-validation",
+    "data_directory": "data/R73_urban_form_nested_cv",
+    "purpose": "nested model ladder and leave-region-out validation for road-form mechanism signal",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R75",
+    "analysis": "submission hardening source tables",
+    "data_directory": "data/R75_submission_hardening",
+    "purpose": "submission-facing aliases, feature groups, figure source data and geometry mobility proxy tables",
+    "status": "completed",
+    "script_or_source": null,
+    "output_files": null
+  },
+  {
+    "round": "R81",
+    "analysis": null,
+    "data_directory": null,
+    "purpose": "Full 71-city high-intensity strict non-crossing geometry-null ensemble",
+    "status": "complete",
+    "script_or_source": "scripts/build_R81_full71_high_intensity_geometry_null_ensemble.py",
+    "output_files": "data/R81_full71_high_intensity_geometry_null_ensemble/full71_geometry_null_replicates.csv; figures/Fig_R81_full71_high_intensity_geometry_null_ensemble.svg"
+  },
+  {
+    "round": "R90",
+    "analysis": "fine-grid null and exact edge-overlap audit",
+    "data_directory": "data/R90_finegrid_edge_audit",
+    "purpose": "Fine-grid matched null-threshold and exact edge-overlap audit",
+    "status": "complete",
+    "script_or_source": "scripts/build_R90_finegrid_edge_audit.py",
+    "output_files": "data/R90_finegrid_edge_audit/R90_finegrid_null_thresholds.csv; data/R90_finegrid_edge_audit/R90_edge_overlap_audit.csv; figures/Fig_R90_finegrid_edge_audit.svg"
+  },
+  {
+    "round": "R95",
+    "analysis": "non-backtracking spectral audit",
+    "data_directory": "data/R95_nonbacktracking_spectral_layer",
+    "purpose": "Test whether a non-backtracking spectral threshold proxy closes the road threshold gap",
+    "status": "complete",
+    "script_or_source": "scripts/build_R95_nonbacktracking_spectral_layer.py; scripts/build_R95_nb_iteration_stability_audit.py",
+    "output_files": "data/R95_nonbacktracking_spectral_layer/N95_nonbacktracking_thresholds.csv; data/R95_nonbacktracking_spectral_layer/N95_cebh_nb_geometry_decomposition.csv; data/R95_nonbacktracking_spectral_layer/R95_nb_iteration_stability_audit.csv; figures/Fig_R95_nonbacktracking_spectral_layer.svg"
+  },
+  {
+    "round": "N99",
+    "analysis": "compact transfer-error correction and permutation audit",
+    "data_directory": "data/N99_prediction_correction_law",
+    "purpose": "Cross-validated empirical correction of the CEBH road-threshold transfer error",
+    "status": "complete",
+    "script_or_source": "scripts/build_N99_prediction_correction_law.py",
+    "output_files": "data/N99_prediction_correction_law/N99_prediction_city_predictions.csv; data/N99_prediction_correction_law/N99_prediction_permutation_baseline.csv; figures/Fig_N99_compact_correction.svg"
+  },
+  {
+    "round": "N99",
+    "analysis": "12-city low-overlap strict-geometry surrogate audit",
+    "data_directory": "data/N99_low_overlap_geometry_surrogate",
+    "purpose": "Test whether the strict non-crossing local-swap null can be pushed to lower exact edge overlap",
+    "status": "complete_stratified_audit",
+    "script_or_source": "scripts/build_N99_low_overlap_geometry_surrogate.py",
+    "output_files": "data/N99_low_overlap_geometry_surrogate/N99_low_overlap_surrogate_records.csv; figures/Fig_N99_low_overlap_geometry_surrogate.svg"
+  },
+  {
+    "round": "R100",
+    "analysis": "main Fig. 4 geometry-null contrast hardening",
+    "data_directory": "data/R100_main_figure_hardening",
+    "purpose": "Promote the 12-city low-overlap evidence into the main geometry-null figure",
+    "status": "complete",
+    "script_or_source": "scripts/build_R100_main_fig4_geometry_null_contrast.py",
+    "output_files": "data/R100_main_figure_hardening/R100_geometry_null_contrast_source_data.csv; figures/Fig_R100_geometry_null_contrast.svg; submission/npj_complexity/target_submission/figures/Fig5_geometry_null_contrast.svg"
+  }
+]

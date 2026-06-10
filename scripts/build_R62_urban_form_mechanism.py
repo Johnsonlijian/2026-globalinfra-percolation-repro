@@ -1,4 +1,4 @@
-﻿"""R62 urban-form covariates and stratified geometry-null pilots.
+"""R62 urban-form covariates and stratified geometry-null pilots.
 
 R61 showed that the CEBH road-threshold gap persists across 71 standardized
 city windows. R62 adds a city-mechanism layer: road-form covariates are
@@ -38,24 +38,16 @@ if str(SCRIPT_DIR) not in sys.path:
 
 import build_R56_spatial_length_constrained_nulls as r56  # noqa: E402
 import build_R60_expansion_geometry_nulls as r60  # noqa: E402
+import pub_style  # noqa: E402
 
 
 OUT = ROOT / "data" / "R62_urban_form_mechanism"
-ROUND_DIR = ROOT / "validation_reports" / "R62_urban_form_mechanism"
+ROUND_DIR = ROOT / "rounds" / "R62_urban_form_mechanism"
 FIG_BASE = ROOT / "figures" / "Fig_R62_urban_form_mechanism"
 R61_RESULTS = ROOT / "data" / "R61_nature_cities_scale_screen" / "central_window_screen_results.csv"
 
 REGION_ORDER = ["Europe", "Middle East", "Africa", "Latin America", "Asia", "North America", "Oceania"]
-REGION_COLORS = {
-    "Europe": "#4E79A7",
-    "Middle East": "#EDC948",
-    "Africa": "#59A14F",
-    "Latin America": "#B07AA1",
-    "Asia": "#F28E2B",
-    "North America": "#E15759",
-    "Oceania": "#76B7B2",
-    "Other": "#8C8C8C",
-}
+REGION_COLORS = pub_style.REGION_COLORS
 
 ARTERIAL = {
     "motorway",
@@ -678,24 +670,12 @@ def run_geometry_nulls(selected: pd.DataFrame, args: argparse.Namespace) -> tupl
 
 
 def set_plot_style() -> None:
-    mpl.rcParams.update(
-        {
-            "font.family": "sans-serif",
-            "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans", "sans-serif"],
-            "svg.fonttype": "none",
-            "pdf.fonttype": 42,
-            "font.size": 7,
-            "axes.spines.right": False,
-            "axes.spines.top": False,
-            "axes.linewidth": 0.8,
-            "legend.frameon": False,
-        }
-    )
+    pub_style.apply()
 
 
 def make_figure(cov: pd.DataFrame, corr: pd.DataFrame, pca: pd.DataFrame, selected: pd.DataFrame, geom: pd.DataFrame) -> None:
     set_plot_style()
-    fig = plt.figure(figsize=(7.2, 6.6), constrained_layout=True)
+    fig = plt.figure(figsize=(pub_style.FIG_WIDTH_2COL, 6.6), constrained_layout=True)
     gs = fig.add_gridspec(2, 2, height_ratios=[1.0, 1.0], width_ratios=[1.0, 1.0])
 
     ax_a = fig.add_subplot(gs[0, 0])
@@ -711,22 +691,36 @@ def make_figure(cov: pd.DataFrame, corr: pd.DataFrame, pca: pd.DataFrame, select
             label=str(region),
         )
     ax_a.set_xlabel("Fourfold orientation order")
-    ax_a.set_ylabel("Road threshold gap")
-    ax_a.set_title("a  Urban-form screen", loc="left", fontweight="bold")
-    ax_a.grid(color="#E6E6E6", lw=0.4)
-    ax_a.legend(loc="upper right", fontsize=5.3, ncol=2, handletextpad=0.3, columnspacing=0.8)
+    ax_a.set_ylabel("Road-minus-CEBH gap")
+    pub_style.panel_title(ax_a, "a", "Urban-form screen (71 windows)")
+    pub_style.light_grid(ax_a, axis="both")
+    handles, labels = ax_a.get_legend_handles_labels()
+    fig.legend(
+        handles,
+        labels,
+        loc="upper center",
+        bbox_to_anchor=(0.5, 1.035),
+        ncol=7,
+        fontsize=6.0,
+        handletextpad=0.25,
+        columnspacing=0.9,
+        frameon=False,
+    )
 
     ax_b = fig.add_subplot(gs[0, 1])
     top = corr.head(10).copy().iloc[::-1]
-    colors = ["#4E79A7" if v >= 0 else "#E15759" for v in top["spearman_rho"]]
+    colors = [
+        pub_style.COLORS["geometry_null"] if v < 0 else pub_style.COLORS["spatial_null"]
+        for v in top["spearman_rho"]
+    ]
     labels = [c.replace("_", " ") for c in top["covariate"]]
     ax_b.barh(np.arange(len(top)), top["spearman_rho"], color=colors, alpha=0.88)
     ax_b.axvline(0, color="#222222", lw=0.8)
     ax_b.set_yticks(np.arange(len(top)))
     ax_b.set_yticklabels(labels, fontsize=6)
-    ax_b.set_xlabel("Spearman rho with road gap")
-    ax_b.set_title("b  Candidate mechanism correlates", loc="left", fontweight="bold")
-    ax_b.grid(axis="x", color="#E6E6E6", lw=0.4)
+    ax_b.set_xlabel(r"Spearman $\rho$ with road-minus-CEBH gap")
+    pub_style.panel_title(ax_b, "b", "Road-form correlations")
+    pub_style.light_grid(ax_b, axis="x")
 
     ax_c = fig.add_subplot(gs[1, 0])
     selected_cities = set(selected["city"].astype(str))
@@ -750,49 +744,66 @@ def make_figure(cov: pd.DataFrame, corr: pd.DataFrame, pca: pd.DataFrame, select
         linewidth=1.2,
         label="geometry-null subset",
     )
+    # Label only morphology-space extremes to avoid overlapping text.
+    chosen_sorted = chosen.assign(_r=np.hypot(chosen["morph_pc1"], chosen["morph_pc2"])).sort_values(
+        "_r", ascending=False
+    )
     label_offsets = {
-        "Amsterdam": (0.12, 0.28),
-        "Dubai": (-0.85, -0.35),
-        "Sydney": (0.15, -0.32),
-        "Rio de Janeiro": (-1.15, -0.28),
-        "Singapore": (0.10, 0.18),
-        "Seattle": (0.10, 0.18),
-        "Dar es Salaam": (0.12, -0.18),
+        "Dubai": (-0.95, -0.40),
+        "Rio de Janeiro": (-1.35, -0.30),
+        "Buenos Aires": (0.12, 0.22),
     }
-    for _, row in chosen.iterrows():
-        dx, dy = label_offsets.get(str(row["city"]), (0.05, 0.05))
-        ax_c.text(row["morph_pc1"] + dx, row["morph_pc2"] + dy, row["city"], fontsize=5.8)
+    for _, row in chosen_sorted.head(7).iterrows():
+        dx, dy = label_offsets.get(str(row["city"]), (0.10, 0.16))
+        ax_c.text(
+            row["morph_pc1"] + dx,
+            row["morph_pc2"] + dy,
+            row["city"],
+            fontsize=5.8,
+            color=pub_style.COLORS["annot"],
+        )
     ax_c.set_xlabel("Morphology PC1")
     ax_c.set_ylabel("Morphology PC2")
-    ax_c.set_title("c  Stratified geometry-null subset", loc="left", fontweight="bold")
-    ax_c.grid(color="#E6E6E6", lw=0.4)
+    pub_style.panel_title(ax_c, "c", "Stratified geometry-null subset")
+    pub_style.light_grid(ax_c, axis="both")
+    ax_c.legend(loc="lower left", fontsize=6.0)
 
     ax_d = fig.add_subplot(gs[1, 1])
     if len(geom):
         g = geom.sort_values("road_gap").reset_index(drop=True)
         x = np.arange(len(g))
-        ax_d.plot(x, g["road_gap"], "o-", color="#333333", lw=1.1, ms=4.2, label="Observed window gap")
-        ax_d.plot(x, g["geometry_null_gap_mean"], "o-", color="#F28E2B", lw=1.1, ms=4.2, label="Geometry-null gap")
+        ax_d.plot(
+            x,
+            g["road_gap"],
+            "o-",
+            color=pub_style.COLORS["observed"],
+            lw=1.0,
+            ms=3.6,
+            label="Observed window gap",
+        )
+        ax_d.plot(
+            x,
+            g["geometry_null_gap_mean"],
+            "o-",
+            color=pub_style.COLORS["geometry_null"],
+            lw=1.0,
+            ms=3.6,
+            label="Geometry-null gap",
+        )
         for i, row in g.iterrows():
-            ax_d.vlines(i, row["geometry_null_gap_mean"], row["road_gap"], color="#C7C7C7", lw=0.8)
+            ax_d.vlines(i, row["geometry_null_gap_mean"], row["road_gap"], color="#C7C7C7", lw=0.7)
         ax_d.set_xticks(x)
-        ax_d.set_xticklabels(g["city"], rotation=35, ha="right", fontsize=6)
+        ax_d.set_xticklabels(g["city"], rotation=90, fontsize=5.8)
         ax_d.set_ylabel("Gap relative to CEBH")
-        ax_d.legend(loc="best", fontsize=6)
+        ax_d.legend(loc="upper left", fontsize=6.0)
     else:
         ax_d.text(0.5, 0.5, "Geometry-null pilot not run", ha="center", va="center", transform=ax_d.transAxes)
         ax_d.set_xticks([])
         ax_d.set_yticks([])
-    ax_d.set_title("d  Cross-region geometry-null pilot", loc="left", fontweight="bold")
-    ax_d.grid(axis="y", color="#E6E6E6", lw=0.4)
+    pub_style.panel_title(ax_d, "d", "Cross-region geometry-null pilot")
+    pub_style.light_grid(ax_d, axis="y")
 
-    for suffix, kwargs in {
-        ".pdf": {},
-        ".svg": {},
-        ".png": {"dpi": 450},
-        ".tiff": {"dpi": 600},
-    }.items():
-        fig.savefig(f"{FIG_BASE}{suffix}", bbox_inches="tight", **kwargs)
+    pub_style.save(fig, FIG_BASE)
     plt.close(fig)
 
 
@@ -895,7 +906,7 @@ road-class completeness and land-use covariates are added.
 - `figures/Fig_R62_urban_form_mechanism.tiff`
 """
     (OUT / "R62_report.md").write_text(report, encoding="utf-8")
-    (ROUND_DIR / "validation_report.md").write_text(report, encoding="utf-8")
+    (ROUND_DIR / "gate_report.md").write_text(report, encoding="utf-8")
 
 
 def parse_args() -> argparse.Namespace:
@@ -988,4 +999,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

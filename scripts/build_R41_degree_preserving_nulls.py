@@ -23,7 +23,7 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_R39 = ROOT / "data" / "R39_threshold_sensitivity" / "threshold_sensitivity_source_data.csv"
-DEFAULT_CACHE = ROOT / "cache" / "private_graphs"
+DEFAULT_CACHE = ROOT / "cache" / "local_graphs"
 DEFAULT_OUT = ROOT / "data" / "R41_degree_preserving_nulls"
 DEFAULT_FIGURE = ROOT / "figures" / "Fig_R41_degree_preserving_nulls"
 

@@ -134,7 +134,7 @@ def build_expanded_city_matrix() -> pd.DataFrame:
                 "spatial_null_gap_R56": float("nan"),
                 "road_minus_spatial_R56": float("nan"),
                 "remaining_fraction_after_spatial_R56": float("nan"),
-                "graph_cache_file": str(Path("cache") / "private_graphs" / graph_name),
+                "graph_cache_file": str(Path("cache") / "local_graphs" / graph_name),
                 "threshold_source": "coarser local-PBF diagnostic bond threshold, R24",
                 "claim_status": "diagnostic_extension",
             }

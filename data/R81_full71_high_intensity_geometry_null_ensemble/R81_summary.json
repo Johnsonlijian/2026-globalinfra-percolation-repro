@@ -1,0 +1,27 @@
+{
+  "status": "pass",
+  "round": "R81_full71_high_intensity_geometry_null_ensemble",
+  "expected_cities": 71,
+  "passed_cities": 71,
+  "n_replicates_total": 426,
+  "n_replicates_pass": 426,
+  "n_replicates_fail": 0,
+  "swap_fractions": [
+    0.01,
+    0.02
+  ],
+  "road_minus_geometry_mean": -0.0018192488262910812,
+  "road_minus_geometry_ci95_low": -0.004273968656743481,
+  "road_minus_geometry_ci95_high": 0.0006354710041613189,
+  "remaining_fraction_after_geometry_mean": -0.011706848031266188,
+  "remaining_fraction_after_geometry_ci95_low": -0.022605079806799443,
+  "remaining_fraction_after_geometry_ci95_high": -0.0008086162557329329,
+  "positive_residual_city_share": 0.19014084507042253,
+  "road_minus_spatial_mean": 0.09647887323943655,
+  "mean_residual_reduction_vs_spatial": 0.09829812206572765,
+  "max_degree_drift": 0.0,
+  "mean_length_bin_tvd": 1.7723049002458395e-07,
+  "mean_accepted_swaps_per_edge": 0.014997612747856121,
+  "reused_r67_records": 0,
+  "claim_boundary": "R81 is a full 71-city strict non-crossing geometry-null screen at higher accepted-swap intensity and multiple replicates per city. It is still an empirical constrained-null ensemble rather than a Markov-chain mixing proof, analytical theorem or causal design law."
+}
