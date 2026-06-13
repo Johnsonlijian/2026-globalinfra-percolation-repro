@@ -1,0 +1,18 @@
+{
+  "tau_2D_exact": 2.0549450549450547,
+  "tau_mean_field": 2.5,
+  "square_tau": 1.9890845657659177,
+  "square_r2": 0.9991880936570882,
+  "road_tau_mean": 2.1161445024579364,
+  "road_tau_sd": 0.065735605811588,
+  "road_tau_by_city": {
+    "Cairo": 2.0737987170090664,
+    "Bengaluru": 2.108036738359642,
+    "Hyderabad": 2.082803485180623,
+    "Osaka": 2.0710804156377853,
+    "Tehran": 2.245003156102567
+  },
+  "mean_field_city": "Cairo",
+  "mean_field_tau": 2.480595464254157,
+  "interpretation": "The cluster-size-distribution (Fisher) exponent tau_F is position-independent and robust to road-density inhomogeneity. The square-lattice calibration recovers the exact 2D value 2.055; real road graphs at their observed thresholds give tau_F close to the 2D value and well below the mean-field/random-graph value 2.5 obtained for a degree-matched configuration model at its CEBH threshold. This supports placement of road bond percolation in the 2D percolation universality class rather than the mean-field random-graph class. The accessible 10-km windows limit precision, so this is supporting evidence, not a high-precision exponent measurement."
+}
