@@ -169,5 +169,14 @@
     "status": "complete",
     "script_or_source": "scripts/build_R100_main_fig4_geometry_null_contrast.py",
     "output_files": "data/R100_main_figure_hardening/R100_geometry_null_contrast_source_data.csv; figures/Fig_R100_geometry_null_contrast.svg; submission/npj_complexity/target_submission/figures/Fig5_geometry_null_contrast.svg"
+  },
+  {
+    "round": "R103",
+    "analysis": "planar-lattice anchor",
+    "data_directory": "data/R103_planar_lattice_anchor",
+    "purpose": "Build a parameter-free honeycomb-square junction-composition anchor and estimator calibration for Fig. 2",
+    "status": "complete",
+    "script_or_source": "scripts/build_R103_planar_lattice_anchor.py",
+    "output_files": "data/R103_planar_lattice_anchor/R103_city_lattice_anchor.csv; data/R103_planar_lattice_anchor/R103_vertex_split_interpolation.csv; data/R103_planar_lattice_anchor/R103_summary.json; submission/npj_complexity/target_submission/figures/Fig2_planar_lattice_anchor.svg"
   }
 ]

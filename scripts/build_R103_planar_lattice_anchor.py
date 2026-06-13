@@ -269,11 +269,124 @@ def run_interpolation(p_grid_fine: np.ndarray, n_perm: int, seed: int) -> pd.Dat
 # --------------------------------------------------------------------------- #
 # Figure.
 # --------------------------------------------------------------------------- #
+def _hexagon(ax, cx, cy, r, color):
+    ang = np.deg2rad(np.arange(0, 360, 60) + 30)
+    xs, ys = cx + r * np.cos(ang), cy + r * np.sin(ang)
+    ax.plot(np.append(xs, xs[0]), np.append(ys, ys[0]), color=color, lw=1.0, solid_capstyle="round")
+
+
+def _honeycomb_patch(ax, x0, y0, color):
+    r = 0.42
+    dx = r * np.sqrt(3)
+    dy = r * 1.5
+    for j in range(2):
+        for i in range(3):
+            cx = x0 + i * dx + (j % 2) * dx / 2
+            cy = y0 + j * dy
+            _hexagon(ax, cx, cy, r, color)
+
+
+def _square_patch(ax, x0, y0, color):
+    s = 0.62
+    for i in range(3):
+        for j in range(2):
+            ax.add_patch(plt.Rectangle((x0 + i * s, y0 + j * s), s, s, fill=False, edgecolor=color, lw=1.0))
+
+
+def _random_blob(ax, cx, cy, color, seed=7):
+    rng = np.random.default_rng(seed)
+    pts = rng.normal(0, 0.62, size=(9, 2))
+    pts[:, 0] += cx
+    pts[:, 1] += cy
+    # spanning tree only -> visibly loop-free / tree-like
+    order = np.argsort(pts[:, 0])
+    for k in range(1, len(order)):
+        a, b = pts[order[k]], pts[order[rng.integers(0, k)]]
+        ax.plot([a[0], b[0]], [a[1], b[1]], color=color, lw=0.8, alpha=0.9, zorder=1)
+    ax.scatter(pts[:, 0], pts[:, 1], s=11, color=color, zorder=2, linewidths=0)
+
+
+def _junction(ax, cx, cy, kind, color):
+    L = 0.34
+    if kind == 3:  # Y / T three-way
+        for ang in (90, 210, 330):
+            a = np.deg2rad(ang)
+            ax.plot([cx, cx + L * np.cos(a)], [cy, cy + L * np.sin(a)], color=color, lw=1.3, solid_capstyle="round")
+    else:  # four-way cross
+        for ang in (0, 90, 180, 270):
+            a = np.deg2rad(ang)
+            ax.plot([cx, cx + L * np.cos(a)], [cy, cy + L * np.sin(a)], color=color, lw=1.3, solid_capstyle="round")
+    ax.scatter([cx], [cy], s=9, color=color, zorder=3, linewidths=0)
+
+
+def draw_mechanism_schematic(ax) -> None:
+    """Panel a: the physical idea - random graph fails; road junctions are the
+    coordinations of the honeycomb and square lattices; the threshold is their
+    junction-weighted mixture."""
+    ink = pub_style.COLORS["observed"]
+    hc = pub_style.COLORS["model"]       # honeycomb / 3-way
+    sq = pub_style.COLORS["spatial_null"]  # square / 4-way
+    road = pub_style.COLORS["geometry_null"]
+    bad = "#C0392B"
+
+    # Station 1: random graph (CEBH).
+    _random_blob(ax, 1.35, 1.65, "#8A8F96")
+    ax.text(1.35, 0.35, "Random graph\n(locally tree-like)", ha="center", va="top", fontsize=6.2, color=ink)
+    ax.text(1.35, 2.95, r"CEBH $p_c\approx0.47$", ha="center", va="bottom", fontsize=6.6, color=bad, fontweight="bold")
+    ax.text(1.35, 2.62, "overstates robustness", ha="center", va="bottom", fontsize=5.6, color=bad)
+
+    # cross-out arrow to indicate "roads are not this".
+    ax.annotate("", xy=(3.0, 1.6), xytext=(2.35, 1.6),
+                arrowprops={"arrowstyle": "-|>", "color": "#9AA0A6", "lw": 1.0})
+    ax.text(2.67, 1.95, "roads are\nplanar", ha="center", va="bottom", fontsize=5.6, color=pub_style.COLORS["annot"])
+
+    # Station 2: the two lattice primitives with their junctions.
+    _junction(ax, 3.65, 2.62, 3, hc)
+    _honeycomb_patch(ax, 3.35, 1.05, hc)
+    ax.text(3.95, 0.35, "3-way junction\n= honeycomb", ha="center", va="top", fontsize=6.0, color=hc)
+    ax.text(3.95, 3.0, r"$p_c=0.653$", ha="center", va="bottom", fontsize=6.2, color=hc)
+
+    _junction(ax, 5.95, 2.62, 4, sq)
+    _square_patch(ax, 5.55, 1.05, sq)
+    ax.text(6.18, 0.35, "4-way junction\n= square", ha="center", va="top", fontsize=6.0, color=sq)
+    ax.text(6.18, 3.0, r"$p_c=0.500$", ha="center", va="bottom", fontsize=6.2, color=sq)
+
+    # non-crossing constraint mark.
+    ax.plot([7.35, 7.75], [1.35, 1.75], color=ink, lw=1.0)
+    ax.plot([7.35, 7.75], [1.75, 1.35], color=ink, lw=1.0)
+    ax.plot([7.78, 8.18], [1.4, 1.7], color=bad, lw=1.6)
+    ax.plot([7.78, 8.18], [1.7, 1.4], color=bad, lw=1.6)
+    ax.text(7.77, 1.0, "no crossings", ha="center", va="top", fontsize=5.6, color=ink)
+
+    ax.annotate("", xy=(9.0, 1.6), xytext=(8.35, 1.6),
+                arrowprops={"arrowstyle": "-|>", "color": "#9AA0A6", "lw": 1.0})
+
+    # Station 3: the mixture / anchor.
+    ax.text(10.5, 2.7, "Real road network", ha="center", va="bottom", fontsize=6.4, color=ink, fontweight="bold")
+    ax.text(10.5, 2.05, r"$p_c=w_3(0.653)+w_4(0.500)$", ha="center", va="center", fontsize=6.8, color=ink)
+    ax.text(10.5, 1.35, r"observed $p_c\approx0.62$-$0.69$", ha="center", va="center", fontsize=6.6,
+            color=road, fontweight="bold")
+    ax.text(10.5, 0.75, "predicted with no fitting", ha="center", va="center", fontsize=5.8,
+            color=pub_style.COLORS["annot"])
+
+    ax.set_xlim(0.2, 12.2)
+    ax.set_ylim(0.0, 3.3)
+    ax.set_aspect("equal")
+    ax.axis("off")
+
+
 def make_figure(city: pd.DataFrame, calib: dict, interp: pd.DataFrame, summary: dict) -> None:
     pub_style.apply()
-    fig, axes = plt.subplots(2, 2, figsize=(pub_style.FIG_WIDTH_2COL, 5.9), constrained_layout=True)
+    fig = plt.figure(figsize=(pub_style.FIG_WIDTH_2COL, 7.4), constrained_layout=True)
+    gs = fig.add_gridspec(3, 2, height_ratios=[0.74, 1.0, 1.0])
+    ax_s = fig.add_subplot(gs[0, :])
+    draw_mechanism_schematic(ax_s)
+    pub_style.panel_title(ax_s, "a", "Road junctions are planar-lattice coordinations")
 
-    # a: estimator calibration on clean lattices.
+    axes = np.array([[fig.add_subplot(gs[1, 0]), fig.add_subplot(gs[1, 1])],
+                     [fig.add_subplot(gs[2, 0]), fig.add_subplot(gs[2, 1])]])
+
+    # b: estimator calibration on clean lattices.
     ax = axes[0, 0]
     names = ["triangular", "square", "honeycomb"]
     exact = [calib[n]["pc_exact"] for n in names]
@@ -285,7 +398,7 @@ def make_figure(city: pd.DataFrame, calib: dict, interp: pd.DataFrame, summary: 
                     color=pub_style.COLORS["annot"])
     ax.set_xlabel("Exact lattice $p_c$")
     ax.set_ylabel("Estimated $p_c$ (road estimator)")
-    pub_style.panel_title(ax, "a", "Estimator reproduces lattice thresholds")
+    pub_style.panel_title(ax, "b", "Estimator reproduces lattice thresholds")
     pub_style.light_grid(ax, axis="both")
     pub_style.annot(ax, 0.04, 0.96,
                     f"max offset = {max(calib[n]['abs_offset'] for n in names):.3f}")
@@ -300,7 +413,7 @@ def make_figure(city: pd.DataFrame, calib: dict, interp: pd.DataFrame, summary: 
                color=pub_style.COLORS["geometry_null"], zorder=3, linewidths=0, label="Measured")
     ax.set_xlabel("3-valent junction fraction")
     ax.set_ylabel("Bond-percolation $p_c$")
-    pub_style.panel_title(ax, "b", "Vertex-split lattice interpolation")
+    pub_style.panel_title(ax, "c", "Vertex-split lattice interpolation")
     pub_style.light_grid(ax, axis="both")
     ax.legend(frameon=False, fontsize=6.0, loc="lower right")
     pub_style.annot(ax, 0.04, 0.30, "honeycomb 0.653", fontsize=5.6)
@@ -319,7 +432,7 @@ def make_figure(city: pd.DataFrame, calib: dict, interp: pd.DataFrame, summary: 
                label="CEBH")
     ax.set_xlabel("Predicted $p_c$")
     ax.set_ylabel("Observed road $p_c$")
-    pub_style.panel_title(ax, "c", "Zero-parameter anchor (71 cities)")
+    pub_style.panel_title(ax, "d", "Zero-parameter anchor (71 cities)")
     pub_style.light_grid(ax, axis="both")
     ax.legend(frameon=False, fontsize=6.0, loc="upper left")
     pub_style.annot(ax, 0.40, 0.16,
@@ -342,7 +455,7 @@ def make_figure(city: pd.DataFrame, calib: dict, interp: pd.DataFrame, summary: 
         ax.scatter(np.full(len(vals), i) + rng.normal(0, 0.04, len(vals)), vals,
                    s=10, color="#515b66", alpha=0.4, linewidths=0)
     ax.set_ylabel("Absolute threshold error")
-    pub_style.panel_title(ax, "d", "Error: degree-moment vs lattice")
+    pub_style.panel_title(ax, "e", "Error: degree-moment vs lattice")
     pub_style.light_grid(ax, axis="y")
     pub_style.annot(ax, 0.5, 0.96,
                     f"{summary['error_reduction']:.1f}x lower", ha="center")
