@@ -1,0 +1,49 @@
+{
+  "pc_honeycomb_exact": 0.6527036446661394,
+  "pc_square_exact": 0.5,
+  "estimator_calibration": {
+    "square": {
+      "nodes": 8100,
+      "edges": 16200,
+      "mean_degree": 4.0,
+      "deg3_frac": 0.0,
+      "pc_estimated": 0.49,
+      "pc_exact": 0.5,
+      "abs_offset": 0.010000000000000009
+    },
+    "honeycomb": {
+      "nodes": 7200,
+      "edges": 10800,
+      "mean_degree": 3.0,
+      "deg3_frac": 1.0,
+      "pc_estimated": 0.64,
+      "pc_exact": 0.6527036446661394,
+      "abs_offset": 0.01270364466613938
+    },
+    "triangular": {
+      "nodes": 4050,
+      "edges": 12150,
+      "mean_degree": 6.0,
+      "deg3_frac": 0.0,
+      "pc_estimated": 0.34,
+      "pc_exact": 0.34729635533386066,
+      "abs_offset": 0.007296355333860638
+    }
+  },
+  "interpolation_max_abs_err": 0.034527733499604585,
+  "interpolation_mean_abs_err": 0.023521398602422288,
+  "n_cities": 71,
+  "anchor_mae": 0.06696744345878128,
+  "anchor_bias": -0.06690780106328335,
+  "cebh_mae": 0.2165826183367332,
+  "cebh_bias": -0.2165826183367332,
+  "error_reduction": 3.2341479254772603,
+  "anchor_spearman_vs_observed": 0.8712142641726666,
+  "cebh_spearman_vs_observed": 0.9361555971903446,
+  "anchor_pearson_vs_observed": 0.8408586459458701,
+  "fraction_in_lattice_bracket": 0.3380281690140845,
+  "residual_dead_end_spearman": -0.789235412474849,
+  "residual_deg4_spearman": 0.8334004024144869,
+  "residual_circuity_spearman": -0.4743460764587525,
+  "geometry_null_anchor_mae": 0.0658733751856983
+}

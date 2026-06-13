@@ -33,7 +33,9 @@ OUT_DIR = ROOT / "figures"
 SUBMISSION_FIG_DIR = ROOT / "submission" / "npj_complexity" / "target_submission" / "figures"
 SOURCE_OUT = ROOT / "data" / "R100_main_figure_hardening"
 FIG_STEM = OUT_DIR / "Fig_R100_geometry_null_contrast"
-TARGET_STEM = SUBMISSION_FIG_DIR / "Fig5_geometry_null_contrast"
+# R103 renumbering: geometry contrast is manuscript Fig. 6 (planar-lattice
+# mechanism is Fig. 2, validation Fig. 5).
+TARGET_STEM = SUBMISSION_FIG_DIR / "Fig6_geometry_null_contrast"
 
 R68 = ROOT / "data" / "R68_full71_geometry_null_ensemble" / "full71_geometry_null_city_summary.csv"
 R81 = ROOT / "data" / "R81_full71_high_intensity_geometry_null_ensemble" / "full71_geometry_null_city_summary.csv"

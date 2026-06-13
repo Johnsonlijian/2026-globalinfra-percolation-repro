@@ -37,9 +37,13 @@ FIG_ROOT = ROOT / "figures" / "Fig_R76_fig5_nested_submission"
 CP_TARGET = ROOT / "submission" / "communications_physics" / "target_submission"
 NPJ_TARGET = ROOT / "submission" / "npj_complexity" / "target_submission"
 # (target, display figure stem, combined source-data file name)
+# R103 renumbering: in the npj package the validation figure display stem is
+# Fig5_urban_form_validation (the planar-lattice mechanism took the Fig. 2 slot,
+# shifting it from Fig. 4 to Fig. 5). The combined source-data CSV keeps its
+# historical Fig4_* name, which the figure-source map and SI already cite.
 TARGET_SPECS = [
     (CP_TARGET, "Fig5_public_controls_boundary_checks", "Fig5_combined_nested_public_source_data.csv"),
-    (NPJ_TARGET, "Fig4_urban_form_validation", "Fig4_combined_nested_public_source_data.csv"),
+    (NPJ_TARGET, "Fig5_urban_form_validation", "Fig4_combined_nested_public_source_data.csv"),
 ]
 CP_SOURCE = CP_TARGET / "source_data"
 

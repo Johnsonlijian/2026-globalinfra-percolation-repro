@@ -55,8 +55,8 @@ def redraw_r56() -> None:
     r56.plot_figure(r56.DEFAULT_FIGURE, summaries)
     for ext in [".svg", ".pdf", ".png", ".tiff"]:
         src = r56.DEFAULT_FIGURE.with_suffix(ext)
-        shutil.copy2(src, NPJ_FIGS / f"Fig2_eight_city_null_decomposition{ext}")
-    log("Fig. 2 (R56 eight-city decomposition) redrawn and copied.")
+        shutil.copy2(src, NPJ_FIGS / f"Fig3_eight_city_null_decomposition{ext}")
+    log("Fig. 3 (R56 eight-city decomposition) redrawn and copied.")
 
 
 def redraw_r62() -> None:
@@ -71,8 +71,8 @@ def redraw_r62() -> None:
     r62.make_figure(cov, corr, pca, selected, geom)
     for ext in [".svg", ".pdf", ".png", ".tiff"]:
         src = Path(f"{r62.FIG_BASE}{ext}")
-        shutil.copy2(src, NPJ_FIGS / f"Fig3_city_window_urban_form{ext}")
-    log("Fig. 3 (R62 urban-form screen) redrawn and copied.")
+        shutil.copy2(src, NPJ_FIGS / f"Fig4_city_window_urban_form{ext}")
+    log("Fig. 4 (R62 urban-form screen) redrawn and copied.")
 
 
 def redraw_r81() -> None:
@@ -206,10 +206,11 @@ def fix_source_data_references() -> None:
 def verify() -> None:
     expected = [
         "Fig1_matched_geometry_partition",
-        "Fig2_eight_city_null_decomposition",
-        "Fig3_city_window_urban_form",
-        "Fig4_urban_form_validation",
-        "Fig5_geometry_null_contrast",
+        "Fig2_planar_lattice_anchor",
+        "Fig3_eight_city_null_decomposition",
+        "Fig4_city_window_urban_form",
+        "Fig5_urban_form_validation",
+        "Fig6_geometry_null_contrast",
         "FigS_geometry_null_distance_audit",
         "FigS_R81_full71_high_intensity_geometry_null_ensemble",
         "FigS_R90_finegrid_edge_audit",
