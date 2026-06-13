@@ -9,3 +9,4 @@ geopandas>=0.14
 pyogrio>=0.7
 shapely>=2.0
 
+pandapower>=2.14  # R106 second-domain power grids (PEGASE cases)

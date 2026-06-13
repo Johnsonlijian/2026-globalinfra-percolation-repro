@@ -1,0 +1,5 @@
+index,metric,n_cities,pearson_r,spearman_rho
+street_form_bottleneck_index,road_gap,71,0.6299919330655921,0.5719651240778001
+street_form_bottleneck_index,road_minus_spatial,71,0.48833462512305614,0.37486095718900136
+street_form_bottleneck_index,road_minus_geometry_mean,71,0.0023129771336729775,0.06664566042541158
+street_form_bottleneck_index,geometry_absorption_fraction_of_road_gap,71,0.17620594077140356,0.07230046948356808

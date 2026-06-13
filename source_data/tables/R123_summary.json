@@ -1,0 +1,25 @@
+{
+  "round": "R123",
+  "analysis": "street-form bottleneck subgroup stress test",
+  "date": "2026-06-13",
+  "n_cities": 71,
+  "index_positive_terms": [
+    "dead_end_share",
+    "bridge_edge_share",
+    "articulation_point_share"
+  ],
+  "index_negative_terms": [
+    "cycle_density",
+    "largest_biconnected_node_fraction",
+    "dual_degree_mean"
+  ],
+  "road_gap_mean_Q1_low_bottleneck": 0.20361598673707143,
+  "road_gap_mean_Q4_high_bottleneck": 0.23775853552358278,
+  "road_gap_Q4_minus_Q1": 0.03414254878651135,
+  "road_gap_spearman_rho_with_index": 0.5719651240778001,
+  "max_abs_quartile_mean_road_minus_geometry": 0.0055555555555555445,
+  "Q4_geometry_absorption_fraction_mean": 0.46920425522992304,
+  "interpretation": "Street-form bottleneck quartiles modulate the random-graph transfer error; strict local non-crossing geometry leaves quartile means near the tested estimator resolution.",
+  "input_table": "submission/npj_complexity/target_submission/source_data/tables/R77_geometry_absorption_city_table.csv",
+  "supplementary_code_zip_sha256_after_update": "1ecdafdf8a7b9bd2f48c49e85b449cb3118865108e2b6ef1c1aa1e8f64f77e54"
+}

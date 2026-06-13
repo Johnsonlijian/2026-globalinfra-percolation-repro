@@ -1,0 +1,19 @@
+{
+  "domain": "power_transmission_grid_PEGASE",
+  "source": "pandapower / MATPOWER PEGASE cases (BSD); raw grids not redistributed",
+  "n_grids": 3,
+  "cebh_gap_mean": 0.36953190062708224,
+  "cebh_abs_err_mean": 0.36953190062708224,
+  "anchor_abs_err_mean": 0.09294822691212408,
+  "anchor_error_reduction_vs_cebh": 3.975674554571636,
+  "power_fisher_tau_mean": 2.3574356466663318,
+  "power_fisher_tau_range": [
+    2.163446660219693,
+    2.4616102129570145
+  ],
+  "meanfield_control_note": "The degree-matched configuration-model control is unreliable for these grids because of their heavy degree-1/degree-2 tail (17-39% leaves), so the theoretical mean-field value 2.5 is used as the reference rather than the per-grid control.",
+  "road_fisher_tau": 2.116,
+  "tau_2D": 2.0549450549450547,
+  "tau_mean_field": 2.5,
+  "interpretation": "ROBUST: the CEBH transfer failure generalizes to a second, non-road embedded infrastructure. On three PEGASE European transmission grids the degree-moment formula under-predicts the observed threshold by ~0.37 on average (larger than the ~0.22 road gap), and the junction-composition anchor cuts the absolute error ~4-fold even though power grids are non-planar. SUGGESTIVE: the cluster-size-distribution exponent is intermediate (~2.2-2.4) between near-planar roads (~2.12, close to the 2D value 2.055) and the mean-field value 2.5, consistent with embedding planarity grading the universality signature; the single-grid estimates are noisier than the road population, so this is read as supporting context. This is a three-grid minimal replication, not a population study."
+}

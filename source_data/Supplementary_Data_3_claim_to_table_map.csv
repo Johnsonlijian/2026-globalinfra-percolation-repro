@@ -27,3 +27,4 @@ A 12-city low-overlap strict-geometry audit preserves degree and length bins whi
 Figure panels and source-data files are mapped for the submission package,Figure_Source_Data_Map.csv,Figure legends; Source Data
 Planar-lattice anchor predicts 71-city thresholds from junction composition without fitting,R103_city_lattice_anchor.csv; R103_vertex_split_interpolation.csv; R103_summary.json,Main text Results 2.2 and Fig. 2
 Estimator calibration and vertex-split interpolation support the first-order lattice anchor,R103_vertex_split_interpolation.csv; R103_summary.json,Main text Results 2.2; Methods; Fig. 2
+Street-form bottleneck quartiles modulate the CEBH road-threshold transfer gap while the strict-geometry residual remains near estimator resolution,R123_street_form_subgroup_city_scores.csv; R123_street_form_subgroup_quartiles.csv; R123_street_form_subgroup_correlations.csv; R123_summary.json,Main text Results 2.4-2.5; Supplementary Fig. S8; Supplementary Note 17

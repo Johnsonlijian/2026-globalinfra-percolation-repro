@@ -178,5 +178,14 @@
     "status": "complete",
     "script_or_source": "scripts/build_R103_planar_lattice_anchor.py",
     "output_files": "data/R103_planar_lattice_anchor/R103_city_lattice_anchor.csv; data/R103_planar_lattice_anchor/R103_vertex_split_interpolation.csv; data/R103_planar_lattice_anchor/R103_summary.json; submission/npj_complexity/target_submission/figures/Fig2_planar_lattice_anchor.svg"
+  },
+  {
+    "round": "R123",
+    "analysis": "street-form bottleneck subgroup stress test",
+    "data_directory": "data/R123_street_form_subgroup",
+    "purpose": "Bounded mechanism subgroup check for CEBH transfer error and strict-geometry residual",
+    "status": "completed",
+    "script_or_source": "scripts/build_R123_street_form_subgroup_analysis.py",
+    "output_files": "tables/R123_street_form_subgroup_city_scores.csv; tables/R123_street_form_subgroup_quartiles.csv; tables/R123_street_form_subgroup_correlations.csv; tables/R123_summary.json; figures/FigS_R123_street_form_subgroup.svg; figures/FigS_R123_street_form_subgroup.pdf; figures/FigS_R123_street_form_subgroup.png; figures/FigS_R123_street_form_subgroup.tiff"
   }
 ]
