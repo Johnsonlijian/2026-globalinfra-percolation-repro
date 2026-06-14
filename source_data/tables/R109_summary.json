@@ -1,0 +1,16 @@
+{
+  "n_networks": 81,
+  "n_roads": 71,
+  "n_power": 10,
+  "mean_fc_observed": 0.3190123456790123,
+  "mean_fc_cebh": 0.5462430367865184,
+  "mean_fc_derived": 0.2915694282302447,
+  "cebh_overrating_mean": 0.22723069110750613,
+  "cebh_overrating_relative_pct": 71.2294349059907,
+  "cebh_overrates_count": 81,
+  "derived_abs_err_fc": 0.03534750521916628,
+  "cebh_abs_err_fc": 0.22723069110750613,
+  "spearman_cebh_rank_vs_true": 0.8403361293383782,
+  "spearman_derived_rank_vs_true": 0.6419745008454261,
+  "interpretation": "The degree-moment (CEBH) robustness benchmark overstates the tolerable random-failure fraction f_c=1-p_c in all 81 networks, by 0.23 on average (~70% relative); resilience margins from this benchmark are systematically unsafe and the derived geometry-aware threshold 2/<k> recovers the absolute level. The relative fragility ordering is, however, largely preserved by the degree-moment formula (Spearman ~0.84), so the consequence is for absolute safety margins and capacity planning rather than prioritization order. This is a screening implication on the standard topological robustness proxy, not an external outage-data validation."
+}
