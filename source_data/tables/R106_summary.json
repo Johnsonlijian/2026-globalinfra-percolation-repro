@@ -1,19 +1,39 @@
 {
-  "domain": "power_transmission_grid_PEGASE",
-  "source": "pandapower / MATPOWER PEGASE cases (BSD); raw grids not redistributed",
-  "n_grids": 3,
-  "cebh_gap_mean": 0.36953190062708224,
-  "cebh_abs_err_mean": 0.36953190062708224,
-  "anchor_abs_err_mean": 0.09294822691212408,
-  "anchor_error_reduction_vs_cebh": 3.975674554571636,
-  "power_fisher_tau_mean": 2.3574356466663318,
-  "power_fisher_tau_range": [
-    2.163446660219693,
-    2.4616102129570145
+  "domain": "power_transmission_grids",
+  "source": "pandapower / MATPOWER cases PEGASE, RTE, Polish, GB, Illinois, IEEE-300 (BSD); raw grids not redistributed",
+  "n_grids": 10,
+  "regions": [
+    "Europe",
+    "France",
+    "Poland",
+    "UK",
+    "US"
   ],
-  "meanfield_control_note": "The degree-matched configuration-model control is unreliable for these grids because of their heavy degree-1/degree-2 tail (17-39% leaves), so the theoretical mean-field value 2.5 is used as the reference rather than the per-grid control.",
+  "grid_size_range": [
+    200,
+    9241
+  ],
+  "cebh_gap_mean": 0.30283200777999386,
+  "cebh_gap_sd": 0.07507017673180105,
+  "cebh_gap_range": [
+    0.16575691212701893,
+    0.47863977862743046
+  ],
+  "cebh_gap_all_positive": true,
+  "cebh_abs_err_mean": 0.30283200777999386,
+  "anchor_abs_err_mean": 0.08210331464071399,
+  "anchor_error_reduction_vs_cebh": 3.6884260898015353,
+  "anchor_better_than_cebh_share": 1.0,
+  "power_fisher_tau_mean": 2.417314564938185,
+  "power_fisher_tau_sd": 0.2275540075760824,
+  "power_fisher_tau_range": [
+    2.0013919924653547,
+    2.6859545829468874
+  ],
+  "meanfield_control_case9241": 2.7381430281826367,
+  "meanfield_control_note": "The degree-matched configuration-model control is unreliable for these grids because of their heavy degree-1/degree-2 leaf tail, so the theoretical mean-field value 2.5 is used as the reference rather than the per-grid control.",
   "road_fisher_tau": 2.116,
   "tau_2D": 2.0549450549450547,
   "tau_mean_field": 2.5,
-  "interpretation": "ROBUST: the CEBH transfer failure generalizes to a second, non-road embedded infrastructure. On three PEGASE European transmission grids the degree-moment formula under-predicts the observed threshold by ~0.37 on average (larger than the ~0.22 road gap), and the junction-composition anchor cuts the absolute error ~4-fold even though power grids are non-planar. SUGGESTIVE: the cluster-size-distribution exponent is intermediate (~2.2-2.4) between near-planar roads (~2.12, close to the 2D value 2.055) and the mean-field value 2.5, consistent with embedding planarity grading the universality signature; the single-grid estimates are noisier than the road population, so this is read as supporting context. This is a three-grid minimal replication, not a population study."
+  "interpretation": "GENERALIZATION (robust): the CEBH transfer failure holds across a population of ten real transmission grids (200-9241 buses; PEGASE, French RTE, Polish, GB, US). The degree-moment formula under-predicts the observed bond-percolation threshold in every grid (10/10 all-positive gap, mean 0.30, larger than the 0.22 road gap), and the zero-parameter junction-composition anchor beats CEBH in 100% of grids, cutting the mean absolute error about fourfold even though power grids are non-planar. BOUNDARY (the informative half): the two-dimensional universality class does NOT carry over. The cluster-size-distribution exponent of the power grids is tau_F = 2.42 +- 0.23 (range 2.00-2.69), near the mean-field value 2.5 and well above the near-planar road value 2.12 (close to 2D 2.055). So junction composition sets the threshold value in both domains, but only the near-planar road geometry places percolation in the 2D class; non-planar power grids fall in the mean-field/random-graph regime. This separates the two parts of the road result - the threshold mechanism generalizes, the universality class is geometry-specific - and is itself a single-infrastructure-type (power) replication."
 }
