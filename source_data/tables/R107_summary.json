@@ -21,5 +21,5 @@
   "square_tau": 1.9890845657659177,
   "tau_2D": 2.0549450549450547,
   "tau_mean_field": 2.5,
-  "interpretation": "On real road graphs the cluster-size exponent is tau_F = 2.13 at zero added crossings, essentially the two-dimensional value 2.055. Adding only a few percent of random crossing edges drives it to the mean-field value 2.5 and above. The 2D universality class of road percolation is therefore caused by non-crossing planarity; destroying planarity recovers mean-field behaviour. This is the controlled counterpart to the cross-domain contrast: near-planar roads are 2D, non-planar power grids are mean-field, and the planarity dial shows the causal direction."
+  "interpretation": "On real road graphs the cluster-size exponent is tau_F = 2.13 at zero added crossings, close to the two-dimensional value 2.055. Adding only a few percent of random crossing edges drives it to the mean-field value 2.5 and above. The finite-size read-out therefore tracks the local non-crossing constraint: removing that constraint moves the tested road windows from the near-two-dimensional end toward the mean-field end of the dial. This is the controlled counterpart to the cross-domain contrast and supports the mechanism without claiming a theorem or a high-precision universality proof."
 }
