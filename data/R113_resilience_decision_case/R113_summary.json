@@ -1,0 +1,45 @@
+{
+  "decision_model": "Target phi*: keep a giant component after random loss of a fraction phi* of links. Degree-moment estimate f_c^CEBH=1-p_c^CEBH vs geometry-aware f_c=1-2/<k> and observed f_c^obs=1-p_c^obs. Flip = CEBH clears (f_c^CEBH>=phi*) but observed fails (f_c^obs<phi*).",
+  "headline_phi_star": 0.4,
+  "n_population": 81,
+  "sweep": [
+    {
+      "phi_star": 0.3,
+      "cebh_clears": 81,
+      "flip_vs_observed": 20,
+      "flip_vs_derived": 40,
+      "flip_share_of_population": 0.24691358024691357
+    },
+    {
+      "phi_star": 0.4,
+      "cebh_clears": 81,
+      "flip_vs_observed": 73,
+      "flip_vs_derived": 79,
+      "flip_share_of_population": 0.9012345679012346
+    },
+    {
+      "phi_star": 0.5,
+      "cebh_clears": 68,
+      "flip_vs_observed": 68,
+      "flip_vs_derived": 68,
+      "flip_share_of_population": 0.8395061728395061
+    }
+  ],
+  "flip_at_headline": 73,
+  "flip_share_at_headline": 0.9012345679012346,
+  "caveats": "Screening implication on the standard topological robustness proxy, not an external outage validation; concerns absolute safety margins, not the relative fragility ranking (degree moments preserve ranking, Spearman ~0.84, see R109).",
+  "named_example": {
+    "network": "case9241pegase",
+    "domain": "power",
+    "mean_degree": 3.075,
+    "pc_cebh": 0.211,
+    "pc_observed": 0.69,
+    "fc_cebh": 0.789,
+    "fc_observed": 0.31,
+    "fc_derived": 0.35,
+    "apparent_margin_degree_moments": 0.389,
+    "actual_margin_observed": -0.09,
+    "geometry_aware_margin": -0.05,
+    "reading": "At phi*=0.40 the degree-moment benchmark shows a +0.39 safety margin (apparently passes, no reinforcement), whereas the observed threshold gives a -0.09 margin (fails the target) and the geometry-aware baseline 2/<k> gives -0.05 - flipping the decision from 'no action' to 'reinforce'."
+  }
+}

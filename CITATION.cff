@@ -1,10 +1,12 @@
 cff-version: 1.2.0
-title: "2026 Global Infrastructure Percolation Reproducibility Package"
-message: "If you use this package, please cite the associated manuscript."
+title: "Reproducibility package for local noncrossing geometry and infrastructure percolation transfer"
+message: "If you use this package, please cite the associated manuscript and this repository."
 type: software
 authors:
   - family-names: Ren
     given-names: Lijian
+    orcid: "https://orcid.org/0000-0003-1629-4368"
 repository-code: "https://github.com/Johnsonlijian/2026-globalinfra-percolation-repro"
-date-released: "2026-06-03"
+date-released: "2026-06-19"
+version: "v1.0-submission-candidate"
 license: MIT

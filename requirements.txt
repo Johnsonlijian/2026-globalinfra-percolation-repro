@@ -9,4 +9,6 @@ geopandas>=0.14
 pyogrio>=0.7
 shapely>=2.0
 
-pandapower>=2.14  # R106 second-domain power grids (PEGASE cases)
+pandapower>=2.14  # R106 second-domain power grids (MATPOWER/PEGASE cases, BSD)
+wntr>=1.1         # R111 third-domain water-distribution networks (EPANET/Kentucky benchmarks, US EPA public domain)
+osmnx>=2.0        # R112 fourth-domain rail networks queried from OpenStreetMap (ODbL); also used for the road windows

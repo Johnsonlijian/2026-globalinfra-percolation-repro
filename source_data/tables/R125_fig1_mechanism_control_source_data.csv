@@ -1,0 +1,17 @@
+panel,stage,value,metric,fisher_tau_sd,n,fisher_tau_mean
+a,CEBH,0.20959387499999999,road-minus-baseline residual,,,
+a,+ degree sequence,0.18292724999999999,road-minus-degree-null residual,,,
+a,+ edge scale,0.14021887499999994,road-minus-spatial-null residual,,,
+a,+ non-crossing geometry,0.0014084507042253,road-minus-geometry-null residual,,,
+b,0.0,2.1332148207865878,dial mean Fisher exponent,0.08788733573759397,4.0,
+b,0.025,2.4422821331528595,dial mean Fisher exponent,0.03810818997116873,4.0,
+b,0.05,2.557422124268572,dial mean Fisher exponent,0.09300092710205461,4.0,
+b,0.1,2.655499298865828,dial mean Fisher exponent,0.1224139754344215,4.0,
+b,0.2,2.81364349263477,dial mean Fisher exponent,0.14786323020434886,4.0,
+b,0.4,2.7347908889553323,dial mean Fisher exponent,0.07123337481819922,4.0,
+c,0.0,2.1826533504345944,dial mean effective dimension,,4.0,2.1332148207865878
+c,0.025,2.679019195890886,dial mean effective dimension,,4.0,2.4422821331528595
+c,0.05,2.9694705220375277,dial mean effective dimension,,4.0,2.557422124268572
+c,0.1,3.3297171911933536,dial mean effective dimension,,4.0,2.655499298865828
+c,0.2,3.829844081522139,dial mean effective dimension,,4.0,2.81364349263477
+c,0.4,5.0800294215042285,dial mean effective dimension,,4.0,2.7347908889553323

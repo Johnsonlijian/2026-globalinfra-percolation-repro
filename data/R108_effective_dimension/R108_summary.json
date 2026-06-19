@@ -87,5 +87,5 @@
       "fisher_tau": 2.7347908889553323
     }
   ],
-  "headline": "Derived parameter-free law p_c=2/<k> predicts 71-city thresholds with MAE 0.022 (vs 0.067 for the honeycomb-square mixture and 0.217 for the degree-moment formula). Effective dimension from the threshold: roads d=2.05 (2D), power grids d=2.63; the planarity dial raises d and the Fisher exponent together. A single effective dimension set by planarity governs both threshold and universality class."
+  "headline": "Approximate parameter-free law p_c=2/<k> predicts 71-city thresholds with MAE 0.022 (vs 0.067 for the honeycomb-square mixture and 0.217 for the degree-moment formula). Effective dimension from the threshold: roads d=2.05 (2D), power grids d=2.63; the planarity dial raises d and the Fisher exponent together. The threshold and exponent routes track the same effective-dimension organization."
 }

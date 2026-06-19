@@ -1,7 +1,7 @@
 """R108: effective-dimension theory - closed-form derivation of the anchor.
 
-This round replaces the phenomenological honeycomb-square mixture with a derived,
-parameter-free threshold law and shows it unifies the whole paper.
+This round replaces the phenomenological honeycomb-square mixture with an approximate,
+parameter-free threshold law and checks it against the critical-class read-out.
 
 Derivation. For a locally tree-like random graph the giant cluster appears when
 the mean number of new occupied connections per occupied edge reaches one
@@ -18,15 +18,15 @@ cases, so the earlier junction-composition mixture is this same relation in
 disguise. The factor of two relative to the mean-field/tree value 1/<k> is why
 degree-moment formulas under-predict embedded thresholds about twofold.
 
-Unification. Reading d as an effective dimension fitted from each network's own
-threshold, d_eff = R/(R-1) with R = p_c*<k>, gives an independent estimate of the
-universality regime that should agree with the cluster-size (Fisher) exponent.
+Cross-check. Reading d as an effective dimension from each network's own
+threshold, d_eff = R/(R-1) with R = p_c*<k>, gives a threshold-route descriptor
+that should agree with the cluster-size (Fisher) exponent if the interpretation is not circular.
 We show: roads have d_eff ~= 2 (two-dimensional, tau_F ~= 2.05); non-planar power
 grids have d_eff ~= 2.5 (tau_F ~= 2.4, near mean-field); and a controlled
-planarity dial raises d_eff and tau_F together. A single effective dimension,
-set by planarity, governs both the threshold value and the universality class.
+planarity dial raises d_eff and tau_F together. The threshold and exponent routes
+therefore track the same effective-dimension organization within the tested systems.
 
-Uses registered derived tables (R62/R103/R105/R106/R107) and the analytic
+Uses derived tables (R62/R103/R105/R106/R107) and the analytic
 lattices; no third-party raw data are redistributed.
 """
 
@@ -144,12 +144,12 @@ def main():
         "roads": road, "power": power,
         "dial_d_eff_by_fraction": dial_df.groupby("f_cross")[["d_eff", "fisher_tau"]].mean().reset_index().to_dict("records"),
         "headline": (
-            f"Derived parameter-free law p_c=2/<k> predicts 71-city thresholds with MAE "
+            f"Approximate parameter-free law p_c=2/<k> predicts 71-city thresholds with MAE "
             f"{road['derived_2_over_k']['mae']:.3f} (vs {road['phenomenological_anchor']['mae']:.3f} for the "
             f"honeycomb-square mixture and {road['cebh']['mae']:.3f} for the degree-moment formula). "
             f"Effective dimension from the threshold: roads d={road['d_eff_median']:.2f} (2D), power grids "
             f"d={power['d_eff_median']:.2f}; the planarity dial raises d and the Fisher exponent together. "
-            "A single effective dimension set by planarity governs both threshold and universality class."
+            "The threshold and exponent routes track the same effective-dimension organization."
         ),
     }
     r.assign(cebh=cebh, derived_2_over_k=derived, anchor=anchor, d_eff=d_road).to_csv(
@@ -177,15 +177,15 @@ def make_figure(obs, derived, cebh, anchor, d_road, dP, dial_df, road, power):
     pub_style.apply()
     fig, axes = plt.subplots(1, 3, figsize=(pub_style.FIG_WIDTH_2COL, 2.8), constrained_layout=True)
 
-    # a: derived 2/<k> vs observed (roads), CEBH for contrast.
+    # a: 2/<k> vs observed (roads), CEBH for contrast.
     ax = axes[0]
     lo, hi = 0.4, 0.95
     ax.plot([lo, hi], [lo, hi], ls="--", lw=0.7, color="#1A1A1A")
-    ax.scatter(derived, obs, s=18, color=pub_style.COLORS["model"], alpha=0.85, linewidths=0, label=r"derived $2/\langle k\rangle$")
+    ax.scatter(derived, obs, s=18, color=pub_style.COLORS["model"], alpha=0.85, linewidths=0, label=r"law $2/\langle k\rangle$")
     ax.scatter(cebh, obs, s=14, color=pub_style.COLORS["cebh"], alpha=0.6, linewidths=0, marker="x", label="CEBH")
     ax.set_xlabel(r"predicted $p_c$")
     ax.set_ylabel(r"observed road $p_c$")
-    pub_style.panel_title(ax, "a", r"Derived $p_c=2/\langle k\rangle$ (71 cities)")
+    pub_style.panel_title(ax, "a", r"Zero-fit $p_c=2/\langle k\rangle$ (71 cities)")
     pub_style.light_grid(ax, axis="both")
     pub_style.annot(ax, 0.40, 0.18, f"2/<k> MAE {road['derived_2_over_k']['mae']:.3f}\nanchor MAE {road['phenomenological_anchor']['mae']:.3f}\nCEBH MAE {road['cebh']['mae']:.3f}")
     ax.legend(frameon=False, fontsize=6.0, loc="upper left")
@@ -214,7 +214,7 @@ def make_figure(obs, derived, cebh, anchor, d_road, dP, dial_df, road, power):
     ax.set_xlabel("fraction of added crossings")
     ax.set_ylabel("effective dimension $d$")
     ax2.set_ylabel(r"Fisher exponent $\tau_F$")
-    pub_style.panel_title(ax, "c", "One dimension sets both")
+    pub_style.panel_title(ax, "c", "Dimension tracks class")
     h1, l1 = ax.get_legend_handles_labels()
     h2, l2 = ax2.get_legend_handles_labels()
     ax.legend(h1 + h2, l1 + l2, frameon=False, fontsize=5.8, loc="lower right")

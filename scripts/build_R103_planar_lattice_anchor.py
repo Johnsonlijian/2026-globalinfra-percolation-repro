@@ -42,6 +42,7 @@ from pathlib import Path
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+from matplotlib.patches import Circle
 import networkx as nx
 import numpy as np
 import pandas as pd
@@ -276,21 +277,39 @@ def _hexagon(ax, cx, cy, r, color):
 
 
 def _honeycomb_patch(ax, x0, y0, color):
+    """Draw honeycomb as unique edges so shared cell borders are not overdrawn."""
     r = 0.42
     dx = r * np.sqrt(3)
     dy = r * 1.5
+    lw = 0.95
+    seen = set()
     for j in range(2):
         for i in range(3):
             cx = x0 + i * dx + (j % 2) * dx / 2
             cy = y0 + j * dy
-            _hexagon(ax, cx, cy, r, color)
+            ang = np.deg2rad(np.arange(0, 360, 60) + 30)
+            verts = np.column_stack([cx + r * np.cos(ang), cy + r * np.sin(ang)])
+            for k in range(6):
+                a = tuple(np.round(verts[k], 4))
+                b = tuple(np.round(verts[(k + 1) % 6], 4))
+                key = tuple(sorted([a, b]))
+                if key in seen:
+                    continue
+                seen.add(key)
+                ax.plot([a[0], b[0]], [a[1], b[1]], color=color, lw=lw, solid_capstyle="round")
 
 
 def _square_patch(ax, x0, y0, color):
-    s = 0.62
-    for i in range(3):
-        for j in range(2):
-            ax.add_patch(plt.Rectangle((x0 + i * s, y0 + j * s), s, s, fill=False, edgecolor=color, lw=1.0))
+    """Draw square lattice as unique grid edges, not overlapping cell boxes."""
+    s = 0.58
+    cols, rows = 3, 2
+    lw = 0.95
+    for i in range(cols + 1):
+        x = x0 + i * s
+        ax.plot([x, x], [y0, y0 + rows * s], color=color, lw=lw, solid_capstyle="round")
+    for j in range(rows + 1):
+        y = y0 + j * s
+        ax.plot([x0, x0 + cols * s], [y, y], color=color, lw=lw, solid_capstyle="round")
 
 
 def _random_blob(ax, cx, cy, color, seed=7):
@@ -307,7 +326,7 @@ def _random_blob(ax, cx, cy, color, seed=7):
 
 
 def _junction(ax, cx, cy, kind, color):
-    L = 0.34
+    L = 0.27
     if kind == 3:  # Y / T three-way
         for ang in (90, 210, 330):
             a = np.deg2rad(ang)
@@ -317,6 +336,17 @@ def _junction(ax, cx, cy, kind, color):
             a = np.deg2rad(ang)
             ax.plot([cx, cx + L * np.cos(a)], [cy, cy + L * np.sin(a)], color=color, lw=1.3, solid_capstyle="round")
     ax.scatter([cx], [cy], s=9, color=color, zorder=3, linewidths=0)
+
+
+def _no_crossings_icon(ax, cx, cy, ink, bad):
+    """Draw a prohibited free-crossing mark without using a red X glyph."""
+    ax.plot([cx - 0.32, cx + 0.32], [cy - 0.18, cy + 0.18],
+            color=ink, lw=1.0, solid_capstyle="round", zorder=2)
+    ax.plot([cx - 0.32, cx + 0.32], [cy + 0.18, cy - 0.18],
+            color=ink, lw=1.0, solid_capstyle="round", zorder=2)
+    ax.add_patch(Circle((cx, cy), 0.38, fill=False, edgecolor=bad, lw=1.25, zorder=3))
+    ax.plot([cx - 0.27, cx + 0.27], [cy - 0.27, cy + 0.27],
+            color=bad, lw=1.25, solid_capstyle="round", zorder=4)
 
 
 def draw_mechanism_schematic(ax) -> None:
@@ -341,36 +371,36 @@ def draw_mechanism_schematic(ax) -> None:
     ax.text(2.67, 1.95, "roads are\nplanar", ha="center", va="bottom", fontsize=5.6, color=pub_style.COLORS["annot"])
 
     # Station 2: the two lattice primitives with their junctions.
-    _junction(ax, 3.65, 2.62, 3, hc)
-    _honeycomb_patch(ax, 3.35, 1.05, hc)
+    _junction(ax, 3.55, 2.52, 3, hc)
+    _honeycomb_patch(ax, 3.05, 0.98, hc)
     ax.text(3.95, 0.35, "3-way junction\n= honeycomb", ha="center", va="top", fontsize=6.0, color=hc)
-    ax.text(3.95, 3.0, r"$p_c=0.653$", ha="center", va="bottom", fontsize=6.2, color=hc)
+    ax.text(3.95, 3.12, r"$p_c=0.653$", ha="center", va="bottom", fontsize=6.2, color=hc)
 
-    _junction(ax, 5.95, 2.62, 4, sq)
-    _square_patch(ax, 5.55, 1.05, sq)
-    ax.text(6.18, 0.35, "4-way junction\n= square", ha="center", va="top", fontsize=6.0, color=sq)
-    ax.text(6.18, 3.0, r"$p_c=0.500$", ha="center", va="bottom", fontsize=6.2, color=sq)
+    _junction(ax, 6.35, 2.52, 4, sq)
+    _square_patch(ax, 5.95, 0.98, sq)
+    ax.text(6.65, 0.35, "4-way junction\n= square", ha="center", va="top", fontsize=6.0, color=sq)
+    ax.text(6.65, 3.12, r"$p_c=0.500$", ha="center", va="bottom", fontsize=6.2, color=sq)
 
     # non-crossing constraint mark.
-    ax.plot([7.35, 7.75], [1.35, 1.75], color=ink, lw=1.0)
-    ax.plot([7.35, 7.75], [1.75, 1.35], color=ink, lw=1.0)
-    ax.plot([7.78, 8.18], [1.4, 1.7], color=bad, lw=1.6)
-    ax.plot([7.78, 8.18], [1.7, 1.4], color=bad, lw=1.6)
-    ax.text(7.77, 1.0, "no crossings", ha="center", va="top", fontsize=5.6, color=ink)
+    _no_crossings_icon(ax, 8.42, 1.60, ink, bad)
+    ax.text(8.42, 0.92, "planar embedding\n(no free crossings)",
+            ha="center", va="top", fontsize=5.25, color=ink, linespacing=0.95)
 
-    ax.annotate("", xy=(9.0, 1.6), xytext=(8.35, 1.6),
+    ax.annotate("", xy=(9.62, 1.6), xytext=(9.22, 1.6),
                 arrowprops={"arrowstyle": "-|>", "color": "#9AA0A6", "lw": 1.0})
 
     # Station 3: the mixture / anchor.
-    ax.text(10.5, 2.7, "Real road network", ha="center", va="bottom", fontsize=6.4, color=ink, fontweight="bold")
-    ax.text(10.5, 2.05, r"$p_c=w_3(0.653)+w_4(0.500)$", ha="center", va="center", fontsize=6.8, color=ink)
-    ax.text(10.5, 1.35, r"observed $p_c\approx0.62$-$0.69$", ha="center", va="center", fontsize=6.6,
+    ax.text(10.58, 2.78, "Real road network", ha="center", va="bottom", fontsize=6.4, color=ink, fontweight="bold")
+    ax.text(10.58, 2.20, r"$p_c=w_3\cdot0.653+w_4\cdot0.500$", ha="center", va="center", fontsize=6.55, color=ink)
+    ax.text(10.58, 1.76, r"$w_3,w_4$: 3-way and 4-way shares",
+            ha="center", va="center", fontsize=5.35, color=pub_style.COLORS["annot"])
+    ax.text(10.58, 1.24, r"observed $p_c\approx0.62$-$0.69$", ha="center", va="center", fontsize=6.35,
             color=road, fontweight="bold")
-    ax.text(10.5, 0.75, "predicted with no fitting", ha="center", va="center", fontsize=5.8,
+    ax.text(10.58, 0.72, "predicted with no fitting", ha="center", va="center", fontsize=5.7,
             color=pub_style.COLORS["annot"])
 
     ax.set_xlim(0.2, 12.2)
-    ax.set_ylim(0.0, 3.3)
+    ax.set_ylim(0.0, 3.45)
     ax.set_aspect("equal")
     ax.axis("off")
 
@@ -515,16 +545,16 @@ def main() -> None:
 
     make_figure(city, calib, interp, summary)
 
-    # Copy display figure (manuscript Fig. 2) and source tables into the npj package.
+    # Copy display figure (manuscript Fig. 3) and source tables into the npj package.
     if NPJ_FIGS.exists():
         for ext in [".svg", ".pdf", ".png", ".tiff"]:
             src = FIG_BASE.with_suffix(ext)
             if src.exists():
-                shutil.copy2(src, NPJ_FIGS / f"Fig2_planar_lattice_anchor{ext}")
+                shutil.copy2(src, NPJ_FIGS / f"Fig3_planar_lattice_anchor{ext}")
         NPJ_TABLES.mkdir(parents=True, exist_ok=True)
         for f in ["R103_city_lattice_anchor.csv", "R103_vertex_split_interpolation.csv", "R103_summary.json"]:
             shutil.copy2(OUT / f, NPJ_TABLES / f)
-        print("[R103] copied Fig. 2 display figure and source tables into npj package.", flush=True)
+        print("[R103] copied Fig. 3 display figure and source tables into npj package.", flush=True)
 
     print("\n[R103] SUMMARY", flush=True)
     for k in ["anchor_mae", "cebh_mae", "error_reduction", "anchor_spearman_vs_observed",

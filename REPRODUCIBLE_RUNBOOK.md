@@ -460,3 +460,56 @@ that regenerates matched spatial and strict-geometry null thresholds on local
 fine grids and records exact edge-overlap diagnostics for the regenerated
 21-city subset.
 
+## Derived-law, effective-dimension and cross-domain rounds (R103-R113)
+
+These rounds build the derived parameter-free law `p_c ~= 2/<k>`, the
+effective-dimension unification, its non-circular validation, the cross-domain
+generalization (power, water, rail) and the resilience consequence. They read
+included derived tables; the cross-domain rounds load openly licensed network
+models from their distributing Python packages and store only derived results.
+
+```bash
+python scripts/build_R103_planar_lattice_anchor.py        # Fig 2 planar-lattice mechanism anchor
+python scripts/build_R105_finite_size_scaling.py          # Fisher exponent / 2D universality class
+python scripts/build_R106_second_domain_power.py          # second domain: power grids
+python scripts/build_R107_planarity_dial.py               # Fig 7 causal planarity dial
+python scripts/build_R108_effective_dimension_theory.py   # Fig 8 derived 2/<k> + d_eff unification
+python scripts/build_R109_resilience_screening.py         # Fig S10 resilience screening (81 networks)
+python scripts/build_R110_dimension_consistency.py        # Fig S11 non-circular d_eff validation
+python scripts/build_R111_third_domain_water.py           # Fig S12 pre-registered held-out: water
+python scripts/build_R112_fourth_domain_rail.py           # Fig S13 pre-registered held-out: rail
+python scripts/build_R113_resilience_decision_case.py     # named resilience decision-flip (reads R109)
+```
+
+### Third-party network data sources and licences (cross-domain rounds)
+
+The generalization tests do NOT redistribute any raw third-party network data;
+they load published models from their distributing packages at run time and the
+package stores only the derived per-network results.
+
+- **R106 power grids** — MATPOWER/PEGASE transmission cases shipped with
+  `pandapower` (BSD licence). Installed via `pip install pandapower`. Only the
+  derived `data/R106_second_domain_power/` tables are stored.
+- **R111 water-distribution networks** — EPANET (Net3/Net6) and University of
+  Kentucky (ky4/ky10) benchmarks shipped with `wntr` (US EPA, public domain).
+  Installed via `pip install wntr`. Only the derived
+  `data/R111_third_domain_water/` tables are stored.
+- **R112 rail networks** — OpenStreetMap railway data queried with `osmnx`
+  (OpenStreetMap is © OpenStreetMap contributors, ODbL). Installed via
+  `pip install osmnx`; queries require network access and are cached locally
+  under the OSMnx cache, which is NOT redistributed. Only the derived
+  `data/R112_fourth_domain_rail/` tables are stored. The same OSMnx/ODbL
+  workflow underlies the road windows.
+
+### Interpretation and boundaries
+
+The dimensional relation `p_c<k> ~= d/(d-1)` (Vyssotsky bond approximation,
+generalized from coordination number to mean degree) is treated as an
+approximation, not an exact theorem. The two-dimensional universality class is
+supported for the near-planar road windows (R105/R107) but only the threshold
+law is claimed for the loop-sparse held-out water and rail domains; their
+cluster-size exponents are reported but not used to certify the class. The
+resilience results (R109/R113) are a screening implication on the standard
+topological robustness proxy concerning absolute margins, not a validation
+against external outage records, and not a fix of the relative fragility ranking.
+
