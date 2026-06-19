@@ -1,7 +1,7 @@
 """R108: effective-dimension theory - closed-form derivation of the anchor.
 
 This round replaces the phenomenological honeycomb-square mixture with an approximate,
-parameter-free threshold law and checks it against the critical-class read-out.
+parameter-free threshold law and checks it against the finite-size exponent read-out.
 
 Derivation. For a locally tree-like random graph the giant cluster appears when
 the mean number of new occupied connections per occupied edge reaches one
