@@ -41,10 +41,7 @@ REGISTRY = ROOT / "data" / "R62_urban_form_mechanism" / "geometry_null_subset_re
 OUT = ROOT / "data" / "R78_observed_road_fine_estimator_check"
 ROUND_DIR = ROOT / "rounds" / "R78_observed_road_fine_estimator_check"
 FIG_BASE = ROOT / "figures" / "Fig_R78_observed_road_fine_estimator_check"
-TARGETS = [
-    ROOT / "submission" / "communications_physics" / "target_submission",
-    ROOT / "submission" / "npj_complexity" / "target_submission",
-]
+PUBLIC_SD = ROOT / "source_data"
 R72_CITY = ROOT / "data" / "R72_geometry_defense" / "matched_intensity_geometry_vs_spatial_city.csv"
 
 
@@ -302,8 +299,8 @@ def build_matched_intensity_substitution(fine_df: pd.DataFrame) -> tuple[pd.Data
     return subst, pd.DataFrame(rows).sort_values("swap_fraction")
 
 
-def update_manifest(target: Path, specs: list[tuple[Path, str, str]]) -> None:
-    manifest = target / "source_data" / "Supplementary_Data_1_source_data_manifest.csv"
+def update_manifest(sd: Path, specs: list[tuple[Path, str, str]]) -> None:
+    manifest = sd / "Supplementary_Data_1_source_data_manifest.csv"
     df = pd.read_csv(manifest)
     for src, copied_file, role in specs:
         if src.suffix == ".csv":
@@ -331,7 +328,7 @@ def update_manifest(target: Path, specs: list[tuple[Path, str, str]]) -> None:
         df = pd.concat([df, pd.DataFrame([entry])], ignore_index=True)
     df.to_csv(manifest, index=False)
 
-    claim_map = target / "source_data" / "Supplementary_Data_3_claim_to_table_map.csv"
+    claim_map = sd / "Supplementary_Data_3_claim_to_table_map.csv"
     cm = pd.read_csv(claim_map)
     claim = "Fine-grid observed-road threshold check supports the 21-city geometry-null estimator scale"
     cm = cm[cm["claim"] != claim]
@@ -380,16 +377,11 @@ def copy_to_targets() -> None:
             "matched-intensity fine-observed substitution summary",
         ),
     ]
-    for target in TARGETS:
-        for src, copied, _role in specs:
-            dst = target / "source_data" / copied
-            dst.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(src, dst)
-        fig_dir = target / "figures"
-        fig_dir.mkdir(exist_ok=True)
-        for ext in [".svg", ".pdf", ".png", ".tiff"]:
-            shutil.copy2(FIG_BASE.with_suffix(ext), fig_dir / f"FigS_observed_road_fine_estimator_check{ext}")
-        update_manifest(target, specs)
+    for src, copied, _role in specs:
+        dst = PUBLIC_SD / copied
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst)
+    update_manifest(PUBLIC_SD, specs)
 
 
 def main() -> int:

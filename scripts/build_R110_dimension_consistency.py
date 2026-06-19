@@ -12,11 +12,11 @@ Design (no fabricated tau(d) law; an empirical monotone map only):
      driving both observables), fit a monotone map g: tau_F -> d using isotonic
      regression. No functional form is assumed.
   2. Held-out test: for real networks that carry BOTH observables (5 road windows
-     with measured tau_F, 10 power grids), predict the "universality-route"
+     with measured tau_F, 10 power grids), predict the "exponent-route"
      dimension d_tau = g(tau_F) and compare it to the independent
      "threshold-route" dimension d_R = R/(R-1). These two observables are
      measured independently, so their agreement is genuine (non-circular)
-     evidence that the effective dimension is a real, multiply-readable property.
+     evidence that the effective dimension is multiply readable within these data.
   3. Forward consequence: d_tau -> predicted threshold p_c = d_tau/((d_tau-1)<k>),
      compared to the observed threshold with a dial-calibrated band.
 
@@ -99,7 +99,7 @@ def main():
     cal = load_calibration()
     real = load_real()
 
-    # monotone universality-route map g: tau_F -> d, calibrated on the dial only.
+    # monotone exponent-route map g: tau_F -> d, calibrated on the dial only.
     iso = IsotonicRegression(increasing=True, out_of_bounds="clip")
     iso.fit(cal["fisher_tau"].values, cal["d_eff"].values)
 
@@ -113,14 +113,14 @@ def main():
     tau_lo, tau_hi = float(cal["fisher_tau"].min()), float(cal["fisher_tau"].max())
     real["tau_in_range"] = (real["fisher_tau"] >= tau_lo) & (real["fisher_tau"] <= tau_hi)
 
-    # forward consequence: predict the threshold from the universality-route d.
-    real["pc_pred_class"] = real["d_tau"] / ((real["d_tau"] - 1.0) * real["mean_degree"])
+    # forward consequence: predict the threshold from the exponent-route d.
+    real["pc_pred_exponent_route"] = real["d_tau"] / ((real["d_tau"] - 1.0) * real["mean_degree"])
     real["pc_band"] = band_d / (((real["d_tau"] - 1.0) ** 2) * real["mean_degree"])  # |dpc/dd|*band
-    real["pc_within_band"] = (real["pc"] - real["pc_pred_class"]).abs() <= real["pc_band"]
+    real["pc_within_band"] = (real["pc"] - real["pc_pred_exponent_route"]).abs() <= real["pc_band"]
 
     d_mae = float(real["d_resid"].abs().mean())
     d_r, d_p = pearsonr(real["d_R"], real["d_tau"])
-    pc_mae = float((real["pc"] - real["pc_pred_class"]).abs().mean())
+    pc_mae = float((real["pc"] - real["pc_pred_exponent_route"]).abs().mean())
 
     summary = {
         "design": (
@@ -140,18 +140,18 @@ def main():
         "d_route_agreement_mae": d_mae,
         "d_route_pearson_r": float(d_r),
         "d_route_pearson_p": float(d_p),
-        "forward_pc_mae_from_class": pc_mae,
+        "forward_pc_mae_from_exponent_route": pc_mae,
         "forward_pc_within_band_frac": float(real["pc_within_band"].mean()),
         "physical_anchors": {"tau_2D": TAU_2D, "d_2D": D_2D, "tau_MF": TAU_MF, "d_MF": D_MF},
         "interpretation": (
-            "The effective dimension recovered from the universality class agrees with the "
+            "The effective dimension recovered from the finite-size exponent route agrees with the "
             "one read from the threshold across the held-out real networks (Pearson r=%.2f, "
-            "d-MAE=%.2f), and the class-route prediction recovers the observed threshold "
+            "d-MAE=%.2f), and the exponent-route prediction recovers the observed threshold "
             "(p_c-MAE=%.3f). Because the two routes use independent observables - the shape "
             "of the cluster-size distribution versus the location of the threshold - their "
-            "agreement shows the effective dimension is a real, multiply-readable property, "
-            "not an algebraic restatement of p_c. The empirical tau->d map is monotone and "
-            "bracketed by the exact 2D class (tau=2.055, d=2) and the mean-field class "
+            "agreement supports the effective dimension as multiply readable within these data, "
+            "not merely an algebraic restatement of p_c. The empirical tau->d map is monotone and "
+            "bracketed by the exact 2D reference (tau=2.055, d=2) and the mean-field reference "
             "(tau=2.5, d_c=6); no closed-form tau(d) law is asserted."
         ) % (d_r, d_mae, pc_mae),
     }
@@ -164,7 +164,7 @@ def main():
 
     print("[R110] held-out real networks: d-route Pearson r=%.2f (p=%.1e), d-MAE=%.2f" % (
         d_r, d_p, d_mae), flush=True)
-    print("[R110] forward p_c from class: MAE=%.3f, within-band %.0f%%" % (
+    print("[R110] forward p_c from exponent route: MAE=%.3f, within-band %.0f%%" % (
         pc_mae, 100 * summary["forward_pc_within_band_frac"]), flush=True)
     print("[R110] calibration: %d dial points, band(d)=%.2f, tau range [%.2f, %.2f]" % (
         len(cal), band_d, tau_lo, tau_hi), flush=True)
@@ -187,7 +187,7 @@ def make_figure(cal, real, iso, band_d, summary):
         ax.scatter(g["d_R"], g["d_tau"], s=26, color=cr[dom], alpha=0.9,
                    linewidths=0, label=f"{dom} (held-out)", zorder=3)
     ax.set_xlabel("threshold-route dimension  $d_R=R/(R-1)$")
-    ax.set_ylabel("universality-route dimension  $d_\\tau=g(\\tau_F)$")
+    ax.set_ylabel("exponent-route dimension  $d_\\tau=g(\\tau_F)$")
     pub_style.panel_title(ax, "a", "Two independent routes to $d$ agree")
     pub_style.annot(ax, 0.04, 0.96,
                     "held-out real nets:\n$r=%.2f$, MAE $=%.2f$" % (
@@ -209,14 +209,14 @@ def make_figure(cal, real, iso, band_d, summary):
                    linewidths=0, label=f"{dom}")
     # physical reference anchors
     ax.scatter([TAU_2D], [D_2D], marker="*", s=70, color="#1A1A1A", zorder=5)
-    ax.annotate("2D class\n($\\tau=2.055$, $d=2$)", (TAU_2D, D_2D), xytext=(3, -16),
+    ax.annotate("2D reference\n($\\tau=2.055$, $d=2$)", (TAU_2D, D_2D), xytext=(3, -16),
                 textcoords="offset points", fontsize=5.6, color="#1A1A1A")
     ax.axvline(TAU_MF, ls=":", lw=0.7, color="#6E6E6E")
     ax.annotate("mean-field\n$\\tau=2.5$", (TAU_MF, hi - 0.2), xytext=(-30, 0),
                 textcoords="offset points", fontsize=5.6, color="#6E6E6E")
-    ax.set_xlabel("Fisher exponent  $\\tau_F$  (universality class)")
+    ax.set_xlabel("Fisher exponent  $\\tau_F$  (finite-size read-out)")
     ax.set_ylabel("effective dimension  $d$")
-    pub_style.panel_title(ax, "b", "One locus links class and dimension")
+    pub_style.panel_title(ax, "b", "One locus links exponent and dimension")
     pub_style.light_grid(ax, axis="both")
     ax.legend(frameon=False, fontsize=5.6, loc="lower right")
 

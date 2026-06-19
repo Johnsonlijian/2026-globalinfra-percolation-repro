@@ -896,7 +896,7 @@ non-crossing subset.
 | Null mobility reported | PASS | Bridge/articulation/biconnected, dual-degree, and angular changes are in the replicate table. |
 | Nature-level claim boundary | PASS | R67 is explicitly framed as 21-city sensitivity hardening, not a full 71-city planar-null result. |
 
-## Remaining Desk-rejection Risk
+## Remaining Scope Risk
 
 - Full 71-city strict planar/geometry null is still deferred because the strict non-crossing algorithm is costly at
   large edge counts.

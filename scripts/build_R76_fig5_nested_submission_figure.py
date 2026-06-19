@@ -4,10 +4,9 @@ This figure replaces the older public-control-only figure in the target
 submission packages. It uses existing derived source tables only; no raw OSM,
 GHSL or WDI data are redistributed.
 
-R101 renumbering: in the npj Complexity package this figure is manuscript
-Fig. 4 (urban-form validation) so that first in-text figure citations remain
-sequential; the communications_physics package keeps its original Fig. 5 name.
-The R101 restyle also removed the former dashboard-style "claim boundary"
+R101 renumbering: in the npj Complexity package this figure became the
+urban-form validation figure. The R101 restyle also removed the former
+dashboard-style "claim boundary"
 text panel; claim boundaries live in the caption and main text instead.
 """
 
@@ -34,18 +33,8 @@ import pub_style  # noqa: E402
 OUT = ROOT / "data" / "R76_fig5_nested_submission"
 FIG_ROOT = ROOT / "figures" / "Fig_R76_fig5_nested_submission"
 
-CP_TARGET = ROOT / "submission" / "communications_physics" / "target_submission"
-NPJ_TARGET = ROOT / "submission" / "npj_complexity" / "target_submission"
-# (target, display figure stem, combined source-data file name)
-# R103 renumbering: in the npj package the validation figure display stem is
-# Fig5_urban_form_validation (the planar-lattice mechanism took the Fig. 2 slot,
-# shifting it from Fig. 4 to Fig. 5). The combined source-data CSV keeps its
-# historical Fig4_* name, which the figure-source map and SI already cite.
-TARGET_SPECS = [
-    (CP_TARGET, "Fig5_public_controls_boundary_checks", "Fig5_combined_nested_public_source_data.csv"),
-    (NPJ_TARGET, "Fig5_urban_form_validation", "Fig4_combined_nested_public_source_data.csv"),
-]
-CP_SOURCE = CP_TARGET / "source_data"
+PUBLIC_SD = ROOT / "source_data"
+COMBINED_SOURCE_NAME = "Fig4_combined_nested_public_source_data.csv"
 
 MODEL_ORDER = [
     "M0_size",
@@ -320,8 +309,8 @@ def make_figure(
     plt.close(fig)
 
 
-def update_manifest_for_target(target: Path, files: list[tuple[Path, str]]) -> None:
-    manifest = target / "source_data" / "Supplementary_Data_1_source_data_manifest.csv"
+def update_manifest_for_source_data(sd: Path, files: list[tuple[Path, str]]) -> None:
+    manifest = sd / "Supplementary_Data_1_source_data_manifest.csv"
     df = pd.read_csv(manifest)
     for src, copied_name in files:
         copied = f"figures/{copied_name}"
@@ -342,22 +331,16 @@ def update_manifest_for_target(target: Path, files: list[tuple[Path, str]]) -> N
 
 
 def copy_outputs() -> None:
-    generated = [FIG_ROOT.with_suffix(ext) for ext in [".svg", ".pdf", ".png", ".tiff"]]
     combined_src = OUT / "Fig4_combined_nested_public_source_data.csv"
-    for target, fig_stem, combined_name in TARGET_SPECS:
-        fig_dir = target / "figures"
-        fig_dir.mkdir(parents=True, exist_ok=True)
-        for src in generated:
-            shutil.copy2(src, fig_dir / f"{fig_stem}{src.suffix}")
-        sd_fig_dir = target / "source_data" / "figures"
-        sd_fig_dir.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(combined_src, sd_fig_dir / combined_name)
-        update_manifest_for_target(target, [(combined_src, combined_name)])
+    sd_fig_dir = PUBLIC_SD / "figures"
+    sd_fig_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(combined_src, sd_fig_dir / COMBINED_SOURCE_NAME)
+    update_manifest_for_source_data(PUBLIC_SD, [(combined_src, COMBINED_SOURCE_NAME)])
 
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    tables = CP_SOURCE / "tables"
+    tables = PUBLIC_SD / "tables"
     nested = pd.read_csv(tables / "R73_nested_model_summary.csv")
     preds = pd.read_csv(tables / "R73_nested_model_predictions.csv")
     region = pd.read_csv(tables / "R73_leave_region_out_region_summary.csv")
@@ -373,7 +356,7 @@ def main() -> None:
         "status": "pass",
         "round": "R76_fig5_nested_submission",
         "figure": str(FIG_ROOT.with_suffix(".svg")),
-        "target_figure_name": "Fig4_urban_form_validation (npj) / Fig5_public_controls_boundary_checks (CP)",
+        "target_figure_name": "Fig5_urban_form_validation in the manuscript package",
         "source_data": str(OUT / "Fig4_combined_nested_public_source_data.csv"),
         "claim_boundary": (
             "The validation figure integrates nested validation, public-control comparison, "

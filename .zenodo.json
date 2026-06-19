@@ -8,7 +8,7 @@
     }
   ],
   "title": "Reproducibility package for local noncrossing geometry and infrastructure percolation transfer",
-  "description": "Public, non-sensitive code, derived source tables, generated figures, run manifests and runbooks supporting the manuscript 'Local noncrossing geometry controls when percolation transfers from random graphs to embedded infrastructure'. Raw third-party OpenStreetMap, Geofabrik, GHSL, WDI and benchmark-network source archives are not redistributed; source links and access notes are recorded in DATASETS_AND_LINKS.csv.",
+  "description": "Public, non-sensitive code, derived source tables, generated figures, run manifests and runbooks supporting the manuscript 'Local noncrossing geometry controls percolation transfer from random graphs to embedded infrastructure'. Raw third-party OpenStreetMap, Geofabrik, GHSL, WDI and benchmark-network source archives are not redistributed; source links and access notes are recorded in DATASETS_AND_LINKS.csv.",
   "upload_type": "software",
   "access_right": "open",
   "license": "mit",

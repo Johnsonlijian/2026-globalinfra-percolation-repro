@@ -17,6 +17,6 @@
     "0.01": 0.07738095238095233,
     "0.02": 0.08958333333333328
   },
-  "figure": "R:\\IMUT_WORKPOOL\\01_PROJECTS\\NAS_DRIVE\\IMUT\\1-Research_Output\\1-Papers\\1_In_Preparation\\2026-GlobalInfra-Percolation\\figures\\Fig_R80_geometry_null_distance_audit.svg",
+  "figure": "figures/Fig_R80_geometry_null_distance_audit.svg",
   "claim_boundary": "Distance audit from archived metrics; no exact edge-overlap reconstruction."
 }

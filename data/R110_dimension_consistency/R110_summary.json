@@ -1,5 +1,5 @@
 {
-  "design": "Two independent observables, the threshold location (route A: d_R = R/(R-1)) and the finite-size cluster-size Fisher exponent (route B: d_tau = g(tau_F), g calibrated by isotonic regression on the controlled planarity dial only), are compared on 15 held-out real networks. Agreement addresses the circularity objection that d is merely an algebraic relabel of p_c.",
+  "design": "Two independent critical observables, the threshold location (route A: d_R = R/(R-1)) and the cluster-size Fisher exponent (route B: d_tau = g(tau_F), g calibrated by isotonic regression on the controlled planarity dial only), are compared on 15 held-out real networks. Agreement breaks the circularity objection that d is merely an algebraic relabel of p_c.",
   "n_calibration_points": 24,
   "n_real_test": 15,
   "n_road": 5,
@@ -13,7 +13,7 @@
   "d_route_agreement_mae": 0.48255111336987444,
   "d_route_pearson_r": 0.712228516700674,
   "d_route_pearson_p": 0.0028908210674012517,
-  "forward_pc_mae_from_class": 0.061253863189942505,
+  "forward_pc_mae_from_exponent_route": 0.061253863189942505,
   "forward_pc_within_band_frac": 0.6666666666666666,
   "physical_anchors": {
     "tau_2D": 2.0549450549450547,
@@ -21,5 +21,5 @@
     "tau_MF": 2.5,
     "d_MF": 6.0
   },
-  "interpretation": "The effective dimension recovered from the finite-size exponent route agrees with the one read from the threshold across the held-out real networks (Pearson r=0.71, d-MAE=0.48), and the exponent-route prediction recovers the observed threshold (p_c-MAE=0.061). Because the two routes use independent observables - the shape of the cluster-size distribution versus the location of the threshold - their agreement supports an effective-dimension organization rather than a purely algebraic restatement of p_c. The empirical tau->d map is monotone and bracketed by the exact 2D exponent (tau=2.055, d=2) and the mean-field exponent (tau=2.5, d_c=6); no closed-form tau(d) law or universality proof is asserted."
+  "interpretation": "The effective dimension recovered from the finite-size exponent route agrees with the one read from the threshold across the held-out real networks (Pearson r=0.71, d-MAE=0.48), and the exponent-route prediction recovers the observed threshold (p_c-MAE=0.061). Because the two routes use independent observables - the shape of the cluster-size distribution versus the location of the threshold - their agreement supports the effective dimension as multiply readable within these data, not merely an algebraic restatement of p_c. The empirical tau->d map is monotone and bracketed by the exact 2D reference (tau=2.055, d=2) and the mean-field reference (tau=2.5, d_c=6); no closed-form tau(d) law is asserted."
 }

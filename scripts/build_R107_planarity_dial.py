@@ -1,19 +1,18 @@
-"""R107: a controlled planarity dial promotes the universality result to a main
-figure with a causal demonstration.
+"""R107: a controlled planarity dial for finite-size exponent read-outs.
 
-R105 showed road percolation is close to the two-dimensional universality class
-(Fisher exponent ~2.05-2.12); R106 showed non-planar power grids lie near
-mean-field. This round adds the controlled experiment that ties the two
-together: starting from real road graphs (planar), we add a tunable fraction of
-random node-pair edges - which are almost always non-adjacent crossings - and
-measure the cluster-size-distribution exponent. The exponent rises sharply from
-the two-dimensional value toward mean-field as planarity is destroyed, showing
-that the 2D assignment is caused by non-crossing geometry, and explaining why
-the non-planar power grids are mean-field-like.
+R105 showed that road finite-size Fisher exponents sit near the
+two-dimensional reference (tau_F ~2.05-2.12); R106 showed non-planar power
+grids lie nearer mean-field. This round adds the controlled experiment that
+ties the two read-outs together: starting from real road graphs, we add a
+tunable fraction of random node-pair edges - which are almost always
+non-adjacent crossings - and measure the cluster-size-distribution exponent.
+The exponent rises sharply from the two-dimensional value toward mean-field as
+crossings are introduced, supporting non-crossing geometry as the implemented
+dial behind the finite-size exponent contrast.
 
 The main figure (manuscript Fig. 7) synthesizes:
-  a. the planarity dial (controlled causal demonstration);
-  b. the cross-domain universality ladder (square / roads / power grids);
+  a. the planarity dial;
+  b. the cross-domain finite-size exponent contrast (square / roads / power grids);
   c. the cross-domain mechanism generalization (CEBH vs junction anchor on roads
      and on the ten power grids).
 
@@ -204,11 +203,12 @@ def main():
         "interpretation": (
             f"On real road graphs the cluster-size exponent is tau_F = {road_tau0:.2f} at zero added "
             "crossings, essentially the two-dimensional value 2.055. Adding only a few percent of random "
-            "crossing edges drives it to the mean-field value 2.5 and above. The 2D universality class of "
-            "road percolation is therefore caused by non-crossing planarity; destroying planarity recovers "
-            "mean-field behaviour. This is the controlled counterpart to the cross-domain contrast: "
-            "near-planar roads are 2D, non-planar power grids are mean-field, and the planarity dial shows "
-            "the causal direction."
+            "crossing edges drives it toward the mean-field value 2.5 and above. The finite-size exponent "
+            "contrast is therefore consistent with non-crossing planarity as the implemented dial; "
+            "adding crossings recovers mean-field-like behaviour. This is the controlled counterpart to "
+            "the cross-domain contrast: near-planar roads sit near the two-dimensional reference, "
+            "non-planar power grids sit nearer mean-field, and the planarity dial provides the bounded "
+            "mechanistic test."
         ),
     }
     (OUT / "R107_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")

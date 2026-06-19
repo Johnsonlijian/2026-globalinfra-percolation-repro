@@ -1,7 +1,7 @@
 ﻿"""R75 submission hardening source tables.
 
-This script creates submission-facing helper tables requested by the final
-npj/CP package audit. It does not create new scientific measurements. It
+This script creates public source-data helper tables requested by the final
+npj package audit. It does not create new scientific measurements. It
 renames and reorganizes already derived R72/R73 outputs, and it records the
 boundary that exact rewired-edge overlap measures cannot be recovered from archived
 summary tables alone.
@@ -19,15 +19,13 @@ import pandas as pd
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "R75_submission_hardening"
-CP_SD = ROOT / "submission" / "communications_physics" / "target_submission" / "source_data"
-NPJ_SD = ROOT / "submission" / "npj_complexity" / "target_submission" / "source_data"
+PUBLIC_SD = ROOT / "source_data"
 
 
 def ensure_dirs() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    for sd in [CP_SD, NPJ_SD]:
-        (sd / "tables").mkdir(parents=True, exist_ok=True)
-        (sd / "figures").mkdir(parents=True, exist_ok=True)
+    (PUBLIC_SD / "tables").mkdir(parents=True, exist_ok=True)
+    (PUBLIC_SD / "figures").mkdir(parents=True, exist_ok=True)
 
 
 def sha256(path: Path) -> str:
@@ -76,8 +74,8 @@ def write_feature_groups(nested: pd.DataFrame) -> pd.DataFrame:
 
 
 def write_geometry_proxy_tables() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-    city = pd.read_csv(CP_SD / "tables" / "R72_matched_intensity_geometry_vs_spatial_city.csv")
-    mobility = pd.read_csv(CP_SD / "tables" / "R72_geometry_null_mobility_summary.csv")
+    city = pd.read_csv(PUBLIC_SD / "tables" / "R72_matched_intensity_geometry_vs_spatial_city.csv")
+    mobility = pd.read_csv(PUBLIC_SD / "tables" / "R72_geometry_null_mobility_summary.csv")
 
     proxy = city[
         [
@@ -147,9 +145,9 @@ def write_geometry_proxy_tables() -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFr
 
 
 def write_aliases_and_figure_sources() -> None:
-    nested = pd.read_csv(CP_SD / "tables" / "R73_nested_model_summary.csv")
-    pred = pd.read_csv(CP_SD / "tables" / "R73_nested_model_predictions.csv")
-    lro = pd.read_csv(CP_SD / "tables" / "R73_leave_region_out_region_summary.csv")
+    nested = pd.read_csv(PUBLIC_SD / "tables" / "R73_nested_model_summary.csv")
+    pred = pd.read_csv(PUBLIC_SD / "tables" / "R73_nested_model_predictions.csv")
+    lro = pd.read_csv(PUBLIC_SD / "tables" / "R73_leave_region_out_region_summary.csv")
 
     nested.to_csv(OUT / "R73_nested_model_ladder_summary.csv", index=False)
     pred.to_csv(OUT / "R73_nested_model_ladder_city_predictions.csv", index=False)
@@ -178,12 +176,11 @@ def write_aliases_and_figure_sources() -> None:
     fig5.to_csv(OUT / "Fig5_nested_validation_source_data.csv", index=False)
 
 
-def copy_outputs_to_submission_packages() -> None:
-    for sd in [CP_SD, NPJ_SD]:
-        for path in OUT.glob("*.csv"):
-            target_dir = sd / ("figures" if path.name.startswith("Fig") else "tables")
-            path_target = target_dir / path.name
-            path_target.write_bytes(path.read_bytes())
+def copy_outputs_to_public_source_data() -> None:
+    for path in OUT.glob("*.csv"):
+        target_dir = PUBLIC_SD / ("figures" if path.name.startswith("Fig") else "tables")
+        path_target = target_dir / path.name
+        path_target.write_bytes(path.read_bytes())
 
 
 def upsert_manifest(sd: Path) -> None:
@@ -350,12 +347,11 @@ def main() -> None:
     ensure_dirs()
     write_aliases_and_figure_sources()
     write_geometry_proxy_tables()
-    copy_outputs_to_submission_packages()
-    for sd in [CP_SD, NPJ_SD]:
-        upsert_manifest(sd)
-        upsert_claim_map(sd)
-        upsert_column_dictionary(sd)
-        upsert_run_manifest(sd)
+    copy_outputs_to_public_source_data()
+    upsert_manifest(PUBLIC_SD)
+    upsert_claim_map(PUBLIC_SD)
+    upsert_column_dictionary(PUBLIC_SD)
+    upsert_run_manifest(PUBLIC_SD)
     summary = {
         "status": "pass",
         "round": "R75_submission_hardening",

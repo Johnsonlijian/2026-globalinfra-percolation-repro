@@ -32,10 +32,7 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "R77_physics_takeaway"
 ROUND_DIR = ROOT / "rounds" / "R77_physics_takeaway"
 FIG_BASE = ROOT / "figures" / "Fig_R77_physics_takeaway"
-TARGETS = [
-    ROOT / "submission" / "communications_physics" / "target_submission",
-    ROOT / "submission" / "npj_complexity" / "target_submission",
-]
+PUBLIC_SD = ROOT / "source_data"
 
 MATCHED_SUMMARY = ROOT / "data" / "R72_geometry_defense" / "matched_intensity_summary.csv"
 MATCHED_CITY = ROOT / "data" / "R72_geometry_defense" / "matched_intensity_geometry_vs_spatial_city.csv"
@@ -413,8 +410,7 @@ def make_figure(
     plt.close(fig)
 
 
-def update_source_data_manifest(target: Path, files: list[tuple[Path, str]]) -> None:
-    sd = target / "source_data"
+def update_source_data_manifest(sd: Path, files: list[tuple[Path, str]]) -> None:
     manifest = sd / "Supplementary_Data_1_source_data_manifest.csv"
     df = pd.read_csv(manifest)
     for src, copied_file in files:
@@ -467,7 +463,6 @@ def update_source_data_manifest(target: Path, files: list[tuple[Path, str]]) -> 
 
 
 def copy_to_targets() -> None:
-    figure_files = [FIG_BASE.with_suffix(ext) for ext in [".svg", ".pdf", ".png", ".tiff"]]
     source_specs = [
         (OUT / "R77_matched_intensity_main_result_source_data.csv", "figures/R77_matched_intensity_main_result_source_data.csv"),
         (OUT / "R77_geometry_absorption_city_table.csv", "tables/R77_geometry_absorption_city_table.csv"),
@@ -475,21 +470,11 @@ def copy_to_targets() -> None:
         (OUT / "R77_kappa_predictive_relation.csv", "tables/R77_kappa_predictive_relation.csv"),
         (OUT / "R77_kappa_predictive_metrics.json", "tables/R77_kappa_predictive_metrics.json"),
     ]
-    for target in TARGETS:
-        fig_dir = target / "figures"
-        fig_dir.mkdir(parents=True, exist_ok=True)
-        for ext_file in figure_files:
-            shutil.copy2(ext_file, fig_dir / f"Fig1_matched_geometry_partition{ext_file.suffix}")
-        # Move old schematic out of upload-facing figure sequence if present.
-        legacy = fig_dir / "legacy"
-        for old in fig_dir.glob("Fig1_null_ladder_schematic.*"):
-            legacy.mkdir(exist_ok=True)
-            shutil.move(str(old), str(legacy / old.name))
-        for src, copied in source_specs:
-            dst = target / "source_data" / copied
-            dst.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(src, dst)
-        update_source_data_manifest(target, source_specs)
+    for src, copied in source_specs:
+        dst = PUBLIC_SD / copied
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src, dst)
+    update_source_data_manifest(PUBLIC_SD, source_specs)
 
 
 def main() -> None:

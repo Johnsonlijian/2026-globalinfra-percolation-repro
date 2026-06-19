@@ -470,9 +470,9 @@ models from their distributing Python packages and store only derived results.
 
 ```bash
 python scripts/build_R103_planar_lattice_anchor.py        # Fig 2 planar-lattice mechanism anchor
-python scripts/build_R105_finite_size_scaling.py          # Fisher exponent / 2D universality class
+python scripts/build_R105_finite_size_scaling.py          # finite-size Fisher exponent read-out
 python scripts/build_R106_second_domain_power.py          # second domain: power grids
-python scripts/build_R107_planarity_dial.py               # Fig 7 causal planarity dial
+python scripts/build_R107_planarity_dial.py               # Fig 7 planarity dial
 python scripts/build_R108_effective_dimension_theory.py   # Fig 8 derived 2/<k> + d_eff unification
 python scripts/build_R109_resilience_screening.py         # Fig S10 resilience screening (81 networks)
 python scripts/build_R110_dimension_consistency.py        # Fig S11 non-circular d_eff validation
@@ -505,11 +505,12 @@ package stores only the derived per-network results.
 
 The dimensional relation `p_c<k> ~= d/(d-1)` (Vyssotsky bond approximation,
 generalized from coordination number to mean degree) is treated as an
-approximation, not an exact theorem. The two-dimensional universality class is
-supported for the near-planar road windows (R105/R107) but only the threshold
-law is claimed for the loop-sparse held-out water and rail domains; their
-cluster-size exponents are reported but not used to certify the class. The
-resilience results (R109/R113) are a screening implication on the standard
-topological robustness proxy concerning absolute margins, not a validation
-against external outage records, and not a fix of the relative fragility ranking.
+approximation, not an exact theorem. The finite-size exponent read-out for
+near-planar road windows is consistent with a two-dimensional interpretation
+within the tested window sizes, whereas only threshold transfer is claimed for
+the loop-sparse held-out water and rail domains; their cluster-size exponents
+are reported but not used to certify a class. The resilience results
+(R109/R113) are a screening implication on the standard topological robustness
+proxy concerning absolute margins, not a validation against external outage
+records, and not a fix of the relative fragility ranking.
 
