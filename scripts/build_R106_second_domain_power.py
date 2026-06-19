@@ -3,9 +3,10 @@
 The road result has two parts: (i) the degree-moment (CEBH) formula under-predicts
 the bond-percolation threshold of an embedded infrastructure network, and a
 junction-composition reference recovers most of the gap; (ii) near-planar road
-networks sit in (or near) the two-dimensional percolation universality class.
+networks sit near a two-dimensional finite-size exponent read-out.
 
-A second, independent embedded infrastructure tests how far this generalizes.
+A second, independent embedded infrastructure tests how far threshold transfer
+and the exponent contrast generalize.
 Power-transmission grids are spatially embedded but, unlike roads, are NOT planar
 (lines cross freely) and contain hubs. We use the openly published PEGASE
 European transmission grids shipped with pandapower (MATPOWER/PEGASE, BSD), build
@@ -15,9 +16,9 @@ pipeline used for roads.
 Honest expected reading: the CEBH transfer failure should generalize (embedded
 grids percolate far above the degree-moment prediction), while the *degree* of
 planar-lattice behaviour should be weaker than for roads because power grids are
-non-planar. The result is therefore a generalization-plus-boundary: the framework
-is not road-specific, and the cluster-size-distribution exponent grades with how
-planar the embedding is.
+non-planar. The result is therefore a threshold-transfer-plus-boundary test:
+the threshold baseline is not road-specific, and the cluster-size-distribution
+exponent grades with how planar the embedding is.
 
 No raw grid data are redistributed; the grids are loaded from the pandapower
 dependency and only derived results are stored.
@@ -203,7 +204,7 @@ def make_figure(recs, summary):
     ax.set_ylabel("Fisher exponent $\\tau_F$")
     ax.set_xlim(-0.6, 2.6)
     ax.set_ylim(1.8, 2.7)
-    pub_style.panel_title(ax, "b", "2D class is specific to planar roads")
+    pub_style.panel_title(ax, "b", "Exponent read-out separates domains")
 
     pub_style.save(fig, FIG_BASE)
     plt.close(fig)
@@ -247,19 +248,19 @@ def main():
         ),
         "road_fisher_tau": ROAD_TAU, "tau_2D": TAU_2D, "tau_mean_field": TAU_MF,
         "interpretation": (
-            "GENERALIZATION (robust): the CEBH transfer failure holds across a population of ten real "
+            "THRESHOLD TRANSFER (robust): the CEBH transfer failure holds across a population of ten real "
             "transmission grids (200-9241 buses; PEGASE, French RTE, Polish, GB, US). The degree-moment "
             "formula under-predicts the observed bond-percolation threshold in every grid (10/10 "
             "all-positive gap, mean 0.30, larger than the 0.22 road gap), and the zero-parameter "
             "junction-composition anchor beats CEBH in 100% of grids, cutting the mean absolute error "
             "about fourfold even though power grids are non-planar. BOUNDARY (the informative half): the "
-            "two-dimensional universality class does NOT carry over. The cluster-size-distribution "
+            "near-two-dimensional finite-size exponent signal does NOT carry over. The cluster-size-distribution "
             "exponent of the power grids is tau_F = 2.42 +- 0.23 (range 2.00-2.69), near the mean-field "
             "value 2.5 and well above the near-planar road value 2.12 (close to 2D 2.055). So junction "
             "composition sets the threshold value in both domains, but only the near-planar road geometry "
-            "places percolation in the 2D class; non-planar power grids fall in the mean-field/"
-            "random-graph regime. This separates the two parts of the road result - the threshold "
-            "mechanism generalizes, the universality class is geometry-specific - and is itself a "
+            "shows the near-two-dimensional exponent read-out; non-planar power grids fall near the "
+            "mean-field/random-graph regime. This separates the two parts of the road result - the "
+            "threshold baseline transfers, the exponent read-out is geometry-specific - and is itself a "
             "single-infrastructure-type (power) replication."
         ),
     }

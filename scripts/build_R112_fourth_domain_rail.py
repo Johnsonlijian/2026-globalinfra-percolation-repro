@@ -229,8 +229,8 @@ def main():
         "domain (rail) - %s. The dimensional law p_c=2/<k> recovers the observed thresholds with "
         "mean absolute error %.3f versus %.3f for the degree-moment formula, with effective dimension "
         "%.2f. With the water test, the threshold law is now supported on two unseen "
-        "domains; across four infrastructures the threshold mechanism generalizes while the 2D "
-        "universality class stays specific to roads."
+        "domains; across four infrastructures the threshold baseline transfers while the "
+        "clean near-two-dimensional finite-size exponent signal remains road-specific."
     ) % (("passes" if "PASS" in summary["verdict"] else "is reported honestly"),
          summary["derived_abs_err_mean"], summary["cebh_abs_err_mean"], summary["d_eff_mean"])
 

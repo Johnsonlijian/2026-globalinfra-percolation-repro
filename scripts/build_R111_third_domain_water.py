@@ -253,9 +253,9 @@ def main():
             "count - the dimensional law is more robust to loop-sparsity than anticipated. (2) The "
             "cluster-size (Fisher) exponent is NOT reliably measurable on these loop-sparse, near-"
             "saturation (p_c~0.85-0.93) water networks (values scatter 1.77-2.38), so we claim only the "
-            "THRESHOLD law for water, not the 2D universality class. This matches the road-specific class "
-            "boundary already found for power grids: the threshold mechanism generalizes across domains, "
-            "the 2D universality class does not."
+            "THRESHOLD law for water, not two-dimensional critical-class membership. This matches the class-evidence "
+            "boundary already found for power grids: the threshold law transfers across domains, "
+            "the finite-size exponent signal does not."
         ) % (float(r_resid_mesh), float(p_resid_mesh)),
         "interpretation": (
             "A held-out, zero-fit prediction on a third domain the law had never seen "

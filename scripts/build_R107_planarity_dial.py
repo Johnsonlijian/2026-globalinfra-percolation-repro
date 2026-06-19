@@ -10,10 +10,10 @@ The exponent rises sharply from the two-dimensional value toward mean-field as
 crossings are introduced, supporting non-crossing geometry as the implemented
 dial behind the finite-size exponent contrast.
 
-The main figure (manuscript Fig. 7) synthesizes:
+The main figure synthesizes:
   a. the planarity dial;
   b. the cross-domain finite-size exponent contrast (square / roads / power grids);
-  c. the cross-domain mechanism generalization (CEBH vs junction anchor on roads
+  c. the cross-domain threshold-transfer test (CEBH vs junction anchor on roads
      and on the ten power grids).
 
 Uses cached OSMnx road graphs (node coordinates only) and registered derived
@@ -135,10 +135,10 @@ def make_figure(dial_rows, r105, r106):
     ax.text(0.0, TAU_MF + 0.02, "mean-field 2.5", ha="left", va="bottom", fontsize=5.6, color=pub_style.COLORS["annot"])
     ax.set_xlabel("fraction of random crossing edges added")
     ax.set_ylabel("Fisher exponent $\\tau_F$")
-    pub_style.panel_title(ax, "a", "Crossings destroy the 2D class")
+    pub_style.panel_title(ax, "a", "Crossings shift exponent read-out")
     ax.legend(frameon=False, fontsize=5.4, loc="lower right", ncol=2, handletextpad=0.3, columnspacing=0.8)
 
-    # b: cross-domain universality ladder.
+    # b: cross-domain finite-size exponent contrast.
     ax = axes[1]
     road_tau0 = float(np.mean([r["fisher_tau"] for r in dial_rows if r["f_cross"] == 0.0]))
     ax.bar([0, 1], [r105["square_tau"], road_tau0],
@@ -159,9 +159,9 @@ def make_figure(dial_rows, r105, r106):
     ax.set_ylabel("Fisher exponent $\\tau_F$")
     ax.set_xlim(-0.6, 2.6)
     ax.set_ylim(1.8, 2.7)
-    pub_style.panel_title(ax, "b", "Universality separates planar from non-planar")
+    pub_style.panel_title(ax, "b", "Exponent read-out separates domains")
 
-    # c: cross-domain mechanism generalization.
+    # c: cross-domain threshold-transfer test.
     ax = axes[2]
     labels = ["roads\n(71 windows)", "power grids\n(10 grids)"]
     cebh = [ROAD_CEBH_MAE, r106["cebh_abs_err_mean"]]
@@ -173,7 +173,7 @@ def make_figure(dial_rows, r105, r106):
     ax.set_xticks(x)
     ax.set_xticklabels(labels, fontsize=5.6)
     ax.set_ylabel("Mean absolute threshold error")
-    pub_style.panel_title(ax, "c", "The threshold mechanism generalizes")
+    pub_style.panel_title(ax, "c", "Threshold baseline transfers")
     ax.legend(frameon=False, fontsize=5.8, loc="upper right")
 
     pub_style.save(fig, FIG_BASE)
@@ -218,7 +218,7 @@ def main():
         for ext in [".svg", ".pdf", ".png", ".tiff"]:
             src = FIG_BASE.with_suffix(ext)
             if src.exists():
-                shutil.copy2(src, NPJ / "figures" / f"Fig7_universality_origin{ext}")
+                shutil.copy2(src, NPJ / "figures" / f"Fig8_universality_origin{ext}")
         for f in ["R107_planarity_dial.csv", "R107_summary.json"]:
             shutil.copy2(OUT / f, NPJ / "source_data" / "tables" / f)
 

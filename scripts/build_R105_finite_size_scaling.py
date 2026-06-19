@@ -345,10 +345,11 @@ def main():
             "robust to road-density inhomogeneity. The square-lattice calibration recovers the "
             "exact 2D value 2.055; real road graphs at their observed thresholds give tau_F close "
             "to the 2D value and well below the mean-field/random-graph value 2.5 obtained for a "
-            "degree-matched configuration model at its CEBH threshold. This supports placement of "
-            "road bond percolation in the 2D percolation universality class rather than the "
-            "mean-field random-graph class. The accessible 10-km windows limit precision, so this "
-            "is supporting evidence, not a high-precision exponent measurement."
+            "degree-matched configuration model at its CEBH threshold. This supports a "
+            "near-two-dimensional finite-size exponent read-out for the tested road windows rather "
+            "than a mean-field random-graph read-out. The accessible 10-km windows limit precision, "
+            "so this is supporting evidence, not a high-precision exponent measurement or proof of "
+            "a universality class."
         ),
     }
     rows = ([{"system": "square_lattice", "tau_F": tau_sq, "r2": r2_sq}]

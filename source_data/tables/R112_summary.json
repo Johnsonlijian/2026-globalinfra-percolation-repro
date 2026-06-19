@@ -46,5 +46,5 @@
   "road_derived_mae": 0.0217,
   "road_cebh_mae": 0.217,
   "verdict": "PASS: the 2/<k> law generalizes to the unseen rail domain - lower error than CEBH and d_eff near 2, the planar threshold signature.",
-  "interpretation": "A second held-out, zero-fit prediction - now on a fourth independent domain (rail) - passes. The dimensional law p_c=2/<k> recovers the observed thresholds with mean absolute error 0.050 versus 0.240 for the degree-moment formula, with effective dimension 2.08. With the water test, the threshold law is now supported on two unseen domains; across four infrastructures the threshold mechanism generalizes while the clean near-two-dimensional finite-size exponent signal remains road-specific."
+  "interpretation": "A second held-out, zero-fit prediction - now on a fourth independent domain (rail) - passes. The dimensional law p_c=2/<k> recovers the observed thresholds with mean absolute error 0.050 versus 0.240 for the degree-moment formula, with effective dimension 2.08. With the water test, the threshold law is now supported on two unseen domains; across four infrastructures the threshold baseline transfers while the clean near-two-dimensional finite-size exponent signal remains road-specific."
 }
