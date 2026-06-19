@@ -56,7 +56,6 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "R111_third_domain_water"
 ROUND = ROOT / "rounds" / "R111_third_domain_water"
 FIG_BASE = ROOT / "figures" / "Fig_R111_third_domain_water"
-NPJ = ROOT / "submission" / "npj_complexity" / "target_submission"
 
 HONEYCOMB = 1.0 - 2.0 * math.sin(math.pi / 18.0)
 SQUARE = 0.5
@@ -275,17 +274,6 @@ def main():
     (OUT / "R111_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     make_figure(prim, summary)
 
-    if NPJ.exists():
-        for ext in [".svg", ".pdf", ".png", ".tiff"]:
-            src = FIG_BASE.with_suffix(ext)
-            if src.exists():
-                shutil.copy2(src, NPJ / "figures" / f"FigS_R111_third_domain_water{ext}")
-                if ext != ".tiff":
-                    shutil.copy2(src, NPJ / "source_data" / "figures" / f"FigS_R111_third_domain_water{ext}")
-        for f in ["R111_water_percolation.csv", "R111_summary.json"]:
-            dst = NPJ / "source_data" / "tables" / f
-            if dst.parent.exists():
-                shutil.copy2(OUT / f, dst)
 
     print("[R111] held-out test on %d water networks (%d-%d nodes)" % (
         len(prim), summary["primary_size_range"][0], summary["primary_size_range"][1]), flush=True)

@@ -42,7 +42,6 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "R109_resilience_screening"
 ROUND = ROOT / "rounds" / "R109_resilience_screening"
 FIG_BASE = ROOT / "figures" / "Fig_R109_resilience_screening"
-NPJ = ROOT / "submission" / "npj_complexity" / "target_submission"
 
 COV = ROOT / "data" / "R62_urban_form_mechanism" / "urban_form_covariates.csv"
 PRED = ROOT / "data" / "N99_prediction_correction_law" / "N99_prediction_city_predictions.csv"
@@ -131,15 +130,6 @@ def main():
     (OUT / "R109_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     make_figure(a)
 
-    if NPJ.exists():
-        for ext in [".svg", ".pdf", ".png", ".tiff"]:
-            src = FIG_BASE.with_suffix(ext)
-            if src.exists():
-                shutil.copy2(src, NPJ / "figures" / f"FigS_R109_resilience_screening{ext}")
-                if ext != ".tiff":
-                    shutil.copy2(src, NPJ / "source_data" / "figures" / f"FigS_R109_resilience_screening{ext}")
-        for f in ["R109_resilience_population.csv", "R109_summary.json"]:
-            shutil.copy2(OUT / f, NPJ / "source_data" / "tables" / f)
 
     print("[R109] CEBH overstates f_c by %.3f (%.0f%%) in %d/%d networks" % (
         summary["cebh_overrating_mean"], summary["cebh_overrating_relative_pct"],

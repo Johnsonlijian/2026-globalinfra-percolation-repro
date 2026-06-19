@@ -47,7 +47,6 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "R112_fourth_domain_rail"
 ROUND = ROOT / "rounds" / "R112_fourth_domain_rail"
 FIG_BASE = ROOT / "figures" / "Fig_R112_fourth_domain_rail"
-NPJ = ROOT / "submission" / "npj_complexity" / "target_submission"
 
 TAU_2D = 187.0 / 91.0
 TAU_MF = 2.5
@@ -238,17 +237,6 @@ def main():
     (OUT / "R112_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     make_figure(recs, summary)
 
-    if NPJ.exists():
-        for ext in [".svg", ".pdf", ".png", ".tiff"]:
-            src = FIG_BASE.with_suffix(ext)
-            if src.exists():
-                shutil.copy2(src, NPJ / "figures" / f"FigS_R112_fourth_domain_rail{ext}")
-                if ext != ".tiff":
-                    shutil.copy2(src, NPJ / "source_data" / "figures" / f"FigS_R112_fourth_domain_rail{ext}")
-        for f in ["R112_rail_percolation.csv", "R112_summary.json"]:
-            dst = NPJ / "source_data" / "tables" / f
-            if dst.parent.exists():
-                shutil.copy2(OUT / f, dst)
 
     print("[R112] derived MAE=%.3f vs CEBH MAE=%.3f (road derived %.3f); derived beats CEBH %.0f%%" % (
         summary["derived_abs_err_mean"], summary["cebh_abs_err_mean"], ROAD_DERIVED_MAE,

@@ -52,7 +52,6 @@ DATA = ROOT / "data"
 OUT = DATA / "R110_dimension_consistency"
 ROUND = ROOT / "rounds" / "R110_dimension_consistency"
 FIG_BASE = ROOT / "figures" / "Fig_R110_dimension_consistency"
-NPJ = ROOT / "submission" / "npj_complexity" / "target_submission"
 
 DIAL = DATA / "R108_effective_dimension" / "R108_dial_effective_dimension.csv"
 ROAD_DEFF = DATA / "R108_effective_dimension" / "R108_road_effective_dimension.csv"
@@ -223,17 +222,6 @@ def make_figure(cal, real, iso, band_d, summary):
     pub_style.save(fig, FIG_BASE)
     plt.close(fig)
 
-    if NPJ.exists():
-        for ext in [".svg", ".pdf", ".png", ".tiff"]:
-            src = FIG_BASE.with_suffix(ext)
-            if src.exists():
-                shutil.copy2(src, NPJ / "figures" / f"FigS_R110_dimension_consistency{ext}")
-                if ext != ".tiff":
-                    shutil.copy2(src, NPJ / "source_data" / "figures" / f"FigS_R110_dimension_consistency{ext}")
-        for f in ["R110_real_network_consistency.csv", "R110_calibration_dial.csv", "R110_summary.json"]:
-            dst = NPJ / "source_data" / "tables" / f
-            if (OUT / f).exists() and dst.parent.exists():
-                shutil.copy2(OUT / f, dst)
 
 
 if __name__ == "__main__":

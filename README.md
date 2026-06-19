@@ -1,4 +1,4 @@
-﻿# 2026 Global Infrastructure Percolation Reproducibility Package
+# 2026 Global Infrastructure Percolation Reproducibility Package
 
 This repository contains public, non-sensitive materials for reproducing the
 derived evidence behind the road-network percolation null-model analysis.
@@ -56,14 +56,14 @@ families under five-fold and leave-region-out cross-validation. Embedded
 street form remains the strongest descriptive mechanism signal, including for
 the post-spatial residual; this is predictive evidence, not causal inference.
 
-R75 hardens the submission source-data layer by adding explicit nested
+R75 hardens the public source-data layer by adding explicit nested
 validation aliases, geometry-null rejection-share summaries, mobility/fidelity
 proxies and an edge-overlap availability table. The edge-overlap table records
 that exact rewired-edge overlap cannot be reconstructed from the archived summaries
 because final null edge sets were not stored; accepted-swap and mobility
 metrics are reported as proxies only.
 
-R76 rebuilds the submission Fig. 5 from the nested validation, public-control
+R76 rebuilds the nested-validation figure from the nested validation, public-control
 comparison and high-order embedded-feature tables. The figure also includes a
 claim-boundary panel stating that the 71-city geometry-null screen is
 low-intensity and descriptive, not a causal urban-design rule or planar theorem.
@@ -76,7 +76,7 @@ geometry subset on a local fine grid and shows that the matched spatial-minus-
 geometry separation is unchanged when the shared observed threshold is
 substituted.
 
-R80 adds the npj Complexity hardening audit for the strict geometry null. It
+R80 adds a geometry-null distance audit for the strict geometry null. It
 summarizes residuals, null mobility, constraint pressure and archived
 embedded-structure drift across R67/R68 geometry-null records. It supports a
 measurable-perturbation interpretation while preserving the boundary that exact
@@ -144,8 +144,6 @@ mixing theorem.
   full-city high-intensity geometry-null script. With `--skip-compute`, it
   recreates R81 summaries and figures from included derived tables; a full
   rerun requires local cached OSMnx graph objects.
-- `scripts/update_R81_npj_submission_package.py`: R81 source-data registration
-  helper for the npj Complexity target package.
 - `scripts/build_R72_geometry_defense.py`: matched-intensity spatial-versus-
   geometry contrast on the 21-city sensitivity subset.
 - `scripts/build_R73_urban_form_nested_cv.py`: nested urban-form model ladder
@@ -153,8 +151,8 @@ mixing theorem.
 - `scripts/build_R75_submission_hardening_tables.py`: source-data hardening
   script for nested-validation aliases, geometry mobility/rejection diagnostics
   and edge-overlap availability boundaries.
-- `scripts/build_R76_fig5_nested_submission_figure.py`: submission Fig. 5
-  builder that combines nested validation, public-control checks, high-order
+- `scripts/build_R76_nested_validation_figure.py`: nested-validation
+  figure builder that combines nested validation, public-control checks, high-order
   feature correlations and explicit claim-boundary notes.
 - `scripts/build_R77_physics_takeaway.py`: matched-geometry head figure and
   kappa/geometry-absorption source-data builder.
@@ -162,13 +160,11 @@ mixing theorem.
   observed-road fine-threshold estimator check and matched-intensity
   fine-observed substitution table.
 - `scripts/build_R80_npj_complexity_hardening.py`: geometry-null distance
-  audit used for the npj Complexity package.
+  audit and public source-data builder.
 - `scripts/build_R90_finegrid_edge_audit.py`: R90 fine-grid matched-null and
   exact edge-overlap audit. With `--skip-compute`, it recreates the R90
   summaries, report and figure from included derived tables; a full rerun
   requires local cached OSMnx graph objects.
-- `scripts/update_R90_npj_submission_package.py`: R90 source-data registration
-  helper for the npj Complexity target package.
 - `scripts/build_R95_nonbacktracking_spectral_layer.py`: R95
   non-backtracking spectral threshold audit. With `--skip-compute`, it
   recreates the R95 decomposition, report and figure from included derived
@@ -180,8 +176,6 @@ mixing theorem.
   coefficient-stability audit and source-figure builder.
 - `scripts/build_N99_low_overlap_geometry_surrogate.py`: N99/R100 12-city
   low-overlap strict-geometry surrogate audit.
-- `scripts/update_N99_npj_submission_package.py`: N99 source-data registration
-  helper for the npj Complexity target package.
 - `scripts/build_R100_main_fig4_geometry_null_contrast.py`: R100 main Fig. 4
   geometry-null contrast hardening builder.
 - `scripts/build_R62_urban_form_mechanism.py`: R62 covariate and Fig.3 source
@@ -191,7 +185,7 @@ mixing theorem.
   summaries and figures from included derived tables; with `--force`, it reruns
   matched spatial nulls and requires local cached graph objects.
 - `run_manifest.csv` and `run_manifest.json`: compact run-level provenance for
-  the submission source-data bundle.
+  the public source-data bundle.
 - `data/R41_degree_preserving_nulls/`: derived degree-null source tables.
 - `data/R56_spatial_length_constrained_nulls/`: derived spatial-null source
   tables and report.
@@ -220,7 +214,7 @@ mixing theorem.
 - `data/R75_submission_hardening/`: derived submission-hardening aliases,
   geometry-null rejection summaries, mobility/fidelity proxy tables and
   figure-source-data tables.
-- `data/R76_fig5_nested_submission/`: derived Fig. 5 source data and summary.
+- `data/R76_nested_validation_figure/`: derived Fig. 5 source data and summary.
 - `data/R77_physics_takeaway/`: derived matched-intensity head-figure source
   data, geometry-absorption table, kappa predictions and summary.
 - `data/R78_observed_road_fine_estimator_check/`: derived 21-city fine
@@ -238,7 +232,7 @@ mixing theorem.
   strict-geometry audit records, city summary, report and gate outputs.
 - `data/R100_main_figure_hardening/`: derived Fig. 4 source data joining
   full-city, matched-intensity, fine-grid and low-overlap geometry-null checks.
-- `source_data/`: submission-facing source-data bundle, column dictionary,
+- `source_data/`: public source-data bundle, column dictionary,
   claim-to-table map and run manifest. It contains derived project tables only.
 - `figures/Fig_R56_spatial_length_constrained_nulls.*`: exported figure.
 - `figures/Fig_R65_public_covariate_controls.*`: exported R65 public-control
@@ -253,7 +247,7 @@ mixing theorem.
   matched-intensity geometry-null contrast figure.
 - `figures/Fig_R73_urban_form_nested_cv.*`: exported supplementary nested
   urban-form validation figure.
-- `figures/Fig_R76_fig5_nested_submission.*`: exported submission Fig. 5 with
+- `figures/Fig_R76_nested_validation.*`: exported nested-validation figure with
   nested validation and public-control checks.
 - `figures/Fig_R77_physics_takeaway.*`: exported matched-geometry head figure.
 - `figures/Fig_R78_observed_road_fine_estimator_check.*`: exported observed-road
@@ -289,7 +283,7 @@ python scripts/build_R67_geometry_null_sensitivity.py --skip-compute
 python scripts/build_R68_full71_geometry_null_ensemble.py --skip-compute
 python scripts/build_R72_geometry_defense.py
 python scripts/build_R75_submission_hardening_tables.py
-python scripts/build_R76_fig5_nested_submission_figure.py
+python scripts/build_R76_nested_validation_figure.py
 python scripts/build_R77_physics_takeaway.py
 python scripts/build_R78_observed_road_fine_estimator_check.py
 python scripts/build_R90_finegrid_edge_audit.py --skip-compute

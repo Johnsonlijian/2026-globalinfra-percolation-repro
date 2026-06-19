@@ -50,7 +50,6 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "R106_second_domain_power"
 ROUND = ROOT / "rounds" / "R106_second_domain_power"
 FIG_BASE = ROOT / "figures" / "Fig_R106_second_domain_power"
-NPJ = ROOT / "submission" / "npj_complexity" / "target_submission"
 
 HONEYCOMB = 1.0 - 2.0 * math.sin(math.pi / 18.0)
 SQUARE = 0.5
@@ -269,17 +268,6 @@ def main():
     (OUT / "R106_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     make_figure(recs, summary)
 
-    if NPJ.exists():
-        for ext in [".svg", ".pdf", ".png", ".tiff"]:
-            src = FIG_BASE.with_suffix(ext)
-            if src.exists():
-                (NPJ / "figures").mkdir(exist_ok=True)
-                __import__("shutil").copy2(src, NPJ / "figures" / f"FigS_R106_second_domain_power{ext}")
-                if ext != ".tiff":
-                    (NPJ / "source_data" / "figures").mkdir(parents=True, exist_ok=True)
-                    __import__("shutil").copy2(src, NPJ / "source_data" / "figures" / f"FigS_R106_second_domain_power{ext}")
-        for f in ["R106_power_grid_percolation.csv", "R106_summary.json"]:
-            __import__("shutil").copy2(OUT / f, NPJ / "source_data" / "tables" / f)
 
     print("\n[R106] SUMMARY", flush=True)
     print(f"   n grids = {summary['n_grids']} ({summary['grid_size_range'][0]}-{summary['grid_size_range'][1]} buses, regions {summary['regions']})", flush=True)

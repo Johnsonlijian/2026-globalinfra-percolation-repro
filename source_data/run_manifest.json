@@ -109,9 +109,9 @@
   },
   {
     "round": "R75",
-    "analysis": "submission hardening source tables",
+    "analysis": "source-data hardening tables",
     "data_directory": "data/R75_submission_hardening",
-    "purpose": "submission-facing aliases, feature groups, figure source data and geometry mobility proxy tables",
+    "purpose": "public source-data aliases, feature groups, figure source data and geometry mobility proxy tables",
     "status": "completed",
     "script_or_source": null,
     "output_files": null

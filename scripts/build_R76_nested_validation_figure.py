@@ -1,10 +1,10 @@
-"""Build the nested-validation and public-control submission figure.
+"""Build the nested-validation and public-control release figure.
 
-This figure replaces the older public-control-only figure in the target
-submission packages. It uses existing derived source tables only; no raw OSM,
+This figure replaces the older public-control-only figure in the public
+source-data bundle. It uses existing derived source tables only; no raw OSM,
 GHSL or WDI data are redistributed.
 
-R101 renumbering: in the npj Complexity package this figure became the
+R101 renumbering: in the staged manuscript package this figure became the
 urban-form validation figure. The R101 restyle also removed the former
 dashboard-style "claim boundary"
 text panel; claim boundaries live in the caption and main text instead.
@@ -13,6 +13,7 @@ text panel; claim boundaries live in the caption and main text instead.
 from __future__ import annotations
 
 import hashlib
+import csv
 import json
 import shutil
 import sys
@@ -23,15 +24,17 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-ROOT = Path(__file__).resolve().parents[1]
+# Keep mapped-drive paths unexpanded on Windows.  Resolving W: to a long UNC
+# path can make pandas fail when writing long source-data filenames.
+ROOT = Path(__file__).parent.parent
 SCRIPT_DIR = ROOT / "scripts"
 if str(SCRIPT_DIR) not in sys.path:
     sys.path.insert(0, str(SCRIPT_DIR))
 
 import pub_style  # noqa: E402
 
-OUT = ROOT / "data" / "R76_fig5_nested_submission"
-FIG_ROOT = ROOT / "figures" / "Fig_R76_fig5_nested_submission"
+OUT = ROOT / "data" / "R76_nested_validation_figure"
+FIG_ROOT = ROOT / "figures" / "Fig_R76_nested_validation"
 
 PUBLIC_SD = ROOT / "source_data"
 COMBINED_SOURCE_NAME = "Fig4_combined_nested_public_source_data.csv"
@@ -306,6 +309,12 @@ def make_figure(
     pub_style.light_grid(ax_e, axis="x")
 
     pub_style.save(fig, FIG_ROOT)
+    svg_path = FIG_ROOT.with_suffix(".svg")
+    if svg_path.exists():
+        svg_path.write_text(
+            "\n".join(line.rstrip() for line in svg_path.read_text(encoding="utf-8").splitlines()) + "\n",
+            encoding="utf-8",
+        )
     plt.close(fig)
 
 
@@ -316,8 +325,8 @@ def update_manifest_for_source_data(sd: Path, files: list[tuple[Path, str]]) -> 
         copied = f"figures/{copied_name}"
         entry = {
             "round": "R76",
-            "source_role": "Fig5 nested validation and public-control source data",
-            "source_path": f"data/R76_fig5_nested_submission/{src.name}",
+            "source_role": "Nested validation and public-control source data",
+            "source_path": f"data/R76_nested_validation_figure/{src.name}",
             "copied_file": copied,
             "format": src.suffix.lstrip("."),
             "n_rows": int(pd.read_csv(src).shape[0]) if src.suffix == ".csv" else 1,
@@ -325,9 +334,13 @@ def update_manifest_for_source_data(sd: Path, files: list[tuple[Path, str]]) -> 
             "sha256": sha256_file(src),
             "redistribution_boundary": "derived project table; raw OSM/Geofabrik archives excluded",
         }
-        df = df[df["copied_file"] != copied]
-        df = pd.concat([df, pd.DataFrame([entry])], ignore_index=True)
-    df.to_csv(manifest, index=False)
+        mask = df["copied_file"] == copied
+        if mask.any():
+            for key, value in entry.items():
+                df.loc[mask, key] = value
+        else:
+            df = pd.concat([df, pd.DataFrame([entry])], ignore_index=True)
+    df.to_csv(manifest, index=False, encoding="utf-8-sig", quoting=csv.QUOTE_ALL, lineterminator="\n")
 
 
 def copy_outputs() -> None:
@@ -354,10 +367,10 @@ def main() -> None:
 
     payload = {
         "status": "pass",
-        "round": "R76_fig5_nested_submission",
-        "figure": str(FIG_ROOT.with_suffix(".svg")),
-        "target_figure_name": "Fig5_urban_form_validation in the manuscript package",
-        "source_data": str(OUT / "Fig4_combined_nested_public_source_data.csv"),
+        "round": "R76_nested_validation_figure",
+        "figure": FIG_ROOT.with_suffix(".svg").relative_to(ROOT).as_posix(),
+        "target_figure_name": "urban-form validation figure",
+        "source_data": (OUT / "Fig4_combined_nested_public_source_data.csv").relative_to(ROOT).as_posix(),
         "claim_boundary": (
             "The validation figure integrates nested validation, public-control comparison, "
             "high-order embedded-feature correlations and leave-region-out checks; claim "

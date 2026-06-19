@@ -34,7 +34,6 @@ ROOT = Path(__file__).resolve().parents[1]
 POP = ROOT / "data" / "R109_resilience_screening" / "R109_resilience_population.csv"
 OUT = ROOT / "data" / "R113_resilience_decision_case"
 ROUND = ROOT / "rounds" / "R113_resilience_decision_case"
-NPJ = ROOT / "submission" / "npj_complexity" / "target_submission"
 
 TARGETS = [0.30, 0.40, 0.50]
 HEADLINE_PHI = 0.40
@@ -115,11 +114,6 @@ def main():
     d_out.to_csv(OUT / "R113_decision_margins.csv", index=False)
     (OUT / "R113_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
-    if NPJ.exists():
-        for f in ["R113_decision_margins.csv", "R113_summary.json"]:
-            dst = NPJ / "source_data" / "tables" / f
-            if dst.parent.exists():
-                __import__("shutil").copy2(OUT / f, dst)
 
     print("[R113] decision target phi*=%.2f on %d networks" % (HEADLINE_PHI, len(d)), flush=True)
     for s in sweep:

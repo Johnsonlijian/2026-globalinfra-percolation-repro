@@ -1,4 +1,4 @@
-"""Unified publication style for all submission-facing figures.
+"""Unified publication style for all publication figures.
 
 Single source of truth for fonts, sizes, line weights, semantic colors and
 export settings.  Every figure-generating script imports this module so that

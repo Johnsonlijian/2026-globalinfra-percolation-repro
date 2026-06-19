@@ -39,3 +39,5 @@ Thumbs.db
 # unless a release-specific manifest says otherwise.
 source_data/figures/*.tif
 source_data/figures/*.tiff
+figures/*.tif
+figures/*.tiff

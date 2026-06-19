@@ -59,9 +59,6 @@ OUT = ROOT / "data" / "R103_planar_lattice_anchor"
 ROUND = ROOT / "rounds" / "R103_planar_lattice_anchor"
 FIG_BASE = ROOT / "figures" / "Fig_R103_planar_lattice_anchor"
 
-NPJ = ROOT / "submission" / "npj_complexity" / "target_submission"
-NPJ_FIGS = NPJ / "figures"
-NPJ_TABLES = NPJ / "source_data" / "tables"
 
 COV = ROOT / "data" / "R62_urban_form_mechanism" / "urban_form_covariates.csv"
 PRED = ROOT / "data" / "N99_prediction_correction_law" / "N99_prediction_city_predictions.csv"
@@ -545,16 +542,6 @@ def main() -> None:
 
     make_figure(city, calib, interp, summary)
 
-    # Copy display figure (manuscript Fig. 3) and source tables into the npj package.
-    if NPJ_FIGS.exists():
-        for ext in [".svg", ".pdf", ".png", ".tiff"]:
-            src = FIG_BASE.with_suffix(ext)
-            if src.exists():
-                shutil.copy2(src, NPJ_FIGS / f"Fig3_planar_lattice_anchor{ext}")
-        NPJ_TABLES.mkdir(parents=True, exist_ok=True)
-        for f in ["R103_city_lattice_anchor.csv", "R103_vertex_split_interpolation.csv", "R103_summary.json"]:
-            shutil.copy2(OUT / f, NPJ_TABLES / f)
-        print("[R103] copied Fig. 3 display figure and source tables into npj package.", flush=True)
 
     print("\n[R103] SUMMARY", flush=True)
     for k in ["anchor_mae", "cebh_mae", "error_reduction", "anchor_spearman_vs_observed",

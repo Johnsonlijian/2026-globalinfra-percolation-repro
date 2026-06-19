@@ -54,7 +54,6 @@ CACHE = ROOT / "cache" / "R61_osmnx_city_windows"
 OUT = ROOT / "data" / "R105_finite_size_scaling"
 ROUND = ROOT / "rounds" / "R105_finite_size_scaling"
 FIG_BASE = ROOT / "figures" / "Fig_R105_finite_size_scaling"
-NPJ = ROOT / "submission" / "npj_complexity" / "target_submission"
 ANCHOR = ROOT / "data" / "R103_planar_lattice_anchor" / "R103_city_lattice_anchor.csv"
 
 D_F_2D = 91.0 / 48.0  # exact 2D percolation cluster fractal dimension
@@ -360,15 +359,6 @@ def main():
 
     make_figure(square, roads, mf_records, summary)
 
-    if NPJ.exists():
-        for ext in [".svg", ".pdf", ".png", ".tiff"]:
-            src = FIG_BASE.with_suffix(ext)
-            if src.exists():
-                shutil.copy2(src, NPJ / "figures" / f"FigS_R105_finite_size_scaling{ext}")
-                if ext != ".tiff":  # SI references the source_data/figures copy
-                    shutil.copy2(src, NPJ / "source_data" / "figures" / f"FigS_R105_finite_size_scaling{ext}")
-        for f in ["R105_fisher_exponents.csv", "R105_summary.json"]:
-            shutil.copy2(OUT / f, NPJ / "source_data" / "tables" / f)
 
     print("\n[R105] SUMMARY", flush=True)
     print(f"   square tau_F          = {tau_sq:.3f}  (exact 2.055)", flush=True)

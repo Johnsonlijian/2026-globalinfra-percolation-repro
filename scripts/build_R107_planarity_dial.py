@@ -43,7 +43,6 @@ CACHE = ROOT / "cache" / "R61_osmnx_city_windows"
 OUT = ROOT / "data" / "R107_planarity_dial"
 ROUND = ROOT / "rounds" / "R107_planarity_dial"
 FIG_BASE = ROOT / "figures" / "Fig_R107_universality_origin"
-NPJ = ROOT / "submission" / "npj_complexity" / "target_submission"
 
 R105 = ROOT / "data" / "R105_finite_size_scaling" / "R105_summary.json"
 R106 = ROOT / "data" / "R106_second_domain_power" / "R106_summary.json"
@@ -214,13 +213,6 @@ def main():
     (OUT / "R107_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
     make_figure(dial_rows, r105, r106)
 
-    if NPJ.exists():
-        for ext in [".svg", ".pdf", ".png", ".tiff"]:
-            src = FIG_BASE.with_suffix(ext)
-            if src.exists():
-                shutil.copy2(src, NPJ / "figures" / f"Fig8_universality_origin{ext}")
-        for f in ["R107_planarity_dial.csv", "R107_summary.json"]:
-            shutil.copy2(OUT / f, NPJ / "source_data" / "tables" / f)
 
     print("\n[R107] SUMMARY", flush=True)
     print(f"   road tau_F at f=0     = {road_tau0:.3f} (2D 2.055)", flush=True)

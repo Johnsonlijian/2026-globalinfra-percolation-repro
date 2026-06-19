@@ -56,7 +56,6 @@ CACHE = ROOT / "cache" / "R61_osmnx_city_windows"
 OUT = ROOT / "data" / "R108_effective_dimension"
 ROUND = ROOT / "rounds" / "R108_effective_dimension"
 FIG_BASE = ROOT / "figures" / "Fig_R108_effective_dimension"
-NPJ = ROOT / "submission" / "npj_complexity" / "target_submission"
 
 COV = ROOT / "data" / "R62_urban_form_mechanism" / "urban_form_covariates.csv"
 PRED = ROOT / "data" / "N99_prediction_correction_law" / "N99_prediction_city_predictions.csv"
@@ -159,13 +158,6 @@ def main():
 
     make_figure(obs, derived, cebh, anchor, d_road, dP, dial_df, road, power)
 
-    if NPJ.exists():
-        for ext in [".svg", ".pdf", ".png", ".tiff"]:
-            src = FIG_BASE.with_suffix(ext)
-            if src.exists():
-                shutil.copy2(src, NPJ / "figures" / f"Fig8_effective_dimension{ext}")
-        for f in ["R108_road_effective_dimension.csv", "R108_dial_effective_dimension.csv", "R108_summary.json"]:
-            shutil.copy2(OUT / f, NPJ / "source_data" / "tables" / f)
 
     print("[R108] roads: 2/<k> MAE=%.4f  anchor MAE=%.4f  CEBH MAE=%.4f" % (
         road["derived_2_over_k"]["mae"], road["phenomenological_anchor"]["mae"], road["cebh"]["mae"]), flush=True)

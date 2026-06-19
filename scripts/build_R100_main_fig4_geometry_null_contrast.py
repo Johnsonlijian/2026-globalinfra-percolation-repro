@@ -11,7 +11,6 @@ in-text figure citations remain sequential (urban-form validation is Fig. 4).
 
 from __future__ import annotations
 
-import shutil
 import sys
 from pathlib import Path
 
@@ -30,12 +29,8 @@ if str(SCRIPT_DIR) not in sys.path:
 import pub_style  # noqa: E402
 
 OUT_DIR = ROOT / "figures"
-SUBMISSION_FIG_DIR = ROOT / "submission" / "npj_complexity" / "target_submission" / "figures"
 SOURCE_OUT = ROOT / "data" / "R100_main_figure_hardening"
 FIG_STEM = OUT_DIR / "Fig_R100_geometry_null_contrast"
-# R103 renumbering: geometry contrast is manuscript Fig. 6 (planar-lattice
-# mechanism is Fig. 2, validation Fig. 5).
-TARGET_STEM = SUBMISSION_FIG_DIR / "Fig6_geometry_null_contrast"
 
 R68 = ROOT / "data" / "R68_full71_geometry_null_ensemble" / "full71_geometry_null_city_summary.csv"
 R81 = ROOT / "data" / "R81_full71_high_intensity_geometry_null_ensemble" / "full71_geometry_null_city_summary.csv"
@@ -151,7 +146,6 @@ def build_source_table() -> pd.DataFrame:
 
 def main() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
-    SUBMISSION_FIG_DIR.mkdir(parents=True, exist_ok=True)
     SOURCE_OUT.mkdir(parents=True, exist_ok=True)
 
     r68 = pd.read_csv(R68)
@@ -256,8 +250,6 @@ def main() -> None:
     ax.legend(frameon=False, fontsize=6.5, loc="lower left")
 
     pub_style.save(fig, FIG_STEM)
-    for suffix in [".svg", ".pdf", ".png", ".tiff"]:
-        shutil.copy2(FIG_STEM.with_suffix(suffix), TARGET_STEM.with_suffix(suffix))
     plt.close(fig)
 
     source = build_source_table()

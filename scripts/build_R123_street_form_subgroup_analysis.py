@@ -1,11 +1,11 @@
-"""R123 street-form subgroup stress test for the npj Complexity package.
+"""R123 street-form subgroup stress test for the public source-data bundle.
 
-The analysis uses only already-registered 71-city source-data variables from
-the target submission package. It builds a pre-specified street-form bottleneck
-index from termination, bridge/articulation, biconnected redundancy, cycle and
-local edge-adjacency variables; then it checks whether the CEBH transfer error
-changes across index quartiles while the strict-geometry residual remains near
-the estimator resolution.
+The analysis uses only already-registered 71-city source-data variables from the
+public reproducibility package. It builds a pre-specified street-form
+bottleneck index from termination, bridge/articulation, biconnected redundancy,
+cycle and local edge-adjacency variables; then it checks whether the CEBH
+transfer error changes across index quartiles while the strict-geometry
+residual remains near the estimator resolution.
 """
 
 from __future__ import annotations
@@ -14,7 +14,6 @@ import csv
 import hashlib
 import json
 import shutil
-import zipfile
 from datetime import date
 from pathlib import Path
 
@@ -26,13 +25,11 @@ from pub_style import COLORS, FIG_WIDTH_2COL, REGION_COLORS, annot, apply, light
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TARGET = ROOT / "submission" / "npj_complexity" / "target_submission"
-SOURCE_DATA = TARGET / "source_data"
+SOURCE_DATA = ROOT / "source_data"
 SOURCE_TABLES = SOURCE_DATA / "tables"
 SOURCE_FIGURES = SOURCE_DATA / "figures"
 DATA_DIR = ROOT / "data" / "R123_street_form_subgroup"
 FIG_DIR = ROOT / "figures"
-SUPP_CODE_ZIP = TARGET / "Supplementary_Code_1_reproducibility_package.zip"
 SEED = 20260613
 
 
@@ -444,19 +441,6 @@ def register_outputs(score_path: Path, quartile_path: Path, corr_path: Path, sum
     )
 
 
-def update_supplementary_zip(paths: list[Path]) -> str | None:
-    if not SUPP_CODE_ZIP.exists():
-        return None
-    with zipfile.ZipFile(SUPP_CODE_ZIP, mode="a", compression=zipfile.ZIP_DEFLATED) as zf:
-        existing = set(zf.namelist())
-        for path in paths:
-            arc = str(path.relative_to(ROOT)).replace("\\", "/")
-            if arc in existing:
-                continue
-            zf.write(path, arc)
-    return sha256(SUPP_CODE_ZIP)
-
-
 def main() -> None:
     DATA_DIR.mkdir(parents=True, exist_ok=True)
     FIG_DIR.mkdir(parents=True, exist_ok=True)
@@ -514,24 +498,6 @@ def main() -> None:
 
     make_figure(scores, quartiles, correlations)
     register_outputs(score_path, quartile_path, corr_path, summary_path)
-
-    zip_hash = update_supplementary_zip(
-        [
-            Path(__file__).resolve(),
-            score_path,
-            quartile_path,
-            corr_path,
-            summary_path,
-            FIG_DIR / "Fig_R123_street_form_subgroup.svg",
-            FIG_DIR / "Fig_R123_street_form_subgroup.pdf",
-            FIG_DIR / "Fig_R123_street_form_subgroup.png",
-            FIG_DIR / "Fig_R123_street_form_subgroup.tiff",
-        ]
-    )
-    if zip_hash:
-        summary["supplementary_code_zip_sha256_after_update"] = zip_hash
-        summary_path.write_text(json.dumps(summary, indent=2), encoding="utf-8")
-        copy_with_hash(summary_path, SOURCE_TABLES / summary_path.name)
 
     print(json.dumps(summary, indent=2))
 

@@ -1,4 +1,4 @@
-"""R80: npj Complexity hardening diagnostics.
+"""R80: geometry-null distance diagnostics.
 
 This round uses already archived replicate-level geometry-null metrics to
 answer the reviewer concern that the strict geometry null is only a lightly
@@ -9,7 +9,6 @@ overlap, because final rewired edge sets were not archived.
 from __future__ import annotations
 
 import json
-import shutil
 import sys
 from pathlib import Path
 
@@ -27,7 +26,6 @@ ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "R80_npj_complexity_hardening"
 ROUND = ROOT / "rounds" / "R80_npj_complexity_hardening"
 FIG_BASE = ROOT / "figures" / "Fig_R80_geometry_null_distance_audit"
-NPJ = ROOT / "submission" / "npj_complexity" / "target_submission"
 
 R67 = ROOT / "data" / "R67_geometry_null_sensitivity" / "geometry_null_sensitivity_replicates.csv"
 R68 = ROOT / "data" / "R68_full71_geometry_null_ensemble" / "full71_geometry_null_replicates.csv"
@@ -256,32 +254,15 @@ def make_figure(metric_audit: pd.DataFrame, fraction: pd.DataFrame, city: pd.Dat
     plt.close(fig)
 
 
-def copy_to_npj() -> None:
-    tables = NPJ / "source_data" / "tables"
-    figs = NPJ / "source_data" / "figures"
-    display = NPJ / "figures"
-    tables.mkdir(parents=True, exist_ok=True)
-    figs.mkdir(parents=True, exist_ok=True)
-    display.mkdir(parents=True, exist_ok=True)
-    for path in OUT.glob("R80_*.csv"):
-        shutil.copy2(path, tables / path.name)
-    for suffix in [".svg", ".pdf", ".png", ".tiff"]:
-        src = FIG_BASE.with_suffix(suffix)
-        if src.exists():
-            shutil.copy2(src, display / f"FigS_geometry_null_distance_audit{suffix}")
-            if suffix != ".tiff":
-                shutil.copy2(src, figs / f"FigS_geometry_null_distance_audit{suffix}")
-
-
 def write_report(summary: dict) -> None:
     ROUND.mkdir(parents=True, exist_ok=True)
-    report = f"""# R80 npj Complexity hardening
+    report = f"""# R80 geometry-null distance audit
 
 Date: 2026-06-08
 
 ## Purpose
 
-This round responds to the npj Complexity reviewer concern that the strict geometry null could be too close to the original graph. It adds a geometry-null distance audit from archived replicate metrics. It does not claim exact rewired-edge overlap or a full-city intensive ensemble.
+This round tests whether the strict geometry null could be too close to the original graph. It adds a geometry-null distance audit from archived replicate metrics. It does not claim exact rewired-edge overlap or a full-city intensive ensemble.
 
 ## Main diagnostics
 
@@ -308,7 +289,6 @@ def main() -> None:
     fraction = build_fraction_audit(reps, matched)
     build_full71_audit(full)
     make_figure(metric_audit, fraction, city_audit)
-    copy_to_npj()
     summary = {
         "round": "R80_npj_complexity_hardening",
         "n_r67_replicates": int((reps["status"] == "pass").sum()),

@@ -1,8 +1,0 @@
-﻿{
-    "status":  "pass",
-    "round":  "R76_fig5_nested_submission",
-    "figure":  "figures/Fig_R76_fig5_nested_submission.svg",
-    "target_figure_name":  "Fig5_public_controls_boundary_checks",
-    "source_data":  "data/R76_fig5_nested_submission/Fig5_combined_nested_public_source_data.csv",
-    "claim_boundary":  "Fig5 integrates nested validation, public-control comparison, high-order embedded-feature correlations and explicit non-causal/exact-overlap boundaries."
-}

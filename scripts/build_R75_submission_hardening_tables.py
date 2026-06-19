@@ -1,7 +1,7 @@
-﻿"""R75 submission hardening source tables.
+﻿"""R75 source-data hardening tables.
 
 This script creates public source-data helper tables requested by the final
-npj package audit. It does not create new scientific measurements. It
+public package audit. It does not create new scientific measurements. It
 renames and reorganizes already derived R72/R73 outputs, and it records the
 boundary that exact rewired-edge overlap measures cannot be recovered from archived
 summary tables alone.
@@ -331,9 +331,9 @@ def upsert_run_manifest(sd: Path) -> None:
         rows.append(
             {
                 "round": "R75",
-                "analysis": "submission hardening source tables",
+                "analysis": "source-data hardening tables",
                 "data_directory": "data/R75_submission_hardening",
-                "purpose": "submission-facing aliases, feature groups, figure source data and geometry mobility proxy tables",
+                "purpose": "public source-data aliases, feature groups, figure source data and geometry mobility proxy tables",
                 "status": "completed",
             }
         )

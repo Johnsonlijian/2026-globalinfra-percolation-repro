@@ -1,4 +1,4 @@
-﻿# Reproducible Runbook
+# Reproducible Runbook
 
 ## Environment
 
@@ -363,9 +363,9 @@ Interpret R73 as descriptive mechanism-screen evidence. It supports a
 street-form signal under nested and regional holdout validation; it does not
 identify causal urban-design effects.
 
-## Recreate R75 Submission-hardening Tables
+## Recreate R75 Source-data-hardening Tables
 
-R75 derives additional submission-facing tables from the existing source-data
+R75 derives additional public source-data tables from the existing source-data
 bundle. It records geometry-null rejection shares, mobility/fidelity proxies,
 nested-validation aliases and the availability boundary for exact edge-overlap measures.
 
@@ -391,16 +391,16 @@ R76 rebuilds Fig. 5 from included derived tables and copies the combined figure
 source data into `source_data/figures/`.
 
 ```bash
-python scripts/build_R76_fig5_nested_submission_figure.py
+python scripts/build_R76_nested_validation_figure.py
 ```
 
 Expected outputs:
 
-- `data/R76_fig5_nested_submission/Fig4_combined_nested_public_source_data.csv`
-- `data/R76_fig5_nested_submission/R76_summary.json`
-- `figures/Fig_R76_fig5_nested_submission.png`
-- `figures/Fig_R76_fig5_nested_submission.svg`
-- `figures/Fig_R76_fig5_nested_submission.pdf`
+- `data/R76_nested_validation_figure/Fig4_combined_nested_public_source_data.csv`
+- `data/R76_nested_validation_figure/R76_summary.json`
+- `figures/Fig_R76_nested_validation.png`
+- `figures/Fig_R76_nested_validation.svg`
+- `figures/Fig_R76_nested_validation.pdf`
 - `source_data/figures/Fig4_combined_nested_public_source_data.csv`
 
 Interpret R76 as visualization and source-data packaging. It does not add a

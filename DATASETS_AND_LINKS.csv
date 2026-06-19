@@ -1,4 +1,4 @@
-﻿name,url,role,redistribution_note
+name,url,role,redistribution_note
 OpenStreetMap,https://www.openstreetmap.org,Primary source for road-network data,Raw OSM data are not redistributed in this package.
 OSMnx,https://osmnx.readthedocs.io,Graph extraction software,Users can recreate graph extraction workflows with OSMnx and OSM data.
 Geofabrik extracts,https://download.geofabrik.de,Diagnostic local-PBF source mentioned in manuscript,Raw PBF files are not redistributed.
@@ -16,5 +16,5 @@ R68 full-city geometry-null tables,data/R68_full71_geometry_null_ensemble,Includ
 R72 matched-intensity geometry defense tables,data/R72_geometry_defense,Included derived spatial-vs-geometry matched-intensity defense evidence,Derived tables only; raw graph caches are not redistributed.
 R73 nested urban-form validation tables,data/R73_urban_form_nested_cv,Included derived nested model and leave-region-out validation evidence,Derived tables only; raw graph caches are not redistributed.
 R75 submission-hardening tables,data/R75_submission_hardening,Included derived nested-validation aliases geometry mobility/rejection diagnostics and edge-overlap availability boundary tables,Derived tables only; exact rewired-edge overlap is not reconstructed from archived summaries.
-R76 Fig. 5 source data,data/R76_fig5_nested_submission,Included derived source data for submission Fig. 5 nested validation and public-control checks,Derived tables only.
-Submission source-data bundle,source_data,Included derived source-data manifest column dictionary claim-to-table map and run manifest,Derived tables only; active manuscripts and cover letters are not included.
+R76 nested-validation source data,data/R76_nested_validation_figure,Included derived source data for the nested-validation and public-control figure,Derived tables only.
+Public source-data bundle,source_data,Included derived source-data manifest column dictionary claim-to-table map and run manifest,Derived tables only; active manuscripts and cover letters are not included.

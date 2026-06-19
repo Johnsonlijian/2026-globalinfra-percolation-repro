@@ -1,0 +1,8 @@
+{
+  "status": "pass",
+  "round": "R76_nested_validation_figure",
+  "figure": "figures/Fig_R76_nested_validation.svg",
+  "target_figure_name": "urban-form validation figure",
+  "source_data": "data/R76_nested_validation_figure/Fig4_combined_nested_public_source_data.csv",
+  "claim_boundary": "The validation figure integrates nested validation, public-control comparison, high-order embedded-feature correlations and leave-region-out checks; claim boundaries are stated in the caption and main text, not as a figure panel."
+}
