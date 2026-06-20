@@ -1,4 +1,4 @@
-﻿# R61 Nature Cities Scale Screen
+﻿# R61 City-Window Scale Screen
 
 Generated: 2026-06-03 19:58:26
 
@@ -54,12 +54,12 @@ Regional pass counts:
 }
 ```
 
-## Nature Cities Target-Fit Reading
+## High-Selectivity Target-Fit Reading
 
 Current R61 scale status: **credible scale layer, still needing formal nulls and urban mechanism analysis**.
 
 The strengthened message is that the phenomenon is not confined to the original
-eight city-boundary cases. However, the Nature Cities-level argument still
+eight city-boundary cases. However, the field-level argument still
 requires a larger and more explicitly urban-science layer: at least 30-60
 method-equivalent city windows, covariates for urban form and development
 history, and formal null-model replication on a representative subset. The

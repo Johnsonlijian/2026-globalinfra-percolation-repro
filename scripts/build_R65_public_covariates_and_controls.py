@@ -807,7 +807,7 @@ used as causal claims about urban planning.
 
 ## Manuscript-Safe Interpretation
 
-R65 strengthens the Nature Cities/Nature Communications case by showing that
+R65 strengthens the selective-journal mechanism case by showing that
 public urban-centre and country-background controls can be registered and
 matched across the full 71-city matrix. The result supports a restrained claim:
 external city size, socioeconomic and country controls are useful context, but
@@ -829,7 +829,7 @@ def write_closeout(summary: dict[str, Any]) -> None:
 | Add country/background controls | Done | `wdi_indicator_long_all_years.csv`, `wdi_country_controls.csv`. | WDI values are country-level controls, not city-level mechanisms. |
 | Recompute mechanism/control analysis | Done | `R65_external_correlations.csv`, `R65_model_comparison.csv`, `R65_graph_adjusted_external_residual_correlations.csv`. | Descriptive predictive screen; no causal claim. |
 | Create publication-grade figure | Done | `figures/Fig_R65_public_covariate_controls.svg/.pdf/.png/.tiff`. | Figure is a control/mechanism-context figure, not primary causal evidence. |
-| Remove all Nature Cities blockers | Partial | R65 reduces the external-covariate blocker and improves mechanism context. | Full global geometry-null ensemble and target-specific final policy/ref audit still remain submission gates. |
+| Reduce target-fit blockers | Partial | R65 reduces the external-covariate blocker and improves mechanism context. | Full global geometry-null ensemble and target-specific final policy/ref audit still remain submission gates. |
 
 ## R65 Key Numbers
 

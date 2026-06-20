@@ -880,7 +880,7 @@ Selected cities:
 
 ## Interpretation
 
-R62 supports a stronger Nature Cities-facing mechanism statement than R61 alone:
+R62 supports a stronger field-facing mechanism statement than R61 alone:
 the CEBH transfer gap is associated with measurable urban road-form variables,
 including edge scale, hierarchy, orientation order, degree composition and
 cycle density. The geometry-null pilot tests whether strict non-crossing
