@@ -131,7 +131,7 @@ def make_figure(recs, summary):
     for xi, d_, c_ in zip(x, de, ce):
         ax.plot([xi, xi], [d_, c_], color="#C7C7C7", lw=0.7, zorder=1)
     ax.scatter(x, ce, s=20, color=col_c, zorder=2, label="CEBH error")
-    ax.scatter(x, de, s=20, color=col_d, zorder=2, label="law $2/\\langle k\\rangle$ error")
+    ax.scatter(x, de, s=20, color=col_d, zorder=2, label="geometric $2/\\langle k\\rangle$ error")
     ax.axhline(ROAD_CEBH_MAE, ls=":", lw=0.8, color=col_c)
     ax.axhline(ROAD_DERIVED_MAE, ls="--", lw=0.8, color=col_d)
     pub_style.annot(ax, 0.03, 0.96, "held-out (no fit)\nderived MAE %.3f vs CEBH %.3f" % (
@@ -140,7 +140,7 @@ def make_figure(recs, summary):
     ax.set_xticklabels([f"{recs[i]['city']}\n{recs[i]['n_nodes']}" for i in order], fontsize=5.0, rotation=0)
     ax.set_xlabel("rail network (held-out domain)")
     ax.set_ylabel("absolute threshold error")
-    pub_style.panel_title(ax, "a", "Dimensional law predicts rail")
+    pub_style.panel_title(ax, "a", "Zero-fit geometry transfers to rail")
     ax.legend(frameon=False, fontsize=5.8, loc="center right")
 
     # b: capstone - effective dimension across all four infrastructure domains.
@@ -225,9 +225,9 @@ def main():
     summary["verdict"] = _verdict(summary)
     summary["interpretation"] = (
         "A second held-out, zero-fit prediction - now on a fourth independent "
-        "domain (rail) - %s. The dimensional law p_c=2/<k> recovers the observed thresholds with "
+        "domain (rail) - %s. The geometric 2/<k> baseline recovers the observed thresholds with "
         "mean absolute error %.3f versus %.3f for the degree-moment formula, with effective dimension "
-        "%.2f. With the water test, the threshold law is now supported on two unseen "
+        "%.2f. With the water test, the threshold baseline is now supported on two unseen "
         "domains; across four infrastructures the threshold baseline transfers while the "
         "clean near-two-dimensional finite-size exponent signal remains road-specific."
     ) % (("passes" if "PASS" in summary["verdict"] else "is reported honestly"),

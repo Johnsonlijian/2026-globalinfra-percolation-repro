@@ -145,7 +145,7 @@ def make_figure(prim, summary):
     for xi, d_, c_ in zip(x, de, ce):
         ax.plot([xi, xi], [d_, c_], color="#C7C7C7", lw=0.7, zorder=1)
     ax.scatter(x, ce, s=20, color=col_c, zorder=2, label="CEBH error")
-    ax.scatter(x, de, s=20, color=col_d, zorder=2, label="law $2/\\langle k\\rangle$ error")
+    ax.scatter(x, de, s=20, color=col_d, zorder=2, label="geometric $2/\\langle k\\rangle$ error")
     ax.axhline(ROAD_CEBH_MAE, ls=":", lw=0.8, color=col_c)
     ax.axhline(ROAD_DERIVED_MAE, ls="--", lw=0.8, color=col_d)
     pub_style.annot(ax, 0.03, 0.96,
@@ -155,7 +155,7 @@ def make_figure(prim, summary):
     ax.set_xticklabels([f"{prim[i]['network']}\n{prim[i]['n_nodes']}" for i in order], fontsize=5.4)
     ax.set_xlabel("water network (held-out domain)")
     ax.set_ylabel("absolute threshold error")
-    pub_style.panel_title(ax, "a", "Dimensional law predicts unseen water")
+    pub_style.panel_title(ax, "a", "Zero-fit geometry transfers to water")
     ax.legend(frameon=False, fontsize=5.8, loc="center right")
 
     # b: cross-domain placement of d_eff - the held-out water domain lands at the
@@ -224,7 +224,7 @@ def main():
         "domain": "water_distribution_networks",
         "source": "WNTR bundled EPANET examples + University of Kentucky benchmark set (US EPA public domain); raw .inp files not redistributed",
         "held_out_prediction_target": (
-            "Planar water mains -> 2D law, "
+            "Planar water mains -> 2D threshold baseline, "
             "d_eff ~= 2 and p_c ~= 2/<k>, CEBH overstates robustness (road signature). "
             "Sharp alternative: loop-sparse water nets shift toward the tree/degree-moment "
             "limit with d_eff > 2, graded by meshedness alpha."
@@ -249,22 +249,22 @@ def main():
             "failure mode did NOT occur: water nets are very loop-sparse (meshedness 0.07-0.12, below "
             "roads ~0.2) yet still sit at the dimensional threshold, and meshedness does not predict "
             "d_eff (r=%.2f, p=%.2f). The threshold regime is set by the 2D embedding, not by raw loop "
-            "count - the dimensional law is more robust to loop-sparsity than anticipated. (2) The "
+            "count - the 2D threshold baseline is more robust to loop-sparsity than anticipated. (2) The "
             "cluster-size (Fisher) exponent is NOT reliably measurable on these loop-sparse, near-"
             "saturation (p_c~0.85-0.93) water networks (values scatter 1.77-2.38), so we claim only the "
-            "THRESHOLD law for water, not two-dimensional class membership. This matches the exponent-evidence "
-            "boundary already found for power grids: the threshold law transfers across domains, "
+            "threshold baseline for water, not two-dimensional class membership. This matches the exponent-evidence "
+            "boundary already found for power grids: the threshold baseline transfers across domains, "
             "the finite-size exponent signal does not."
         ) % (float(r_resid_mesh), float(p_resid_mesh)),
         "interpretation": (
             "A held-out, zero-fit prediction on a third domain the law had never seen "
             "(four real water-distribution networks, 97-3356 nodes) PASSES on the central claim: the "
-            "derived dimensional law p_c=2/<k> recovers the observed bond-percolation threshold with mean "
+            "geometric 2/<k> baseline recovers the observed bond-percolation threshold with mean "
             "absolute error 0.028 - comparable to the 0.022 road accuracy and about ten times better than "
             "the degree-moment formula (0.276) - in all four networks, with effective dimension d_eff=1.96 "
             "(range 1.89-2.04), the two-dimensional threshold signature. The degree-moment "
             "robustness benchmark overstates the tolerable failure fraction in all four. This converts the "
-            "effective-dimension law from a post-hoc description of roads and power grids into a "
+            "effective-dimension baseline from a post-hoc description of roads and power grids into a "
             "held-out predictor of an unseen infrastructure class."
         ),
     }
