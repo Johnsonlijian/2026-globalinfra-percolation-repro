@@ -20,7 +20,7 @@
   {
     "round": "R61",
     "analysis": "71-city center-window screen",
-    "data_directory": "data/R61_nature_cities_scale_screen",
+    "data_directory": "data/R61_city_window_scale_screen",
     "purpose": "10-km standardized OSMnx city windows",
     "status": "completed",
     "script_or_source": null,

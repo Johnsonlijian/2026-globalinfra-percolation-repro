@@ -44,7 +44,7 @@ import pub_style  # noqa: E402
 OUT = ROOT / "data" / "R62_urban_form_mechanism"
 ROUND_DIR = ROOT / "rounds" / "R62_urban_form_mechanism"
 FIG_BASE = ROOT / "figures" / "Fig_R62_urban_form_mechanism"
-R61_RESULTS = ROOT / "data" / "R61_nature_cities_scale_screen" / "central_window_screen_results.csv"
+R61_RESULTS = ROOT / "data" / "R61_city_window_scale_screen" / "central_window_screen_results.csv"
 
 REGION_ORDER = ["Europe", "Middle East", "Africa", "Latin America", "Asia", "North America", "Oceania"]
 REGION_COLORS = pub_style.REGION_COLORS

@@ -73,10 +73,10 @@ cities show a persistent positive gap beyond degree-only theory."
 
 ## Outputs
 
-- `data/R61_nature_cities_scale_screen/central_window_screen_results.csv`
-- `data/R61_nature_cities_scale_screen/R61_summary.json`
-- `figures/Fig_R61_nature_cities_scale_screen.pdf`
-- `figures/Fig_R61_nature_cities_scale_screen.svg`
-- `figures/Fig_R61_nature_cities_scale_screen.png`
-- `figures/Fig_R61_nature_cities_scale_screen.tiff`
+- `data/R61_city_window_scale_screen/central_window_screen_results.csv`
+- `data/R61_city_window_scale_screen/R61_summary.json`
+- `figures/Fig_R61_city_window_scale_screen.pdf`
+- `figures/Fig_R61_city_window_scale_screen.svg`
+- `figures/Fig_R61_city_window_scale_screen.png`
+- `figures/Fig_R61_city_window_scale_screen.tiff`
 

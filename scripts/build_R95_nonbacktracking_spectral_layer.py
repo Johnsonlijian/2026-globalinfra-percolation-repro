@@ -32,7 +32,7 @@ if str(SCRIPTS) not in sys.path:
 
 import build_R56_spatial_length_constrained_nulls as r56  # noqa: E402
 
-R61 = ROOT / "data" / "R61_nature_cities_scale_screen" / "central_window_screen_results.csv"
+R61 = ROOT / "data" / "R61_city_window_scale_screen" / "central_window_screen_results.csv"
 R64 = ROOT / "data" / "R64_71city_spatial_null_screen" / "spatial_null_screen_summary.csv"
 R81 = ROOT / "data" / "R81_full71_high_intensity_geometry_null_ensemble" / "full71_geometry_null_city_summary.csv"
 URBAN = ROOT / "data" / "R62_urban_form_mechanism" / "urban_form_covariates.csv"

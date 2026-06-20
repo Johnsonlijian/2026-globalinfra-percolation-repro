@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "Reproducibility package for local noncrossing geometry and infrastructure percolation transfer"
+title: "Reproducibility package for geometry-controlled percolation in embedded infrastructure networks"
 message: "If you use this package, please cite the associated manuscript and this repository."
 type: software
 authors:
@@ -7,6 +7,6 @@ authors:
     given-names: Lijian
     orcid: "https://orcid.org/0000-0003-1629-4368"
 repository-code: "https://github.com/Johnsonlijian/2026-globalinfra-percolation-repro"
-date-released: "2026-06-19"
+date-released: "2026-06-20"
 version: "v1.0-submission-candidate"
 license: MIT

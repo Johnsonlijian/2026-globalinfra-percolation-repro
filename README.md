@@ -189,7 +189,7 @@ mixing theorem.
 - `data/R41_degree_preserving_nulls/`: derived degree-null source tables.
 - `data/R56_spatial_length_constrained_nulls/`: derived spatial-null source
   tables and report.
-- `data/R61_nature_cities_scale_screen/`: derived 71-city standardized
+- `data/R61_city_window_scale_screen/`: derived 71-city standardized
   center-window threshold screen.
 - `data/R62_urban_form_mechanism/`: derived 21-city geometry-subset registry
   and 71-city urban-form covariate table required by R67/R68 replotting.

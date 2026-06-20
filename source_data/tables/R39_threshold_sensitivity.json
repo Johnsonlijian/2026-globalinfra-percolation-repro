@@ -2,7 +2,7 @@
   "_schema": "R39-threshold-sensitivity-v1",
   "parameters": {
     "w7_results": "data\\W7_nc10_R23_best_effort_matrix\\w7_microbatch_simulation_results.csv",
-    "r38_json": "data\\R38_nature_hardening\\road_offset_hardening.json",
+    "r38_json": "data\\R38_threshold_hardening\\road_offset_hardening.json",
     "graph_cache_dir": "local_graph_cache",
     "cities": [
       "Berlin",

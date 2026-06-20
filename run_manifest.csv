@@ -1,7 +1,7 @@
 round,analysis,data_directory,purpose,status,script_or_source,output_files
 R41,degree-preserving nulls,data/R41_degree_preserving_nulls,six configuration-model null projections per eight-city graph,completed,,
 R56,spatial-scale nulls,data/R56_spatial_length_constrained_nulls,"degree-preserving chord-length-bin constrained nulls, four replicates per main city",completed,,
-R61,71-city center-window screen,data/R61_nature_cities_scale_screen,10-km standardized OSMnx city windows,completed,,
+R61,71-city center-window screen,data/R61_city_window_scale_screen,10-km standardized OSMnx city windows,completed,,
 R62,urban-form mechanism screen,data/R62_urban_form_mechanism,road-form covariates and descriptive Ridge screen,completed,,
 R63,high-order embedded metrics,data/R63_high_order_external_covariates,block/bridge/angular/dual metrics and subset expansion,completed,,
 R64,71-city spatial null screen,data/R64_71city_spatial_null_screen,one spatial-scale null per 71-city window,completed,,
