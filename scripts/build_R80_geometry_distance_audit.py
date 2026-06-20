@@ -23,8 +23,8 @@ if str(_SCRIPT_DIR) not in sys.path:
 import pub_style  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "data" / "R80_npj_complexity_hardening"
-ROUND = ROOT / "rounds" / "R80_npj_complexity_hardening"
+OUT = ROOT / "data" / "R80_geometry_distance_audit"
+ROUND = ROOT / "rounds" / "R80_geometry_distance_audit"
 FIG_BASE = ROOT / "figures" / "Fig_R80_geometry_null_distance_audit"
 
 R67 = ROOT / "data" / "R67_geometry_null_sensitivity" / "geometry_null_sensitivity_replicates.csv"
@@ -290,7 +290,7 @@ def main() -> None:
     build_full71_audit(full)
     make_figure(metric_audit, fraction, city_audit)
     summary = {
-        "round": "R80_npj_complexity_hardening",
+        "round": "R80_geometry_distance_audit",
         "n_r67_replicates": int((reps["status"] == "pass").sum()),
         "n_r68_records": int((full["status"] == "pass").sum()),
         "mobility_by_fraction": {str(k): float(v) for k, v in fraction.set_index("swap_fraction")["null_mobility_index_mean"].items()},

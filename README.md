@@ -159,7 +159,7 @@ mixing theorem.
 - `scripts/build_R78_observed_road_fine_estimator_check.py`: 21-city
   observed-road fine-threshold estimator check and matched-intensity
   fine-observed substitution table.
-- `scripts/build_R80_npj_complexity_hardening.py`: geometry-null distance
+- `scripts/build_R80_geometry_distance_audit.py`: geometry-null distance
   audit and public source-data builder.
 - `scripts/build_R90_finegrid_edge_audit.py`: R90 fine-grid matched-null and
   exact edge-overlap audit. With `--skip-compute`, it recreates the R90

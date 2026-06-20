@@ -41,3 +41,6 @@ source_data/figures/*.tif
 source_data/figures/*.tiff
 figures/*.tif
 figures/*.tiff
+
+# Legacy local alias not part of the release manifest.
+figures/Fig_N99_prediction_correction_law.*
