@@ -7,6 +7,13 @@ supporting the working manuscript:
 **Why road networks leave random-graph percolation: testing a local
 embedded-merging constraint**.
 
+## Archive DOI
+
+- Version DOI for release `v1.0.1-r198`:
+  <https://doi.org/10.5281/zenodo.21102471>
+- Zenodo concept DOI for all versions:
+  <https://doi.org/10.5281/zenodo.21102470>
+
 ## R198 Release Scope
 
 This release aligns the public reproducibility package with the R198

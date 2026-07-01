@@ -31,6 +31,11 @@ archiving was enabled for this repository. Scientific content is unchanged from
 the R198 public package; the version bump exists to emit a fresh GitHub release
 event for DOI archiving.
 
+Zenodo archived this release as:
+
+- Version DOI: <https://doi.org/10.5281/zenodo.21102471>
+- Concept DOI: <https://doi.org/10.5281/zenodo.21102470>
+
 ## Public/private boundary
 
 Included:
