@@ -22,7 +22,14 @@ manuscript text.
 - Added `figures/R198_final_main/Figure_Source_Map_R198.csv` linking each R198
   main figure to its source evidence role.
 - Updated `CITATION.cff`, `.zenodo.json` and `run_manifest.csv` to version
-  `v1.0.0-r198`.
+  `v1.0.1-r198`.
+
+## Zenodo trigger note
+
+`v1.0.1-r198` is a metadata-synchronized release created after Zenodo GitHub
+archiving was enabled for this repository. Scientific content is unchanged from
+the R198 public package; the version bump exists to emit a fresh GitHub release
+event for DOI archiving.
 
 ## Public/private boundary
 
