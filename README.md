@@ -1,7 +1,30 @@
-# 2026 Global Infrastructure Percolation Reproducibility Package
+# 2026 Road-Network Percolation Reproducibility Package
 
 This repository contains public, non-sensitive materials for reproducing the
-derived evidence behind the road-network percolation null-model analysis.
+derived evidence behind the road-network percolation null-model analysis
+supporting the working manuscript:
+
+**Why road networks leave random-graph percolation: testing a local
+embedded-merging constraint**.
+
+## R198 Release Scope
+
+This release aligns the public reproducibility package with the R198
+mechanism-first working version. R198 does not add a new raw-data download or a
+new numerical rerun. It reorganizes the public evidence around a bounded
+model-transfer claim:
+
+1. observed road thresholds define a random-graph transfer problem;
+2. degree sequence and edge scale are insufficient controls;
+3. the implemented strict local non-crossing null bounds the remaining
+   residual near estimator resolution;
+4. threshold-scale, spectral, road-form and cross-domain checks define
+   consequences and boundaries rather than a universal infrastructure law.
+
+The self-contained R198 manuscript remains outside this public repository while
+the paper is being revised. This repository publishes the code, derived source
+tables, figure assets, manifests and data-source links needed for independent
+inspection of the evidence package.
 
 ## Core Result
 
@@ -262,6 +285,9 @@ mixing theorem.
   strict-geometry surrogate audit figure.
 - `figures/Fig_R100_geometry_null_contrast.*`: exported main Fig. 4
   geometry-null contrast figure.
+- `figures/R198_final_main/`: R198 final six-main-figure package as SVG, PDF
+  and PNG, plus `Figure_Source_Map_R198.csv`. TIFF submission renders are not
+  included to keep the public repository light.
 
 ## What Is Not Included
 
@@ -296,7 +322,7 @@ python scripts/build_R100_main_fig4_geometry_null_contrast.py
 
 The full R56 null-model regeneration requires local graph caches or a
 fresh OSMnx extraction workflow. The included derived tables are sufficient to
-recreate the submitted R56 evidence figure. R65 can be recreated from the
+recreate the R56 evidence figure. R65 can be recreated from the
 included R63/R64 derived inputs plus official GHSL/WDI downloads.
 R67 can be redrawn from included derived tables with `--skip-compute`; the full
 geometry-null regeneration requires local cached OSMnx graph objects.

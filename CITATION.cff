@@ -1,12 +1,12 @@
 cff-version: 1.2.0
-title: "Reproducibility package for geometry-controlled percolation in embedded infrastructure networks"
-message: "If you use this package, please cite the associated manuscript and this repository."
+title: "Reproducibility package for why road networks leave random-graph percolation"
+message: "If you use this package, please cite the associated manuscript and this repository/archive."
 type: software
 authors:
   - family-names: Ren
     given-names: Lijian
     orcid: "https://orcid.org/0000-0003-1629-4368"
 repository-code: "https://github.com/Johnsonlijian/2026-globalinfra-percolation-repro"
-date-released: "2026-06-20"
-version: "v1.0-submission-candidate"
+date-released: "2026-07-01"
+version: "v1.0.0-r198"
 license: MIT

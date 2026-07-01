@@ -7,12 +7,12 @@
       "type": "ProjectMember"
     }
   ],
-  "title": "Reproducibility package for geometry-controlled percolation in embedded infrastructure networks",
-  "description": "Public, non-sensitive code, derived source tables, generated figures, run manifests and runbooks supporting the manuscript 'Geometry-controlled percolation in embedded infrastructure networks: a parameter-free threshold law'. Raw third-party OpenStreetMap, Geofabrik, GHSL, WDI and benchmark-network source archives are not redistributed; source links and access notes are recorded in DATASETS_AND_LINKS.csv.",
+  "title": "Reproducibility package for why road networks leave random-graph percolation",
+  "description": "Public, non-sensitive code, derived source tables, generated figures, run manifests and runbooks supporting the working manuscript 'Why road networks leave random-graph percolation: testing a local embedded-merging constraint'. Raw third-party OpenStreetMap, Geofabrik, GHSL, WDI and benchmark-network source archives are not redistributed; source links and access notes are recorded in DATASETS_AND_LINKS.csv.",
   "upload_type": "software",
   "access_right": "open",
   "license": "mit",
-  "version": "v1.0-submission-candidate",
+  "version": "v1.0.0-r198",
   "language": "eng",
   "keywords": [
     "percolation",
