@@ -1,0 +1,11 @@
+key,doi,candidate_title,crossref_title,similarity,journal,year,volume,page,verdict
+rosas2007,10.1142/S0218127407018531,Topological vulnerability of the European power grid under errors and attacks,TOPOLOGICAL VULNERABILITY OF THE EUROPEAN POWER GRID UNDER ERRORS AND ATTACKS,1.0,International Journal of Bifurcation and Chaos,2007,17,2465-2475,VERIFIED
+sole2008,10.1103/PhysRevE.77.026102,Robustness of the European power grids under intentional attack,Robustness of the European power grids under intentional attack,1.0,Physical Review E,2008,77,,VERIFIED
+pagani2013,10.1016/j.physa.2013.01.023,The Power Grid as a complex network: A survey,The Power Grid as a complex network: A survey,0.978,Physica A: Statistical Mechanics and its Applications,2013,392,2688-2700,VERIFIED
+melnik2011,10.1103/PhysRevE.83.036112,Unreasonable effectiveness of tree-based theory for networks with clustering,The unreasonable effectiveness of tree-based theory for networks with clustering,0.974,Physical Review E,2011,83,,VERIFIED
+radicchi2015,10.1038/nphys3374,Predicting percolation thresholds in networks,Percolation in real interdependent networks,0.614,Nature Physics,2015,11,597-602,CHECK_TITLE
+radicchi_castellano2016,10.1103/PhysRevE.93.030302,Beyond the locally treelike approximation for percolation on real networks,Beyond the locally treelike approximation for percolation on real networks,1.0,Physical Review E,2016,93,,VERIFIED
+li2011dimension,10.1038/nphys1932,Dimension of spatially embedded networks,Dimension of spatially embedded networks,1.0,Nature Physics,2011,7,481-484,VERIFIED
+ouyang2014rail,10.1016/j.ress.2013.10.003,Comparisons of complex network based models and real train flow model to analyze Chinese railway vulnerability,Comparisons of complex network based models and real train flow model to analyze Chinese railway vulnerability,1.0,Reliability Engineering &amp; System Safety,2014,123,38-46,VERIFIED
+bashan2013,10.1038/nphys2727,The extreme vulnerability of interdependent spatially embedded networks,The extreme vulnerability of interdependent spatially embedded networks,1.0,Nature Physics,2013,9,667-672,VERIFIED
+albert2004,10.1103/PhysRevE.69.025103,Structural vulnerability of the North American power grid,Structural vulnerability of the North American power grid,1.0,Physical Review E,2004,69,,VERIFIED

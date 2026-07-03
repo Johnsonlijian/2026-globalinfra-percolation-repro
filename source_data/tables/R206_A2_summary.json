@@ -1,0 +1,8 @@
+{
+  "n_cities": 6,
+  "chi_all_median": 0.17122031583388422,
+  "chi_angle15_median": 0.15592635290197404,
+  "chi_lcc_angle15_median": 0.1062284914985531,
+  "share_below_15deg_median": 0.08368320381108198,
+  "verdict_hint": "artifact-dominated if chi collapses under angle filter"
+}

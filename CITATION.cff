@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "Reproducibility package for why road networks leave random-graph percolation"
+title: "Reproducibility package for a measured validity boundary for percolation threshold screening in infrastructure networks"
 message: "If you use this package, please cite the associated manuscript and this repository/archive."
 type: software
 authors:
@@ -7,7 +7,7 @@ authors:
     given-names: Lijian
     orcid: "https://orcid.org/0000-0003-1629-4368"
 repository-code: "https://github.com/Johnsonlijian/2026-globalinfra-percolation-repro"
-doi: "10.5281/zenodo.21102471"
-date-released: "2026-07-01"
-version: "v1.0.1-r198"
+doi: "10.5281/zenodo.21102470"
+date-released: "2026-07-03"
+version: "v1.0.2-r209"
 license: MIT

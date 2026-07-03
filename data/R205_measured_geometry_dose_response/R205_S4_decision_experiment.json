@@ -1,0 +1,54 @@
+{
+  "r113_flip_rate_by_domain": {
+    "power": 1.0,
+    "road": 0.8873
+  },
+  "r113_n_by_domain": {
+    "power": 10,
+    "road": 71
+  },
+  "r113_margin_abs_err_cebh_mean": 0.2272,
+  "r113_margin_abs_err_derived_mean": 0.0353,
+  "r113_flip_rate_derived_by_domain": {
+    "power": 0.0,
+    "road": 0.0845
+  },
+  "r61_rank_fidelity_pc_cebh": {
+    "spearman": 0.9362,
+    "spearman_p": 0.0,
+    "kendall": 0.8253,
+    "kendall_p": 0.0
+  },
+  "r61_rank_fidelity_anchor_pc": {
+    "spearman": 0.908,
+    "spearman_p": 0.0,
+    "kendall": 0.7746,
+    "kendall_p": 0.0
+  },
+  "r61_mae_cebh": 0.2166,
+  "r61_mae_anchor": 0.0217,
+  "r61_top_decile_fragile_hit_rate_pc_cebh": 0.7143,
+  "r61_top_decile_fragile_hit_rate_anchor_pc": 0.5714,
+  "per_domain_mae": {
+    "power": {
+      "n": 10,
+      "mae_cebh": 0.3028,
+      "mae_anchor": 0.0821
+    },
+    "water": {
+      "n": 7,
+      "mae_cebh": 0.2435,
+      "mae_anchor": 0.2263
+    },
+    "rail": {
+      "n": 6,
+      "mae_cebh": 0.2402,
+      "mae_anchor": 0.0502
+    },
+    "road71": {
+      "n": 71,
+      "mae_cebh": 0.2166,
+      "mae_anchor": 0.0217
+    }
+  }
+}

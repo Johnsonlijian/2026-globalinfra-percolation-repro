@@ -196,5 +196,32 @@
         "status":  "completed",
         "script_or_source":  "scripts/build_R123_street_form_subgroup_analysis.py",
         "output_files":  "tables/R123_street_form_subgroup_city_scores.csv; tables/R123_street_form_subgroup_quartiles.csv; tables/R123_street_form_subgroup_correlations.csv; tables/R123_summary.json; figures/FigS_R123_street_form_subgroup.svg; figures/FigS_R123_street_form_subgroup.pdf; figures/FigS_R123_street_form_subgroup.png; figures/FigS_R123_street_form_subgroup.tiff"
+    },
+    {
+        "round":  "R205",
+        "analysis":  "measured crossing-density and dose-response",
+        "data_directory":  "data/R205_measured_geometry_dose_response",
+        "purpose":  "Measured projected crossing density, grade-separation validation, confound controls, length decomposition and controlled dials",
+        "status":  "complete",
+        "script_or_source":  "scripts/R205_measured_geometry",
+        "output_files":  "data/R205_measured_geometry_dose_response/R205_S1_crossing_density_71cities.csv; data/R205_measured_geometry_dose_response/R205_S2_matched_dial.csv; data/R205_measured_geometry_dose_response/R205_S3_cross_domain_nonplanarity.csv; figures/Fig_R205_measured_control_parameter.svg"
+    },
+    {
+        "round":  "R206/R208",
+        "analysis":  "RESS decision and validity reframe",
+        "data_directory":  "data/R206_R208_ress_reframe",
+        "purpose":  "Fine-grid dials, rail validation, pass/fail flip sweep, breadth/window sensitivity, review-response stats and mid-range dial",
+        "status":  "complete",
+        "script_or_source":  "scripts/R206_R208_ress_reframe",
+        "output_files":  "data/R206_R208_ress_reframe/R206_A1_dial_fine_grid.csv; data/R206_R208_ress_reframe/R206_A3_flip_threshold_sweep.csv; data/R206_R208_ress_reframe/R208_A6_window_sensitivity.csv; data/R206_R208_ress_reframe/R208_A8_midrange_dial.csv"
+    },
+    {
+        "round":  "R209",
+        "analysis":  "RESS final main figure package",
+        "data_directory":  "figures/R209_RESS_main",
+        "purpose":  "Six main figures aligned with the R209 RESS submission package",
+        "status":  "complete",
+        "script_or_source":  "figures/R209_RESS_main",
+        "output_files":  "figures/R209_RESS_main/Figure_1.svg; figures/R209_RESS_main/Figure_2.svg; figures/R209_RESS_main/Figure_3.svg; figures/R209_RESS_main/Figure_4.svg; figures/R209_RESS_main/Figure_5.svg; figures/R209_RESS_main/Figure_6.svg"
     }
 ]

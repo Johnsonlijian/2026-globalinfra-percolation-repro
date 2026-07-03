@@ -1,0 +1,49 @@
+{
+  "chi_topo_by_domain_median": {
+    "power": 0.04603,
+    "rail": 0.00855,
+    "road": 0.01943,
+    "water": 0.0
+  },
+  "euler_slack_by_domain_median": {
+    "power": 0.4182,
+    "rail": 0.4168,
+    "road": 0.4525,
+    "water": 0.394
+  },
+  "power_chi_topo__vs__anchor_abs_err": {
+    "n": 10,
+    "spearman": 0.4303,
+    "p": 0.21449
+  },
+  "power_chi_topo__vs__cebh_abs_err": {
+    "n": 10,
+    "spearman": 0.1152,
+    "p": 0.75142
+  },
+  "power_chi_topo__vs__cebh_gap": {
+    "n": 10,
+    "spearman": 0.1152,
+    "p": 0.75142
+  },
+  "power_chi_topo__vs__anchor_rel_dev": {
+    "n": 10,
+    "spearman": -0.2121,
+    "p": 0.55631
+  },
+  "pooled_chi_topo__vs__anchor_rel_dev": {
+    "n": 23,
+    "spearman": 0.4396,
+    "p": 0.035831,
+    "domains": [
+      "power",
+      "rail",
+      "water"
+    ]
+  },
+  "rail_chi_geo__vs__chi_topo": {
+    "n": 6,
+    "spearman": -0.3714,
+    "p": 0.46848
+  }
+}

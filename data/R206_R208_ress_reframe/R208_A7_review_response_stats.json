@@ -1,0 +1,34 @@
+{
+  "road_fitted_offset": 0.2166,
+  "bias_corrected_cebh_mae_power": 0.0964,
+  "bias_corrected_cebh_mae_water": 0.0715,
+  "bias_corrected_cebh_mae_rail": 0.0398,
+  "bias_corrected_cebh_mae_water_primary4": 0.0593,
+  "fine_grid_21city": {
+    "pc_column_used": "pc_rank_fine",
+    "n": 21,
+    "mae_dim_baseline": 0.0228,
+    "mae_cebh": 0.2113
+  },
+  "tagging_validation": {
+    "median": 1.0,
+    "q25": 1.0,
+    "min": 0.922,
+    "n_below_50pct": 0,
+    "spearman_tagshare_vs_chi": 0.256
+  },
+  "chi_vs_gap_region_fixed_effects": {
+    "partial_spearman": -0.2866,
+    "perm_p": 0.0138,
+    "n": 71
+  },
+  "power_cebh_flips_by_family_at_0.40": {
+    "GB": "1/1",
+    "IEEE300": "1/1",
+    "Illinois": "1/1",
+    "PEGASE": "3/3",
+    "Polish": "1/1",
+    "RTE": "3/3"
+  },
+  "power_n_independent_systems": 6
+}

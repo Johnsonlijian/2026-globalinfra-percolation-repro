@@ -132,9 +132,9 @@ def make_figure(dial_rows, r105, r106):
     ax.text(0.40, TAU_2D - 0.03, "2D 2.055", ha="right", va="top", fontsize=5.6)
     ax.axhline(TAU_MF, ls=":", lw=0.8, color=pub_style.COLORS["annot"])
     ax.text(0.0, TAU_MF + 0.02, "mean-field 2.5", ha="left", va="bottom", fontsize=5.6, color=pub_style.COLORS["annot"])
-    ax.set_xlabel("fraction of random crossing edges added")
-    ax.set_ylabel("Fisher exponent $\\tau_F$")
-    pub_style.panel_title(ax, "a", "Crossings shift exponent read-out")
+    ax.set_xlabel("fraction of random shortcut/crossing edges added")
+    ax.set_ylabel("Fisher exponent tau_F")
+    pub_style.panel_title(ax, "a", "Shortcuts/crossings shift exponent")
     ax.legend(frameon=False, fontsize=5.4, loc="lower right", ncol=2, handletextpad=0.3, columnspacing=0.8)
 
     # b: cross-domain finite-size exponent contrast.
@@ -155,7 +155,7 @@ def make_figure(dial_rows, r105, r106):
     ax.axhline(TAU_MF, ls=":", lw=0.8, color=pub_style.COLORS["annot"])
     ax.set_xticks([0, 1, 2])
     ax.set_xticklabels(["square\n(2D)", "roads\n(planar)", "power grids\n(non-planar)"], fontsize=5.4)
-    ax.set_ylabel("Fisher exponent $\\tau_F$")
+    ax.set_ylabel("Fisher exponent tau_F")
     ax.set_xlim(-0.6, 2.6)
     ax.set_ylim(1.8, 2.7)
     pub_style.panel_title(ax, "b", "Exponent read-out separates domains")

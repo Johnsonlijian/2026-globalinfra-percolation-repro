@@ -4,22 +4,38 @@ This repository contains public, non-sensitive materials for reproducing the
 derived evidence behind the road-network percolation null-model analysis
 supporting the working manuscript:
 
-**Why road networks leave random-graph percolation: testing a local
-embedded-merging constraint**.
+**A measured validity boundary for percolation threshold screening in
+infrastructure networks**.
 
 ## Archive DOI
 
-- Version DOI for release `v1.0.1-r198`:
-  <https://doi.org/10.5281/zenodo.21102471>
 - Zenodo concept DOI for all versions:
   <https://doi.org/10.5281/zenodo.21102470>
+- Current GitHub/Zenodo release tag: `v1.0.2-r209`.
+- Historical R198 version DOI:
+  <https://doi.org/10.5281/zenodo.21102471>
 
-## R198 Release Scope
+## R209 Release Scope
 
-This release aligns the public reproducibility package with the R198
-mechanism-first working version. R198 does not add a new raw-data download or a
-new numerical rerun. It reorganizes the public evidence around a bounded
-model-transfer claim:
+This release aligns the public reproducibility package with the R209 RESS
+submission package. It does not redistribute raw third-party data or active
+submission manuscripts. It publishes code, derived source tables, generated
+figures, manifests and data-source links for the current screening-boundary
+claim:
+
+1. degree-moment percolation thresholds are strongly level-biased on real
+   infrastructure networks, even when ranks remain useful;
+2. zero-parameter geometric baselines reduce threshold error for near-planar
+   domains;
+3. measured projected crossing density and controlled rewiring experiments
+   delimit when those baselines remain valid;
+4. local grade separations behave differently from long-range shortcut
+   crossings, which collapse the planar screening regime.
+
+The earlier R198 material remains in the repository as a historical figure and
+evidence package, but `v1.0.2-r209` is the release aligned with the current
+RESS submission title and figure set. The public evidence is organized around a
+bounded model-transfer claim:
 
 1. observed road thresholds define a random-graph transfer problem;
 2. degree sequence and edge scale are insufficient controls;
@@ -28,8 +44,8 @@ model-transfer claim:
 4. threshold-scale, spectral, road-form and cross-domain checks define
    consequences and boundaries rather than a universal infrastructure law.
 
-The self-contained R198 manuscript remains outside this public repository while
-the paper is being revised. This repository publishes the code, derived source
+The self-contained manuscript remains outside this public repository while the
+paper is under submission. This repository publishes the code, derived source
 tables, figure assets, manifests and data-source links needed for independent
 inspection of the evidence package.
 
@@ -152,6 +168,22 @@ mean road-minus-geometry residual (-0.0056; 95% CI -0.0164 to 0.0051). These
 are empirical stress tests, not causal laws or a full 71-city low-overlap
 mixing theorem.
 
+R205 adds the measured-control-parameter layer used in the R209 manuscript. It
+records projected crossing density across the 71 standardized city windows,
+grade-separation validation summaries, confound controls, crossing-length
+decomposition, cross-domain non-planarity summaries and controlled dial source
+tables.
+
+R206/R208 add the RESS-oriented decision and robustness layer. They include
+fine-grid dial estimates, rail artifact validation, pass/fail flip-threshold
+sweeps, reliability-reference verification tables, dial-breadth checks, window
+sensitivity, review-response statistics and a mid-range shortcut/crossing dial.
+
+R209 adds the final RESS six-main-figure package as PDF, SVG and PNG. These are
+the public figure assets corresponding to the manuscript title above; the
+manuscript PDF/DOCX, cover letter and portal metadata remain outside the public
+reproducibility repository.
+
 ## What Is Included
 
 - `scripts/build_R41_degree_preserving_nulls.py`: full R41 analysis script.
@@ -201,6 +233,12 @@ mixing theorem.
   tables; a full rerun requires local cached OSMnx graph objects.
 - `scripts/build_R95_nb_iteration_stability_audit.py`: R95 160-versus-640
   iteration-stability audit for the non-backtracking threshold proxy.
+- `scripts/R205_measured_geometry/`: R205 measured crossing-density,
+  grade-separation, confound-control, length-decomposition, dial and
+  cross-domain scripts.
+- `scripts/R206_R208_ress_reframe/`: R206/R208 RESS reframing scripts for the
+  decision sweep, rail artifact validation, fine-grid dials, breadth checks,
+  window sensitivity and final manuscript figure builders.
 - `scripts/build_N99_prediction_correction_law.py`: N99 leakage-guarded
   compact transfer-error correction, shuffled-label permutation audit,
   coefficient-stability audit and source-figure builder.
@@ -262,6 +300,11 @@ mixing theorem.
   strict-geometry audit records, city summary, report and gate outputs.
 - `data/R100_main_figure_hardening/`: derived Fig. 4 source data joining
   full-city, matched-intensity, fine-grid and low-overlap geometry-null checks.
+- `data/R205_measured_geometry_dose_response/`: R205 measured crossing-density,
+  validation, confound-control, controlled-dial and cross-domain derived
+  tables.
+- `data/R206_R208_ress_reframe/`: R206/R208 RESS decision, robustness,
+  validation and review-response derived tables.
 - `source_data/`: public source-data bundle, column dictionary,
   claim-to-table map and run manifest. It contains derived project tables only.
 - `figures/Fig_R56_spatial_length_constrained_nulls.*`: exported figure.
@@ -295,6 +338,8 @@ mixing theorem.
 - `figures/R198_final_main/`: R198 final six-main-figure package as SVG, PDF
   and PNG, plus `Figure_Source_Map_R198.csv`. TIFF submission renders are not
   included to keep the public repository light.
+- `figures/R209_RESS_main/`: R209 RESS six-main-figure package as PDF, SVG and
+  PNG.
 
 ## What Is Not Included
 
@@ -341,6 +386,10 @@ spatial-null recomputation requires local cached OSMnx graph objects.
 R75, R76, R77 and R78 are derived-table packaging and plotting/checking steps; they do not require
 raw third-party downloads or cached graph objects. R90 can be redrawn from included derived
 tables with `--skip-compute`; full R90 regeneration requires local cached OSMnx graph objects.
+R205/R206/R208 scripts are included as public, repo-relative workflow records;
+full recomputation of the measured crossing and crossing-dial layers requires
+local OSMnx graph caches. The R209 figure assets and derived source tables are
+included directly in this archive.
 
 ## Boundary
 
@@ -372,3 +421,8 @@ into causal inference.
 R90 fills the null-threshold fine-grid and exact-overlap audit for the
 regenerated 21-city subset. It should still be read as an empirical stress test,
 not as a Markov-chain mixing proof or a causal urban-design rule.
+
+R205/R206/R208 add measured crossing exposure, decision-threshold sweeps and
+controlled shortcut/crossing dials for the R209 screening-boundary manuscript.
+They are still derived-output layers: raw third-party graph downloads and
+active submission files are not redistributed.

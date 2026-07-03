@@ -1,0 +1,334 @@
+{
+  "n_cities_ok": 71,
+  "chi_poly__vs__road_gap": {
+    "n": 71,
+    "spearman": -0.3985,
+    "spearman_p": 0.000578,
+    "spearman_ci95": [
+      -0.586,
+      -0.1838
+    ],
+    "pearson": -0.3295,
+    "pearson_p": 0.005013
+  },
+  "chi_poly__vs__anchor_deviation": {
+    "n": 71,
+    "spearman": -0.2291,
+    "spearman_p": 0.054585,
+    "spearman_ci95": [
+      -0.4407,
+      0.0024
+    ],
+    "pearson": -0.199,
+    "pearson_p": 0.096231
+  },
+  "chi_poly__vs__spatial_resid_f0.01": {
+    "n": 71,
+    "spearman": -0.5363,
+    "spearman_p": 1e-06,
+    "spearman_ci95": [
+      -0.7028,
+      -0.3409
+    ],
+    "pearson": -0.4752,
+    "pearson_p": 2.8e-05
+  },
+  "chi_poly__vs__spatial_resid_f0.02": {
+    "n": 71,
+    "spearman": -0.5363,
+    "spearman_p": 1e-06,
+    "spearman_ci95": [
+      -0.6923,
+      -0.332
+    ],
+    "pearson": -0.4752,
+    "pearson_p": 2.8e-05
+  },
+  "chi_poly__vs__geom_resid_f0.01": {
+    "n": 71,
+    "spearman": -0.1065,
+    "spearman_p": 0.376542,
+    "spearman_ci95": [
+      -0.3108,
+      0.12
+    ],
+    "pearson": 0.173,
+    "pearson_p": 0.149148
+  },
+  "chi_poly__vs__geom_resid_f0.02": {
+    "n": 71,
+    "spearman": -0.2101,
+    "spearman_p": 0.078656,
+    "spearman_ci95": [
+      -0.4145,
+      0.003
+    ],
+    "pearson": -0.0348,
+    "pearson_p": 0.773266
+  },
+  "chi_poly__vs__noncross_marginal_f0.01": {
+    "n": 71,
+    "spearman": 0.5584,
+    "spearman_p": 0.0,
+    "spearman_ci95": [
+      0.3448,
+      0.7292
+    ],
+    "pearson": 0.6264,
+    "pearson_p": 0.0
+  },
+  "chi_poly__vs__noncross_marginal_f0.02": {
+    "n": 71,
+    "spearman": 0.4759,
+    "spearman_p": 2.7e-05,
+    "spearman_ci95": [
+      0.2473,
+      0.6626
+    ],
+    "pearson": 0.4762,
+    "pearson_p": 2.7e-05
+  },
+  "chi_chord__vs__road_gap": {
+    "n": 71,
+    "spearman": -0.2644,
+    "spearman_p": 0.025899,
+    "spearman_ci95": [
+      -0.4789,
+      -0.0368
+    ],
+    "pearson": -0.2522,
+    "pearson_p": 0.033875
+  },
+  "chi_chord__vs__anchor_deviation": {
+    "n": 71,
+    "spearman": -0.163,
+    "spearman_p": 0.174284,
+    "spearman_ci95": [
+      -0.3922,
+      0.0816
+    ],
+    "pearson": -0.1749,
+    "pearson_p": 0.144677
+  },
+  "chi_chord__vs__spatial_resid_f0.01": {
+    "n": 71,
+    "spearman": -0.4335,
+    "spearman_p": 0.000159,
+    "spearman_ci95": [
+      -0.6241,
+      -0.2013
+    ],
+    "pearson": -0.4238,
+    "pearson_p": 0.000231
+  },
+  "chi_chord__vs__spatial_resid_f0.02": {
+    "n": 71,
+    "spearman": -0.4335,
+    "spearman_p": 0.000159,
+    "spearman_ci95": [
+      -0.6211,
+      -0.2059
+    ],
+    "pearson": -0.4238,
+    "pearson_p": 0.000231
+  },
+  "chi_chord__vs__geom_resid_f0.01": {
+    "n": 71,
+    "spearman": -0.0317,
+    "spearman_p": 0.793139,
+    "spearman_ci95": [
+      -0.2528,
+      0.191
+    ],
+    "pearson": 0.2151,
+    "pearson_p": 0.071593
+  },
+  "chi_chord__vs__geom_resid_f0.02": {
+    "n": 71,
+    "spearman": -0.1763,
+    "spearman_p": 0.141304,
+    "spearman_ci95": [
+      -0.3818,
+      0.0386
+    ],
+    "pearson": 0.001,
+    "pearson_p": 0.993722
+  },
+  "chi_chord__vs__noncross_marginal_f0.01": {
+    "n": 71,
+    "spearman": 0.4816,
+    "spearman_p": 2.1e-05,
+    "spearman_ci95": [
+      0.2443,
+      0.6734
+    ],
+    "pearson": 0.6028,
+    "pearson_p": 0.0
+  },
+  "chi_chord__vs__noncross_marginal_f0.02": {
+    "n": 71,
+    "spearman": 0.4053,
+    "spearman_p": 0.000455,
+    "spearman_ci95": [
+      0.1718,
+      0.6069
+    ],
+    "pearson": 0.4472,
+    "pearson_p": 9.2e-05
+  },
+  "bridge_tunnel_tagged_edge_share__vs__road_gap": {
+    "n": 71,
+    "spearman": -0.1898,
+    "spearman_p": 0.112813,
+    "spearman_ci95": [
+      -0.4179,
+      0.048
+    ],
+    "pearson": -0.1485,
+    "pearson_p": 0.216623
+  },
+  "bridge_tunnel_tagged_edge_share__vs__anchor_deviation": {
+    "n": 71,
+    "spearman": -0.2743,
+    "spearman_p": 0.020615,
+    "spearman_ci95": [
+      -0.49,
+      -0.0214
+    ],
+    "pearson": -0.2251,
+    "pearson_p": 0.059081
+  },
+  "bridge_tunnel_tagged_edge_share__vs__spatial_resid_f0.01": {
+    "n": 71,
+    "spearman": -0.4075,
+    "spearman_p": 0.000421,
+    "spearman_ci95": [
+      -0.5986,
+      -0.1899
+    ],
+    "pearson": -0.354,
+    "pearson_p": 0.00246
+  },
+  "bridge_tunnel_tagged_edge_share__vs__spatial_resid_f0.02": {
+    "n": 71,
+    "spearman": -0.4075,
+    "spearman_p": 0.000421,
+    "spearman_ci95": [
+      -0.5912,
+      -0.1893
+    ],
+    "pearson": -0.354,
+    "pearson_p": 0.00246
+  },
+  "bridge_tunnel_tagged_edge_share__vs__geom_resid_f0.01": {
+    "n": 71,
+    "spearman": -0.1216,
+    "spearman_p": 0.312208,
+    "spearman_ci95": [
+      -0.3636,
+      0.1183
+    ],
+    "pearson": 0.1742,
+    "pearson_p": 0.146248
+  },
+  "bridge_tunnel_tagged_edge_share__vs__geom_resid_f0.02": {
+    "n": 71,
+    "spearman": -0.1852,
+    "spearman_p": 0.122079,
+    "spearman_ci95": [
+      -0.4084,
+      0.0553
+    ],
+    "pearson": -0.0455,
+    "pearson_p": 0.706532
+  },
+  "bridge_tunnel_tagged_edge_share__vs__noncross_marginal_f0.01": {
+    "n": 71,
+    "spearman": 0.4184,
+    "spearman_p": 0.000282,
+    "spearman_ci95": [
+      0.1818,
+      0.6242
+    ],
+    "pearson": 0.4995,
+    "pearson_p": 9e-06
+  },
+  "bridge_tunnel_tagged_edge_share__vs__noncross_marginal_f0.02": {
+    "n": 71,
+    "spearman": 0.385,
+    "spearman_p": 0.000915,
+    "spearman_ci95": [
+      0.1555,
+      0.5712
+    ],
+    "pearson": 0.3409,
+    "pearson_p": 0.003619
+  },
+  "chi_poly_distribution": {
+    "min": 0.0009723060417085,
+    "median": 0.0212239284895713,
+    "mean": 0.0243036913295748,
+    "max": 0.1520573801434503
+  },
+  "chi_chord_distribution": {
+    "min": 0.0089086859688195,
+    "median": 0.0373298036783694,
+    "mean": 0.04055747902516613,
+    "max": 0.193129482823707
+  },
+  "cross_pairs_with_tagged_edge_share_median": 1.0,
+  "chi_poly_top5": [
+    {
+      "city": "Hong Kong",
+      "chi_poly": 0.1521,
+      "road_gap": 0.2098
+    },
+    {
+      "city": "Taipei",
+      "chi_poly": 0.0916,
+      "road_gap": 0.1683
+    },
+    {
+      "city": "Kuala Lumpur",
+      "chi_poly": 0.0642,
+      "road_gap": 0.2031
+    },
+    {
+      "city": "New York City",
+      "chi_poly": 0.0537,
+      "road_gap": 0.1874
+    },
+    {
+      "city": "Singapore",
+      "chi_poly": 0.0525,
+      "road_gap": 0.2082
+    }
+  ],
+  "chi_poly_bottom5": [
+    {
+      "city": "Dar es Salaam",
+      "chi_poly": 0.001,
+      "road_gap": 0.2674
+    },
+    {
+      "city": "Kampala",
+      "chi_poly": 0.0022,
+      "road_gap": 0.2505
+    },
+    {
+      "city": "Montevideo",
+      "chi_poly": 0.0025,
+      "road_gap": 0.193
+    },
+    {
+      "city": "Addis Ababa",
+      "chi_poly": 0.0029,
+      "road_gap": 0.2177
+    },
+    {
+      "city": "Hyderabad",
+      "chi_poly": 0.0032,
+      "road_gap": 0.2618
+    }
+  ]
+}

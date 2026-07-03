@@ -1,0 +1,142 @@
+{
+  "chi_poly__road_gap__ctrl_none": {
+    "n": 71,
+    "partial_spearman": -0.3985,
+    "perm_p": 0.0006
+  },
+  "chi_poly__road_gap__ctrl_k": {
+    "n": 71,
+    "partial_spearman": -0.2888,
+    "perm_p": 0.0166
+  },
+  "chi_poly__road_gap__ctrl_k_size": {
+    "n": 71,
+    "partial_spearman": -0.3303,
+    "perm_p": 0.005
+  },
+  "chi_poly__road_gap__ctrl_k_size_gdp": {
+    "n": 71,
+    "partial_spearman": -0.2799,
+    "perm_p": 0.0174
+  },
+  "chi_poly__spatial_resid_f0.01__ctrl_none": {
+    "n": 71,
+    "partial_spearman": -0.5363,
+    "perm_p": 0.0
+  },
+  "chi_poly__spatial_resid_f0.01__ctrl_k": {
+    "n": 71,
+    "partial_spearman": -0.4776,
+    "perm_p": 0.0
+  },
+  "chi_poly__spatial_resid_f0.01__ctrl_k_size": {
+    "n": 71,
+    "partial_spearman": -0.3672,
+    "perm_p": 0.0032
+  },
+  "chi_poly__spatial_resid_f0.01__ctrl_k_size_gdp": {
+    "n": 71,
+    "partial_spearman": -0.3226,
+    "perm_p": 0.0064
+  },
+  "chi_poly__spatial_resid_f0.02__ctrl_none": {
+    "n": 71,
+    "partial_spearman": -0.5363,
+    "perm_p": 0.0
+  },
+  "chi_poly__spatial_resid_f0.02__ctrl_k": {
+    "n": 71,
+    "partial_spearman": -0.4776,
+    "perm_p": 0.0
+  },
+  "chi_poly__spatial_resid_f0.02__ctrl_k_size": {
+    "n": 71,
+    "partial_spearman": -0.3672,
+    "perm_p": 0.0016
+  },
+  "chi_poly__spatial_resid_f0.02__ctrl_k_size_gdp": {
+    "n": 71,
+    "partial_spearman": -0.3226,
+    "perm_p": 0.0068
+  },
+  "chi_poly__geom_resid_f0.01__ctrl_none": {
+    "n": 71,
+    "partial_spearman": -0.1065,
+    "perm_p": 0.3762
+  },
+  "chi_poly__geom_resid_f0.01__ctrl_k": {
+    "n": 71,
+    "partial_spearman": -0.1109,
+    "perm_p": 0.3612
+  },
+  "chi_poly__geom_resid_f0.01__ctrl_k_size": {
+    "n": 71,
+    "partial_spearman": -0.1064,
+    "perm_p": 0.3672
+  },
+  "chi_poly__geom_resid_f0.01__ctrl_k_size_gdp": {
+    "n": 71,
+    "partial_spearman": -0.1799,
+    "perm_p": 0.135
+  },
+  "chi_poly__geom_resid_f0.02__ctrl_none": {
+    "n": 71,
+    "partial_spearman": -0.2101,
+    "perm_p": 0.0788
+  },
+  "chi_poly__geom_resid_f0.02__ctrl_k": {
+    "n": 71,
+    "partial_spearman": -0.1944,
+    "perm_p": 0.1006
+  },
+  "chi_poly__geom_resid_f0.02__ctrl_k_size": {
+    "n": 71,
+    "partial_spearman": -0.2092,
+    "perm_p": 0.0844
+  },
+  "chi_poly__geom_resid_f0.02__ctrl_k_size_gdp": {
+    "n": 71,
+    "partial_spearman": -0.29,
+    "perm_p": 0.0124
+  },
+  "chi_poly__noncross_marginal_f0.01__ctrl_none": {
+    "n": 71,
+    "partial_spearman": 0.5584,
+    "perm_p": 0.0
+  },
+  "chi_poly__noncross_marginal_f0.01__ctrl_k": {
+    "n": 71,
+    "partial_spearman": 0.4984,
+    "perm_p": 0.0
+  },
+  "chi_poly__noncross_marginal_f0.01__ctrl_k_size": {
+    "n": 71,
+    "partial_spearman": 0.4152,
+    "perm_p": 0.0004
+  },
+  "chi_poly__noncross_marginal_f0.01__ctrl_k_size_gdp": {
+    "n": 71,
+    "partial_spearman": 0.2782,
+    "perm_p": 0.017
+  },
+  "chi_poly__noncross_marginal_f0.02__ctrl_none": {
+    "n": 71,
+    "partial_spearman": 0.4759,
+    "perm_p": 0.0
+  },
+  "chi_poly__noncross_marginal_f0.02__ctrl_k": {
+    "n": 71,
+    "partial_spearman": 0.4135,
+    "perm_p": 0.0008
+  },
+  "chi_poly__noncross_marginal_f0.02__ctrl_k_size": {
+    "n": 71,
+    "partial_spearman": 0.2944,
+    "perm_p": 0.011
+  },
+  "chi_poly__noncross_marginal_f0.02__ctrl_k_size_gdp": {
+    "n": 71,
+    "partial_spearman": 0.1452,
+    "perm_p": 0.2312
+  }
+}

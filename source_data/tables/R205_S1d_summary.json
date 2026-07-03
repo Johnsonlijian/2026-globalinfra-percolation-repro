@@ -1,0 +1,44 @@
+{
+  "n": 71,
+  "chi_long_median": 0.01988845305221868,
+  "chi_short_median": 0.0005365126676602086,
+  "crossing_len_ratio_median": 11.073778382986793,
+  "chi_long__vs__road_gap": {
+    "n": 71,
+    "spearman": -0.398,
+    "p": 0.000588
+  },
+  "chi_long__vs__road_minus_spatial": {
+    "n": 71,
+    "spearman": -0.5374,
+    "p": 1e-06
+  },
+  "chi_short__vs__road_gap": {
+    "n": 71,
+    "spearman": -0.317,
+    "p": 0.007079
+  },
+  "chi_short__vs__road_minus_spatial": {
+    "n": 71,
+    "spearman": -0.4823,
+    "p": 2.1e-05
+  },
+  "crossing_len_ratio__vs__road_gap": {
+    "n": 71,
+    "spearman": 0.2597,
+    "p": 0.02874
+  },
+  "crossing_len_ratio__vs__road_minus_spatial": {
+    "n": 71,
+    "spearman": 0.2595,
+    "p": 0.028863
+  },
+  "partial_chi_long__road_gap__ctrl_chi_short": {
+    "n": 71,
+    "partial_spearman": -0.255
+  },
+  "partial_chi_short__road_gap__ctrl_chi_long": {
+    "n": 71,
+    "partial_spearman": -0.0256
+  }
+}

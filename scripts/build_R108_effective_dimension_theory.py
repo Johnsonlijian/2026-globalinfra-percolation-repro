@@ -203,7 +203,7 @@ def make_figure(obs, derived, cebh, anchor, d_road, dP, dial_df, road, power):
     ax2 = ax.twinx()
     ax2.spines["top"].set_visible(False)
     ax2.plot(g["f_cross"], g["fisher_tau"], "s--", ms=3, lw=1.0, color=pub_style.COLORS["accent"], label=r"$\tau_F$ exponent")
-    ax.set_xlabel("fraction of added crossings")
+    ax.set_xlabel("added shortcut/crossing fraction")
     ax.set_ylabel("effective dimension $d$")
     ax2.set_ylabel(r"Fisher exponent $\tau_F$")
     pub_style.panel_title(ax, "c", "Dimension tracks class")

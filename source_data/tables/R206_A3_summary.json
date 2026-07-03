@@ -1,0 +1,26 @@
+{
+  "power_cebh": {
+    "flip_min": 0.0,
+    "flip_max": 1.0,
+    "flip_at_0.40": 1.0,
+    "flip_mean_band": 0.4882
+  },
+  "power_derived": {
+    "flip_min": 0.0,
+    "flip_max": 0.9,
+    "flip_at_0.40": 0.0,
+    "flip_mean_band": 0.3
+  },
+  "road_cebh": {
+    "flip_min": 0.0,
+    "flip_max": 0.971830985915493,
+    "flip_at_0.40": 0.8873239436619719,
+    "flip_mean_band": 0.4822
+  },
+  "road_derived": {
+    "flip_min": 0.0,
+    "flip_max": 0.16901408450704225,
+    "flip_at_0.40": 0.0,
+    "flip_mean_band": 0.029
+  }
+}
