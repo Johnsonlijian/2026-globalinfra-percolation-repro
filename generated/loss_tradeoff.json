@@ -1,0 +1,4 @@
+{
+  "power_junction_2d_break_even_unsafe_cost": 1.1663770881069195,
+  "loss_definition": "lambda*unsafe+conservative; six-family means; illustrative uniform target band"
+}

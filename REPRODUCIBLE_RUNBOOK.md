@@ -2,515 +2,168 @@
 
 ## Environment
 
-Use Python 3.11 or newer.
+Use Python 3.12.10 (tested). Install requirements.txt in a separate environment.
+NumPy 2.3.5, SciPy 1.16.3, pandas 2.3.3, NetworkX 3.6.1, Matplotlib 3.10.9,
+statsmodels 0.14.6, Shapely 2.1.2, PyProj 3.7.2 and PyMuPDF 1.28.0 were used
+for the local checks. Numba 0.67.0 and h5py 3.16.0 support the additional
+component-observable and mapped-power diagnostics.
+Changing graph/runtime versions requires rechecking graph and edge-order
+hashes before claiming bytewise replay.
 
-```bash
-pip install -r requirements.txt
+All plotting and table scripts accept --data-root, --config and --output.
+Paths inside config/reproduction.json are relative to --data-root, not to
+an author's workstation. Default configuration and data
+are resolved relative to the installed scripts, so another working directory
+is supported. No script performs downloads.
+
+## Self-Contained Table And Figure Regeneration
+
+Run from the extracted attachment root:
+
+```text
+python -B scripts/check.py
+python -B scripts/analyze.py --data-root . --output generated --associations
+python -B scripts/external_split.py --data-root . --output generated
+python -B scripts/retention_sensitivity.py --data-root . --output generated
+python -B scripts/local_difference_sensitivity.py --data-root . --output generated
+python -B scripts/make_core_figures.py --data-root . --output generated
+python -B scripts/make_length_control_figure.py --data-root . --output generated
+python -B scripts/make_paper_assets.py --data-root . --output generated
+python -B scripts/audit_package.py --data-root . --output generated
 ```
 
-## Recreate The Public R56 Figure
+analyze.py recomputes instance losses, family-weighted summaries, reference-only
+allowance, leave-region-out decisions, matched null contrasts, external
+decisions, asymmetric loss curves, scenario aggregation and, with
+--associations, Freedman-Lane/paired-city inference. Supplied summaries are
+used as regression expectations, not substituted for these calculations.
+The tests compare regenerated tables to their included values.
 
-```bash
-python scripts/replot_R56_spatial_null_figure.py
+external_split.py reproduces the retrospective 19-city primary cohort,
+the two prior-use cases and the full 21-city roster. It also reports the
+constant-offset comparator with a shared numerical allowance and with its
+own 69th ordered reference error. No main-rule allowance is refitted.
+
+retention_sensitivity.py keeps the reference-calibrated allowance unchanged
+and reproduces retained acceptances, retained rejections and target-band
+sensitivities. Only [0.15,0.55] is the locked primary band; the full, lower
+and upper bands are post hoc weighting checks, not new validation cohorts.
+
+local_difference_sensitivity.py reproduces conditional stage-minus-baseline
+percentile ranges from the included bootstrap peak-count distributions.
+It uses the product of independent stage distributions, not paired edge
+orders or additional Monte Carlo simulations.
+
+Figure scripts default to the bound included tables in data/. To plot the
+freshly regenerated summaries, use config/regenerated_figures.json after
+analyze.py. The numerical values are regression-checked in either route.
+
+Outputs: generated/*.csv/json, generated/tables/*.tex, generated/facts.tex,
+and generated/figures/fig1 through fig6 as PDF/SVG/PNG. TeX files contain
+numeric bindings and preamble row macros (MainErrorRows and MainValidationRows),
+not manuscript prose. Load the table files in the document preamble and use
+their macros inside the corresponding tabular environment with booktabs.
+Figure 1 composes an
+authorized fixed map layer with a newly drawn response/decision plot.
+The map is not claimed to be reconstructed from raw OSM geometry here.
+
+## Snapshot Validation Without Monte Carlo
+
+Place the author-held snapshots under a separate directory, retaining the
+relative snapshot_name values from data/source_registry.csv.
+
+```text
+python -B scripts/rerun_topology.py --data-root $PRIMARY_SNAPSHOTS --cohort reference --validate-only --output generated/snapshot_checks
+python -B scripts/rerun_topology.py --data-root $EXTERNAL_SNAPSHOTS --cohort external --allow-trusted-pickle --validate-only --output generated/external_checks
+python -B scripts/rerun_topology.py --data-root $CLEAN_STAGES --cohort length_control --validate-only --output generated/stage_checks
 ```
 
-Expected output:
+The pickle switch is explicit because loading pickle can execute code. Use
+only a trusted author-held source. There is no pickle or NPZ in the archive.
+A missing snapshot is reported as required input, never silently downloaded.
 
-- `figures/Fig_R56_spatial_length_constrained_nulls_public.png`
-- `figures/Fig_R56_spatial_length_constrained_nulls_public.svg`
-- `figures/Fig_R56_spatial_length_constrained_nulls_public.pdf`
+Remove --validate-only to run the declared estimator. A single-instance run
+can use --instance Net3 or --limit 1. Use a new output directory; existing
+estimate files are not overwritten. A graph validation report is not an MC
+rerun. For reference roads, --kind degree or --kind connected reconstructs
+the specified null realization, verifies its hash before MC, and uses its
+recorded seed and 256-order setting.
 
-## Re-run R56 From Graph Caches
+The helper preserves historical iteration/edge-order behavior. Set iteration,
+NetworkX changes, different normalized node labels or a fresh snapshot can
+produce a different realization even when coarse topology statistics agree;
+the hash check must fail rather than conceal that divergence.
 
-The full analysis script is included for transparency:
+## Fixed-Count Scenarios
 
-```bash
-python scripts/build_R56_spatial_length_constrained_nulls.py --n-null 4 --n-perm 16 --n-bootstrap 300 --swap-fraction 0.25 --length-bins 12 --bin-tolerance 1 --max-attempt-factor 60
+```text
+python -B scripts/run_scenarios.py --data-root $PRIMARY_SNAPSHOTS --instance Net3 --output $SCENARIO_OUTPUT
 ```
 
-This requires cached OSMnx road graphs under `cache/local_graphs/` with node
-longitude/latitude and edge data. Those caches are not redistributed because
-they are raw third-party derived graph objects and may contain source-data
-licensing or size concerns.
+This runs three static approximate edge-betweenness rankings, not adaptive
+recomputed targeting. Optional --coordinates and --coordinate-contract add
+12 localized orders for verified road/rail geography only. The private
+coordinate NPZ must contain xy in frozen integer-node order. Its separate
+JSON contract states input_hash, coordinate_sha256, source_crs=EPSG:4326 and
+node_order=frozen_integer_labels. Coordinates are projected to local AEQD
+metres. Ranking uses edge endpoint-chord midpoints, not polyline hazard
+intersections. No coordinates or coordinate table are included.
 
-## Interpretation Check
+## Numerical Contract
 
-Use `data/R56_spatial_length_constrained_nulls/spatial_length_constrained_nulls_report.md`
-as the manuscript-safe boundary statement. Do not interpret R56 as a full
-planar null or causal mechanism proof.
+- Canonical response: binomial conversion of fixed-count LCC trajectories.
+  Kernel tails are truncated at 1e-14 and their total mass is checked.
+- Diagnostic: first maximum of the mean analytic derivative on p=0:.0025:1.
+  This is a finite-graph diagnostic, not an infinite-network critical point.
+- The p=1 derivative is computed exactly from bridges and applied to every
+  order before the peak/bootstrap calculation. The resulting order bootstrap
+  is conditional on this fixed graph and exact endpoint treatment.
+- Primary/external estimates: 8192 orders, 1000 bootstrap replicates.
+  Nulls: 256 orders; clean saved stages: 512 orders. All use step .0025.
+- Calibration: reference-only ceil((71+1)*.95)-th absolute error;
+  q=0.061536786614714734. External cities never enter calibration.
+- City/family bootstrap: 10000 draws, seed 20260905.
+- Association permutations: 10000 Freedman-Lane draws; eight tests form one
+  BH/Holm family. Long/short uses paired city resampling, not within-city swaps.
+- Power means use six source families. Scenario replication does not enlarge
+  the independent-city sample size.
+- Random versus scenario AUC uses fixed retained-edge fraction, not one
+  canonical curve versus one fixed-count curve. Random uses 401 sampled
+  points; other scenarios integrate all counts. The absolute quadrature
+  comparison bound is .00125; the saved scenario difference was <=.000431593.
+- Primary 91 point estimates are interior. C-Town pc=1 in additional-water
+  scope is retained. Do not erase endpoints or overstate interval coverage.
+- Primary rail exposure uses whole-graph proper nonadjacent polyline crossing
+  pairs without the 15-degree cutoff. LCC/15-degree outputs are sensitivities.
+  Water planarity is not assigned numerical geographic crossing density.
 
-## Recreate R65 Public-Covariate Controls
+## Scope And Release
 
-R65 uses included R63/R64 derived inputs plus official public downloads from
-JRC/GHSL and the World Bank WDI API.
+Additional diagnostic reruns require matching author-held graph snapshots:
 
-```bash
-python scripts/build_R65_public_covariates_and_controls.py
+```text
+python -B scripts/control_budget_verified.py --data data --graphs $REFERENCE_SNAPSHOTS --output $CONTROL_OUTPUT
+python -B scripts/response_definition_verified.py --data data --graphs $REFERENCE_SNAPSHOTS --output $RESPONSE_OUTPUT
+python -B scripts/power_scigrid_check.py --network $SCIGRID_NETWORK --output $SCIGRID_OUTPUT
 ```
 
-Expected outputs:
-
-- `data/R65_public_covariates_and_controls/public_data_source_registry.csv`
-- `data/R65_public_covariates_and_controls/ghsl_match_qc.csv`
-- `data/R65_public_covariates_and_controls/wdi_country_controls.csv`
-- `data/R65_public_covariates_and_controls/R65_integrated_public_covariates.csv`
-- `data/R65_public_covariates_and_controls/R65_external_correlations.csv`
-- `data/R65_public_covariates_and_controls/R65_model_comparison.csv`
-- `data/R65_public_covariates_and_controls/R65_summary.json`
-- `figures/Fig_R65_public_covariate_controls.png`
-- `figures/Fig_R65_public_covariate_controls.svg`
-- `figures/Fig_R65_public_covariate_controls.pdf`
-- `figures/Fig_R65_public_covariate_controls.tiff`
-
-The script writes GHSL raw zip downloads under
-`data/R65_public_covariates_and_controls/raw/`. That directory is intentionally
-ignored by git; redistribute only after checking the source terms and citation
-requirements.
-
-## Recreate R67 Geometry-null Sensitivity Figure
-
-The public package includes the derived R67 replicate and summary tables. To
-rebuild the R67 summaries and figure without raw graph caches:
-
-```bash
-python scripts/build_R67_geometry_null_sensitivity.py --skip-compute
-```
-
-Expected outputs:
-
-- `data/R67_geometry_null_sensitivity/geometry_null_sensitivity_city_summary.csv`
-- `data/R67_geometry_null_sensitivity/geometry_null_sensitivity_fraction_summary.csv`
-- `data/R67_geometry_null_sensitivity/R67_summary.json`
-- `figures/Fig_R67_geometry_null_sensitivity.png`
-- `figures/Fig_R67_geometry_null_sensitivity.svg`
-- `figures/Fig_R67_geometry_null_sensitivity.pdf`
-- `figures/Fig_R67_geometry_null_sensitivity.tiff`
-
-## Re-run R67 From Graph Caches
-
-The full R67 geometry-null regeneration requires cached OSMnx road graph
-objects with node longitude/latitude fields. Those graph caches are not
-redistributed. If local caches are available in the expected project layout,
-run:
-
-```bash
-python scripts/build_R67_geometry_null_sensitivity.py --force
-```
-
-Interpret R67 as a 21-city strict non-crossing sensitivity test. It is stronger
-than a one-replicate pilot, but it is not a full 71-city planar-null ensemble
-and does not prove a causal urban-design law.
-
-## Recreate R68 Full-city Geometry-null Figure
-
-The public package includes the derived R68 replicate, city-summary and
-macro-region tables. To rebuild the R68 summaries and figure without raw graph
-caches:
-
-```bash
-python scripts/build_R68_full71_geometry_null_ensemble.py --skip-compute
-```
-
-Expected outputs:
-
-- `data/R68_full71_geometry_null_ensemble/full71_geometry_null_city_summary.csv`
-- `data/R68_full71_geometry_null_ensemble/full71_geometry_null_macro_region_summary.csv`
-- `data/R68_full71_geometry_null_ensemble/R68_summary.json`
-- `figures/Fig_R68_full71_geometry_null_ensemble.png`
-- `figures/Fig_R68_full71_geometry_null_ensemble.svg`
-- `figures/Fig_R68_full71_geometry_null_ensemble.pdf`
-- `figures/Fig_R68_full71_geometry_null_ensemble.tiff`
-
-## Re-run R68 From Graph Caches
-
-The full R68 geometry-null regeneration requires cached OSMnx road graph
-objects with node longitude/latitude fields. Those graph caches are not
-redistributed. If local caches are available in the expected project layout,
-run:
-
-```bash
-python scripts/build_R68_full71_geometry_null_ensemble.py --force
-```
-
-Interpret R68 as full 71-city low-intensity strict geometry-null coverage with
-one replicate per city. It answers the low-intensity coverage objection, but it
-is not a high-intensity multi-replicate planar-null theorem and does not prove
-a causal urban-design rule.
-
-## Recreate R81 Full-city High-intensity Geometry-null Figure
-
-The public package includes the derived R81 replicate, city-summary and
-macro-region tables. To rebuild the R81 summaries and figure without raw graph
-caches:
-
-```bash
-python scripts/build_R81_full71_high_intensity_geometry_null_ensemble.py --skip-compute
-```
-
-Expected outputs:
-
-- `data/R81_full71_high_intensity_geometry_null_ensemble/full71_geometry_null_city_summary.csv`
-- `data/R81_full71_high_intensity_geometry_null_ensemble/full71_geometry_null_macro_region_summary.csv`
-- `data/R81_full71_high_intensity_geometry_null_ensemble/R81_summary.json`
-- `figures/Fig_R81_full71_high_intensity_geometry_null_ensemble.png`
-- `figures/Fig_R81_full71_high_intensity_geometry_null_ensemble.svg`
-- `figures/Fig_R81_full71_high_intensity_geometry_null_ensemble.pdf`
-- `figures/Fig_R81_full71_high_intensity_geometry_null_ensemble.tiff`
-
-## Re-run R81 From Graph Caches
-
-The full R81 geometry-null regeneration requires cached OSMnx road graph
-objects with node longitude/latitude fields. Those graph caches are not
-redistributed. If local caches are available in the expected project layout,
-run:
-
-```bash
-python scripts/build_R81_full71_high_intensity_geometry_null_ensemble.py --force
-```
-
-Interpret R81 as a full 71-city high-intensity empirical strict-geometry null
-ensemble. It answers the all-city high-intensity evidence objection, but it
-does not prove Markov-chain mixing, a closed-form planar-percolation theorem or
-a causal urban-design rule.
-
-## Recreate R90 Fine-grid and Edge-overlap Audit
-
-The public package includes the derived R90 null-threshold, edge-overlap and
-matched-pair tables. To rebuild the R90 summary, report and figure without raw
-graph caches:
-
-```bash
-python scripts/build_R90_finegrid_edge_audit.py --skip-compute
-```
-
-Expected outputs:
-
-- `data/R90_finegrid_edge_audit/R90_finegrid_null_thresholds.csv`
-- `data/R90_finegrid_edge_audit/R90_edge_overlap_audit.csv`
-- `data/R90_finegrid_edge_audit/R90_spatial_geometry_pair_summary.csv`
-- `data/R90_finegrid_edge_audit/R90_summary.json`
-- `figures/Fig_R90_finegrid_edge_audit.png`
-- `figures/Fig_R90_finegrid_edge_audit.svg`
-- `figures/Fig_R90_finegrid_edge_audit.pdf`
-
-## Re-run R90 From Graph Caches
-
-Full R90 regeneration requires cached OSMnx road graph objects with node
-longitude/latitude fields because it regenerates matched spatial-scale and
-strict-geometry nulls before estimating fine-grid thresholds and exact
-edge-overlap diagnostics. Those graph caches are not redistributed. If local
-caches are available in the expected project layout, run:
-
-```bash
-python scripts/build_R90_finegrid_edge_audit.py --force
-```
-
-Interpret R90 as an estimator and copy-artifact stress test for the 21-city
-core subset. It does not prove Markov-chain mixing, a closed-form
-planar-percolation theorem or a causal urban-design rule.
-
-## Recreate R95 Non-backtracking Spectral Audit
-
-The public package includes the derived R95 non-backtracking threshold,
-decomposition, localization and iteration-stability tables. To rebuild the R95
-summary, report and figure without raw graph caches:
-
-```bash
-python scripts/build_R95_nonbacktracking_spectral_layer.py --skip-compute
-```
-
-Expected outputs:
-
-- `data/R95_nonbacktracking_spectral_layer/N95_nonbacktracking_thresholds.csv`
-- `data/R95_nonbacktracking_spectral_layer/N95_cebh_nb_geometry_decomposition.csv`
-- `data/R95_nonbacktracking_spectral_layer/N95_nb_spectrum_localization_metrics.csv`
-- `data/R95_nonbacktracking_spectral_layer/R95_summary.json`
-- `data/R95_nonbacktracking_spectral_layer/R95_report.md`
-- `figures/Fig_R95_nonbacktracking_spectral_layer.png`
-- `figures/Fig_R95_nonbacktracking_spectral_layer.svg`
-- `figures/Fig_R95_nonbacktracking_spectral_layer.pdf`
-
-The included stability table can be inspected directly:
-
-```bash
-python -m json.tool data/R95_nonbacktracking_spectral_layer/R95_nb_iteration_stability_summary.json
-```
-
-## Re-run R95 From Graph Caches
-
-Full R95 regeneration requires cached OSMnx road graph objects with node
-longitude/latitude fields because it recomputes the non-backtracking spectral
-radius from the 71 city-window graphs. Those graph caches are not redistributed.
-If local caches are available in the expected project layout, run:
-
-```bash
-python scripts/build_R95_nonbacktracking_spectral_layer.py --force --max-iter 640
-python scripts/build_R95_nb_iteration_stability_audit.py --short-iter 160
-```
-
-Interpret R95 as a negative spectral control and theory bridge. It tests
-whether a finite-graph non-backtracking threshold proxy closes the road
-threshold gap before spatial and geometry constraints are imposed. It does not
-replace the constrained null-model ladder, prove an analytical theorem or
-establish a causal urban-design rule.
-
-## Recreate N99/R100 Correction, Low-overlap Audit And Main Geometry Figure
-
-The public package includes derived N99/R100 tables and the scripts used to
-generate the compact transfer-error correction figure, the low-overlap
-strict-geometry audit figure and the final main geometry-null contrast figure.
-
-```bash
-python scripts/build_N99_prediction_correction_law.py
-python scripts/build_N99_low_overlap_geometry_surrogate.py --skip-compute --cities "Singapore,Dubai,Taipei,Seattle,Nairobi,Sydney,Hong Kong,Rio de Janeiro,Chicago,Montevideo,Dar es Salaam,Barcelona" --max-cities 12
-python scripts/build_R100_main_fig4_geometry_null_contrast.py
-```
-
-Expected compact-correction outputs:
-
-- `data/N99_prediction_correction_law/N99_prediction_city_predictions.csv`
-- `data/N99_prediction_correction_law/N99_prediction_model_comparison.csv`
-- `data/N99_prediction_correction_law/N99_prediction_feature_group_comparison.csv`
-- `data/N99_prediction_correction_law/N99_prediction_permutation_baseline.csv`
-- `data/N99_prediction_correction_law/N99_prediction_coefficient_stability.csv`
-- `data/N99_prediction_correction_law/N99_prediction_summary.json`
-- `figures/Fig_N99_compact_correction.png`
-- `figures/Fig_N99_compact_correction.svg`
-- `figures/Fig_N99_compact_correction.pdf`
-
-Expected low-overlap audit outputs:
-
-- `data/N99_low_overlap_geometry_surrogate/N99_low_overlap_surrogate_records.csv`
-- `data/N99_low_overlap_geometry_surrogate/N99_low_overlap_surrogate_city_summary.csv`
-- `data/N99_low_overlap_geometry_surrogate/N99_low_overlap_surrogate_summary.json`
-- `figures/Fig_N99_low_overlap_geometry_surrogate.png`
-- `figures/Fig_N99_low_overlap_geometry_surrogate.svg`
-- `figures/Fig_N99_low_overlap_geometry_surrogate.pdf`
-
-Expected R100 main-figure outputs:
-
-- `data/R100_main_figure_hardening/R100_geometry_null_contrast_source_data.csv`
-- `figures/Fig_R100_geometry_null_contrast.png`
-- `figures/Fig_R100_geometry_null_contrast.svg`
-- `figures/Fig_R100_geometry_null_contrast.pdf`
-
-The compact correction excludes observed thresholds, null thresholds, spectral
-thresholds and their residuals from the predictor set. The permutation baseline
-reruns the same pipeline on shuffled labels; with the default 1000
-permutations, the observed leave-one-city-out and leave-region-out scores are
-better than all shuffled-label fits. Full low-overlap audit regeneration
-requires local cached OSMnx graph objects because it regenerates strict
-non-crossing null graphs. Treat the 12-city audit as a stratified stress test
-under the implemented local-swap algorithm, not as a full 71-city planar mixing
-theorem.
-
-## Recreate R72 Matched-intensity Geometry-null Defense
-
-The public package includes the derived R72 matched spatial-null replicates,
-matched city summaries and geometry-null mobility summaries. To rebuild the
-R72 summaries and Fig. 4 from included tables:
-
-```bash
-python scripts/build_R72_geometry_defense.py
-```
-
-Expected outputs:
-
-- `data/R72_geometry_defense/matched_intensity_geometry_vs_spatial_city.csv`
-- `data/R72_geometry_defense/matched_intensity_summary.csv`
-- `data/R72_geometry_defense/geometry_null_mobility_summary.csv`
-- `data/R72_geometry_defense/R72_summary.json`
-- `figures/Fig_R72_geometry_null_defense.png`
-- `figures/Fig_R72_geometry_null_defense.svg`
-- `figures/Fig_R72_geometry_null_defense.pdf`
-- `figures/Fig_R72_geometry_null_defense.tiff`
-
-## Re-run R72 Matched Spatial Nulls From Graph Caches
-
-The full R72 matched spatial-null recomputation requires cached OSMnx road
-graph objects. Those graph caches are not redistributed. If local caches are
-available in the expected project layout, run:
-
-```bash
-python scripts/build_R72_geometry_defense.py --force
-```
-
-Interpret R72 as a matched-intensity empirical contrast on the 21-city R67
-subset. It weakens the low-perturbation artifact objection, but it is not a
-proof of full Markov-chain mixing or a high-intensity all-71 planar ensemble.
-
-## Recreate R73 Nested Urban-form Validation
-
-R73 uses the included integrated public-covariate table and does not require
-raw graph caches or third-party downloads.
-
-```bash
-python scripts/build_R73_urban_form_nested_cv.py
-```
-
-Expected outputs:
-
-- `data/R73_urban_form_nested_cv/nested_model_summary.csv`
-- `data/R73_urban_form_nested_cv/nested_model_predictions.csv`
-- `data/R73_urban_form_nested_cv/leave_region_out_region_summary.csv`
-- `data/R73_urban_form_nested_cv/R73_summary.json`
-- `figures/Fig_R73_urban_form_nested_cv.png`
-- `figures/Fig_R73_urban_form_nested_cv.svg`
-- `figures/Fig_R73_urban_form_nested_cv.pdf`
-- `figures/Fig_R73_urban_form_nested_cv.tiff`
-
-Interpret R73 as descriptive mechanism-screen evidence. It supports a
-street-form signal under nested and regional holdout validation; it does not
-identify causal urban-design effects.
-
-## Recreate R75 Source-data-hardening Tables
-
-R75 derives additional public source-data tables from the existing source-data
-bundle. It records geometry-null rejection shares, mobility/fidelity proxies,
-nested-validation aliases and the availability boundary for exact edge-overlap measures.
-
-```bash
-python scripts/build_R75_submission_hardening_tables.py
-```
-
-Expected outputs:
-
-- `data/R75_submission_hardening/R72_geometry_rejection_reason_summary.csv`
-- `data/R75_submission_hardening/R72_geometry_graph_distance_summary.csv`
-- `data/R75_submission_hardening/R72_geometry_edge_jaccard_by_city.csv`
-- `data/R75_submission_hardening/R73_nested_model_ladder_summary.csv`
-- `data/R75_submission_hardening/R73_leave_region_out_predictions.csv`
-- `data/R75_submission_hardening/Fig4_nested_validation_source_data.csv`
-
-Do not interpret the edge-overlap availability table as a measured exact edge-overlap measure. The archived null summaries do not store final rewired edge
-sets, so accepted-swap and mobility metrics are proxies only.
-
-## Recreate R76 Submission Fig. 5
-
-R76 rebuilds Fig. 5 from included derived tables and copies the combined figure
-source data into `source_data/figures/`.
-
-```bash
-python scripts/build_R76_nested_validation_figure.py
-```
-
-Expected outputs:
-
-- `data/R76_nested_validation_figure/Fig4_combined_nested_public_source_data.csv`
-- `data/R76_nested_validation_figure/R76_summary.json`
-- `figures/Fig_R76_nested_validation.png`
-- `figures/Fig_R76_nested_validation.svg`
-- `figures/Fig_R76_nested_validation.pdf`
-- `source_data/figures/Fig4_combined_nested_public_source_data.csv`
-
-Interpret R76 as visualization and source-data packaging. It does not add a
-new null ensemble or convert the descriptive nested model screen into causal
-inference.
-
-## Recreate R77 Matched-Geometry Head Figure
-
-R77 promotes the matched-intensity spatial-versus-geometry contrast to the
-head figure and adds compact source data for geometry absorption and the kappa
-predictive relation.
-
-```bash
-python scripts/build_R77_physics_takeaway.py
-```
-
-Expected outputs:
-
-- `data/R77_physics_takeaway/R77_matched_intensity_main_result_source_data.csv`
-- `data/R77_physics_takeaway/R77_geometry_absorption_city_table.csv`
-- `data/R77_physics_takeaway/R77_geometry_absorption_correlations.csv`
-- `data/R77_physics_takeaway/R77_kappa_predictive_relation.csv`
-- `data/R77_physics_takeaway/R77_kappa_predictive_metrics.json`
-- `figures/Fig_R77_physics_takeaway.png`
-- `figures/Fig_R77_physics_takeaway.svg`
-- `figures/Fig_R77_physics_takeaway.pdf`
-
-Interpret R77 as a figure and derived-evidence synthesis. It does not regenerate
-null edge sets, does not compute exact rewired-edge overlap measure and does not
-claim a causal design law.
-
-## Recreate R78 Observed-Road Fine Estimator Check
-
-R78 recomputes observed-road thresholds for the 21-city geometry subset on a
-local fine p-grid. It then substitutes the fine observed thresholds into the
-matched-intensity residual table to test whether the spatial-versus-geometry
-contrast depends on the registered observed-road grid.
-
-```bash
-python scripts/build_R78_observed_road_fine_estimator_check.py
-```
-
-Expected outputs:
-
-- `data/R78_observed_road_fine_estimator_check/R78_observed_road_fine_estimator_21city.csv`
-- `data/R78_observed_road_fine_estimator_check/R78_observed_road_fine_estimator_summary.json`
-- `data/R78_observed_road_fine_estimator_check/R78_matched_intensity_fine_observed_substitution.csv`
-- `data/R78_observed_road_fine_estimator_check/R78_matched_intensity_fine_observed_summary.csv`
-- `figures/Fig_R78_observed_road_fine_estimator_check.png`
-- `figures/Fig_R78_observed_road_fine_estimator_check.svg`
-- `figures/Fig_R78_observed_road_fine_estimator_check.pdf`
-
-Interpret R78 as an observed-road estimator check only. It does not regenerate
-fine-grid geometry-null curves; the matched contrast is preserved because both
-null residuals share the same observed-road threshold. R90 is the later audit
-that regenerates matched spatial and strict-geometry null thresholds on local
-fine grids and records exact edge-overlap diagnostics for the regenerated
-21-city subset.
-
-## Derived-law, effective-dimension and cross-domain rounds (R103-R113)
-
-These rounds build the derived parameter-free law `p_c ~= 2/<k>`, the
-effective-dimension unification, its non-circular validation, the cross-domain
-generalization (power, water, rail) and the resilience consequence. They read
-included derived tables; the cross-domain rounds load openly licensed network
-models from their distributing Python packages and store only derived results.
-
-```bash
-python scripts/build_R103_planar_lattice_anchor.py        # Fig 2 planar-lattice mechanism anchor
-python scripts/build_R105_finite_size_scaling.py          # finite-size Fisher exponent read-out
-python scripts/build_R106_second_domain_power.py          # second domain: power grids
-python scripts/build_R107_planarity_dial.py               # Fig 7 planarity dial
-python scripts/build_R108_effective_dimension_theory.py   # Fig 8 derived 2/<k> + d_eff unification
-python scripts/build_R109_resilience_screening.py         # Fig S10 resilience screening (81 networks)
-python scripts/build_R110_dimension_consistency.py        # Fig S11 non-circular d_eff validation
-python scripts/build_R111_third_domain_water.py           # Fig S12 pre-registered held-out: water
-python scripts/build_R112_fourth_domain_rail.py           # Fig S13 pre-registered held-out: rail
-python scripts/build_R113_resilience_decision_case.py     # named resilience decision-flip (reads R109)
-```
-
-### Third-party network data sources and licences (cross-domain rounds)
-
-The generalization tests do NOT redistribute any raw third-party network data;
-they load published models from their distributing packages at run time and the
-package stores only the derived per-network results.
-
-- **R106 power grids** — MATPOWER/PEGASE transmission cases shipped with
-  `pandapower` (BSD licence). Installed via `pip install pandapower`. Only the
-  derived `data/R106_second_domain_power/` tables are stored.
-- **R111 water-distribution networks** — EPANET (Net3/Net6) and University of
-  Kentucky (ky4/ky10) benchmarks shipped with `wntr` (US EPA, public domain).
-  Installed via `pip install wntr`. Only the derived
-  `data/R111_third_domain_water/` tables are stored.
-- **R112 rail networks** — OpenStreetMap railway data queried with `osmnx`
-  (OpenStreetMap is © OpenStreetMap contributors, ODbL). Installed via
-  `pip install osmnx`; queries require network access and are cached locally
-  under the OSMnx cache, which is NOT redistributed. Only the derived
-  `data/R112_fourth_domain_rail/` tables are stored. The same OSMnx/ODbL
-  workflow underlies the road windows.
-
-### Interpretation and boundaries
-
-The dimensional relation `p_c<k> ~= d/(d-1)` (Vyssotsky bond approximation,
-generalized from coordination number to mean degree) is treated as an
-approximation, not an exact theorem. The finite-size exponent read-out for
-near-planar road windows is consistent with a two-dimensional interpretation
-within the tested window sizes, whereas only threshold transfer is claimed for
-the loop-sparse held-out water and rail domains; their cluster-size exponents
-are reported but not used to certify a class. The resilience results
-(R109/R113) are a screening implication on the standard topological robustness
-proxy concerning absolute margins, not a validation against external outage
-records, and not a fix of the relative fragility ranking.
-
+The first command generates fresh degree-preserving controls for 24 cities
+at five nested order budgets and eight cities at four successful-switch
+budgets. It saves private rewired graphs outside the attachment. These are
+budget diagnostics, not a uniform-ensemble or mixing certificate. The second
+command tests the component-size bookkeeping against NetworkX at every
+occupation step of small graphs before calculating the 91-graph diagnostic.
+The third uses one UTM32N endpoint chord per simple edge; it does not measure
+line-route crossings or utility operating reliability. Its source file is
+identified in DATASETS_AND_LINKS.csv. These computations are distinct from
+self-contained regeneration of derived tables and figures.
+
+All supplied empirical files are derived scalar tables, source identity
+metadata, or explicitly authorized produced artwork. Excluded: original
+source files, raw snapshots, geographic edge lists, literature PDFs,
+manuscripts/replies, credentials and internal logs.
+No raw source is relicensed by this attachment.
+
+Supplementary_Code.zip is the authoritative code and derived-data version
+accompanying the article. This release contains only the reproducibility
+materials and selected derived outputs distributed with the paper.

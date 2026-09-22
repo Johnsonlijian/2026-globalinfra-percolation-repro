@@ -1,0 +1,10 @@
+{
+  "reference_sha256": "db7f706d0beabfdc054cad0ca5b98e161018558fea920fa749978791cb22267b",
+  "calibration_sha256": "e81206f143f7d8df2942dcf41098a5a844318e5c332eccea36fdc68dbb333627",
+  "q95_rank": 0.061536786614714734,
+  "rule": "fixed 2/mean_degree; absolute margin; uniform targets .15-.55",
+  "orders": 8192,
+  "bootstrap": 1000,
+  "step": 0.0025,
+  "locked_utc": "2026-09-05T09:17:43.047660+00:00"
+}

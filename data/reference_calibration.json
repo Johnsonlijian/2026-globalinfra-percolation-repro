@@ -1,0 +1,11 @@
+{
+  "n_reference_roads": 71,
+  "q95_rank": 0.061536786614714734,
+  "q95_linear": 0.05915179810877225,
+  "allowance_rule": "ceil((n+1)*0.95)-th absolute reference error",
+  "heldout_used_for_calibration": false,
+  "leave_region_out_error_coverage": 0.9154929577464789,
+  "leave_region_out_escalation": 0.279462656731862,
+  "leave_region_out_unsafe_all": 0.0,
+  "leave_region_out_conditional_disagreement": 0.004438070677955396
+}

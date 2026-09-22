@@ -1,0 +1,2 @@
+# Compatibility alias: the full tested requirements already include Numba.
+-r requirements.txt

@@ -1,0 +1,72 @@
+city,country,macro_region
+Lisbon,Portugal,Europe
+Vienna,Austria,Europe
+Athens,Greece,Europe
+Istanbul,Turkey,Middle East
+Dubai,United Arab Emirates,Middle East
+Cairo,Egypt,Africa
+Nairobi,Kenya,Africa
+Accra,Ghana,Africa
+Johannesburg,South Africa,Africa
+Casablanca,Morocco,Africa
+Mexico City,Mexico,Latin America
+Bogota,Colombia,Latin America
+Lima,Peru,Latin America
+Santiago,Chile,Latin America
+Sao Paulo,Brazil,Latin America
+Tokyo,Japan,Asia
+Seoul,South Korea,Asia
+Taipei,Taiwan,Asia
+Bangkok,Thailand,Asia
+Kuala Lumpur,Malaysia,Asia
+Jakarta,Indonesia,Asia
+Manila,Philippines,Asia
+Mumbai,India,Asia
+Bengaluru,India,Asia
+Los Angeles,United States,North America
+New York City,United States,North America
+Montreal,Canada,North America
+Vancouver,Canada,North America
+London,United Kingdom,Europe
+Paris,France,Europe
+Amsterdam,Netherlands,Europe
+Barcelona,Spain,Europe
+Warsaw,Poland,Europe
+Prague,Czechia,Europe
+Rome,Italy,Europe
+Milan,Italy,Europe
+Lagos,Nigeria,Africa
+Addis Ababa,Ethiopia,Africa
+Dakar,Senegal,Africa
+Kampala,Uganda,Africa
+Dar es Salaam,Tanzania,Africa
+Tunis,Tunisia,Africa
+Algiers,Algeria,Africa
+Buenos Aires,Argentina,Latin America
+Rio de Janeiro,Brazil,Latin America
+Quito,Ecuador,Latin America
+Montevideo,Uruguay,Latin America
+Panama City,Panama,Latin America
+Delhi,India,Asia
+Chennai,India,Asia
+Hyderabad,India,Asia
+Karachi,Pakistan,Asia
+Dhaka,Bangladesh,Asia
+Hanoi,Vietnam,Asia
+Ho Chi Minh City,Vietnam,Asia
+Singapore,Singapore,Asia
+Hong Kong,China,Asia
+Osaka,Japan,Asia
+Sydney,Australia,Oceania
+Melbourne,Australia,Oceania
+Auckland,New Zealand,Oceania
+Brisbane,Australia,Oceania
+Chicago,United States,North America
+Toronto,Canada,North America
+Seattle,United States,North America
+San Francisco,United States,North America
+Boston,United States,North America
+Miami,United States,North America
+Riyadh,Saudi Arabia,Middle East
+Tel Aviv,Israel,Middle East
+Tehran,Iran,Middle East

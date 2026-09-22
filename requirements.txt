@@ -1,14 +1,11 @@
-﻿matplotlib>=3.8
-numpy>=1.26
-networkx>=3.2
-pandas>=2.2
-requests>=2.31
-scipy>=1.11
-scikit-learn>=1.4
-geopandas>=0.14
-pyogrio>=0.7
-shapely>=2.0
-
-pandapower>=2.14  # R106 second-domain power grids (MATPOWER/PEGASE cases, BSD)
-wntr>=1.1         # R111 third-domain water-distribution networks (EPANET/Kentucky benchmarks, US EPA public domain)
-osmnx>=2.0        # R112 fourth-domain rail networks queried from OpenStreetMap (ODbL); also used for the road windows
+numpy==2.3.5
+scipy==1.16.3
+pandas==2.3.3
+networkx==3.6.1
+matplotlib==3.10.9
+statsmodels==0.14.6
+shapely==2.1.2
+pyproj==3.7.2
+PyMuPDF==1.28.0
+numba==0.67.0
+h5py==3.16.0

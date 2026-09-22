@@ -1,0 +1,52 @@
+{
+  "frozen_utc": "2026-09-05T08:41:19+00:00",
+  "target_n": 21,
+  "cities_per_region": 3,
+  "design": "Threshold-blind, purposive geographically quota-balanced held-out panel",
+  "scope": "Newly collected cities held out relative to the R61 reference 71; not a claim that nobody has studied these cities, nor random representativeness.",
+  "blindness": "No pc, error, screening, centrality, degree-summary, or morphology criterion used for roster, fallback, inclusion, or retention.",
+  "inclusion": "Named city outside R61 reference 71; finite geocoded centre; exact frozen 10-km bbox drive extraction; simple undirected graph after self-loop/isolate removal has at least 2 nodes and 1 edge; finite node coordinates. No lower size cutoff, morphology cutoff, threshold/error screen, or outcome exclusion.",
+  "fallback_rule": "Use only this slot's frozen fallback after primary acquisition fails within 3 total attempts or has a documented structural/geocoding failure. Retain all failures. Never activate fallback because of graph size (beyond nonempty minimum), topology, pc, predictor error, or decision performance.",
+  "maximum_attempts_per_city": 3,
+  "attempt_wall_seconds": 420,
+  "retry_backoff_seconds": [
+    60,
+    120
+  ],
+  "inter_city_seconds": 15,
+  "http_timeout_seconds": {
+    "connect": 20,
+    "read": 180,
+    "status_read": 30
+  },
+  "nominatim_minimum_request_interval_seconds": 1.1,
+  "overpass_status_rate_limit": true,
+  "estimated_response_transfer_bytes": "200000000-800000000; rough pre-download estimate",
+  "cumulative_response_body_budget_bytes": 900000000,
+  "transfer_caveat": "Decoded HTTP response bytes, not exact VPN/wire accounting; one in-flight response may cross the stop budget. Local raw cache plus two graph pickles expected below a few GB.",
+  "overpass_url": "https://overpass-api.de/api",
+  "nominatim_url": "https://nominatim.openstreetmap.org",
+  "user_agent": "academic-road-validation/1.0 (one-off academic intake; https://github.com/Johnsonlijian)",
+  "r61_extraction": "graph_from_point(geocode(city,country), dist=10000, dist_type='bbox', network_type='drive', simplify=True, retain_all=False, truncate_by_edge=True)",
+  "r61_source_sha256": "7cfe1601f6277b11e3ad8afbe6f9d2172941540fa05709bf36c5fdd7fcf0e75f",
+  "r56_source_sha256": "3da8a18191b33195433f8477d4fdcb20ac1eb8e4aa1a3a99494aca8d69919871",
+  "simple_conversion": "G.to_undirected(); nx.Graph; remove self-loops; remove isolates; default-order integer relabel retaining source OSM IDs. The conversion follows the recorded reference extraction protocol; isolate removal is explicit.",
+  "topology_hash_definition": "SHA256 of compact sorted JSON containing sorted OSM node IDs and sorted canonical undirected OSM-ID endpoint pairs. Identity-sensitive, not an isomorphism hash.",
+  "reference_csv_sha256": "20300f941ffe0d041a5a82d4cdd4ff6a6162aabfcb58507c546e34d4f0b98c0b",
+  "frozen_script_sha256": "a903ad4644aa45d925570b2f1b42ce6005cc6d43bcb55aeb36fdeaa8df313204",
+  "source_docs_checked_utc": "2026-09-05T08:41:19+00:00",
+  "source_docs": [
+    "https://osmnx.readthedocs.io/en/stable/user-reference.html#osmnx.graph.graph_from_point",
+    "https://operations.osmfoundation.org/policies/nominatim/",
+    "https://wiki.openstreetmap.org/wiki/Overpass_API#Public_Overpass_API_instances",
+    "https://www.openstreetmap.org/copyright",
+    "https://opendatacommons.org/licenses/odbl/1-0/"
+  ],
+  "osmnx_docs_version": "2.1.1 stable; installed 2.1.0 signature separately inspected",
+  "limitations": [
+    "Not probability sampling; 21 city centres are not whole municipal footprints.",
+    "Contemporary OSM coverage and snapshot time can differ from R61.",
+    "Same OSM source means held-out cities, not an independent data-source validation.",
+    "Quota balance alone does not validate any prediction or decision guarantee."
+  ]
+}

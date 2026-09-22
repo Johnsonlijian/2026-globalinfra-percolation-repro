@@ -1,0 +1,11 @@
+{
+  "sensitivity_cases": [
+    "Cape Town",
+    "Stockholm"
+  ],
+  "primary_n": 19,
+  "acquired_n": 21,
+  "locked_allowance": 0.061536786614714734,
+  "allowance_recomputed": false,
+  "cohort_role": "All 21 acquired cities were evaluated under the locked rule. The reported primary cohort contains 19 cities with no earlier use identified in the project's manuscript history. Stockholm was in the earlier eight-city analysis; Cape Town was an earlier Geofabrik diagnostic scope check. This provenance stratification was made after outcome calculation, not pre-declared. Both prior-use cases and the full roster remain reported. No exclusion is based on prediction error; predictor and allowance are unchanged."
+}

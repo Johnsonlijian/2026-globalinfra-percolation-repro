@@ -1,0 +1,21 @@
+{
+  "n": 70,
+  "rho_long": -0.1755882157418907,
+  "rho_short": -0.0281217897330264,
+  "difference": -0.1474664260088643,
+  "intervals": {
+    "rho_long": [
+      -0.4401172730349469,
+      0.09893971577539049
+    ],
+    "rho_short": [
+      -0.29039402269398024,
+      0.2241523430656773
+    ],
+    "difference": [
+      -0.5952044609653716,
+      0.3129010819895903
+    ]
+  },
+  "inference": "Paired city bootstrap; no within-city long/short label-exchangeability assumption"
+}

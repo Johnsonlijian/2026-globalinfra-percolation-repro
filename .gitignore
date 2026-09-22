@@ -1,46 +1,18 @@
-# Local/private inputs
-cache/
-private_graphs/
-raw/
-data/R65_public_covariates_and_controls/raw/
-data/R65_public_covariates_and_controls/ghsl_city_covariates_all.csv
-data/R65_public_covariates_and_controls/wdi_indicator_long_all_years.csv
-data/R65_public_covariates_and_controls/wdi_indicator_long_latest.csv
-*.pkl
-*.gpkg
-*.osm
-*.osm.pbf
-
-# Manuscripts and private review materials
-submission/
-submission_clean/
-rounds/
-validation_reports/
-logs/
-*_Conflict*
-*MONSTERW*
-*.docx
-*.pptx
-
-# Runtime outputs
 __pycache__/
-*.pyc
-.pytest_cache/
+*.py[cod]
+*.nbc
+*.nbi
 .venv/
-venv/
-
-# OS/editor
+.env*
+raw/
+private*/
+*.pkl
+*.pickle
+*.npz
+*.inp
+*.pbf
+*.osm
+*.zip
+*.log
 .DS_Store
-Thumbs.db
-.idea/
-.vscode/
 
-# Large regenerated raster previews; keep vector/PDF/PNG source figures in git
-# unless a release-specific manifest says otherwise.
-source_data/figures/*.tif
-source_data/figures/*.tiff
-figures/*.tif
-figures/*.tiff
-
-# Legacy local alias not part of the release manifest.
-figures/Fig_N99_prediction_correction_law.*

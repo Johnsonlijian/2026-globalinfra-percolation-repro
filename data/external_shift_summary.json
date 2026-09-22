@@ -1,0 +1,9 @@
+{
+  "offset": 0.21225163242124023,
+  "q": 0.061536786614714734,
+  "paired_external_mae_difference_shift_minus_2d": 0.007165404629060153,
+  "paired_external_mae_difference_low": -0.0012076003587893056,
+  "paired_external_mae_difference_high": 0.015952922165202263,
+  "paired_difference_note": "Paired city-bootstrap difference of external mean absolute error, shift comparator minus mean-degree reference; 10000 draws.",
+  "interpretation": "Post hoc reference-only comparator fitted on the 71 reference roads; not prespecified, not a refitted primary predictor, and not an alternative screening rule."
+}

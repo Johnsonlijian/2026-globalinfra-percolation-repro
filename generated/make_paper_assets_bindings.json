@@ -1,0 +1,36 @@
+{
+  "script_sha256": "6aee409006699dff94c34eb2e23d3a3dca42e71a8edb24d009352ef31fa9dace",
+  "input_sha256": {
+    "data/observed.csv": "d9c28402a5a24b408a45acf049c452b3270ee555db798ed72fc6a94adfd147f2",
+    "data/external.csv": "0e9b306f2ef0bdaedf378dff6bd7c6413004b2ece3795d4c3a9c6e5352b1a6a0",
+    "generated/external_split_note.json": "732a6c26d55acc25b7e0d3fb4ca1eaadddd2fa29928216a420944521f29e7144",
+    "generated/domain_metrics.csv": "003ce1ed6905c45c6664dcc1b490d36e9e79b4a7e8661acc30995c98384cf791",
+    "generated/null_summary.csv": "82af8df790bfe11c67dfd6f503a8a2df321cfee8101ad831ddb1ef85e96a02f3",
+    "generated/external_primary_predictors.csv": "bc64e0e57df74c8469f40e166ccf53e1d800a5b1e3791a926f972554d0b5c61c",
+    "generated/external_predictors.csv": "4cbe14755225d72f19fd8fce9f0d2bc58e2849c0c19fc5c5c95e626b612f3c82",
+    "generated/external_cohort_split_summary.csv": "47c216ced70932eafe445a00cb5bc07980f7c754d5487c40691edd9649519151",
+    "generated/external_shift_comparator.csv": "c948f31eaec70f66e89e64488401d63eaaf919d1345abd69343360386c816e9b",
+    "generated/external_shift_summary.json": "2dff8601785495b71b7943c3141b629d4e7ff33bc1dedb155e96d2c2d1434e7d",
+    "generated/external_summary.json": "dff9fd9d57df847eba1eda162789fc30030b2d493e2e06583831bedf7832bde3",
+    "generated/loss_tradeoff.json": "26704fb37c18681bf7c07ae915924dde2d5d9462179350ac4a21a2a5715baefc",
+    "data/road_geometry.csv": "4a5c6e026aac2daf7388017979fc364a3b6ca5912cf781e004507bb3e47ec447",
+    "data/rail_geometry.csv": "9caf9d7494834491c63c15a25da35ca1c0f5b52a3eb394b66173e2c780a3b5e1",
+    "data/rts.json": "245897c8e6713620d6e49cc33a47eac91b9f9ff74a0b3e1332336750cb400b1b",
+    "generated/scenario_instances.csv": "660e5dcacee79f09979d85ec687aa0ad0ad23914784903847860d4bf945172b5",
+    "data/power_scigrid_de.csv": "762d0438b81abf70703f4c9001b0f466974910eddb1f8701f7b2d020601cda42"
+  },
+  "settings": {
+    "target_band": [
+      0.15,
+      0.55
+    ],
+    "bootstrap_seed": 20260905,
+    "bootstrap_draws": 10000,
+    "method_version": "canonical_v2_exact_endpoint",
+    "reference_orders": 8192,
+    "null_orders": 256,
+    "n_bootstrap": 1000,
+    "step": 0.0025,
+    "length_orders": 512
+  }
+}

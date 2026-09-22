@@ -1,0 +1,22 @@
+{
+  "script_sha256": "d012e3261bc9540b3bfe92f72bb144db429775dbd6497d39efdc72853c0c8870",
+  "input_sha256": {
+    "data/reference_calibration.json": "6d44f7bd01afe1e8e11dcc371a09782a9fc0e92023c7bbe0fc2d2a6945a769b5",
+    "data/external.csv": "0e9b306f2ef0bdaedf378dff6bd7c6413004b2ece3795d4c3a9c6e5352b1a6a0",
+    "data/observed.csv": "d9c28402a5a24b408a45acf049c452b3270ee555db798ed72fc6a94adfd147f2"
+  },
+  "settings": {
+    "target_band": [
+      0.15,
+      0.55
+    ],
+    "bootstrap_seed": 20260905,
+    "bootstrap_draws": 10000,
+    "method_version": "canonical_v2_exact_endpoint",
+    "reference_orders": 8192,
+    "null_orders": 256,
+    "n_bootstrap": 1000,
+    "step": 0.0025,
+    "length_orders": 512
+  }
+}

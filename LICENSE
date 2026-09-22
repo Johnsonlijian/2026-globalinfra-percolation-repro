@@ -1,6 +1,14 @@
+LICENSE SCOPE
+
+Source code in scripts/ and tests/: MIT, inherited from the project license.
+Author-generated documentation, scalar derived summaries and original figures:
+CC BY 4.0, subject to the third-party exclusions below.
+
 MIT License
 
-Copyright (c) 2026 Lijian Ren
+Copyright (c) 2026 Lijian REN <renlijian@imut.edu.cn>
+ORCID: 0000-0003-1629-4368
+Inner Mongolia University of Technology
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +27,20 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+AUTHOR-GENERATED MATERIAL
+
+Creative Commons Attribution 4.0 International:
+https://creativecommons.org/licenses/by/4.0/legalcode
+Copyright (c) 2026 Lijian REN.
+
+THIRD-PARTY EXCLUSIONS
+
+No source graph, OSM edge-coordinate table, EPANET model or benchmark archive is
+included. The produced Vienna map layer retains OpenStreetMap attribution and
+ODbL source obligations. Upstream source conditions are listed in
+DATASETS_AND_LINKS.csv; neither the MIT software license nor this CC BY notice
+relicenses those sources. In particular, the recorded Modena source terms are
+CC BY-NC 4.0. Any downstream rights that attach to source-derived material
+remain applicable. This archive does not grant rights over third-party data.
+

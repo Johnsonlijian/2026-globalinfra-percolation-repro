@@ -1,0 +1,21 @@
+{
+  "city": "Vienna",
+  "graph_hash": "8b68b8dd113f31905448268df59026a70688fb0f7528e92a635f9fc598b0d79f",
+  "source_crs": "epsg:4326",
+  "display_crs": "EPSG:32633",
+  "cache_created_date": "2026-06-03 18:02:37",
+  "osm_attribution": "OpenStreetMap contributors, ODbL; required in manuscript caption.",
+  "geometry": "One source polyline per edge of the frozen simple undirected graph; no basemap or new crop.",
+  "n_nodes": 17629,
+  "n_edges": 26142,
+  "n_orders": 8192,
+  "p_star": 0.6475,
+  "p_star_low": 0.6425,
+  "p_star_high": 0.655,
+  "cebh": 0.4456985030858935,
+  "illustrative_phi": 0.4,
+  "reference_f": 0.35250000000000004,
+  "predicted_f": 0.5543014969141065,
+  "decision": "unsafe-side disagreement",
+  "interval": "95% order-bootstrap interval for the maximum-slope location, not a population interval."
+}

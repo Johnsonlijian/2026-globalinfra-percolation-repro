@@ -1,0 +1,133 @@
+{
+  "core_function_checks": [
+    {
+      "portable_module": "canonical_percolation.py",
+      "function": "count_curve",
+      "source_file_sha256": "2a5869671fbab234b68d3537e2e0ce2b72eadfec085090ac29c7195fb8fa112c",
+      "normalized_function_sha256": "e548c37ffe1e558fa79a8969bdb9c0dd6c6fb737b7823539e5d31c29adda5ea7",
+      "function_body_unchanged": true
+    },
+    {
+      "portable_module": "canonical_percolation.py",
+      "function": "sample_counts",
+      "source_file_sha256": "2a5869671fbab234b68d3537e2e0ce2b72eadfec085090ac29c7195fb8fa112c",
+      "normalized_function_sha256": "75687211cd199159a8fbc652a6756667012c597457cb035b5a8f9120c2f46b39",
+      "function_body_unchanged": true
+    },
+    {
+      "portable_module": "canonical_percolation.py",
+      "function": "binomial_kernel",
+      "source_file_sha256": "2a5869671fbab234b68d3537e2e0ce2b72eadfec085090ac29c7195fb8fa112c",
+      "normalized_function_sha256": "2c70a106d9f3cbfe78f7adf01877a2cd32f700cd0a71ddd2e819a449422427bf",
+      "function_body_unchanged": true
+    },
+    {
+      "portable_module": "canonical_percolation.py",
+      "function": "canonical_curves",
+      "source_file_sha256": "2a5869671fbab234b68d3537e2e0ce2b72eadfec085090ac29c7195fb8fa112c",
+      "normalized_function_sha256": "b09e5ec51d3a379250950f13173f6c7b4861f5aa2417e86dae19505a27c3db9c",
+      "function_body_unchanged": true
+    },
+    {
+      "portable_module": "canonical_percolation.py",
+      "function": "peak",
+      "source_file_sha256": "2a5869671fbab234b68d3537e2e0ce2b72eadfec085090ac29c7195fb8fa112c",
+      "normalized_function_sha256": "edfc32cc02e40c598e1e970f929fe55cd8cee06a83fb9c216be5e2b367fec408",
+      "function_body_unchanged": true
+    },
+    {
+      "portable_module": "canonical_percolation.py",
+      "function": "endpoint_slope",
+      "source_file_sha256": "2a5869671fbab234b68d3537e2e0ce2b72eadfec085090ac29c7195fb8fa112c",
+      "normalized_function_sha256": "0a598a3568e61fd8a5b4d83430e83ddbe798fdc879a931e7596d7dc743e4c6ae",
+      "function_body_unchanged": true
+    },
+    {
+      "portable_module": "canonical_percolation.py",
+      "function": "estimate",
+      "source_file_sha256": "2a5869671fbab234b68d3537e2e0ce2b72eadfec085090ac29c7195fb8fa112c",
+      "normalized_function_sha256": "ec495fd98b21e1bcbebd6b334d22b3f29889c77708b78677694c2f1ad039b504",
+      "function_body_unchanged": true
+    },
+    {
+      "portable_module": "canonical_percolation.py",
+      "function": "strict_flips",
+      "source_file_sha256": "2a5869671fbab234b68d3537e2e0ce2b72eadfec085090ac29c7195fb8fa112c",
+      "normalized_function_sha256": "6334e21f22b5392c328f5cde08c00b537b84cc316e12a2be516c069e2bc1bccd",
+      "function_body_unchanged": true
+    },
+    {
+      "portable_module": "graph_helpers.py",
+      "function": "seed_for",
+      "source_file_sha256": "ba9a31dad73f56d91d2255f6443fdafb070dbb40090a126e4dd2dbf78cff4116",
+      "normalized_function_sha256": "40ee728e6d84951f1c75800491c14b9997ed709ccaac5f51300ca7bc4598f499",
+      "function_body_unchanged": true
+    },
+    {
+      "portable_module": "graph_helpers.py",
+      "function": "graph_hash",
+      "source_file_sha256": "ba9a31dad73f56d91d2255f6443fdafb070dbb40090a126e4dd2dbf78cff4116",
+      "normalized_function_sha256": "e88ed6b31bee059eb7fb2461ae05ea834c22356ad92b109b7f076ae567a91631",
+      "function_body_unchanged": true
+    },
+    {
+      "portable_module": "graph_helpers.py",
+      "function": "spectral_threshold",
+      "source_file_sha256": "ba9a31dad73f56d91d2255f6443fdafb070dbb40090a126e4dd2dbf78cff4116",
+      "normalized_function_sha256": "a0e04ff9abddcd0b01e6500090c4d2ac00a8ee0e932cc70ffee17ebb3df2bf2b",
+      "function_body_unchanged": true
+    },
+    {
+      "portable_module": "graph_helpers.py",
+      "function": "predictors",
+      "source_file_sha256": "d4643eb191a24256caa7efc469be0ba1adbf098f4e1761257b04a8dd61d3ed16",
+      "normalized_function_sha256": "411fe000733f9708aa87ffac36c9365b5cdfd40b4c8c991e1b639cc8caa28fec",
+      "function_body_unchanged": true
+    },
+    {
+      "portable_module": "graph_helpers.py",
+      "function": "connect_components_by_degree_preserving_switches",
+      "source_file_sha256": "a88ec96df80b59d429b970f172113a9e4082651852776b47fca71885ebab126f",
+      "normalized_function_sha256": "12d0b0dece9e41b72f87c2e01e2c35e09eb66edcce2dc3aef0a3b3cdd576c801",
+      "function_body_unchanged": true
+    }
+  ],
+  "adaptation": "Portable I/O, optional no-JIT decorator, data-only figure regeneration and validation wrappers are new; no claim of file-level identity. Persistent Numba disk caching is disabled for deep or read-only extraction paths; numerical function bodies are unchanged.",
+  "revision_2026_09_07": {
+    "changes": [
+      "Local-control percentile ranges from empirical bootstrap peak-count products",
+      "Fixed-allowance retention decomposition and post hoc target-band sensitivities",
+      "Figure 4 terminal numerical ranges and Figure 6 map-view label correction"
+    ],
+    "core_estimator_changed": false,
+    "new_edge_orders_generated": false,
+    "allowance_refitted": false,
+    "source_sha256": {
+      "local_difference_sensitivity.py": "043bf4eb3526892d9f6575e2a18a4e817b9ac630dd359c3a8d7b3237cf765176",
+      "retention_sensitivity.py": "aa121c9e206c5dfbcd77aaab2a1c67051a8eebeab1f768c28f70fb5af561d4b4",
+      "make_length_control_figure.py": "9b0226045fbc4ebb57b28629d8884b616c657898c3f0289dfa3e934e1f59b1b1",
+      "make_paper_assets.py": "0202b8c3ed927a942c4d20f37c6006a4f0ba6ad43fa7e8a298871bad05501bd7"
+    }
+  },
+  "revision_2026_09_20": {
+    "changes": [
+      "Retrospective provenance stratification: Stockholm and Cape Town separate from 19 primary cities; full 21 retained",
+      "Complete 272-record order/switch diagnostics regenerated; arithmetic and input identities checked",
+      "Second-component and finite-cluster susceptibility observables recomputed with exact component-size bookkeeping",
+      "SciGRID crossing counts corrected to one chord per simple edge and node-disjoint pairs",
+      "Original pre-response protocol records included; not public preregistration",
+      "Constant-offset comparisons use shared allowance and separately reported matched-rank allowance"
+    ],
+    "core_primary_response_estimator_changed": false,
+    "new_diagnostic_edge_orders_generated": true,
+    "primary_allowance_refitted": false,
+    "source_sha256": {
+      "external_split.py": "d012e3261bc9540b3bfe92f72bb144db429775dbd6497d39efdc72853c0c8870",
+      "screening.py": "cc8511e7b4d750ded2d040d343954e09da6cfc5e7baa1ce4565248e675370943",
+      "make_paper_assets.py": "6aee409006699dff94c34eb2e23d3a3dca42e71a8edb24d009352ef31fa9dace",
+      "control_budget_verified.py": "667a06866dd4bfcbdfdc646421d10b32f8741b1956e7a962fdf9838ad7c6cda8",
+      "response_definition_verified.py": "60aea62b70434a3691cda528b0f2bf8387d132613a4fb78782d5529ba8bcc171",
+      "power_scigrid_check.py": "81de796c3ab3df9e25967bb4e9715f8f969b49fb02ada101d6d35efd4c78fbab"
+    }
+  }
+}
