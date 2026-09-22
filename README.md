@@ -11,14 +11,17 @@ transfer" (Reliability Engineering & System Safety).**
 | Item | Value |
 |---|---|
 | Latest release tag | `v1.1.0-r214` (22 September 2026) |
+| Version DOI (cite this release) | [10.5281/zenodo.22886920](https://doi.org/10.5281/zenodo.22886920) |
 | Concept DOI (all versions) | [10.5281/zenodo.21102470](https://doi.org/10.5281/zenodo.21102470) |
-| Previous release | `v1.0.2-r209` |
-| Archive | [10.5281/zenodo.21102471](https://doi.org/10.5281/zenodo.21102471) (R198 version DOI) |
+| Zenodo record | <https://zenodo.org/records/22886920> |
+| Release page | <https://github.com/Johnsonlijian/2026-globalinfra-percolation-repro/releases/tag/v1.1.0-r214> |
+| Earlier releases | `v1.0.2-r209` ([10.5281/zenodo.21102471](https://doi.org/10.5281/zenodo.21102471), R198 version DOI) and earlier tags |
 | License | MIT for code; see `DATASETS_AND_LINKS.csv` for third-party source terms |
 
-The same archive is submitted with the manuscript as the supplementary code
-package. The release asset and the submitted archive are byte-identical modulo
-the version metadata in `CITATION.cff`.
+This release is archived on Zenodo under the version DOI above and can be cited
+directly. To cite the evolving package as a whole, use the concept DOI. Cite
+whichever DOI the manuscript states, so that the manuscript and the archive
+stay aligned.
 
 ## What Runs Without Private Data
 

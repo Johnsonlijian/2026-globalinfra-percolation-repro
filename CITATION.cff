@@ -11,7 +11,14 @@ authors:
     affiliation: "Inner Mongolia University of Technology"
 repository-code: "https://github.com/Johnsonlijian/2026-globalinfra-percolation-repro"
 url: "https://github.com/Johnsonlijian/2026-globalinfra-percolation-repro"
-doi: "10.5281/zenodo.21102470"
+doi: "10.5281/zenodo.22886920"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.22886920"
+    description: "Version DOI for this release (v1.1.0-r214)"
+  - type: doi
+    value: "10.5281/zenodo.21102470"
+    description: "Concept DOI covering all versions of this package"
 license: MIT
 keywords:
   - infrastructure networks
