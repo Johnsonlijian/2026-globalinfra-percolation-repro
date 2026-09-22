@@ -15,7 +15,7 @@ transfer" (Reliability Engineering & System Safety).**
 | Concept DOI (all versions) | [10.5281/zenodo.21102470](https://doi.org/10.5281/zenodo.21102470) |
 | Zenodo record | <https://zenodo.org/records/22886920> |
 | Release page | <https://github.com/Johnsonlijian/2026-globalinfra-percolation-repro/releases/tag/v1.1.0-r214> |
-| Earlier releases | `v1.0.2-r209` ([10.5281/zenodo.21102471](https://doi.org/10.5281/zenodo.21102471), R198 version DOI) and earlier tags |
+| Earlier releases | `v1.0.2-r209` ([10.5281/zenodo.21159907](https://doi.org/10.5281/zenodo.21159907)); `v1.0.1-r198` ([10.5281/zenodo.21102471](https://doi.org/10.5281/zenodo.21102471)) |
 | License | MIT for code; see `DATASETS_AND_LINKS.csv` for third-party source terms |
 
 This release is archived on Zenodo under the version DOI above and can be cited

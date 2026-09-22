@@ -3,8 +3,11 @@
 Date: 22 September 2026
 
 This release supersedes `v1.0.2-r209` and accompanies the revised manuscript
-under review at *Reliability Engineering & System Safety*. The concept DOI
-`10.5281/zenodo.21102470` covers every version of this package.
+under review at *Reliability Engineering & System Safety*.
+
+- Version DOI for this release: [10.5281/zenodo.22886920](https://doi.org/10.5281/zenodo.22886920)
+- Concept DOI for all versions: [10.5281/zenodo.21102470](https://doi.org/10.5281/zenodo.21102470)
+- Superseded: `v1.0.2-r209` (10.5281/zenodo.21159907), `v1.0.1-r198` (10.5281/zenodo.21102471)
 
 ## What changed since v1.0.2-r209
 

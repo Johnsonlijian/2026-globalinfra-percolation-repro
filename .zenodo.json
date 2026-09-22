@@ -41,5 +41,5 @@
       "resource_type": "software"
     }
   ],
-  "notes": "This version: v1.1.0-r214, version DOI 10.5281/zenodo.22886920. Supersedes v1.0.2-r209 (10.5281/zenodo.21102471). Concept DOI covering all versions: 10.5281/zenodo.21102470."
+  "notes": "This version: v1.1.0-r214, version DOI 10.5281/zenodo.22886920. Supersedes v1.0.2-r209 (10.5281/zenodo.21159907), which superseded v1.0.1-r198 (10.5281/zenodo.21102471). Concept DOI covering all versions: 10.5281/zenodo.21102470."
 }
