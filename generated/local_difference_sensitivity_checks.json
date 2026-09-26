@@ -1,0 +1,26 @@
+{
+  "status": "PASS_COUNT_PRODUCT_REGRESSION",
+  "stages": 36,
+  "identity_baselines": 9,
+  "nonbaseline_products": 27,
+  "sparse_count_rows": 367,
+  "counts_per_stage": 1000,
+  "product_weight_per_nonbaseline_stage": 1000000,
+  "quantiles": [
+    0.025,
+    0.975
+  ],
+  "quantile_method": "linear",
+  "max_absolute_regression_error": 8.326672684688674e-17,
+  "calibration_q_used": false,
+  "new_edge_orders": 0,
+  "new_bootstrap_resamples": 0,
+  "baseline_convention": "Same estimator minus itself: exactly [0, 0].",
+  "uncertainty_scope": "Pointwise numerical uncertainty conditional on realized stage graphs, not population or simultaneous coverage.",
+  "synthetic_checks": {
+    "expanded_product_cases": 4,
+    "permutation_checks": 4,
+    "unpaired_distribution_check": true,
+    "invalid_count_checks": 4
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "status": "PASS",
+  "problems": [],
+  "dataset_count": 47,
+  "figures": [
+    {
+      "figure": "fig1_screening_example",
+      "pdf_sha256": "90521ed81be9b1decf5ceb82916461c9231f10b88caf08c44aac422f57aa3a1e",
+      "svg_sha256": "6f2814990fa6dac0be1ffe7617b119bb45730eab07abc64eb7ad55740ba7e192",
+      "pages": 1,
+      "nonwhite_sample_fraction": 0.1654460641399417,
+      "vector_svg": true
+    },
+    {
+      "figure": "fig2_accuracy",
+      "pdf_sha256": "3790a99082c92b1091eb557394a0d6d023a3bc5e26ae607b62b535c944415364",
+      "svg_sha256": "c6e49804d9d85fc787bb4f02ed9b8d6e733813330250a3ace5ccb57e0b3c4139",
+      "pages": 1,
+      "nonwhite_sample_fraction": 0.07373833254231925,
+      "vector_svg": true
+    },
+    {
+      "figure": "fig3_nulls",
+      "pdf_sha256": "a26a1b085e0e09e92fe89708820759d261abb32d51a3a691616750a09ed5c594",
+      "svg_sha256": "359340122c5ad6fa2469f61494d005e0b4659d3dbfcb19ba3c503590a2a3bc4e",
+      "pages": 1,
+      "nonwhite_sample_fraction": 0.074070787735384,
+      "vector_svg": true
+    },
+    {
+      "figure": "fig4_local_control",
+      "pdf_sha256": "da7205e7225a4018ab269c848c8dd576184c4970a8b8cad40d4950b49711186f",
+      "svg_sha256": "7f7743690698fa8d19314afc3c850b64d94d20de8ca8625b67dfe846051e1b4e",
+      "pages": 1,
+      "nonwhite_sample_fraction": 0.09834791059280855,
+      "vector_svg": true
+    },
+    {
+      "figure": "fig5_validation",
+      "pdf_sha256": "187c30f24a472bfe3f522d05e3105c6e04ac26efa45fd3fa6ae7a09b3a89b8c5",
+      "svg_sha256": "70900c38caf08747ed816fd8d8a42cb78a2659555305acf78419b2ec106f6720",
+      "pages": 1,
+      "nonwhite_sample_fraction": 0.2180914229618253,
+      "vector_svg": true
+    },
+    {
+      "figure": "fig6_geometry",
+      "pdf_sha256": "0e7c225a30740c33ba84eed3132aaa8492a16d0c5dbe268d33a3e1f66d5fe735",
+      "svg_sha256": "0d1402e6c7f0c6ecff7c50e29fca8265a25f6de141271fd49a4cceac21d2f37e",
+      "pages": 1,
+      "nonwhite_sample_fraction": 0.10316255260075485,
+      "vector_svg": true
+    }
+  ],
+  "release_state": "PUBLIC_REPRODUCIBILITY_PACKAGE",
+  "raw_graphs_distributed": false,
+  "scope": "File/plot hygiene and input hashes; not original-data acquisition or publication approval"
+}

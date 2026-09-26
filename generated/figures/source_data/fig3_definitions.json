@@ -1,0 +1,18 @@
+{
+  "intervals": "10000-resample percentile city-bootstrap intervals for means; null realizations averaged within city before resampling.",
+  "point_jitter": "Deterministic shared horizontal jitter per city; values unchanged and connected across all three groups.",
+  "boundary": "Upper schematic states are not the empirical null realizations. Geometric sensitivity is illustrative here; lower contrasts jointly change network organization and do not isolate crossing causation.",
+  "null_sources": {
+    "degree": {
+      "n_cities": 71,
+      "n_realizations": 284,
+      "orders_per_realization": 256
+    },
+    "connected": {
+      "n_cities": 71,
+      "n_realizations": 142,
+      "orders_per_realization": 256
+    }
+  },
+  "observed_orders": 8192
+}

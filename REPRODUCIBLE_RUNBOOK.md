@@ -164,6 +164,7 @@ source files, raw snapshots, geographic edge lists, literature PDFs,
 manuscripts/replies, credentials and internal logs.
 No raw source is relicensed by this attachment.
 
-Supplementary_Code.zip is the authoritative code and derived-data version
-accompanying the article. This release contains only the reproducibility
-materials and selected derived outputs distributed with the paper.
+The tagged repository release is the authoritative code and derived-data
+version accompanying the article. This release contains only the
+reproducibility materials and selected derived outputs distributed with the
+paper.

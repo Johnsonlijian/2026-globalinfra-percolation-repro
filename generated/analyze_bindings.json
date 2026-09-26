@@ -1,0 +1,27 @@
+{
+  "script_sha256": "c78b9254598715616eefd769f6293ae24b696611c8a6b99e8b6dea1744c7974a",
+  "input_sha256": {
+    "data/observed.csv": "d9c28402a5a24b408a45acf049c452b3270ee555db798ed72fc6a94adfd147f2",
+    "data/external.csv": "0e9b306f2ef0bdaedf378dff6bd7c6413004b2ece3795d4c3a9c6e5352b1a6a0",
+    "data/road_regions.csv": "ea9aea4f4160ce4b36ede6f15b6f62aa3ef1aebaf667244035dfacda95f04348",
+    "data/reference_calibration.json": "6d44f7bd01afe1e8e11dcc371a09782a9fc0e92023c7bbe0fc2d2a6945a769b5",
+    "data/null_degree.csv": "1e0e20d43b3da9e895e919bc575e51c4c289091637d919fa385f35a10fae7e27",
+    "data/null_connected.csv": "acf26c55fa2d8a752a557b40574fe6fcebb347d15fed585914727a03cfbc36b4",
+    "data/scenarios.csv": "f526cdeb615e4997273b77526e8a0b4ea3ccf60065251e594d5b7075e35b053b",
+    "data/road_geometry.csv": "4a5c6e026aac2daf7388017979fc364a3b6ca5912cf781e004507bb3e47ec447"
+  },
+  "settings": {
+    "target_band": [
+      0.15,
+      0.55
+    ],
+    "bootstrap_seed": 20260905,
+    "bootstrap_draws": 10000,
+    "method_version": "canonical_v2_exact_endpoint",
+    "reference_orders": 8192,
+    "null_orders": 256,
+    "n_bootstrap": 1000,
+    "step": 0.0025,
+    "length_orders": 512
+  }
+}

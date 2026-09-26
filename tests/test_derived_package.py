@@ -27,7 +27,7 @@ class DerivedPackageTests(unittest.TestCase):
                         "private_file",
                         "graph_cache_file",
                         "source_note",
-                        "pc_r211",
+                        "pc_legacy_estimate",
                         "pc_rank",
                         "elapsed_seconds",
                         "stage_edge_snapshot",

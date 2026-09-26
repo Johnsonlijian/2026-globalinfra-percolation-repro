@@ -1,4 +1,6 @@
 {
+  "title": "Reproducibility package: unsafe-side decision errors in infrastructure robustness screening",
+  "description": "Code, configuration, derived tables, generated figures and provenance records for the revised study of analytical percolation thresholds used as infrastructure robustness screens. The package contains the finite-network estimator with exact endpoint evaluation, finite degree-preserving controls, the external city-holdout evaluation, response-definition checks, control ladders and figure/table builders. Raw third-party source archives are not redistributed; retrieval locations, versions and use conditions are recorded in DATASETS_AND_LINKS.csv, and the non-sensitive derived outputs needed to regenerate the reported tables and figures are included.",
   "creators": [
     {
       "name": "Ren, Lijian",
@@ -7,12 +9,10 @@
       "type": "ProjectMember"
     }
   ],
-  "title": "Reproducibility package: unsafe-side decision errors in infrastructure robustness screening",
-  "description": "<p>Code, configuration, derived tables, generated figures and provenance records for a study of analytical percolation thresholds used as infrastructure robustness screens. The package contains the finite-network estimator with exact endpoint evaluation, the finite degree-preserving control protocol, the cohort-split and locked-allowance evaluation, the constant-offset comparator, response-definition robustness records, control order- and swap-budget ladders, window and failure-process sensitivities, and the figure and table builders, together with a runbook, a data manifest and per-file hashes.</p><p>Raw third-party source archives (OpenStreetMap extracts, pandapower cases, EPANET/WNTR models, SciGRID and PyPSA-Eur layers, World Bank series) are not redistributed. Their retrieval locations, versions and use conditions are recorded in DATASETS_AND_LINKS.csv, and the derived, non-sensitive outputs needed to regenerate the reported tables and figures are included.</p><p>The package accompanies the manuscript \"Unsafe-side decision errors in infrastructure robustness screening: finite-network controls and external city-holdout transfer\" under revision at Reliability Engineering &amp; System Safety. It supersedes the earlier R209 release; all versions share the concept DOI 10.5281/zenodo.21102470.</p>",
   "upload_type": "software",
   "access_right": "open",
   "license": "mit",
-  "version": "v1.1.0-r214",
+  "version": "v1.1.1-r215",
   "language": "eng",
   "keywords": [
     "percolation",
@@ -21,18 +21,12 @@
     "infrastructure networks",
     "reliability screening",
     "model-form error",
-    "OpenStreetMap",
     "reproducible research"
   ],
   "related_identifiers": [
     {
-      "relation": "isSupplementTo",
-      "identifier": "10.5281/zenodo.21102470",
-      "resource_type": "software"
-    },
-    {
       "relation": "isVersionOf",
-      "identifier": "10.5281/zenodo.21102471",
+      "identifier": "10.5281/zenodo.21102470",
       "resource_type": "software"
     },
     {
@@ -40,6 +34,5 @@
       "identifier": "https://github.com/Johnsonlijian/2026-globalinfra-percolation-repro",
       "resource_type": "software"
     }
-  ],
-  "notes": "This version: v1.1.0-r214, version DOI 10.5281/zenodo.22886920. Supersedes v1.0.2-r209 (10.5281/zenodo.21159907), which superseded v1.0.1-r198 (10.5281/zenodo.21102471). Concept DOI covering all versions: 10.5281/zenodo.21102470."
+  ]
 }

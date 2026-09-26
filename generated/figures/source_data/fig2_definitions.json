@@ -1,0 +1,11 @@
+{
+  "target_band": [
+    0.15,
+    0.55
+  ],
+  "power_crossing": 1.1663770881069195,
+  "intervals": "95% percentile bootstrap of 10000 city/network means; six equal family means for power.",
+  "curve_convention": "Exact piecewise-constant fractions between every decision boundary; endpoint ties have zero integration measure. Coincident curves are not displaced.",
+  "power_loss": "lambda * unsafe + conservative, family-weighted and uniformly integrated over the target band; no real accident-cost interpretation.",
+  "nonbacktracking": "Leading spectral onset used as a graph-aware screening comparator; it does not target the same finite maximum-slope diagnostic."
+}

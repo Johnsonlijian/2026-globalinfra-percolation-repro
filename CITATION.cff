@@ -1,21 +1,17 @@
 cff-version: 1.2.0
-message: "If you use this package, please cite the associated manuscript and this repository or archive."
+message: "Cite this public software and derived-data release when reproducing the analysis."
 title: "Reproducibility package: unsafe-side decision errors in infrastructure robustness screening"
 type: software
-version: "v1.1.0-r214"
-date-released: "2026-09-22"
+version: "v1.1.1-r215"
+date-released: "2026-09-26"
 authors:
-  - family-names: Ren
+  - family-names: REN
     given-names: Lijian
     orcid: "https://orcid.org/0000-0003-1629-4368"
     affiliation: "Inner Mongolia University of Technology"
 repository-code: "https://github.com/Johnsonlijian/2026-globalinfra-percolation-repro"
-url: "https://github.com/Johnsonlijian/2026-globalinfra-percolation-repro"
-doi: "10.5281/zenodo.22886920"
+url: "https://doi.org/10.5281/zenodo.21102470"
 identifiers:
-  - type: doi
-    value: "10.5281/zenodo.22886920"
-    description: "Version DOI for this release (v1.1.0-r214)"
   - type: doi
     value: "10.5281/zenodo.21102470"
     description: "Concept DOI covering all versions of this package"
@@ -23,17 +19,5 @@ license: MIT
 keywords:
   - infrastructure networks
   - percolation
-  - complex networks
-  - reliability screening
   - model-form error
   - reproducibility
-abstract: >-
-  Code, configuration, derived tables, generated figures and provenance records
-  for a study of analytical percolation thresholds used as infrastructure
-  robustness screens. The package includes the finite-network estimator with
-  exact endpoint evaluation, finite degree-preserving controls, a locked
-  reference allowance evaluated with a cohort split and a disclosed sensitivity
-  case, a constant-offset comparator, response-definition robustness records and
-  control order- and swap-budget ladders. Raw third-party source archives are not
-  redistributed; retrieval locations and use conditions are recorded in
-  DATASETS_AND_LINKS.csv.

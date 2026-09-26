@@ -33,7 +33,7 @@ def audit(context):
         "private_file",
         "graph_cache_file",
         "source_note",
-        "pc_r211",
+        "pc_legacy_estimate",
         "pc_rank",
         "elapsed_seconds",
         "stage_edge_snapshot",
@@ -45,6 +45,9 @@ def audit(context):
     problems = []
     for path in root.rglob("*"):
         if not path.is_file():
+            continue
+        parts = path.relative_to(root).parts
+        if ".git" in parts:
             continue
         relative = path.relative_to(root).as_posix()
         if path.suffix.lower() in forbidden_suffixes:
@@ -123,7 +126,7 @@ def audit(context):
         "problems": problems,
         "dataset_count": len(data["datasets"]),
         "figures": figure_checks,
-        "release_state": "ACCOMPANYING_ARCHIVE_NOT_PUBLICLY_RELEASED",
+        "release_state": "PUBLIC_REPRODUCIBILITY_PACKAGE",
         "raw_graphs_distributed": False,
         "scope": "File/plot hygiene and input hashes; not original-data acquisition or publication approval",
     }
